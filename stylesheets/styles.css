@@ -108,7 +108,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:860px;
+  width:1060px;
   margin:0 auto;
 }
 
@@ -141,7 +141,6 @@ table {
 th, td {
   text-align:left;
   padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
 }
 
 dt {
@@ -224,7 +223,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:700px;
   float:right;
   padding-bottom:50px;
 }
@@ -313,6 +312,7 @@ footer {
   header li, header ul li + li + li {
     width:33%;
   }
+  
 }
 
 @media print {
