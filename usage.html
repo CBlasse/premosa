@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-				<img src="./PreMosaLogo.png" alt="PreMosa" ><br>
+				<img src="./images/PreMosaLogo.png" alt="PreMosa" ><br>
 				<p align="center">Mosaic Preprocessing Pipeline</p>
         <ul>
           <li><a href="https://github.com/PreMosa/premosa/zipball/master">Download <strong>ZIP File</strong></a></li>
@@ -47,37 +47,114 @@ The xml file contains all required and optional parameter:</p>
 <img src="./images/XMLParameter.png"  alt="XML Parameter">
 <table>
   <tr  style="border-bottom:2px solid #e5e5e5;">
-    <td width=150px><em>Parameter</em></td>
+    <td width=150px><em>Required parameter</em></td>
 		<td><em>Description</em></td>
   </tr>
   <tr>
-    <td>&lt;inputFolder&gt;</td>
-		<td>Input folder containing a subfolder for each time point</td>
+    <td>&lt;folderNameExpression&gt;</td>
+		<td>Template of the subfolders names: {iii} encodes the time point </td>
   </tr>
   <tr>
-    <td>Output Folder</td>
-		<td>Folder for all corrected images</td>
+    <td>&lt;fileNameExpression&gt;</td>
+		<td>Template of the input images: {iii} encodes the tile number, TIME the time </td>
   </tr>
   <tr>
-    <td>Tile Configuration</td>
-		<td>File with the position of each image tile, generated using the <em>Grid Stitching</em> plugin</td>
+    <td>&lt;tStart&gt;</td>
+		<td>First time point</td>
   </tr>
-	<tr>
-    <td>Minimum / Maximum intensity</td>
-		<td>Definition of the intensity range accepted for the sampled pixel pairs</td>
+  <tr>
+    <td>&lt;tEnd&gt;</td>
+		<td>Last time point</td>
   </tr>
-	<tr>
-    <td>Number of samples</td>
-		<td>Number of sampled pixel pairs</td>
+  <tr>
+    <td>&lt;fiji&gt;</td>
+		<td>Path to the Fiji application</td>
   </tr>
-	<tr>
-    <td>Lambda 1 / Lambda 2</td>
-		<td>Penalties for the integrated regularizer (The higher, the bigger the possible divergence from the original images)</td>
+  <tr>
+    <td>&lt;scriptLocation&gt;</td>
+		<td>Path to the Fiji scripts required for PreMosa</td>
+  </tr>
+  <tr>
+    <td>&lt;tileNumber&gt;</td>
+		<td>Number of tiles</td>
+  </tr>
+  <tr>
+    <td>&lt;gridSizeX&gt;</td>
+		<td>Number of tiles in X direction</td>
+  </tr>
+  <tr>
+    <td>&lt;gridSizeY&gt;</td>
+		<td>Number of tiles in Y direction</td>
+  </tr>
+  <tr>
+    <td>&lt;firstIndex&gt;</td>
+		<td>Index of the first tile</td>
+  </tr>
+  <tr>
+    <td>&lt;outputFolder&gt;</td>
+		<td>Output folder</td>
   </tr>
   <tr  style="border-bottom:2px solid #e5e5e5;border-top:2px solid #e5e5e5;">
     <td width=150px><em>Optional parameter</em></td>
 		<td><em>Description</em></td>
   </tr>
+  <tr>
+    <td>&lt;verbose&gt;</td>
+		<td>Activation/Deactivation of printing of preprocessing statuses</td>
+  </tr>
+  <tr>
+    <td>&lt;intermediateFileDeletion&gt;</td>
+		<td>Activation/Deactivation of deletion of all files created during the preprocessing</td>
+  </tr>
+  <tr>
+    <td>&lt;radius&gt;</td>
+		<td>Grid size (Surface Extraction)</td>
+  </tr>
+  <tr>
+    <td>&lt;distance&gt;</td>
+		<td>Distance parameter (Surface Extraction)</td>
+  </tr>
+  <tr>
+    <td>&lt;threshold&gt;</td>
+		<td>Number of bright pixels (Surface Extraction)</td>
+  </tr>
+  <tr>
+    <td>&lt;printHeightMap&gt;</td>
+		<td>Activation/Deactivation of export of the height map (Surface Extraction)</td>
+  </tr>
+  <tr>
+    <td>&lt;overlap&gt;</td>
+		<td>Percentage of overlap of the mosaic tiles (Stitching)</td>
+  </tr>
+  <tr>
+    <td>&lt;masterTileConfig&gt;</td>
+		<td>File with fixed stitching coordinates (Stitching)</td>
+  </tr>
+  <tr>
+    <td>&lt;flatField&gt;</td>
+		<td>Path to a precomputed flat field image (Flat field correction)</td>
+  </tr>
+  <tr>
+    <td>&lt;minIntensity&gt;</td>
+		<td>Minimum intensity accepted for the sampled pixel pairs (Contrast adjustment)</td>
+  </tr>
+  <tr>
+    <td>&lt;maxIntensity&gt;</td>
+		<td>Maximum intensity accepted for the sampled pixel pairs (Contrast adjustment)</td>
+  </tr>
+  <tr>
+    <td>&lt;numberOfPixelPairs&gt;</td>
+		<td>Number of sampled pixel pairs (Contrast adjustment)</td>
+  </tr>
+  <tr>
+    <td>&lt;lambda1&gt;</td>
+		<td>Penalties for the integrated regularizer (Contrast adjustment)</td>
+  </tr>
+  <tr>
+    <td>&lt;lambda2&gt;</td>
+		<td>Penalties for the integrated regularizer (Contrast adjustment)</td>
+  </tr>
+	
 </table>
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Surface extraction</h3>
