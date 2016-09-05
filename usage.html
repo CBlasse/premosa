@@ -36,13 +36,13 @@
         <h1>
 <a id="welcome-to-premosa" class="anchor" href="#welcome-to-premosa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
 
-<p>P<font size="1em">RE</font>M<font size="1em">OSA</font> is a pipeline designed to preprocess 3D image mosaics of one or several time points fully automatically and without any interaction. In case further customization is needed, the individual programs are also provided. </p><br>
+<p><font style='font-variant:small-caps;'>PreMosa</font> is a pipeline designed to preprocess 3D image mosaics of one or several time points fully automatically and without any interaction. In case further customization is needed, the individual programs are also provided. </p><br>
 <br>
 
 <h3>
-<a id="usage-pipeline" class="anchor" href="#usage-pipeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mosaic Preprocessing Pipeline P<font size="1em">RE</font>M<font size="1em">OSA</font></h3>
-<p>The pipeline automatically performs all processing tasks independently whether the methods are provided as C++ programs or Fiji plugins. To run P<font size="1em">RE</font>M<font size="1em">OSA</font>, one needs to use the following command:<br><br>
-<span style="background-color: #f4f4f4;padding-left:30px;padding-right:30px;padding-bottom:10px;padding-top:10px">./PreMosa <em>parameter.xml</em></span><br><br>	
+<a id="usage-pipeline" class="anchor" href="#usage-pipeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mosaic Preprocessing Pipeline <font style='font-variant:small-caps;'>PreMosa</font></h3>
+<p>The pipeline automatically performs all processing tasks independently whether the methods are provided as C++ programs or Fiji plugins. To run <font style='font-variant:small-caps;'>PreMosa</font>, one needs to use the following command:<br><br>
+<span style="background-color: #f4f4f4;padding-left:30px;padding-right:20px;padding-bottom:10px;padding-top:10px">./PreMosa <em>parameter.xml</em></span><br><br>	
 The xml file contains all required and optional parameter:</p>
 <img src="./images/XMLParameter.png"  alt="XML Parameter">
 <table>
@@ -158,15 +158,121 @@ The xml file contains all required and optional parameter:</p>
 </table>
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Surface extraction</h3>
+<p>
+The provided 2D projection extracts one (or several) surface(s) within the 3D image volume and projects it onto a 2D image. 
+</p>
+<span style="background-color: #f4f4f4;padding-left:20px;padding-right:30px;padding-bottom:30px;padding-top:10px">./SurfaceExtraction [-r &lt;int&gt;] [-d &lt;int&gt;] [-l &lt;int&gt;] [-t &lt;int&gt;] [-hmd] [-hmr] [-mi] -in <em>inputImage.tif</em></span><br><span style="padding-left:100px">-out <em>outputImage.tif</em></span><br><br>
+<p>Optional parameters are indicated with square brackets. If they are not be considered or default values are used, then one simply ignores them in the command.</p>
+<table>
+  <tr  style="border-bottom:2px solid #e5e5e5;">
+    <td width=150px><em>Required parameter</em></td>
+		<td><em>Description</em></td>
+  </tr>
+  <tr>
+    <td>inputImage.tif</td>
+		<td>3D input image (8-bit/16-bit)</td>
+  </tr>
+  <tr>
+    <td>outputImage.tif</td>
+		<td>2D output image </td>
+  </tr>
+  <tr  style="border-bottom:2px solid #e5e5e5;border-top:2px solid #e5e5e5;">
+    <td width=150px><em>Optional parameter</em></td>
+		<td><em>Description</em></td>
+  </tr>
+	<tr>
+		<td>-r &lt;int&gt;</td>
+		<td>Initial grid size (default: -r 20)</td>	
+	</tr>
+	<tr>
+		<td>-d &lt;int&gt;</td>
+		<td>Distance parameter, defines the size of the substacks of the second selection (default: -d 2)</td>	
+	</tr>
+	<tr>
+		<td>-l &lt;int&gt;</td>
+		<td>Number of signal layers present in the volume (default: -l 1)</td>	
+	</tr>
+	<tr>
+		<td>-t &lt;int&gt;</td>
+		<td>Indication of the number of bright pixels (default: -t 50)</td>	
+	</tr>
+	<tr>
+		<td>-hmd</td>
+		<td>Activation/Deactivation of exporting the down-sampled height map</td>	
+	</tr>
+	<tr>
+		<td>-hmr</td>
+		<td>Activation/Deactivation of exporting the height map</td>	
+	</tr>
+	<tr>
+		<td>-mi</td>
+		<td>Activation/Deactivation of a projection that projects the maximal intensities of the detected layer and its neighboring ones</td>	
+	</tr>
+</table>
+
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Extended surface extraction</h3>
+<p>For multi-channel image volumes, there is the possibility of using a computed heigh map to project a spatially close surface. This extension is especially useful, when a surface is challenging or feature sparse signals. </p><br>
+<span style="background-color: #f4f4f4;padding-left:20px;padding-right:30px;padding-bottom:30px;padding-top:10px">./ExtendedSurfaceExtraction [-r &lt;int&gt;] [-d1 &lt;int&gt;] [-d2 &lt;int&gt;] [-t &lt;int&gt;] [-hmd] [-hmr] [-mi] </span><br><span style="padding-left:100px">-in <em>inputImage.tif</em> -hmFile <em>heightMap.tif</em> -out <em>outputImage.tif</em></span><br><br>
+Optional parameters are indicated with square brackets. If they are not be considered or default values are used, then one simply ignores them in the command.
+<table>
+  <tr  style="border-bottom:2px solid #e5e5e5;">
+    <td width=150px><em>Required parameter</em></td>
+		<td><em>Description</em></td>
+  </tr>
+  <tr>
+    <td>inputImage.tif</td>
+		<td>3D input image (8-bit/16-bit)</td>
+  </tr>
+  <tr>
+    <td>heightMap.tif</td>
+		<td>Given height map (32-bit)</td>
+  </tr>
+  <tr>
+    <td>outputImage.tif</td>
+		<td>2D output image </td>
+  </tr>
+  <tr  style="border-bottom:2px solid #e5e5e5;border-top:2px solid #e5e5e5;">
+    <td width=150px><em>Optional parameter</em></td>
+		<td><em>Description</em></td>
+  </tr>
+	<tr>
+		<td>-r &lt;int&gt;</td>
+		<td>Initial grid size (default: -r 20)</td>	
+	</tr>
+	<tr>
+		<td>-d &lt;int&gt;</td>
+		<td>Distance parameter, defines the size of the substacks of the second selection (default: -d 2)</td>	
+	</tr>
+	<tr>
+		<td>-l &lt;int&gt;</td>
+		<td>Number of signal layers present in the volume (default: -l 1)</td>	
+	</tr>
+	<tr>
+		<td>-t &lt;int&gt;</td>
+		<td>Indication of the number of bright pixels (default: -t 50)</td>	
+	</tr>
+	<tr>
+		<td>-hmd</td>
+		<td>Activation/Deactivation of exporting the down-sampled height map</td>	
+	</tr>
+	<tr>
+		<td>-hmr</td>
+		<td>Activation/Deactivation of exporting the height map</td>	
+	</tr>
+	<tr>
+		<td>-mi</td>
+		<td>Activation/Deactivation of a projection that projects the maximal intensities of the detected layer and its neighboring ones</td>	
+	</tr>
+</table>
+
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flat field correction</h3>
 <p>The flat field correction removes uneven illumination in 2D images (8-bit, 16-bit) using a flat field with was either provided as an input or generated from the input image. The usage is the following:
 <br><br>
-<span style="background-color: #f4f4f4;padding-left:30px;padding-right:30px;padding-bottom:10px;padding-top:10px">./FlatFieldCorrection -in <em>inputImage.tif</em> [-ff <em>flatFieldImage.tif</em>] -out <em>outputImage.tif</em></span><br><br>
+<span style="background-color: #f4f4f4;padding-left:20px;padding-right:30px;padding-bottom:10px;padding-top:10px">./FlatFieldCorrection -in <em>inputImage.tif</em> [-ff <em>flatFieldImage.tif</em>] -out <em>outputImage.tif</em></span><br><br>
 Whereas the input and output image (-in, -out) are required parameters, the flat field image (-ff) can be optionally specified.</p>
 
 <h3>
