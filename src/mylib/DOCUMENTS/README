@@ -1,0 +1,183 @@
+
+                            MY-LIB CODE LIBRARY
+                               Gene Myers
+                              March 1, 2011
+
+  This is a C-library under continual expansion and development by Gene Myers.  It is
+licensed under the copyright notice at the end of this file and currently consists
+of 19 modules, supporting a total of 19 classes, with 400+ routines:
+
+  FOR IMAGE_ANALYSIS:
+
+    array.[ph]
+        An array abstraction and basic primitives for making and operating upon them.
+        Includes support for the concepts of slices and frames that are mechanisms for
+        conveniently working with subarrays of an array.
+
+    image.[ph]
+        A library for reading and writing images between .tif files and arrays.  The latest
+        version uses the MY-TIFF package so the library no longer relies on TiffLib 6.0.
+
+    flood.fill.[ph]
+        Basic routines to support 2n- and 3^n-conectivity and flood-filling of volumes and surfaces.
+
+    filters.[ph]
+        Routines to convolve arrays with filter elements, compute gradients, curvature, and
+        other transforms of an array/image (such as flow fields, Laplacian, and distance transform)
+        (IN_PROGRESS: gradients & curvature)
+
+    histogram.[ph]
+         Generator of histograms of arrays that can then be used to compute statistics,
+         thresholds, entropy, and so on.
+
+    level.set.[ph]
+        The level-set tree data abstraction (for arrays of any dimensionality)
+
+    water.shed.[ph]
+        The watershed partition abstraction (for arrays of any dimensionality).
+
+    region.[ph]
+        An abstraction for connected objects that records them via their surface.
+
+    draw.[ph]
+        Routines to draw a variety of shapes, contours, water-sheds, level-sets, etc.
+        on an array.  The concept of brushes for the different kinds of arrays is supported.
+
+    tiff_image, tiff_io -- a replacement for libtiff.  Reads, writes and interprets almost
+                           any tiff (save those for fax and print media).
+
+    swc.[ph]
+        Routines to support .swc formated trees modeling neurons.  Read/write, creation,
+        addition, clipping, extents, path length, etc.
+
+    paths.[ph]
+        Routines for computing shortest paths between sets of source and destination points.
+
+    snake.[ph]
+        Active contours as an (n-1) hyperplane in n-dimensions (IN_PROGRESS)
+        normalized correlation.  Uses the MY-FFT package.
+
+  FOR NUMERICAL ANALYSIS:
+
+    fft.[ph]
+        Routines for real, complex 1- and multi-dimensional FFTs, convolutions, correlations,
+        and normalized correlations in floating point and double precision.
+
+    linear.algebra.[ph]
+        Routines for inverting matrices, determinants, and solving systems of
+        linear equations based on the lu-decomposition (with partial pivoting).
+        Also tri-diagonal and penta-diagonal matrix solvers with applications
+        to cubic splines and active contours.
+
+    fct.min.[ph]
+        Routines to minimize functions of one or more variables
+
+    fct.root.[ph]
+        Routines to find roots of functions of one or more variables
+
+  GENERAL:
+
+    utilities.[ph]
+        A few guarded system calls and a spiffy command-line interpretation utility,
+        documented in detail in the file Command.Line.pdf
+
+    hash.[ph]
+        A hash table abstraction
+
+    cdf.[ph]
+        A suite of routines for generating random variables from a suite of well-known
+        probability distributions
+
+    svg.[ph]
+        Routines for creating an "svg" drawing.  I find it very useful for program
+        animation or generation of complex visual displays.  SVG is an xml-based drawing
+        specification that can be displayed by browsers and a number of free-ware drawing
+        packages.
+
+Most of the modules are fairly stable although I won't warrant that they are bug free.
+All have been tested fairly methodically and most have been used often and so are fairly
+well exercised, particularly the general utilities.
+
+  Documentation for the library currently consists of a collection of html pages that can
+be accessed by opening HTML/AllPages.html in the browser of your choosing.  In addition,
+there are a couple of .pdf documents in the subfolder PDFS describing (a) the object
+management scheme central to the library (Object.Management.pdf), and (b) a command line
+interpretor that allows you to easily specify complex command lines, yet easily interpret
+them (Command.Line.pdf).
+
+  As just mentioned the library use a fairly sophisticated object management scheme.
+To facilitate developement and avoid writing boring stylized code over and over again,
+I developed a special preprocessor that generates most of the code for this object management
+(it is documented in the file PDFS/Object.Management.pdf).  Therefore the source for every
+module is in a .p (*not* for pascal!) file that is transformed into a .c file by the
+preprocessor built by compiling generator.c (see BUILDME for instructions on how to make
+the library).
+
+  Similarly, I found that to handle arrays of different types, or an enum of operation types,
+and so on, that a sytlized macro expansion around the idea of a generator gave much more
+readable and terser code than using the C macro-preprocessor.  This is also realized as part
+of the mylib preprocessor that is invoked on all the .p files.  This simple generator is
+described in the comments that head the C file, generator.c, implementing it.
+
+  Most of the routines handle arrays/images that have more than 2 billion elements/pixels.
+Any individual dimension must be less than 2 billion but the total size of the array can
+be larger.  The restrictions are that the level set and water shed routines do not handle
+arrays of such sizes, the reason being that the working storage would double and so be
+unlikely to fit in the memory of a machine unless it has on the order of 64Gb or more.
+
+  As of February, 2011, the library is thread-safe and many of the routines work on array
+slices making it easy to write parallel thread code with the library.
+
+/*****************************************************************************************\
+*                                                                                         *
+*  Copyright (c) Oct. 1, '05 Dr. Gene Myers and Howard Hughes Medical Institute ("HHMI")  *
+*                                                                                         *
+*  This software is provided and licensed on the following terms.  By downloading,        *
+*  using and/or copying the software, you agree that you have read, understood, and       *
+*  will comply with these terms.                                                          *
+*                                                                                         *
+*  Redistribution and use in source and binary forms, with or without modification,       *
+*  are permitted provided that the following conditions are met:                          *
+*     1. Redistributions of source code must retain the above copyright notice, this      *
+*          list of conditions and the following disclaimer.                               *
+*     2. Redistributions in binary form must reproduce the above copyright notice, this   *
+*          list of conditions and the following disclaimer in the documentation and/or    *
+*          other materials provided with the distribution.                                *
+*     3. Neither the name of the Howard Hughes Medical Institute nor the names of its     *
+*          contributors may be used to endorse or promote products derived from this      *
+*          software without specific prior written permission.                            *
+*                                                                                         *
+*  For use of this software and documentation for purposes other than those listed above, *
+*  contact Dr. Gene Myers at:                                                             *
+*                                                                                         *
+*    Janelia Farms Research Campus                                                        *
+*    19700 Helix Drive                                                                    *
+*    Ashburn, VA  20147-2408                                                              *
+*    Tel:   571.209.4153                                                                  *
+*    Fax:   571.209.4083                                                                  *
+*    Email: myersg@janelia.hhmi.org                                                       *
+*                                                                                         *
+*  For any issues regarding HHMI or use of its name, contact:                             *
+*                                                                                         *
+*    Howard Hughes Medical Institute                                                      *
+*    4000 Jones Bridge Road                                                               *
+*    Chevy Chase, MD 20815-6789                                                           *
+*    (301) 215-8500                                                                       *
+*    Email: webmaster@hhmi.org                                                            *
+*                                                                                         *
+*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY    *
+*  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES   *
+*  OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE ARE          *
+*  DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY   *
+*  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, *
+*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR *
+*  PROFITS; REASONABLE ROYALTIES; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY     *
+*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING         *
+*  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF   *
+*  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                                             *
+*                                                                                         *
+*  The names of the authors and copyright holders may not be used in advertising or       *
+*  publicity pertaining to the software without specific, written prior permission.       *
+*  Title to copyright in this software will remain with copyright holders.                *
+*                                                                                         *
+\*****************************************************************************************/

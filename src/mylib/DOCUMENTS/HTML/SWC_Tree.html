@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: SWC_Tree Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">SWC_Tree Class Reference</h1>
+
+<p>
+Support for the .swc tree format: a piece-wise segment model of neurons.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;swc.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#SWC_Node"> SWC_Node </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#kind"> kind </a></b>
+     </td><td class="define" valign="baseline">: SWC_Kind</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#x"> x </a></b>
+     </td><td class="define" valign="baseline">: float</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#y"> y </a></b>
+     </td><td class="define" valign="baseline">: float</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#z"> z </a></b>
+     </td><td class="define" valign="baseline">: float</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#r"> r </a></b>
+     </td><td class="define" valign="baseline">: float</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">One of the defined SWC_Kind values below</td></tr>
+    <tr><td class="comment" valign="baseline">x, y, z coordinate of vertex</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment" valign="baseline">Radius of neuron at this point</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#SWC_Bundle"> SWC_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#num_trees"> num_trees </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#trees"> trees </a></b>
+     </td><td class="define" valign="baseline">: SWC_Tree **</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Number of trees</td></tr>
+    <tr><td class="comment" valign="baseline">trees[0..num_trees-1] point at SWC trees</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#SWC_Kind"> SWC_Kind </a></b>
+     </td><td class="define" valign="baseline">: { SWC_UNDEFINED, SWC_SOMA, SWC_AXON, SWC_BASAL_DENDRITE, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWC_APICAL_DENDRITE, SWC_FORK_POINT, SWC_END_POINT, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWC_CUSTOM }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Get_SWC_Size">Get_SWC_Size</a></b>
+     (SWC_Tree *<I>t</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Get_SWC_Node">Get_SWC_Node</a></b>
+     (SWC_Tree *<I>t</I>, int <I>i</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Get_SWC_Root">Get_SWC_Root</a></b>
+     (SWC_Tree *<I>t</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Get_SWC_Father">Get_SWC_Father</a></b>
+     (SWC_Node *<I>n</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Get_SWC_Child">Get_SWC_Child</a></b>
+     (SWC_Node *<I>n</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Get_SWC_Sibling">Get_SWC_Sibling</a></b>
+     (SWC_Node *<I>n</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Get_SWC_Outdegree">Get_SWC_Outdegree</a></b>
+     (SWC_Node *<I>n</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SWC_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Read_SWC_File">Read_SWC_File</a></b>
+     (SWC_Bundle *<I>forest</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>file_name</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Write_SWC_File">Write_SWC_File</a></b>
+     (string <I>file_name</I>, SWC_Bundle *<I>forest</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Print_SWC_Tree">Print_SWC_Tree</a></b>
+     (SWC_Tree *<I>tree</I>, FILE *<I>output</I>, int <I>indent</I>, string <I>format</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SWC_Tree *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Make_SWC_Tree">Make_SWC_Tree</a></b>
+     (int <I>size_estimate</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Add_Vertex_As_Root">Add_Vertex_As_Root</a></b>
+     (SWC_Tree *<I>tree</I>, int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Add_Vertex_As_First_Child">Add_Vertex_As_First_Child</a></b>
+     (SWC_Tree *<I>tree</I>, SWC_Node *<I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Add_Vertex_As_Sibling">Add_Vertex_As_Sibling</a></b>
+     (SWC_Tree *<I>tree</I>, SWC_Node *<I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">SWC_Node *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Add_Vertex_As_Father">Add_Vertex_As_Father</a></b>
+     (SWC_Tree *<I>tree</I>, SWC_Node *<I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SWC_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#Clip_SWC_Tree">Clip_SWC_Tree</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (SWC_Bundle *<I>forest</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SWC_Tree *<I>tree</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Double_Vector *<I>beg</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Double_Vector *<I>end</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Extent_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#SWC_Tree_Extent">SWC_Tree_Extent</a></b>
+     (Extent_Bundle *<I>extent</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SWC_Tree *<I>tree</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="SWC_Tree.html#SWC_Tree_Path_Length">SWC_Tree_Path_Length</a></b>
+     (SWC_Tree *<I>tree</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+The .swc-format is a standard in neuroscience (see http://www.neuromorph.org) for encoding
+and modeling neurons.  While a neuron is a continuous 3D object, the SWC model
+approximates the shape as a tree of cylindrical segments where the radius of the
+cylinder at each end need not be the same.  The standard does not dictate a degree
+of precision to which the piecewise linear approximation needs to model the true shape.
+An <B><a href="SWC_Tree.html">SWC_Tree</a></B> object is a tree for which each node or vertex has a 3D real-valued
+coorindate, a radius, and an optional designation (see <a href="SWC_Tree.html#SWC_Kind">SWC_Kind</a>) as to what the node
+or its segment represent.   The segment of a node is the line segment from its point
+to that of the father of the node in the tree (if any).  It is unspecified as to how
+the radius defines a cylinder about each segment, but the general idea is that the
+radius is an estimate of the thickness of the neuron at the point of each node.
+</p>
+<p>
+An <B><a href="SWC_Tree.html#SWC_Node">SWC_Node</a></B> models each node of an SWC_Tree and the class provides primitives
+for traversing a tree.  Namely, you can get the root of an SWC_Tree with <a href="SWC_Tree.html#Get_SWC_Root">Get_SWC_Root</a>
+and you can recursively traverse the tree with <a href="SWC_Tree.html#Get_SWC_Child">Get_SWC_Child</a>, which takes you to the
+first child of a node, and <a href="SWC_Tree.html#Get_SWC_Sibling">Get_SWC_Sibling</a>, which then takes you to the next sibling
+of a node.  For example, the code snippet below traverses every node in an
+SWC_Tree <I>T</I>:
+</p>
+<pre>
+ void Traverse_Tree(SWC_Node *v)
+ { // Visiting v
+   for (v = Get_SWC_Child(v); v != NULL; v = Get_SWC_Sibling(v))
+     Traverse_Tree(v);
+ }
+
+ Traverse_Tree(Get_SWC_Root(T));
+</pre>
+<p>
+There are also routines to get the size of an SWC_Tree, the <I>i<sup>th</sup></I> node of a tree,
+and the number of children or outdegree of a node, i.e. <a href="SWC_Tree.html#Get_SWC_Size">Get_SWC_Size</a>, <a href="SWC_Tree.html#Get_SWC_Node">Get_SWC_Node</a>,
+and <a href="SWC_Tree.html#Get_SWC_Outdegree">Get_SWC_Outdegree</a>.  <a href="SWC_Tree.html#Make_SWC_Tree">Make_SWC_Tree</a> creates an initially empty tree with an initial memory
+allocation large enough to build a tree with a specified number of nodes without additional
+memory allocations.  One can then add nodes to a tree in a specified position relative to
+a specified node already in the tree, with the routines <a href="SWC_Tree.html#Add_Vertex_As_Root">Add_Vertex_As_Root</a>,
+<a href="SWC_Tree.html#Add_Vertex_As_First_Child">Add_Vertex_As_First_Child</a>, <a href="SWC_Tree.html#Add_Vertex_As_Sibling">Add_Vertex_As_Sibling</a>, and <a href="SWC_Tree.html#Add_Vertex_As_Father">Add_Vertex_As_Father</a>.
+</p>
+<p>
+The .swc-format specifies not only a model but also is a text-based format for encoding the
+model on a file.  <a href="SWC_Tree.html#Read_SWC_File">Read_SWC_File</a> and <a href="SWC_Tree.html#Write_SWC_File">Write_SWC_File</a> read and write multiple trees to
+and from a file in .swc-format.  Each line of an .swc-file is either a comment line
+that begins with a '#'-sign, or a blank line, or a data line describing a node and its
+father (if any).  A data line has the format:
+</p>
+<pre>
+ &lt;id&gt; &lt;kind&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;r&gt; &lt;father&gt;
+</pre>
+<p>
+where the <I>&lt;id&gt;</I>, <I>&lt;kind&gt;</I>, and <I>&lt;father&gt;</I> are non-negative integers, and the <I>&lt;x&gt;</I>, <I>&lt;y&gt;</I>, <I>&lt;z&gt;</I>,
+and <I>&lt;r&gt;</I> values are floating point constants, all separated by white space.
+Each node must have a unique id.
+The structure of the tree is determined from the father links
+that must either refer to a node id or -1 if the node is a root of a tree.
+As an example, the input below encodes a tree where for illustration purposes the
+id's are not consecutive or ordered in any way:
+</p>
+<pre>
+ # A comment
+
+ 1 1 2 51 25 1.4 -1
+ 8 6 196 45 10 1.7 6
+ 2 0 4 67 55 2.2 1
+ 6 5 195 504 19 1.4 5
+ 3 0 5 240 40 1.4 2
+ 5 5 2 185 49 1.4 1
+ 4 6 23 255 0 1.7 3
+ 7 6 346 509 56 1.4 6
+</pre>
+<p>
+<a href="SWC_Tree.html#Print_SWC_Tree">Print_SWC_Tree</a> prints a representation of the tree and is principally provided for
+debug purposes.  For the example above, it might produce the output:
+</p>
+<pre>
+     (2.0,51.0,25.0):1.4
+     |
+     +->(4.0,67.0,55.0):2.2
+     |  (5.0,240.0,40.0):1.4
+     |  (23.0,255.0,0.0):1.7
+     |
+     +->(2.0,185.0,49.0):1.4
+        (195.0,504.0,19.0):1.4
+        |
+        +->(346.0,509.0,56.0):1.4
+        |
+        +->(196.0,45.0,10.0):1.7
+</pre>
+<p>
+There are many concievable computations that could be performed on an SWC_Tree.  Currently the
+library has a routine to clip a tree to a given bounding box (<a href="SWC_Tree.html#Clip_SWC_Tree">Clip_SWC_Tree</a>),
+to determine the 3D real-valued extent of an SWC_Tree (<a href="SWC_Tree.html#SWC_Tree_Extent">SWC_Tree_Extent</a>), and
+to calculate the path length of an SWC_Tree (<a href="SWC_Tree.html#SWC_Tree_Path_Length">SWC_Tree_Path_Length</a>).
+</p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SWC_Node"></a>     <tr><td class="name" valign="top">SWC_Node</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>kind</i></td><td class="define">: <a href="SWC_Tree.html#SWC_Kind">SWC_Kind</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>x</i></td><td class="define">: float</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>y</i></td><td class="define">: float</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>z</i></td><td class="define">: float</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>r</i></td><td class="define">: float</td></tr>
+    </table>
+  </h3>
+<p>
+Individual nodes (vertices) in an SWC tree have a <I>kind</I>, a coordinate in 3D space
+<I>(x,y,z)</I> and a radius <I>r</I>.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SWC_Bundle"></a>     <tr><td class="name" valign="top">SWC_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>num_trees</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>trees</i></td><td class="define">: <a href="SWC_Tree.html">SWC_Tree</a> **</td></tr>
+    </table>
+  </h3>
+<p>
+Holds a collection of <I>num_trees</I> SWC trees given in <I>trees[i]</I> for
+<I>i &isin; [0,num_trees-1]</I>.
+</p>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="SWC_Kind"></a><tr><td valign="top">SWC_Kind</td><td>: { SWC_UNDEFINED, SWC_SOMA, SWC_AXON, SWC_BASAL_DENDRITE, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWC_APICAL_DENDRITE, SWC_FORK_POINT, SWC_END_POINT, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWC_CUSTOM }</td></tr>
+  </table></h3>
+<p>
+Each segment in an SWC tree can have a kind documenting whether it is soma,
+axon, basal or apical dendrite, or it can be left undefined.  The segment identified
+by a node is the one from its father in the tree to itself (if it exists).
+Note that in general, that the kind can be undefined (<I>SWC_UNDEFINED</I>) and so is not critical
+to the neuron model per se.  The routines in this module do not in any way rely on this
+information for their proper function.
+</p>
+<p>
+The last three kinds: <I>SWC_FORK_POINT</I>, <I>SWC_END_POINT</I>, and <I>SWC_CUSTOM</I>, are non-standard
+and apply to a node (as opposed to its segment).  They are
+used by some tools to indicate the topology of the segment (the first two values) or to
+encode customized annotation (any value equal to or greater than <I>SWC_CUSTOM</I>).
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Get_SWC_Size"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_SWC_Size (<a href="SWC_Tree.html">SWC_Tree</a> *<I>t</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of nodes in SWC tree <I>t</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_SWC_Node"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Get_SWC_Node (<a href="SWC_Tree.html">SWC_Tree</a> *<I>t</I>, int <I>i</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the <I>i<sup>th</sup></I> node of SWC tree <I>t</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_SWC_Root"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Get_SWC_Root (<a href="SWC_Tree.html">SWC_Tree</a> *<I>t</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the root node of SWC tree <I>t</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_SWC_Father"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Get_SWC_Father (<a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *<I>n</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the father of vertex <I>n</I>, returning <I>NULL</I>
+if <I>n</I> is the root of the tree.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_SWC_Child"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Get_SWC_Child (<a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *<I>n</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the leftmost child of vertex <I>n</I>, returning <I>NULL</I>
+if there is none.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_SWC_Sibling"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Get_SWC_Sibling (<a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *<I>n</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the sibling immediately to the right of vertex <I>n</I>, returning <I>NULL</I>
+if there is none.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_SWC_Outdegree"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_SWC_Outdegree (<a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *<I>n</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of children of node <I>n</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Read_SWC_File"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Bundle">SWC_Bundle</a> *</td>
+     <td valign="baseline">Read_SWC_File (<a href="SWC_Tree.html#SWC_Bundle">SWC_Bundle</a> *<I>forest</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>file_name</I>)</td></tr>
+  </table></h3>
+<p>
+Reads an .swc-formated file, building an <a href="SWC_Tree.html">SWC_Tree</a> for each tree there in, and returning this
+set of trees by filling out the bundle <I>forest</I>.  Each line of the file is either a comment line
+that begins with a '#'-sign, or blank, or a data line describing a node and its father (if any).
+A data line has the format:
+</p>
+<pre>
+ &lt;id&gt; &lt;kind&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;r&gt; &lt;father&gt;
+</pre>
+<p>
+where the <I>&lt;id&gt;</I>, <I>&lt;kind&gt;</I>, and <I>&lt;father&gt;</I> are non-negative integers, and the <I>&lt;x&gt;</I>, <I>&lt;y&gt;</I>, <I>&lt;z&gt;</I>,
+and <I>&lt;r&gt;</I> values are floating point constants, all separated by white space.  Unlike some more
+limited readers, the nodes can be defined in any order of their id, and the id's need not
+constitute a consecutive interval, but each node must have a unique id.
+Moreover, if there can be multiple trees in the file, and their nodes can be interleaved within
+the file -- the number of trees and their structure is determined from the father links
+that must either refer to a node id or -1 if the node is a root of a tree.  The <I>kind</I> encoding
+is a non-negative integer, where the codes correspond to their order in the definition
+of <a href="SWC_Tree.html#SWC_Kind">SWC_Kind</a>, e.g. 2 is <I>SWC_AXON</I>.  As an example, the input below encodes two trees where
+for illustration purposes the id's are not consecutive or ordered in any way and the nodes of
+the two trees are mixed together:
+</p>
+<pre>
+ # A comment
+
+   4 1 2 51 25 1.4 -1
+   1 0 4 67 55 2.2 4
+   3 0 5 240 40 1.4 1
+   2 5 2 185 49 1.4 4
+   5 0 100 200 32 1.3 -1
+
+  10 6 23 255 0 1.7 3
+   6 5 195 504 19 1.4 2
+   9 6 196 45 10 1.7 6
+   8 6 346 509 56 1.4 6
+  11 0 222 361 15 1.2  5
+</pre>
+<p>
+The bundle <I>forest</I> should be a semantically valid <a href="SWC_Tree.html#SWC_Bundle">SWC_Bundle</a> on input, i.e. if
+<I>num_trees</I> &gt; 0 then <I>trees</I> should be a vector of at least <I>num_trees</I> pointers to
+SWC trees, and exactly the first <I>num_trees</I> of these pointers should be to valid
+<a href="SWC_Tree.html">SWC_Tree</a> objects.  The simplist way to establish a semantically valid bundle is to initialize
+<I>num_trees</I> to 0 and <I>trees</I> to NULL.  This routine will take the bundle and modify it
+so that it reflects the number of trees in the file being read and so that <I>trees</I> is a vector
+of pointers to each SWC tree read, where any previous SWC trees in the bundle are freed.
+The user is responsible for managing the SWC_Tree objects in the bundle
+and the vector <I>trees</I> that points at the trees.
+</p>
+  <h3 class="fn"><table>
+     <a name="Write_SWC_File"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Write_SWC_File (string <I>file_name</I>, <a href="SWC_Tree.html#SWC_Bundle">SWC_Bundle</a> *<I>forest</I>)</td></tr>
+  </table></h3>
+<p>
+Write the collection of SWC trees in the bundle <I>forest</I> to the file <I>file_name</I> in
+.swc-format.  The id's will be assigned in order from 1, and each tree will be written
+in turn (in order to accommodate more restricted readers than our own).
+For the sample input given above for <a href="SWC_Tree.html#Read_SWC_File">Read_SWC_File</a>, the output produced by this
+routine would be:
+</p>
+<pre>
+ # Tree 0 (8 nodes):
+
+ 1 1 2 51 25 1.4 -1
+ 2 0 4 67 55 2.2 1
+ 3 0 5 240 40 1.4 2
+ 4 6 23 255 0 1.7 3
+ 5 5 2 185 49 1.4 1
+ 6 5 195 504 19 1.4 5
+ 7 6 346 509 56 1.4 6
+ 8 6 196 45 10 1.7 6
+
+ # Tree 1 (2 nodes):
+
+ 9 0 100 200 32 1.3 -1
+ 10 0 222 361 15 1.2 9
+</pre>
+  <h3 class="fn"><table>
+     <a name="Print_SWC_Tree"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Print_SWC_Tree (<a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>, FILE *<I>output</I>, int <I>indent</I>, string <I>format</I>)</td></tr>
+  </table></h3>
+<p>
+Print an ASCII representation of the tree <I>tree</I> to the file <I>output</I> indented by
+<I>indent</I> spaces, where floating point numbers will be formated according to the string
+<I>format</I>.  As an example, for the sample input given above for <a href="SWC_Tree.html#Read_SWC_File">Read_SWC_File</a>, the print
+out for the first of the two trees, given <I>indent=4</I> and <I>format="%.1f"</I>, would be:
+</p>
+<pre>
+     (2.0,51.0,25.0):1.4
+     |
+     +->(4.0,67.0,55.0):2.2
+     |  (5.0,240.0,40.0):1.4
+     |  (23.0,255.0,0.0):1.7
+     |
+     +->(2.0,185.0,49.0):1.4
+        (195.0,504.0,19.0):1.4
+        |
+        +->(346.0,509.0,56.0):1.4
+        |
+        +->(196.0,45.0,10.0):1.7
+</pre>
+  <h3 class="fn"><table>
+     <a name="Make_SWC_Tree"></a><tr><td valign="baseline"><a href="SWC_Tree.html">SWC_Tree</a> *</td>
+     <td valign="baseline">Make_SWC_Tree (int <I>size_estimate</I>)</td></tr>
+  </table></h3>
+<p>
+Generate an initally empty tree with room for <I>size_estimate</I> nodes before a reallocation of
+memory becomes necessary.
+</p>
+  <h3 class="fn"><table>
+     <a name="Add_Vertex_As_Root"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Add_Vertex_As_Root (<a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>, int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+     <a name="Add_Vertex_As_First_Child"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Add_Vertex_As_First_Child (<a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>, <a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *<I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+     <a name="Add_Vertex_As_Sibling"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Add_Vertex_As_Sibling (<a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>, <a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *<I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+     <a name="Add_Vertex_As_Father"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *</td>
+     <td valign="baseline">Add_Vertex_As_Father (<a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>, <a href="SWC_Tree.html#SWC_Node">SWC_Node</a> *<I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>kind</I>, double <I>x</I>, double <I>y</I>, double <I>z</I>, double <I>r</I>)</td></tr>
+  </table></h3>
+<p>
+<I>Add_Vertex_As_X</I> adds a new node or vertex to the tree <I>tree</I> of kind <I>kind</I>, with position
+<I>(x,y,z)</I> and radius <I>r</I>.  The new node is added (a) as the root,
+(b) as the first child of <I>v</I>, (c) as the immediately following sibling of <I>v</I>, or (d) as the
+father of <I>v</I> for <I>X</I> equal to <I>Root</I>, <I>First_Child</I>, <I>Sibling</I>, and <I>Father</I>, respectively.
+Other nodes in the tree adjust accordingly.  That is, the first child of <I>v</I> becomes the second
+child of <I>v</I> and the immediate sibling of the new node in the case of <I>Add_Vertex_As_First_Child</I>.
+For <I>Add_Vertex_As_Father</I>, the new node takes the place of <I>v</I> in its sibling list and <I>v</I>
+becomes the sole child of the new node.  The current root becomes the only child of the new
+node in the case of <I>Add_Vertex_As_Root</I>, and the sibling of <I>v</I> becomes the sibling of the
+new node in the case of <I>Add_Vertex_As_Sibling</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Clip_SWC_Tree"></a><tr><td valign="baseline"><a href="SWC_Tree.html#SWC_Bundle">SWC_Bundle</a> *</td>
+     <td valign="baseline">Clip_SWC_Tree<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="SWC_Tree.html#SWC_Bundle">SWC_Bundle</a> *<I>forest</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Array.html#Double_Vector">Double_Vector</a> *<I>beg</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Double_Vector">Double_Vector</a> *<I>end</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Clip the SWC_Tree <I>tree</I> to the rectangle in 3D real space whose minimimum corner is
+<I>beg</I> and whose maximum corner is <I>end</I>.  This operation can split <I>tree</I> into any number
+of pieces (or none at all), so the routine fills in the bundle <I>forest</I> with the resulting
+collection of trees.
+</p>
+<p>
+The bundle <I>forest</I> should be a semantically valid <a href="SWC_Tree.html#SWC_Bundle">SWC_Bundle</a> on input, i.e. if
+<I>num_trees</I> &gt; 0 then <I>trees</I> should be a vector of at least <I>num_trees</I> pointers to
+SWC trees, and exactly the first <I>num_trees</I> of these pointers should be to valid
+<a href="SWC_Tree.html">SWC_Tree</a> objects.  The simplist way to establish a semantically valid bundle is to initialize
+<I>num_trees</I> to 0 and <I>trees</I> to NULL.  This routine will take the bundle and modify it
+so that it reflects the number of trees in the file being read and so that <I>trees</I> is a vector
+of pointers to each SWC tree read, where any previous SWC trees in the bundle are freed.
+The user is responsible for managing the SWC_Tree objects in the bundle
+and the vector <I>trees</I> that points at the trees.
+</p>
+  <h3 class="fn"><table>
+     <a name="SWC_Tree_Extent"></a><tr><td valign="baseline"><a href="Array.html#Extent_Bundle">Extent_Bundle</a> *</td>
+     <td valign="baseline">SWC_Tree_Extent (<a href="Array.html#Extent_Bundle">Extent_Bundle</a> *<I>extent</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>)</td></tr>
+  </table></h3>
+<p>
+Compute the smallest bounding rectangle in 3D real space that contains all the vertices
+of the tree and return it in the bundle <I>extent</I>.
+If the <I>min</I> and <I>max</I> fields of the <a href="Array.html#Extent_Bundle">Extent_Bundle</a> are NULL on input,
+then the routine generates 3-element <a href="Array.html#Double_Vector">Double_Vector</a>s, otherwise whatever array
+they point to is converted to a <I>3</I>-element <a href="Array.html#Double_Vector">Double_Vector</a> if they are not already thus,
+and then filled in with the extent values.  The caller is responsible for freeing or
+killing these vectors.
+</p>
+  <h3 class="fn"><table>
+     <a name="SWC_Tree_Path_Length"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">SWC_Tree_Path_Length (<a href="SWC_Tree.html">SWC_Tree</a> *<I>tree</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the path length of <I>tree</I> which is defined as the sum of the lengths of all the
+edges in the tree.
+</td></tr></table>
+</body>
+</html>

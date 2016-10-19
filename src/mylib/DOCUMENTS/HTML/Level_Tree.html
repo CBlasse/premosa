@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Level_Tree Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Level_Tree Class Reference</h1>
+
+<p>
+A tree of all the level sets in an Array or Slice.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;level.set.h&gt;
+</pre>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set"> Level_Set </a></b>
+     </td><td class="define" valign="baseline">: void</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Level_Tree *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Build_Level_Tree">Build_Level_Tree</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Pixel_APart *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Print_Level_Tree">Print_Level_Tree</a></b>
+     (Level_Tree *<I>t</I>, int <I>indent</I>, int <I>idwidth</I>, int <I>valwidth</I>, FILE *<I>file</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Get_Level_Tree_Connectivity">Get_Level_Tree_Connectivity</a></b>
+     (Level_Tree *<I>t</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Get_Level_Tree_APart">Get_Level_Tree_APart</a></b>
+     (Level_Tree *<I>t</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Set_Level_Tree_APart">Set_Level_Tree_APart</a></b>
+     (Level_Tree *<I>t</I>, Pixel_APart *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Level_Set *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Root">Level_Set_Root</a></b>
+     (Level_Tree *<I>t</I>)</td></tr>
+<tr><td class="return" valign="baseline">Level_Set *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Child">Level_Set_Child</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">Level_Set *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Sibling">Level_Set_Sibling</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Size">Level_Set_Size</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Level">Level_Set_Level</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Peak">Level_Set_Peak</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_LeftMost">Level_Set_LeftMost</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Background">Level_Set_Background</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#Level_Set_Id">Level_Set_Id</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Level_Tree.html#List_Level_Set">List_Level_Set</a></b>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arg</I>, void (*<I>handler</I>)(Indx_Type p, void *arg))</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+A <B>level set</B> of level <I>h</I> is a maximal, connected set of pixels all of whose values are
+not less than <I>h</I> and at least one of which has value exactly <I>h</I>.  A level set is maximal in that
+any pixels outside the set adjacent to a pixel in the set have a value less than <I>h</I>.
+Consider the set <I>L</I> of all level sets of all levels in an image.  First observe that the
+number of sets is less than the number of pixels in the image as a level set of level h
+must have at least one pixel of value <I>h</I> unique to it.  Second, observe that if A and B are
+two level sets (of any respective levels) then either A and B are disjoint or one is a
+subset of the other (the one of strictly greater level).  This implies that the transitive
+reduction of the subset relationship over <I>L</I> is a tree, and this tree is called here
+the <B>level tree</B> for the image.  To be more concrete, every node in a level tree represents
+one of the level sets of <I>L</I>.  The root of the tree is the level set of level 0 (which is the
+entire image).  Level set A is a child of level set B iff B is a subset of A and there is no
+level set C such that B is a subset of C and C is a subset of A.  The level of B must clearly
+be greater than the level of A.
+</p>
+<p>
+A <B>Level_Tree</B> object is built for a <I>UINT8_TYPE</I> or <I>UINT16_TYPE</I> array or slice of any
+dimensionality with respect to either (2n)- or (3<sup>n</sup>-1)-connectivity by the routine
+<a href="Level_Tree.html#Build_Level_Tree">Build_Level_Tree</a>.  The connectivity and the array or slice from which it was built can be
+retrieved later with <a href="Level_Tree.html#Get_Level_Tree_Connectivity">Get_Level_Tree_Connectivity</a> and <a href="Level_Tree.html#Get_Level_Tree_APart">Get_Level_Tree_APart</a>.
+A <B>Level_Tree</B> object
+can be read and written to a file, but it relies on a reference to the underlying array from
+which it was built, so when your read in a <B>Level_Tree</B> you must re-establish this reference
+with <a href="Level_Tree.html#Set_Level_Tree_APart">Set_Level_Tree_APart</a>.  One can also produce a diagnostic print out of a <B>Level_Tree</B>
+with <a href="Level_Tree.html#Print_Level_Tree">Print_Level_Tree</a>, but generally level trees are so large that this is only recommended
+for small debug situations.
+</p>
+<p>
+Once you have a tree you can then traverse the nodes of the tree.  A <B>Level_Set</B> is an opaque
+object representing a node in the tree.  It does not have any class operators as its existence
+and access is strictly relative to a <B>Level_Tree</B>.  All the traveral primitives operate upon
+a pointer to a <B>Level_Set</B>.
+You can get the root of a tree with <a href="Level_Tree.html#Level_Set_Root">Level_Set_Root</a> and your can
+recursively traverse the tree with <a href="Level_Tree.html#Level_Set_Child">Level_Set_Child</a> which takes you to the first child of
+a level set, and <a href="Level_Tree.html#Level_Set_Sibling">Level_Set_Sibling</a> which then takes you to the next sibling of a level set.
+For example, the code snippet below traverses every node in a level set tree <I>T</I>:
+</p>
+<pre>
+ void Traverse_Tree(Level_Tree *t, Level_Set *p)
+ { // Visiting p
+   for (p = Level_Set_Child(t,p); p != NULL; p = Level_Set_Sibling(t,p))
+     Traverse_Tree(t,p);
+ }
+
+ Traverse_Tree(T,Level_Set_Root(T));
+</pre>
+<p>
+For each level set you can get its level with <a href="Level_Tree.html#Level_Set_Level">Level_Set_Level</a>, its size in pixels
+with <a href="Level_Tree.html#Level_Set_Size">Level_Set_Size</a>, the value of the largest pixel in the level set with <a href="Level_Tree.html#Level_Set_Peak">Level_Set_Peak</a>,
+a representative left-most pixel in the level set (useful for flood fills, see the <a href="Connectivity.html">Connectivity</a>
+module) with <a href="Level_Tree.html#Level_Set_LeftMost">Level_Set_LeftMost</a>, a unique integer id in the range
+<i>[0,L-1]</i>
+where <I>L</I> is
+the number of level sets in the tree with <a href="Level_Tree.html#Level_Set_Id">Level_Set_Id</a>, and the background of a level
+set with <a href="Level_Tree.html#Level_Set_Background">Level_Set_Background</a>.  The background value of a level set is the value of the
+largest pixel adjacent to the level set, but not in it.
+</p>
+<hr />
+
+<h2>Descriptive Types Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Level_Set"></a><tr><td valign="top">Level_Set</td><td>: void</td></tr>
+  </table></h3>
+<p>
+Void (opaque) object representing a node in a <a href="Level_Tree.html">Level_Tree</a>.  Access to the contents of these
+objects, that can only be created by the tree object, is entirely through the routines below.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Build_Level_Tree"></a><tr><td valign="baseline"><a href="Level_Tree.html">Level_Tree</a> *</td>
+     <td valign="baseline">Build_Level_Tree<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Pixel_APart">Pixel_APart</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a level set tree object for <I>UINT8_TYPE</I> or <I>UINT16_TYPE</I> <a href="Array.html">Array</a> or <a href="Slice.html">Slice</a> <I>image</I>
+with respect to <I>2n</I>-connectivity if <I>iscon2n</I> it true, and
+<i>(3<sup>n</sup>-1)</i>
+connectivity otherwise.  Note carefully that the routine creates a new reference to <I>image</I>
+which is held by the level set object.
+Building the level set tree takes <I>28A</I> bytes where <I>A</I> is the size of <I>image</I> in pixels,
+where the level set tree object itself occupies <I>20A</I> bytes.
+Because of this fairly large space overhead, a level set can only be built over <a href="AForm.html#APart">APart</a>s
+that have less than
+<i>2<sup>31</sup>-1</i>
+pixels.  For a detailed description of what a level tree is, see the
+<a href="#details">introduction</a>
+</p>
+  <h3 class="fn"><table>
+     <a name="Print_Level_Tree"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Print_Level_Tree (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, int <I>indent</I>, int <I>idwidth</I>, int <I>valwidth</I>, FILE *<I>file</I>)</td></tr>
+  </table></h3>
+<p>
+Produce a nested print out of level tree <I>t</I>.
+While the routine will work for any tree,
+it generally only makes sense to use it for small trees while debugging, because for a
+really big tree the nesting depth is so deep that the display will be unwiedly.
+The display is printed to file <I>file</I> and indented by <I>indent</I> spaces.  You can control
+the display width of the numbers denoting id and size with <I>idwidth</I>, and the display width
+of numbers denoting background, level, and peak values with <I>valwidth</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Level_Tree_Connectivity"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Get_Level_Tree_Connectivity (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only if level tree <I>t</I> was built with respect to <I>2n</I>-connectivity
+(as opposed to
+<i>(3<sup>n</sup>-1)</i>-connectivity).
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Level_Tree_APart"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Get_Level_Tree_APart (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>)</td></tr>
+  </table></h3>
+<p>
+Return the <a href="Array.html">Array</a> or <a href="Slice.html">Slice</a> (<a href="AForm.html#APart">APart</a>) that level tree <I>t</I> was made from.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Level_Tree_APart"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Set_Level_Tree_APart (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Array.html#Pixel_APart">Pixel_APart</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Creates a new reference to <I>image</I> and sets it to be the image reference of <I>t</I>.
+The somewhat awkward need for this routine is to relink the level tree with its
+image in the event you read it in from a file.  A level tree object can be written
+and later read, but writing the object does not write the image upon which it
+depends, so one must take care to write the image as well.  Later when you
+read both the image and level tree from the file, one needs this routine link
+them back up.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Root"></a><tr><td valign="baseline"><a href="Level_Tree.html#Level_Set">Level_Set</a> *</td>
+     <td valign="baseline">Level_Set_Root (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the root of level set tree <I>t</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Child"></a><tr><td valign="baseline"><a href="Level_Tree.html#Level_Set">Level_Set</a> *</td>
+     <td valign="baseline">Level_Set_Child (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return the left-most child of level set <I>r</I> within tree <I>t</I>, returning <I>NULL</I>
+if there is none.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Sibling"></a><tr><td valign="baseline"><a href="Level_Tree.html#Level_Set">Level_Set</a> *</td>
+     <td valign="baseline">Level_Set_Sibling (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return the sibling immediately to the right of level set <I>r</I> within tree <I>t</I>, returning <I>NULL</I>
+if there is none.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Size"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Level_Set_Size (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of pixels in level set <I>r</I> of tree <I>t</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Level"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Level_Set_Level (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return the level of level set <I>r</I> of tree <I>t</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Peak"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Level_Set_Peak (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return the peak or largest valued pixel within level set <I>r</I> of tree <I>t</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_LeftMost"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Level_Set_LeftMost (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return a 'leftmost' pixel of level set <I>r</I> of tree <I>t</I>.  A leftmost pixel is one
+that is guaranteed to be on the outer contour of the level set and so can be given
+to one of the <a href="Connectivity.html">Connectivity</a> module routines if you wish to traverse all the pixels in a
+level set.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Background"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Level_Set_Background (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return the background of level set <I>r</I> of tree <I>t</I>.
+The background value of a level set is the value of the
+largest pixel adjacent to the level set, but not in it.
+</p>
+  <h3 class="fn"><table>
+     <a name="Level_Set_Id"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Level_Set_Id (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Return the internal id level set <I>r</I> of tree <I>t</I>.
+This id is a unique integer in the range
+<i>[0,L-1]</i>
+where <I>L</I> is the number of level sets in the tree.
+</p>
+  <h3 class="fn"><table>
+     <a name="List_Level_Set"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">List_Level_Set (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arg</I>, void (*<I>handler</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arg))</td></tr>
+  </table></h3>
+<p>
+Call the routine <I>handler</I> on every pixel in level set <I>r</I> of tree <I>t</I>.
+A pointer <I>arg</I> to an amorphous data package is passed through the routine to each
+call of handler along with a pixel <I>p</I>.
+</td></tr></table>
+</body>
+</html>

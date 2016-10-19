@@ -1,0 +1,63 @@
+BUILD INSTRUCTION FOR THE "MY-LIB" CODE LIBRARY
+
+     Create a folder where you want to build the package and then unpack mylib.tar.gz
+   therein.  On Unix just "tar -xzf mylib.tar.gz", and on typical Mac or Win desktops
+   double clicking should do the trick.  You'll end up with a bunch of .p and .h source
+   files, a .c file (generator.c), two make files (one for UNIX/Mac, one for Windows) and
+   three sub-folders: the MY_FFT package, the MY_TIFF package, and a DOCUMENTS folder
+   that you should look at to get started with the library.
+
+   UNIX or MAC OS X:
+   
+        On Unix systems and Mac OS X, building the library is simply a matter of uttering
+      "make".  The build requires a C-compiler such as gcc.  Simply replace the CC variable
+      in the Makefile(s) (there is one at each directory) with the name of the compiler
+      you want to use.  The result is the library "libmylib.a".  We do not install it for
+      you.  You can either put libmylib.a and the .h files in places known to your system's
+      C-compiler (e.g. /usr/local/lib and /usr/local/include, respectively on a Mac) or you
+      can reset the appropriate compiler environment variables to include the paths to the
+      library and its .h's (e.g. LD_LIBRARY and CPATH on a Mac).  Then you are ready to go,
+      simply link the library in with -lmylib when compiling code that calls the library.
+      
+        WARNING: The compile builds for 64-bit architectures (the "-m64" option).  If you
+      do not compile your code with this option then the linker will not find the
+      mylib routines.  Fix this either by using the flag when compiling your code, or
+      by remaking mylib but without the "-m64"-flag (simply by redefining the MFLAGS
+      variable at the top of the Makefile(s).
+
+      "make clean": Removes all auxiliary files and the library, leaving just the original
+                    sources.
+
+      "make package": Makes mylib.tar.gz from the sources should you every want to pass the
+                      library or a modification thereof forward.
+   
+   WINDOWS:
+   
+        We assume that most Windows developers work in Microsoft Visual Studio and will not
+      necessarily have UNIX "make" equivalents installed on their machines.  So we provide
+      make-files based on the free software CMake.  The following steps are hopefully easy
+      for you:
+      
+      1. Install CMake 2.8 or better, if it is not already installed on your machine.
+         Download and run the installer for your system.
+      
+                  http://www.cmake.org/cmake/resources/software.html
+      
+      2. Install Visual Studio 2008 or better, if you don't already have it on your machine.
+         One of the free "Express Edition" versions is fine, e.g. Visual Studio 2010 Express:
+      
+                  http://www.microsoft.com/express/Downloads/#2010-Visual-CPP
+      
+      3. Open a "Visual Studio" command prompt and start in the root of the source directory.
+         This command prompt ensures environment variables are set appropriately.  It can be
+         located in the Start Menu under:
+
+                   "All Program" >> "Microsoft Video Studio" >> "Visual Studio Tools"
+      
+      4. Type these commands:
+      
+              mkdir build
+              cd build
+              cmake ..
+         
+      5. Open build/mylib.sln in Visual Studio and build the solution.

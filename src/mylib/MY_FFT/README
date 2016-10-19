@@ -1,0 +1,125 @@
+
+                                 MY-FFT PACKAGE
+                                   Gene Myers
+                                  June 19, 2009
+
+  This is a basic C-code library for fast fourier transforms.  It provides the following
+functionality:
+
+  1 Forward and inverse FFT of complex arrays, in place.
+
+  2 Forward and inverse FFT of real arrays, in place.
+
+  3 Convolution and correlation of real and complex arrays.
+
+  4 Routines are provided that handle the case of multi-dimensional arrays with
+      an arbitrary number of dimensions.  Separate routine interfaces are provided
+      for the case of one-dimensional arrays as this case can be further optimized.
+
+  5 Routines are provided for floating point and double precision numbers.
+
+  6 Optimizations for the Intel processor SSE3 hardware capabilities can be compiled in.
+
+  7 The code is re-entrant and hence can be threaded.
+
+  Space is often at a premium.  The routines for the FFT of real arrays take half the
+space and unlike the code in say, Numerical Recipes, take advantage of the symmetries
+of the transform to work in place.  To further improve space performance floating point
+as opposed to double precision routines are also provided, saving another half in space.
+The numerical stability of the floating point versions is significantly "weaker" than for
+the double precision case, but the routines are twice as fast, and as long as the numbers
+under consideration are not too large (e.g. [0,255.]) the stability is more than good
+enough for correlation and convolution maximization problems.
+
+  The routines will handle multi-dimensional arrays that are over 2Gb in size on 64-bit
+machines.  Each individual dimension must fit in a signed integer, but the total size
+of the array, i.e. the product of its dimensions, may be as large as 2^63.
+
+  The codes only work for powers of 2 at the current time.  For these values the codes
+are competitive (+ or - 10% in run time) with the FFTW package for any power of 2.
+The FFTW package is considered the best open-source FFT package available.  The advantage
+of our library is that it is simple enough that you can actually look "under the hood",
+it is a heck of a lot less code, and yet it does just as well.  This code proves the
+point that if you optimize a handful of things that are important, then you get nearly
+optimal performance.  The complex code generator and compiler-compiler of FFTW is buying
+one almost nothing over a set of intelligently selected hand-optimizations.
+
+  The library consists of two modules fft.F.c and fft.D.c with their associated .h files,
+fft.F.h and fft.D.h.  The "F" .c,.h pair realizes a floating point interface and the
+"D" .c,.h pair realizes a double precision interface.  They can both be linked in to your
+application (as their externally visible names are distinct), but if you just need one or
+the other precision then you need only link in the relevant .o file.
+
+  Saying "make" at the command line compiles fft.F.o, fft.D.o, and myfft.o (which contains
+both interfaces in a single .o).  Link in the appropriate one to your application.
+The make file gives the -msse3 option to the gcc compiler which instructs it to use the
+Intel SSE3 instruction optimizations.  This option will not work on any other type of
+chip (e.g. AMD) and needs to be edited or commented out for such architectures.
+
+  Saying "make test" builds and runs a suite of test routines that make sure everything is
+fine with the build on your machine.  It should be obvious when something is wrong.
+
+  Saying "make package" builds a compressed tarball of the package for export to
+another system.
+
+  The interface is documented in detail in each of the two .h files.  The documentation
+of the code itself is OK, but probably not fully explanatory save to someone expert on
+the subject of FFTs.
+
+  This code was developed by Gene Myers and completed in June of 2009 while at the
+Janelia Farm Research Campus of the Howard Hughes Medical Institute.  It is released
+under the following  copyright notice that applies to all the files:
+
+/*****************************************************************************************\
+*                                                                                         *
+*  Copyright (c) June 19, '09 Dr. Gene Myers and Howard Hughes Medical Institute ("HHMI") *
+*                                                                                         *
+*  This software is provided and licensed on the following terms.  By downloading,        *
+*  using and/or copying the software, you agree that you have read, understood, and       *
+*  will comply with these terms.                                                          *
+*                                                                                         *
+*  Redistribution and use in source and binary forms, with or without modification,       *
+*  are permitted provided that the following conditions are met:                          *
+*     1. Redistributions of source code must retain the above copyright notice, this      *
+*          list of conditions and the following disclaimer.                               *
+*     2. Redistributions in binary form must reproduce the above copyright notice, this   *
+*          list of conditions and the following disclaimer in the documentation and/or    *
+*          other materials provided with the distribution.                                *
+*     3. Neither the name of the Howard Hughes Medical Institute nor the names of its     *
+*          contributors may be used to endorse or promote products derived from this      *
+*          software without specific prior written permission.                            *
+*                                                                                         *
+*  For use of this software and documentation for purposes other than those listed above, *
+*  contact Dr. Gene Myers at:                                                             *
+*                                                                                         *
+*    Janelia Farms Research Campus                                                        *
+*    19700 Helix Drive                                                                    *
+*    Ashburn, VA  20147-2408                                                              *
+*    Tel:   571.209.4153                                                                  *
+*    Fax:   571.209.4083                                                                  *
+*    Email: myersg@janelia.hhmi.org                                                       *
+*                                                                                         *
+*  For any issues regarding HHMI or use of its name, contact:                             *
+*                                                                                         *
+*    Howard Hughes Medical Institute                                                      *
+*    4000 Jones Bridge Road                                                               *
+*    Chevy Chase, MD 20815-6789                                                           *
+*    (301) 215-8500                                                                       *
+*    Email: webmaster@hhmi.org                                                            *
+*                                                                                         *
+*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY    *
+*  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES   *
+*  OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE ARE          *
+*  DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY   *
+*  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, *
+*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR *
+*  PROFITS; REASONABLE ROYALTIES; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY     *
+*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING         *
+*  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF   *
+*  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                                             *
+*                                                                                         *
+*  The names of the authors and copyright holders may not be used in advertising or       *
+*  publicity pertaining to the software without specific, written prior permission.       *
+*  Title to copyright in this software will remain with copyright holders.                *
+*                                                                                         *
+\*****************************************************************************************/

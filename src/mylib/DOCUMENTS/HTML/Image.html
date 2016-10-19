@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Image I/O Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Image I/O Module Reference</h1>
+
+<p>
+I/O of Tiff-encoded multi-channel images and stacks.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;image.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Layer_Bundle"> Layer_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#num_layers"> num_layers </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#layers"> layers </a></b>
+     </td><td class="define" valign="baseline">: Array *[]</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Number of layers in the layer list</td></tr>
+    <tr><td class="comment" valign="baseline">layers[i] is the image of the i'th layer for i in [0,num_layers-1]</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Series_Bundle"> Series_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#prefix"> prefix </a></b>
+     </td><td class="define" valign="baseline">: string</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#suffix"> suffix </a></b>
+     </td><td class="define" valign="baseline">: string</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#padded"> padded </a></b>
+     </td><td class="define" valign="baseline">: boolean</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#num_width"> num_width </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#first_num"> first_num </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment" valign="baseline">Bundle names are "%s%0*d%s",prefix,num_width,#,suffix</td></tr>
+    <tr><td class="comment" valign="baseline">&nbsp;&nbsp;or possibly "%s%d%s",prefix,#,suffix if padded is false.</td></tr>
+    <tr><td class="comment" valign="baseline">&nbsp;&nbsp;Tries both when reading.</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Image_Compress"> Image_Compress </a></b>
+     </td><td class="define" valign="baseline">: { DONT_PRESS LZW_PRESS PACKBITS_PRESS }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">string</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Image_Error">Image_Error</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Image_Error_Release">Image_Error_Release</a></b>
+     ()</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Read_Image">Read_Image</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (string <I>file_name</I>, int <I>layer</I>)</td></tr>
+<tr><td class="return" valign="baseline">Layer_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Read_Images">Read_Images</a></b>
+     (string <I>file_name</I>, Layer_Bundle *<I>images</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Write_Image">Write_Image</a></b>
+     (string <I>file_name</I>, Array *<I>array</I>, Image_Compress <I>comp</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Write_Images">Write_Images</a></b>
+     (string <I>file_name</I>, Layer_Bundle *<I>images</I>, Image_Compress <I>comp</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Series_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Parse_Series_Name">Parse_Series_Name</a></b>
+     (Series_Bundle *<I>files</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>file_name</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Read_Series">Read_Series</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Series_Bundle *<I>files</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>layer</I>)</td></tr>
+<tr><td class="return" valign="baseline">Layer_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Read_All_Series">Read_All_Series</a></b>
+     (Series_Bundle *<I>files</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Layer_Bundle *<I>images</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Write_Series">Write_Series</a></b>
+     (Series_Bundle *<I>files</I>, Array *<I>image</I>, Image_Compress <I>comp</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Image.html#Write_All_Series">Write_All_Series</a></b>
+     (Series_Bundle *<I>files</I>, Layer_Bundle *<I>images</I>, Image_Compress <I>comp</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<a name="tiff"><a>
+<p>
+A <B>Tiff</B>-encoded file contains a sequence of one or more <B>image file descriptors</B> (IFD's) each of
+which contains any number of <B>channels</B> each of which is a 2D array, all of the same shape.
+A 3D stack is not explicitly supported but the common convention is that if a tiff file
+contains a sequence of IFD's all of which encode the same channels and arrays of the
+same dimensions and types, then the sequence of IFD's gives each successive z-plane of
+a 3D stack in each channel.  Each channel's array can contain signed or unsigned integers
+of some specific number of bits, or a 32-bit floating point number.  Each channel also
+has a photometric interpretation which in effect can be one of RED, GREEN, BLUE, ALPHA,
+MAPPED, or PLAIN, with the restriction that the only channel that can be MAPPED
+is the first.  (Tiff actually uses a somewhat baroque and complicated set of tags
+to encode (or not) these interpretations, but in effect the list just given is the information
+that is present.)
+</p>
+<a name="layer"><a>
+<p>
+We divide the sequence of channels in an IFD into <B>layers</B> as follows:
+4 channels in sequence that together constitute a RED, GREEN,
+BLUE, and ALPHA channel (the order is not important), form an <B>RGBA layer</B>, 3 channels in
+sequence that consitute a RED, GREEN, and BLUE channel, form an <B>RGB layer</B>, and any
+other channel is a <B>PLAIN layer</B>.  The layers are read off in sequence, always taking
+RGBA over RGB over PLAIN as the next layer.  For example, if an IFD has a sequence "RABGRA"
+then it has 3 layers, the first is RGBA, and the second and third are considered PLAIN
+despite having interpretations RED and ALPHA.  As another example, "MGBRG", has 3 layers,
+the second is RGB, the third is PLAIN, and the first will be RGB as it will be the result
+of applying the color map to the first channel.
+The examples are convoluted in order to clarify how channels are grouped into layers,
+in most cases the channel sequences are straightforward, e.g. PRGBP.
+</p>
+<p>
+The routines in the <B>Image</B> module, read and write the 2D or 3D layers of a tiff-encoded file
+into or from an <a href="Array.html">Array</a> of the corresponding <a href="Array.html#kind">kind</a>, <a href="Array.html#type">type</a>, and <a href="Array.html#scale">scale</a>.  One should be
+aware of the following subtleties:
+<ol>
+<li>
+The scale of an array is actually operative here: the values of a 12-bit UINT16_TYPE array will be
+written as 12-bit numbers to the tiff file, which in turn, when read, will produce an array
+with a scale of 12.
+<br>
+<li>
+The <a href="Array.html#text">text</a> field of the first layer array is written to a <B>JF_ANO_BLOCK</B> tag upon a write and
+this tag is loaded into the text field of the first layer array when read.  There is no
+limitation on the size of a text field, so one can in principle encode arbitrarily complex
+meta-data about an image in this field in an ASCII-oriented format such as XML.
+<br>
+<li>
+The software will also read LSM files produced by Zeiss microscopes.  The format is a small
+variation on the tiff format.  LSM's frequently contain thumbnails as well as the primary
+image.  These are ignored so that just the "primary" stack is read.
+<li>
+All the read routines may return <I>NULL</I> if they can't open a file or if the tiff
+contents are improperly formated.  Similarly, the write routines will return true if they
+cannot open a file for writing.  In such an error event, one may
+get a descriptive string of the problem by calling <a href="Image.html#Image_Error">Image_Error</a>, right after the
+error occurs.  In order for this to be thread-safe, if multiple threads encounter an
+error, only one of the threads (which is unspecified) records a descriptive string.
+One must subsequently "release" the recorded error (with <a href="Image.html#Image_Error_Release">Image_Error_Release</a>) in order
+for a thread to record a new error, if one occurs.  So an error message must be released even
+when one's application is not threaded.
+</ol>
+</p>
+<p>
+<a href="Image.html#Read_Image">Read_Image</a> reads a single specified layer from a specified file and returns the result
+as a 2D or 3D array of either <I>PLAIN_KIND</I>, <I>RGB_KIND</I>, or <I>RGBA_KIND</I> according to the number
+of IFDs in the file and the series of channel kinds in each IFD.  <a href="Image.html#Read_Images">Read_Images</a> reads all
+the layers in a file and returns them in a <a href="Image.html#Layer_Bundle">Layer_Bundle</a> structure.  <a href="Image.html#Write_Image">Write_Image</a> writes
+a single 2D or 3D array as a Tiff file compressing it according to the <a href="Image.html#Image_Compress">Image_Compress</a>
+value passed to it.  <a href="Image.html#Write_Images">Write_Images</a> writes a set of either 2D or 3D arrays as supplied
+in a <a href="Image.html#Layer_Bundle">Layer_Bundle</a> to a single file, compressing them as indicated.
+</p>
+<p>
+Occasionally, especially with older data sets, the individual planes of a 3D stack are
+recorded as separate files with a number series in their names.  To facilitate this situation
+<B>Mylib</B> provides the "(Read/Write)_(All_)Series" routines (<a href="Image.html#Read_Series">Read_Series</a>,
+<a href="Image.html#Read_All_Series">Read_All_Series</a>, <a href="Image.html#Write_Series">Write_Series</a>, <a href="Image.html#Write_All_Series">Write_All_Series</a>) that are analogous
+to the "(Read/Write)_Image(s)" routines above save that they read or write a numbered series of
+files.  The key is the routine <a href="Image.html#Parse_Series_Name">Parse_Series_Name</a> which parses the first name in such a series and
+fills in a <a href="Image.html#Series_Bundle">Series_Bundle</a> structure that can then be given to the IO routines to read or
+write the series.
+</p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Layer_Bundle"></a>     <tr><td class="name" valign="top">Layer_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>num_layers</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>layers</i></td><td class="define">: <a href="Array.html">Array</a> *[]</td></tr>
+    </table>
+  </h3>
+<p>
+Used to encode a set of 2D or 3D arrays that can be read from or written to a tiff file as
+a series of <a class="ref" href="Image.html#layer">layer</a>s.  <I>num_layers</I> is the number of arrays or layers in the set, and
+<I>layers</I>[i] is a pointer to the
+<I>i</I><sup>th</sup> array in the set, where <I>i</I>&nbsp;&isin;&nbsp;[0,num_layers-1]</I>.  All the
+arrays are either 2D or 3D and have the same dimensions.  The arrays can be of any kind
+except <I>COMPLEX_KIND</I> and are of any type except <I>FLOAT64_TYPE</I>.  The arrays in the set
+do not need to be of the same kind, type, or scale.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Series_Bundle"></a>     <tr><td class="name" valign="top">Series_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>prefix</i></td><td class="define">: string</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>suffix</i></td><td class="define">: string</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>padded</i></td><td class="define">: boolean</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>num_width</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>first_num</i></td><td class="define">: int</td></tr>
+    </table>
+  </h3>
+<p>
+Used to repesent an unbounded series of file names that is most easily explained with a couple
+of examples.  Suppose <I>prefix</I> = "x", <I>suffix</I> = ".tif", and <I>first_num</I> = 8.  If
+<I>padded</I> is false, then the sequence of names modeled is: "x8.tif", "x9.tif", "x10.tif", ....
+On the otherhand, if <I>padded</I> is true and <I>num_width</I> = 3, then the sequence of names modeled
+is: "x008.tif", "x009.tif", "x010.tif", ...
+</p>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Image_Compress"></a><tr><td valign="top">Image_Compress</td><td>: { DONT_PRESS LZW_PRESS PACKBITS_PRESS }</td></tr>
+  </table></h3>
+<p>
+Values that indicate what kind of compression should be applied to a data being written in
+the tiff format.  <I>DONT_PRESS</I> indicates no compression.  <I>PACKBITS_PRESS</I> indicates
+<a href="http://en.wikipedia.org/wiki/PackBits">Packbits</a>
+compression which is a lossless run-length encoding scheme.  Lastly, <I>LZW_PRESS</I> indicates
+<a href="http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch">Lempel-Ziv-Welch</a>
+compression which is a very effective lossless repeat compression scheme.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Image_Error"></a><tr><td valign="baseline">string</td>
+     <td valign="baseline">Image_Error ()</td></tr>
+     <a name="Image_Error_Release"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Image_Error_Release ()</td></tr>
+  </table></h3>
+<p>
+All the routines that read layers may return <I>NULL</I> if they can't open a file or if the tiff
+contents are improperly formated.  Similarly, the write routines will return true if they
+cannot open a file for writing.  In such an error event, one may
+get a descriptive string of the problem by calling <B>Image_Error</B>, right after the
+error occurs.  In order for this to be thread-safe, if multiple threads encounter an
+error, only one of the threads (which is unspecified) records a descriptive string.
+One must subsequently "release" the recorded error with <B>Image_Error_Release</B> in order
+for a thread to record a new error, if one occurs.  So an error message must be released even
+when one's application is not threaded.
+</p>
+  <h3 class="fn"><table>
+     <a name="Read_Image"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Read_Image<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (string <I>file_name</I>, int <I>layer</I>)</td></tr>
+  </table></h3>
+<p>
+Read layer <I>layer</I> from file <I>file_name</I> returning a newly generated 2D array if the file
+contains a single IFD, and a newly generated 3D array otherwise.  The layer is color mapped
+if the tiff channel kind indicates it should be.
+</p>
+  <h3 class="fn"><table>
+     <a name="Read_Images"></a><tr><td valign="baseline"><a href="Image.html#Layer_Bundle">Layer_Bundle</a> *</td>
+     <td valign="baseline">Read_Images (string <I>file_name</I>, <a href="Image.html#Layer_Bundle">Layer_Bundle</a> *<I>images</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Read all the layers from file <I>file_name</I> and return the result in <I>images</I>.
+</p>
+<p>
+The bundle <I>images</I> should be a semantically valid <a href="Image.html#Layer_Bundle">Layer_Bundle</a> on input, i.e. if
+<I>num_layers</I> &gt; 0 then <I>layers</I> should be a vector of at least <I>num_layers</I> pointers to
+arrays, and exactly the first <I>num_layers</I> of these pointers should be to valid
+<a href="Array.html">Array</a> objects.  The simplist way to establish a semantically valid bundle is to set
+<I>num_layers</I> to 0 and <I>layers</I> to NULL.  This routine will take the bundle and modify it
+so that it reflects the number of layers in the file and so that <I>layers</I> points at an
+array for each layer read, where arrays are freed, created, and or modified as necessary
+to produce the result.  The user is responsible for managing the array objects in the bundle
+and the vector <I>layers</I> that points at the arrays.
+</p>
+  <h3 class="fn"><table>
+     <a name="Write_Image"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Write_Image (string <I>file_name</I>, <a href="Array.html">Array</a> *<I>array</I>, <a href="Image.html#Image_Compress">Image_Compress</a> <I>comp</I>)</td></tr>
+  </table></h3>
+<p>
+Write <I>array</I> to a file <I>file_name</I> in the tiff format.  The array must be 2D or 3D and
+cannot be of <I>COMPLEX_KIND</I> or <I>FLOAT64_TYPE</I>.  The file is compressed (or not) according
+to the value of <I>comp</I>.  Writing an LZW compressed file takes almost 3 times longer than
+an uncompressed file, but does result in the file being 30-50% of the uncompressed size.
+Packbits compression is faster run-length compression, but does not compress as effectively.
+</p>
+  <h3 class="fn"><table>
+     <a name="Write_Images"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Write_Images (string <I>file_name</I>, <a href="Image.html#Layer_Bundle">Layer_Bundle</a> *<I>images</I>, <a href="Image.html#Image_Compress">Image_Compress</a> <I>comp</I>)</td></tr>
+  </table></h3>
+<p>
+Write the arrays in <I>images</I> to the file <I>file_name</I> in tiff format.  The arrays in
+<I>images</I> must all be either 2D or 3D, and all have the same dimensions.  The arrays can
+be of different kinds and types, but may not be of <I>COMPLEX_KIND</I> or <I>FLOAT64_TYPE</I>.
+The data in the file is compressed according to the value of the parameter <I>comp</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Parse_Series_Name"></a><tr><td valign="baseline"><a href="Image.html#Series_Bundle">Series_Bundle</a> *</td>
+     <td valign="baseline">Parse_Series_Name (<a href="Image.html#Series_Bundle">Series_Bundle</a> *<I>files</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>file_name</I>)</td></tr>
+  </table></h3>
+<p>
+Parse the string <I>file_name</I> assuming it is of the form <I>"&lt;prefix&gt;&lt;first_num&gt;&lt;suffix&gt;"</I>
+and fills in the supplied <a href="Image.html#Series_Bundle">Series_Bundle</a> <I>files</I> with the constituent parts where <I>num_width</I>
+is the length of the string matched to <I>first_num</I> and <I>padded</I> is true if the number
+begins with a 0.
+</p>
+  <h3 class="fn"><table>
+     <a name="Read_Series"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Read_Series<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Image.html#Series_Bundle">Series_Bundle</a> *<I>files</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>layer</I>)</td></tr>
+  </table></h3>
+<p>
+Read the specified <I>layer</I> from the series of 2D tiff images specified by the <a href="Image.html#Series_Bundle">Series_Bundle</a>
+<I>files</I> into a newly generated 3D <a href="Array.html">Array</a> that is returned as the result.  The routine will
+look for a series of files as specified by <I>files</I>, with the field <I>padded</I> set to both true
+and false, and it will load the <B>longer</B> series.  For example, if <I>files</I> has
+<I>prefix</I>&nbsp;=&nbsp;"x",
+<I>suffix</I> = ".tif", <I>num_first</I> = 8, and <I>num_width</I> = 3, then the routine will look for the
+series "x8.tif", "x9.tif", ...  and for the series "x008.tif", "x009.tif" ... in the file system
+and create the image corresponding to the longer of the two series, setting <I>padded</I>
+accordingly (which incidentally is the only way in which <I>files</I> is modified by the routine).
+</p>
+  <h3 class="fn"><table>
+     <a name="Read_All_Series"></a><tr><td valign="baseline"><a href="Image.html#Layer_Bundle">Layer_Bundle</a> *</td>
+     <td valign="baseline">Read_All_Series (<a href="Image.html#Series_Bundle">Series_Bundle</a> *<I>files</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Image.html#Layer_Bundle">Layer_Bundle</a> *<I>images</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Read all the layers from the series of 2D tiff images specified by <I>files</I>, filling
+<I>images</I> with the array read exactly as for <a href="Image.html#Read_Images">Read_Images</a>.  The identification of the
+series of images to read according to <I>files</I> is as for <a href="Image.html#Read_Series">Read_Series</a> immediately above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Write_Series"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Write_Series (<a href="Image.html#Series_Bundle">Series_Bundle</a> *<I>files</I>, <a href="Array.html">Array</a> *<I>image</I>, <a href="Image.html#Image_Compress">Image_Compress</a> <I>comp</I>)</td></tr>
+  </table></h3>
+<p>
+Write the supplied <I>array</I> to the seres of 2D tiff images specified by <I>files</I>,
+compressed according to the value of <I>comp</I>.  Unlike the read analog of this
+routine, the <I>padded</I> field of <I>files</I> is operative and determines whether the
+number sequence is 0-padded or not.
+</p>
+  <h3 class="fn"><table>
+     <a name="Write_All_Series"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Write_All_Series (<a href="Image.html#Series_Bundle">Series_Bundle</a> *<I>files</I>, <a href="Image.html#Layer_Bundle">Layer_Bundle</a> *<I>images</I>, <a href="Image.html#Image_Compress">Image_Compress</a> <I>comp</I>)</td></tr>
+  </table></h3>
+<p>
+Write the arrays in <I>images</I> to the series of 2D tiff images specified  by <I>files</I>, compressed
+according to the value of <I>comp</I>.  The arrays in
+<I>images</I> must all be either 2D or 3D, and all have the same dimensions.  The arrays can
+be of different kinds and types, but may not be of <I>COMPLEX_KIND</I> or <I>FLOAT64_TYPE</I>.
+</td></tr></table>
+</body>
+</html>

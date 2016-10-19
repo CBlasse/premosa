@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Root Finding Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Root Finding Module Reference</h1>
+
+<p>
+Root finding of a unary function with and without a derivative.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;fct.root.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Root.html#Root_Bundle"> Root_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Root.html#lft"> lft </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Root.html#rgt"> rgt </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A bracket for root finding:</td></tr>
+    <tr><td class="comment" valign="baseline">&nbsp;&nbsp;&nbsp;&nbsp;lft < rgt and f(lft)*f(rgt) < 0</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Root_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Root.html#Find_Root_Bracket">Find_Root_Bracket</a></b>
+     (Root_Bundle *<I>brack</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double (*<I>f</I>)(double x))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Root.html#Find_Function_Root">Find_Function_Root</a></b>
+     (Root_Bundle *<I>brack</I>, double (*<I>f</I>)(double x), double (*<I>df</I>)(double x))</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+This module contains a single numerical routine, <a href="Root.html#Find_Function_Root">Find_Function_Root</a>, for finding the root
+of a unary function.  It employs different strategies depending on whether or not your supply
+it with a function for the derivative.  In either case, the function needs a pair of points that
+bracket a root, modeled by a <a href="Root.html#Root_Bundle">Root_Bundle</a>, that can be computed in teh vicinity of an initial
+interval of interest with <a href="Root.html#Find_Root_Bracket">Find_Root_Bracket</a>.
+</p>
+<p>
+Root finding of n-ary functions is equivalent to solving a system of
+non-linear equations.  There are basically no good, universal methods for such a problem
+and so there is no attempt to provide root finding of n-ary functions.
+</p>
+<p>
+For a description of Brent's method and the Raphson-Newton method employed here in
+see Press, Vetterling, Teukolsky and Flannery, Numerical Recipes in C (Cambridge University
+Press, 1992), Chapter 9.3 and 9.4.
+</p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Root_Bundle"></a>     <tr><td class="name" valign="top">Root_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>lft</i></td><td class="define">: double</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>rgt</i></td><td class="define">: double</td></tr>
+    </table>
+  </h3>
+<p>
+A bracket for root finding pruposes is two points <I>lft &lt; rgt</I> such that
+<I>f(lft) * f(rgt) &lt; 0</I>, i.e. are of opposite signs.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Find_Root_Bracket"></a><tr><td valign="baseline"><a href="Root.html#Root_Bundle">Root_Bundle</a> *</td>
+     <td valign="baseline">Find_Root_Bracket (<a href="Root.html#Root_Bundle">Root_Bundle</a> *<I>brack</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double (*<I>f</I>)(double x))</td></tr>
+  </table></h3>
+<p>
+Given a function <I>f</I> and an initial interval in <I>brack</I>, <a href="Root.html#Find_Root_Bracket">Find_Root_Bracket</a> attempts to find
+a bracket about a root by expanding the interval toward the point closer to 0.  Return <I>NULL</I>
+if a bracket could not be found, otherwise fill in the root bracket values in <I>brack</I> and
+return a pointer to it for convenience.
+</p>
+  <h3 class="fn"><table>
+     <a name="Find_Function_Root"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Find_Function_Root (<a href="Root.html#Root_Bundle">Root_Bundle</a> *<I>brack</I>, double (*<I>f</I>)(double x), double (*<I>df</I>)(double x))</td></tr>
+  </table></h3>
+<p>
+Given a root bracket <I>brack</I>, <a href="Root.html#Find_Function_Root">Find_Function_Root</a> returns a root of <I>f</I> within the bracket.
+Generally accurate to 15 digits (double-precision).  If the derivative of <I>f</I>, <I>df</I>, is <I>NULL</I>,
+then Brent's algorithm which uses quadratic estimation is employed,
+otherwise the Raphson-Newton which uses the derivative is employed.  In the
+event <I>df</I> is used, one may take advantage of the fact that a call to <I>df</I> with a
+value <I>x</I>, <B>always</B> follows a prior call to <I>f</I> with the same value.  So one
+may, via globally shared values, optimize the computation of <I>f</I> and <I>df</I> by
+sharing the computation of any common sub-expressions.
+</td></tr></table>
+</body>
+</html>

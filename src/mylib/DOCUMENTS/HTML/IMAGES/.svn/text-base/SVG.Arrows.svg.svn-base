@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by mylib 1.0 -->
+
+<svg
+   xmlns:mylib="http://www.mylib.org/mylib1.0"
+   xmlns="http://www.w3.org/2000/svg"
+   width="7.75in"
+   height="3.45in"
+   viewBox="0 0 550 230"
+   preserveAspectRatio="none"
+   version="1.1">
+<rect x="5" y="5" width="540" height="220"
+ stroke="#0000ff" stroke-width="2" fill="none" />
+<g transform="translate(50 50) rotate(-90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+<g transform="translate(50 150) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+  <mask id="Mask1" maskUnits="userSpaceOnUse" x="46" y="46" width="8" height="108">
+    <g>
+    <rect x="46" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(50 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(50 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 50 50 L 50 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask1)" />
+<g transform="translate(175 50) rotate(-90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+<g transform="translate(175 134) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+  <mask id="Mask2" maskUnits="userSpaceOnUse" x="171" y="46" width="8" height="108">
+    <g>
+    <rect x="171" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(175 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -16 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(175 134) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 175 50 L 175 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask2)" />
+<g transform="translate(300 66.2866) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+<g transform="translate(300 150) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+  <mask id="Mask3" maskUnits="userSpaceOnUse" x="296" y="46" width="8" height="108">
+    <g>
+    <rect x="296" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(300 66.2866) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(300 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -12 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 300 50 L 300 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask3)" />
+<g transform="translate(425 76.4749) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+<g transform="translate(425 123.525) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#6b8e23" stroke-width="7" fill="none" />
+</g>
+  <mask id="Mask4" maskUnits="userSpaceOnUse" x="421" y="46" width="8" height="108">
+    <g>
+    <rect x="421" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(425 76.4749) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(425 123.525) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="7" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 425 50 L 425 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask4)" />
+<g transform="translate(75 50) rotate(-90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="none" />
+</g>
+<g transform="translate(75 150) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="none" />
+</g>
+  <mask id="Mask5" maskUnits="userSpaceOnUse" x="71" y="46" width="8" height="108">
+    <g>
+    <rect x="71" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(75 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(75 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 75 50 L 75 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask5)" />
+<g transform="translate(200 50) rotate(-90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="#8a2be2" />
+</g>
+<g transform="translate(200 134) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="#8a2be2" />
+</g>
+  <mask id="Mask6" maskUnits="userSpaceOnUse" x="196" y="46" width="8" height="108">
+    <g>
+    <rect x="196" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(200 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -16 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(200 134) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 200 50 L 200 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask6)" />
+<g transform="translate(325 64.4495) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="#8a2be2" />
+</g>
+<g transform="translate(325 150) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="#8a2be2" />
+</g>
+  <mask id="Mask7" maskUnits="userSpaceOnUse" x="321" y="46" width="8" height="108">
+    <g>
+    <rect x="321" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(325 64.4495) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(325 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -12 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 325 50 L 325 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask7)" />
+<g transform="translate(450 75.4142) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="#8a2be2" />
+</g>
+<g transform="translate(450 124.586) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="bevel" stroke-linecap="square" fill="#8a2be2" />
+</g>
+  <mask id="Mask8" maskUnits="userSpaceOnUse" x="446" y="46" width="8" height="108">
+    <g>
+    <rect x="446" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(450 75.4142) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(450 124.586) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="bevel" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 450 50 L 450 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask8)" />
+<g transform="translate(100 50) rotate(-90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<g transform="translate(100 150) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+  <mask id="Mask9" maskUnits="userSpaceOnUse" x="96" y="46" width="8" height="108">
+    <g>
+    <rect x="96" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(100 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(100 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 100 50 L 100 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask9)" />
+<g transform="translate(225 50) rotate(-90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="#ff0000" />
+</g>
+<g transform="translate(225 134) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="#ff0000" />
+</g>
+  <mask id="Mask10" maskUnits="userSpaceOnUse" x="221" y="46" width="8" height="108">
+    <g>
+    <rect x="221" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(225 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -16 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(225 134) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 225 50 L 225 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask10)" />
+<g transform="translate(350 64.4495) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="#ff0000" />
+</g>
+<g transform="translate(350 150) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="#ff0000" />
+</g>
+  <mask id="Mask11" maskUnits="userSpaceOnUse" x="346" y="46" width="8" height="108">
+    <g>
+    <rect x="346" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(350 64.4495) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(350 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -12 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 350 50 L 350 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask11)" />
+<g transform="translate(475 76) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="#ff0000" />
+</g>
+<g transform="translate(475 124) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="#ff0000" />
+</g>
+  <mask id="Mask12" maskUnits="userSpaceOnUse" x="471" y="46" width="8" height="108">
+    <g>
+    <rect x="471" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(475 76) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(475 124) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 475 50 L 475 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask12)" />
+<g transform="translate(125 50) rotate(-90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#8a2be2" stroke-opacity="0.4" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<g transform="translate(125 150) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#8a2be2" stroke-opacity="0.4" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+  <mask id="Mask13" maskUnits="userSpaceOnUse" x="121" y="46" width="8" height="108">
+    <g>
+    <rect x="121" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(125 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(125 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L 0 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 M -16 0"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 125 50 L 125 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask13)" />
+<g transform="translate(250 50) rotate(-90)">
+<g opacity="0.6">
+<mask id="Mask14" maskUnits="userSpaceOnUse" x="-18" y="-10" width="20" height="20">
+<g>
+<rect x="-18" y="-10" width="20" height="20"
+  stroke="none" fill="#ffffff" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+</mask>
+<g opacity="0.666667">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="none" fill="#ff0000" mask="url(#Mask14)" />
+</g>
+</g>
+<g transform="translate(250 134) rotate(270)">
+<g opacity="0.6">
+<mask id="Mask15" maskUnits="userSpaceOnUse" x="-18" y="-10" width="20" height="20">
+<g>
+<rect x="-18" y="-10" width="20" height="20"
+  stroke="none" fill="#ffffff" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+</mask>
+<g opacity="0.666667">
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="none" fill="#ff0000" mask="url(#Mask15)" />
+</g>
+</g>
+  <mask id="Mask16" maskUnits="userSpaceOnUse" x="246" y="46" width="8" height="108">
+    <g>
+    <rect x="246" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(250 50) rotate(-90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -16 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(250 134) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -16 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 250 50 L 250 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask16)" />
+<g transform="translate(375 64.4495) rotate(90)">
+<g opacity="0.6">
+<mask id="Mask17" maskUnits="userSpaceOnUse" x="-18" y="-10" width="20" height="20">
+<g>
+<rect x="-18" y="-10" width="20" height="20"
+  stroke="none" fill="#ffffff" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+</mask>
+<g opacity="0.666667">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="none" fill="#ff0000" mask="url(#Mask17)" />
+</g>
+</g>
+<g transform="translate(375 150) rotate(90)">
+<g opacity="0.6">
+<mask id="Mask18" maskUnits="userSpaceOnUse" x="-18" y="-10" width="20" height="20">
+<g>
+<rect x="-18" y="-10" width="20" height="20"
+  stroke="none" fill="#ffffff" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+</mask>
+<g opacity="0.666667">
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="none" fill="#ff0000" mask="url(#Mask18)" />
+</g>
+</g>
+  <mask id="Mask19" maskUnits="userSpaceOnUse" x="371" y="46" width="8" height="108">
+    <g>
+    <rect x="371" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(375 64.4495) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -16 8 L -16 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(375 150) rotate(90)">
+<path d=" M -16 8 L 0 8 L 0 -8 L -16 -8 L -12 0 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -12 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M 0 8 L 0 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 375 50 L 375 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask19)" />
+<g transform="translate(500 76) rotate(90)">
+<g opacity="0.6">
+<mask id="Mask20" maskUnits="userSpaceOnUse" x="-26" y="-10" width="28" height="20">
+<g>
+<rect x="-26" y="-10" width="28" height="20"
+  stroke="none" fill="#ffffff" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+</mask>
+<g opacity="0.666667">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="none" fill="#ff0000" mask="url(#Mask20)" />
+</g>
+</g>
+<g transform="translate(500 124) rotate(270)">
+<g opacity="0.6">
+<mask id="Mask21" maskUnits="userSpaceOnUse" x="-26" y="-10" width="28" height="20">
+<g>
+<rect x="-26" y="-10" width="28" height="20"
+  stroke="none" fill="#ffffff" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+</mask>
+<g opacity="0.666667">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#8a2be2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+</g>
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="none" fill="#ff0000" mask="url(#Mask21)" />
+</g>
+</g>
+  <mask id="Mask22" maskUnits="userSpaceOnUse" x="496" y="46" width="8" height="108">
+    <g>
+    <rect x="496" y="46" width="8" height="108" stroke="none" fill="#ffffff" fill-opacity="1." />
+    <g transform="translate(500 76) rotate(90)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    <g transform="translate(500 124) rotate(270)">
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 -8 L -24 8 Z"
+ stroke="none" fill="#000000" />
+<path d=" M -16 8 L 0 0 L -16 -8 L -24 0 Z"
+ stroke="#000000" stroke-width="4" stroke-linejoin="round" fill="none" />
+<path d="M -24 8 L -24 -8"
+ stroke="#000000" stroke-width="7" fill="none" />
+    </g>
+    </g>
+  </mask>
+<path d=" M 500 50 L 500 150"
+ stroke="#6b8e23" stroke-width="7" fill="none" mask="url(#Mask22)" />
+<text x="87.5" y="180" font-family="sans-serif" font-size="18" text-anchor="middle" stroke="none" fill="#000000">
+    'line' arrow
+</text>
+<text x="212.5" y="180" font-family="sans-serif" font-size="18" text-anchor="middle" stroke="none" fill="#000000">
+    'flat' arrow
+</text>
+<text x="337.5" y="180" font-family="sans-serif" font-size="18" text-anchor="middle" stroke="none" fill="#000000">
+    'plain' arrow
+</text>
+<text x="462.5" y="180" font-family="sans-serif" font-size="18" text-anchor="middle" stroke="none" fill="#000000">
+    'flint' arrow
+</text>
+</svg>

@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Connectivity Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Connectivity Module Reference</h1>
+
+<p>
+Traversals of n-dimensional arrays and general flood fill operations.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;connectivity.h&gt;
+</pre>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Grid_Id"> Grid_Id </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+</table>
+<p class="group"><i><i>N</i>-Dimensional Grid Support</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Grid_Id</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Setup_Grid">Setup_Grid</a></b>
+     (APart *<I>a</I>, string <I>routine</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Grid_Size">Grid_Size</a></b>
+     (Grid_Id <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+<tr><td class="return" valign="baseline">Offs_Type *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Grid_Neighbors">Grid_Neighbors</a></b>
+     (Grid_Id <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+<tr><td class="return" valign="baseline">double *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Grid_Distances">Grid_Distances</a></b>
+     (Grid_Id <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+<tr><td class="return" valign="baseline">int *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Grid_Backtrack">Grid_Backtrack</a></b>
+     (Grid_Id <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Boundary_Pixels">Boundary_Pixels</a></b>
+     (Grid_Id <I>id</I>, Indx_Type <I>p</I>, boolean <I>iscon2n</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Boundary_Pixels_2d">Boundary_Pixels_2d</a></b>
+     (Grid_Id <I>id</I>, Indx_Type <I>p</I>, boolean <I>iscon4</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Boundary_Pixels_3d">Boundary_Pixels_3d</a></b>
+     (Grid_Id <I>id</I>, Indx_Type <I>p</I>, boolean <I>iscon6</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Release_Grid">Release_Grid</a></b>
+     (Grid_Id <I>id</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Reset_Grids">Reset_Grids</a></b>
+     ()</td></tr>
+</table>
+<p class="group"><i>Flood Fill Routines</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Flood_Object">Flood_Object</a></b>
+     (APart *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, Indx_Type <I>seed</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, &nbsp;boolean (*<I>test</I>)  (Indx_Type p, void *argt), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arge</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>eval</I>) (Indx_Type p, void *arge), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argc</I>, boolean    (*<I>check</I>) (Size_Type n, void *argc), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arga</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>act</I>) (Indx_Type p, void *arga))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Flood_All">Flood_All</a></b>
+     (APart *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, &nbsp;boolean (*<I>test</I>)    (Indx_Type p, void *argt), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arge</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>eval</I>) (Indx_Type p, void *arge), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argc</I>, boolean (*<I>check</I>)  (Size_Type n, void *argc), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arga</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>act</I>)  (Indx_Type p, void *arga))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Flood_Surface">Flood_Surface</a></b>
+     (APart *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, Indx_Type <I>seed</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, &nbsp;boolean (*<I>test</I>)  (Indx_Type p, void *argt), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arge</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>eval</I>) (Indx_Type p, void *arge), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argc</I>, boolean (*<I>check</I>) (Size_Type n, Size_Type a, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size_Type d, void *argc), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arga</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>act</I>) (Indx_Type p, int x, void *arga))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Find_Leftmost_Seed">Find_Leftmost_Seed</a></b>
+     (APart *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, Indx_Type <I>seed</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, boolean (*<I>test</I>)  (Indx_Type p, void *argt))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Connectivity.html#Reset_Flood">Reset_Flood</a></b>
+     ()</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<h3><i>N</i>-Dimensional Grids</h3>
+<p>
+While <B>Mylib</B> provides a library of routines that operate upon arrays, there will inevitably
+be times when one needs to implement their own special functions over arrays and may indeed
+want them to work generally in <I>n</I>-dimensions as is true for all the routines in <B>Mylib</B>.
+To make this easier, the Connectivity module has routines that support a small resource
+pool of <B>grid</B>s each identified by an integer id declared with the descriptive type name
+<a href="Connectivity.html#Grid_Id">Grid_Id</a>.  One can request a grid that is setup for traversing a particular array or
+slice (i.e. <a href="AForm.html#APart">APart</a>) by calling <a href="Connectivity.html#Setup_Grid">Setup_Grid</a>.  One can then access the following information
+about the lattice of the <a href="AForm.html#APart">APart</a> in question with respect to <I>2n</I>- or
+<i>(3<sup>n</sup>-1)</i>-connectivity:
+<ol>
+<li>
+<a href="Connectivity.html#Grid_Size">Grid_Size</a>: the number of neighbors, say <I>N</I>, to a point in the array's lattice.
+<li>
+<a href="Connectivity.html#Grid_Neighbors">Grid_Neighbors</a>: a pointer to a vector, say <I>ngh</I>, of length <I>N</I> that gives the
+offsets to each neighbor of a voxel.
+<li>
+<a href="Connectivity.html#Grid_Distances">Grid_Distances</a>: a pointer to a vector of length <I>N</I> that gives the Euclidean distance
+to each neighbor of a voxel.
+<li>
+<a href="Connectivity.html#Grid_Backtrack">Grid_Backtrack</a>: a pointer to an integer array, say <I>bck</I>, of length <I>N</I> that gives the
+index into <I>ngh</I> of the direction <B>opposite</B> to <I>ngh[i]</I>.  That is,
+<I>ngh[bck[i]] = -ngh[i]</I>.
+</ol>
+</p>
+<p>
+Note carefully that the last three primitives all return a vector with exactly
+<I>N = <a href="Connectivity.html#Grid_Size">Grid_Size</a>(id,iscon2n)</I> elements, and that the neighbors of a voxel in the
+array's lattice occur in the same order in all three vectors.  This order is exactly
+lexicographical order of the conceptual displacement vector, e.g. (-1,-1,-1), (-1,-1,1),
+(-1,1,-1) ... (1,1,1) for a 3D array under <I>2n</I> connectivity.
+When you are done with a grid, it is very important to release it back to the resource
+pool so another process can use it by calling <a href="Connectivity.html#Release_Grid">Release_Grid</a> (more on this below).
+As an example, the routine below counts the number of locally maximal voxels in an
+integer array <I>A</I> with respect to <I>2n</I>-connectivity if <I>iscon2n</I> is true, and
+<i>(3<sup>n</sup>-1)</i>-connectivity, otherwise.
+</p>
+<pre>
+  1. Size_Type Count_Maxima(Integer_Array *A, int iscon2n)
+  2. { Grid_Id    g   = Setup_Grid(A,"Count_Maxima");
+  3.   Size_Type  N   = Grid_Size(g,iscon2n);
+  4.   Offs_Type *ngh = Grid_Neighbors(g,iscon2n);
+  5.   int       *val = AUINT32(A);
+  6.   Size_Type  M;
+
+  7.   { Indx_Type p;
+  8.     int       k;
+
+  9.     M = 0;
+ 10.     for (p = 0; p < A->size; p++)
+ 11.       { for (k = 0; k < N; k++)
+ 12.         if (val[p+ngh[k]] > val[p])   //  There is a bug here, so read on please !!!
+ 13.           break;
+ 14.         M += (k >= N);
+           }
+       }
+
+ 15.   Release_Grid(g);
+
+ 16.   return (M);
+     }
+</pre>
+<p>
+The code above is actually <B>not correct</B>.  The bug is that voxels on
+the boundary of the array do not have the full complement of neighbors and hence it is an
+error to offset to such a non-existent neighbor when on a boundary voxel.  To this end,
+a grid further provides the routine <a href="Connectivity.html#Boundary_Pixels">Boundary_Pixels</a> that for a given voxel <I>p</I> returns
+a boolean vector, <I>in</I>, of length <I>N</I> for which
+<I>in[k]</I> is true if and only if <I>p+ngh[k]</I> is in the array or slice.
+The routine <a href="Connectivity.html#Boundary_Pixels">Boundary_Pixels</a> can be further optimized for the important 2D and 3D cases,
+so the module provides specialized versions <a href="Connectivity.html#Boundary_Pixels_2d">Boundary_Pixels_2d</a> and <a href="Connectivity.html#Boundary_Pixels_3d">Boundary_Pixels_3d</a>.
+The <B>grid</B> routines are used throughout <B>Mylib</B> to realize all the routines
+that generally work on <I>n</I>-dimensional arrays and slices.  In fact, if our example routine
+<I>Count_Maxima</I> were part of the <B>Mylib</B> library, its implementation, including optimization
+for the 2D and 3D cases would look something like this:
+</p>
+<pre>
+  1. Size_Type Count_Maxima(Integer_Array *A, int iscon2n)
+  2. { Grid_Id    g   = Setup_Grid(A,"Count_Maxima");
+  3.   Size_Type  N   = Grid_Size(g,iscon2n);
+  4.   Offs_Type *ngh = Grid_Neighbors(g,iscon2n);
+  5.   int       *val = AUINT32(A);
+  6.   Size_Type  M;
+  7.   boolean   *(*bnd)(Grid_Id,Indx_Type,int);
+
+  8.   if (A->ndims == 2)
+  9.     bnd = Boundary_Pixels_2d;
+ 10.   else if (A->ndims == 3)
+ 11.     bnd = Boundary_Pixels_3d;
+ 12.   else
+ 13.     bnd = Boundary_Pixels;
+
+ 14.   { Indx_Type p;
+ 15.     int       k;
+
+ 16.     M = 0;
+ 17.     for (p = 0; p < A->size; p++)
+ 18.       { boolean *in = bnd(g,p,iscon2n);
+ 19.         for (k = 0; k < N; k++)
+ 20.           if (in[k] && val[p+ngh[k]] > val[p])
+ 21.             break;
+ 22.         M += (k >= N);
+           }
+       }
+
+ 23.   Release_Grid(g);
+
+ 24.   return (M);
+     }
+</pre>
+<p>
+While the code above is correct, it is in absolute terms quite a bit less efficient then the
+first (incorrect) version because <I>Boundary_Pixels</I> is called on every voxel, and <I>in[k]</I>
+has to be checked for each potential neighbor <I>p+ngh[k]</I>.  Asymptotically, the code is no
+worse than the earlier version because <I>Boundary_Pixels</I> is <I>O(N)</I> and one will spend that
+much time in lines 19-21.  But in absolute terms, when this code was timed on a Macbook Pro
+there was a 5-fold increase in the time taken on a large 2D array, because line 20 involves fewer
+machine instructions
+than those taken to compute <I>in[k]</I> for each <I>k</I>.  So for those that want the ultimate in
+efficiency, one can replace lines 14-22 with the code below, which while quite a bit more
+involved, effectively returns the performance to the case
+where "no" boundary checks are required.
+</p>
+<p>
+The key to understanding the code fragment below, is to realize that for each run of
+<I>w</I> = <I>A-&gt;dims[0]</I> consecutive elements in the array, only the lowest dimension is changing.
+For all but the first and the last voxel in each such run, the result of calling <I>Boundary_Pixels</I>
+will be the same, and hence need not be recomputed.  The three cases are effected by a small
+<I>for</I>-loop over a variable <I>c</I> (line 10) where the first voxel case is handled when
+<I>c</I> = 0, the middle <I>w-2</I>
+voxels are handled when <I>c</I> = 1, and the last voxel is handled when <I>c</I> = 2.  In order not to
+have to check <I>in</I> for each neighbor in line 20, the code fills in a copy of <I>ngh</I> in the
+array <I>alt</I> with the modification that it sets the offset to 0 if the offset were to take
+one outside the array, i.e. <I>in[k]</I> is not true.  Rather than allocate <I>alt</I>, the code
+takes the dirty hack of coercing the distance array of the grid <I>g</I> knowing that (a) the size
+of a <I>double</I> is not less than the size of an <I>Offs_Type</I>,
+and (b) the values setup in this array by
+<a href="Connectivity.html#Setup_Grid">Setup_Grid</a> will never be
+needed by this code.  Note further, that the code seeks to save every micro-second  by
+placing <I>val[p]</I> in a variable <I>x</I> in line 18, and by jumping around the increment of <I>M</I>
+in line 22 if the voxel is found not to be maximal in line 20.
+</p>
+<pre>
+  1. { Dimn_Type  w;
+  2.   Offs_Type *alt;
+  3.   Indx_Type  p, n, len[3];
+  4.   int        k, c;
+
+  5.   alt = (Offs_Type *) Grid_Distances(g,iscon2n);
+  6.   len[0] = len[2] = 1;
+  7.   len[1] = A->dims[0]-2;
+
+  8.   M = 0;
+  9.   for (p = 0; p < A->size; )
+ 10.     for (c = 0; c < 3; c++)
+ 11.       { boolean *in = bnd(g,p,iscon2n);
+ 12.         for (k = 0; k < N; k++)
+ 13.           if (in[k])
+ 14.             alt[k] = ngh[k];
+ 15.           else
+ 16.             alt[k] = 0;
+ 17.           for (n = p+len[c]; p < n; p++)
+ 18.             { uint32 x = val[p];
+ 19.               for (k = 0; k < N; k++)
+ 20.                 if (val[p+alt[k]] > x)
+ 21.                   goto done;
+ 22.               M += 1;
+ 23.         done: ;
+                 }
+           }
+     }
+</pre>
+<p>
+In a single thread application, typically a single <B>grid</B> is in use.  The reason for a
+pool of <B>grids</B> (8 by default) is to support multi-threaded applications.  When one calls
+<a href="Connectivity.html#Setup_Grid">Setup_Grid</a>, if there is an available grid in the pool, then the grid is marked as in use,
+setup, and its id returned.  Otherwise, the routine <B>waits</B> until a grid becomes available
+by virture of another thread releasing a grid by calling <a href="Connectivity.html#Release_Grid">Release_Grid</a>.
+Thus it is very important to remember to release a grid when one no longer needs it,
+as a failure to do so will result in a deadlocked program.
+</p>
+<p>
+<a href="Connectivity.html#Reset_Grids">Reset_Grids</a> waits until all grids are not in use, and then frees all the storage
+associated with the grids in the resource pool returning it to its initial state.
+</p>
+<a name="flood fill"><a>
+<h3>General Flood-Fill Routines</h3>
+<p>
+A flood fill is a simple linear time method for finding and operating upon a region
+of connected voxels that satisfy some common property such as having a value greater
+than some threshold.  This module contains three general routines that perform
+(a) a flood fill starting at a given seed voxel (<a href="Connectivity.html#Flood_Object">Flood_Object</a>),
+(b) a flood fill that finds all the regions satisfying a given property (<a href="Connectivity.html#Flood_All">Flood_All</a>), and
+(c) a flood fill that starting at a voxel on the outer contour of a region, will traverse
+the outer surface of the region (<a href="Connectivity.html#Flood_Surface">Flood_Surface</a>).
+The routines are general in that the caller defines
+the criterion for being in the flood fill region and the action to be performed on
+the voxels in the region via handler routines that they supply.
+</p>
+<p>
+<I><a href="Connectivity.html#Flood_Object">Flood_Object</a>(A,share,iscon2n,seed,argt,test,arge,eval,argc,check,arga,act)</I> does a flood
+fill, with respect to <I>2n</I>-connectivity if <I>iscon2n</I> it true,
+<i>(3<sup>n</sup>-1)</i>-connectivity otherwise, of voxels in array or
+slice <I>A</I> starting
+from voxel <I>seed</I> to all voxels <I>p</I> for which <I>test(p,argt)</I> is true.  During this flood fill
+it calls <I>eval(p,arge)</I> once on each voxel in the flood fill region.  Then it
+calls <I>check(n,argc)</I> where <I>n</I> is the number of voxels in the flood-fill region,
+and if this returns true, then in a second pass over the flood-fill region, <I>act(p,arga)</I>
+is called on each voxel in the region.  If <I>A</I> is a <a href="Slice.html">Slice</a>, then <I>seed</I> must be inside
+the slice and the flood fill is restricted to the region delimited by the slice.  The routine
+<I>test</I> is called on a voxel at most once, so the predicate it evaluates must be invariant to
+the order in which it is called on voxels in <I>A</I>.  If an
+'arg' parameter is not needed by its associated handler than it may be NULL, and any
+handler, if it is not needed, can also be NULL.  Note that the <I>test</I> handler is always
+needed, as it defines the region, and if <I>check</I> is NULL, then the second pass takes place.
+Furthermore, the second pass does not involve calling <I>test</I>, so the handler <I>act</I> can
+change the values in an underlying array or relevant variables as it pleases without affecting
+the set of voxels upon which it will be called.
+The parameter <I>share</I> will be explained later, for most applications it can be 0.  As an
+example, the routine <I>Flatten_Big_Regions</I> below replaces all voxels in the <I>2n</I>-connected
+region about <I>seed</I> that are not less than <I>t</I>, with the mean of the region, provided the
+region contains at least <I>s</I> voxels:
+</p>
+<pre>
+ static int *Val;
+ static int  Thresh;
+ static int  Size;
+ static int  Mean;
+
+ boolean test(Indx_Type p, void *arg)
+ { return (Val[p] >= Thresh); }
+
+ void eval(Indx_Type p, void *arg)
+ { Mean += Val[p]; }
+
+ boolean check(Size_Type n, void *arg)
+ { Mean = (Mean + (Mean >> 1)) / n;
+   return (n >= Size);
+ }
+
+ void act(Index_Type p, void *arg)
+ { Val[p] = Mean; }
+
+ void Flatten_Big_Regions(Integer_Array *A, Indx_Type seed, int t, int s)
+ { Val    = AINT32(A);
+   Thresh = t;
+   Size   = s;
+   Mean   = 0;
+   Flood_Object(A,0,1,seed,NULL,test,NULL,eval,NULL,check,NULL,act);
+ }
+</pre>
+<p>
+Observe that the handlers <I>test</I>, <I>eval</I>, <I>check</I>, and <I>act</I> need information about
+<I>A</I>, <I>t</I>, and <I>s</I>, as well as needing to communicate information to each other (i.e. <I>Mean</I>).
+In this version of the example, this is accomplished by setting up global variables (i.e.
+<I>Val</I>, <I>Thresh</I>, <I>Size</I>, and <I>Mean</I>) before the call to <a href="Connectivity.html#Flood_Object">Flood_Object</a>, completely
+by-passing the need for the <I>void *arg</I> parameters that are thus all set to NULL.  While this
+code is perfectly correct, <B>it is not re-entrant</B>.  For situations where one doesn't care
+about being re-entrant, the style above is the simplist way to realize the handlers.
+However, all <B>Mylib</B> routines are re-entrant and it seemed a good idea to allow
+users to write re-entrant routines using the flood fill primitives.  So each handler
+is called with a <I>void *</I> pointer that can point at any values the handler needs in
+order to perform its function.  This pointer is passed to the flood fill routine as
+the parameter preceding the handler in the argument list of the call.  As an example,
+<I>Zero_Big_Regions</I> is recoded below, but this time in a re-entrant fashion, by using
+the <I>void *</I> payload pointers.  To keep it simple, we have only one payload structure,
+<I>MyArg</I>, that all four handlers share:
+</p>
+<pre>
+ typedef struct
+   { int *val;
+     int  thresh;
+     int  size;
+     int  mean;
+   } MyArg;
+
+ #define M(a) ((MyArg *) (a))
+
+ boolean test(Indx_Type p, void *arg)
+ { return (M(arg)->val[p] >= M(arg)->thresh) }
+
+ void eval(Indx_Type p, void *arg)
+ { M(arg)->mean += M(arg)->val[p]; }
+
+ boolean check(Size_Type n, void *arg)
+ { int m = M(arg)->mean;
+   M(arg)->mean = (m + (m >> 1))/ n;
+   return (n >= M(arg)->size);
+ }
+
+ void act(Index_Type p, void *arg)
+ { M(arg)->val[p] = M(arg)->mean; }
+
+ void Flatten_Big_Regions(Integer_Array *A, Indx_Type seed, int t, int s)
+ { MyArg arg;
+   arg.val    = AINT32(A);
+   arg.thresh = t;
+   arg.size   = s;
+   arg.mean   = 0;
+   Flood_Object(A,0,1,seed,&arg,test,&arg,eval,&arg,check,&arg,act);
+ }
+</pre>
+<p>
+<I><a href="Connectivity.html#Flood_All">Flood_All</a>(A,share,iscon2n,argt,test,arge,eval,argc,check,arga,act)</I>
+scans the array or slice <I>A</I>, executing flood fills with respect to the connectivity
+indicated by <I>iscon2n</I> whenever a voxel, not yet traversed by the scan or a previous flood fill,
+is encountered for which <I>test(p,argt)</I> is true.  The operation of each flood fill
+and the role of each handler is exactly as for <a href="Connectivity.html#Flood_Object">Flood_Object</a>, this routine
+does a flood-fill of every <I>iscon2n</I> connnected region of voxels for which <I>test</I> is true.
+</p>
+<a name="topology"><a>
+<p>
+<a href="Connectivity.html#Flood_Surface">Flood_Surface</a> is a rather unusual flood fill that traverses the <I>(n-1)</I>-dimensional
+<B>surface</B> or <B>outer countour</B> of the <I>iscon2n</I> connected region of voxels that include
+<I>seed</I> and for which <I>test(p,argt)</I> is true.  It must be given a seed that is <B>leftmost</B>
+in that a step in the negative x-direction takes one to a voxel that is not in the region
+and that is not in a <B>hole</B> of the region (i.e. an area surrounded by an <I>iscon2n</I> connected
+subset of voxels from the region).
+Most <B>Mylib</B> routines that return seeds or structures that hold seeds, refer to leftmost
+seeds.  For example, <a href="Level_Tree.html#Level_Set_LeftMost">Level_Set_LeftMost</a> returns a leftmost seed for a level set,
+and the <I>seed</I>-field of a <a href="Partition.html#P_Vertex">P_Vertex</a> in a <a href="Partition.html">Partition</a> is always leftmost.  It is
+recommended that an implementation always retain a leftmost voxel if one intends to
+use such a voxel as a seed from which one can then recapture the desired object with some
+form of flood fill.  The voxel with the smallest index in a given region is always leftmost
+and <a href="Connectivity.html#Find_Leftmost_Seed">Find_Leftmost_Seed</a> finds that voxel given any <I>seed</I> voxel in the region and
+a <I>test</I>-handler.  The handlers for <a href="Connectivity.html#Flood_Surface">Flood_Surface</a> play the same roles as those for
+<a href="Connectivity.html#Flood_Object">Flood_Object</a>, with some subtle changes as follows.
+</p>
+<p>
+The handler <I>evaluate</I> is called on each voxel on the outer border of the flood-fill region.
+The <B>outer border</B> is the <I>iscon2n</I>-connected subset of voxels of the region that are
+<I>~ iscon2n</I>-connected to a voxel exterior to the region and not in a hole.
+The handler <I>check(s,a,d)</I> is called with three size parameters.
+<I>s</I> is the number of voxels in the outer border, and <I>a</I>, is the surface area of the region,
+which is the number of faces in the outer countour of the region.
+An <B><I>x</I>-face</B> is a face of the outer contour oriented in the <I>x</I>-direction.  The
+third parameter, <I>d</I>, is the number of voxels in the outer border that have 2 x-faces.
+The reason for this somewhat
+obscure parameter, is because <a href="Region.html">Region</a> objects are built using this routine and their
+internal encoding of a region requires knowing this number (see the page for <a href="Region.html">Region</a>s if
+you are curious to know more).
+The handler <I>act(p,x)</I> is called on every outer border voxel where <I>x</I> is the number of
+x-faces of the voxel (0, 1, or 2).
+</p>
+<p>
+The figure below illustrates in 2D the concepts of hole, outer contour, and outer border
+described above, specifically depicting the difference in these entities depending on
+the setting of <I>iscon2n</I>.  In this example the region is both 4-connected
+and 8-connected, so that one can see the difference in the concepts depending on whether
+the region was found with a 4-connected flood fill or an 8-connected flood fill.
+In the 4-connected case, <a href="Connectivity.html#Flood_Surface">Flood_Surface</a> will call <I>check(20,28,1)</I>, and in the
+8-connect case it will call <I>check(16,24,0)</I>.
+</p>
+<br>
+<p align="center"><img src="IMAGES/Surfaces.jpg"></p>
+<br>
+<a name="share"><a>
+<h3>Flood-Fill And Threads: The Mysterious Parameter <i>share</i></h3>
+<p>
+All of the flood fill routines require a mark array in order to efficiently perform
+their traversals.  In threaded applications several threads performing flood fills on
+<B>disjoint <a href="Slice.html">Slice</a>s</B> of the same array <I>A</I>, can use a single mark array that has the same
+size as <I>A</I>.  Alternatively, each thread may use a private mark array that is the size
+of the slice.  The input parameter <I>share</I> determines this subtle behavior of
+the flood fill routines.  If <I>share</I> is 0, then the called flood fill routine uses a private
+mark vector whose size is that of the array or slice <I>source</I> passed to it (i.e.
+<I>AForm_Size(source)</I>.  If <I>share</I> &gt; 0, then the called routine uses a shared mark vector
+whose size is that of the underlying array of <I>source</I> (i.e. <I>AForm_Array(source)-&gt;size</I>),
+where the mark vector is shared with any other thread whose <a href="AForm.html#APart">APart</a> refers to the same
+underlying array and for which the value of <I>share</I> is the same.  Thus by using different
+values of <I>share</I>, one can create different sharing pools as per one's whim.  Note very
+carefully, that it is the user's responsibility to make sure that any slices that share
+a mark array are indeed disjoint, failure to do so leads to unpredictable results.
+</p>
+<p>
+In addition to a mark array, a flood fill routine also need a queue.  A pool of
+these queues and mark arrays is maintained globally.  A flood fill routine, <I>Flood</I>, when
+called requests a pair of working structures (according to the setting of <I>share</I>).
+If one is available then <I>Flood</I> is allocated the resource pair, otherwise <I>Flood</I> waits until
+it can be allocated the resource pair.  Once it has been allocated a resource pair, <I>Flood</I>
+then performs its operation, and when it is done it releases the resource back to the pool.
+Ideally, the number of resource pairs available equals the number of cores on your
+machine (e.g. 8).   This number is equal to the constant <a href="Mylib.html#NUM_THREADS">NUM_THREADS</a> defined in the <a href="Mylib.html">Mylib Core</a>
+module.  Further note that this resource pool consumes memory and if one uses it with large
+arrays or lots of threads the memory allocated for the resource pool can get large over time
+as it is not implicitly freed when a resource is released.  To release all the memory held
+by the flood fill resource pool, call <a href="Connectivity.html#Reset_Flood">Reset_Flood</a>.  Note carefully that this routine will
+not return until all threads actively using flood fill resources release them.
+</p>
+<hr />
+
+<h2>Descriptive Types Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Grid_Id"></a><tr><td valign="top">Grid_Id</td><td>: int</td></tr>
+  </table></h3>
+<p>
+The integer id of a grid data structure that is from a finite resource pool of such structures.
+Allocation of a grid to a process is by <a href="Connectivity.html#Setup_Grid">Setup_Grid</a> which returns the id of the grid,
+and the release of a grid is by <a href="Connectivity.html#Release_Grid">Release_Grid</a>.  Inbetween, the grid is refered to
+by its id.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Setup_Grid"></a><tr><td valign="baseline"><a href="Connectivity.html#Grid_Id">Grid_Id</a></td>
+     <td valign="baseline">Setup_Grid (<a href="AForm.html#APart">APart</a> *<I>a</I>, string <I>routine</I>)</td></tr>
+  </table></h3>
+<p>
+Request the allocation of a grid, waiting if necessary until one can be allocated, and
+once recieved, set it up for traversals of the lattice of the array or slice <I>a</I>.
+The routine can exit if there is insufficient memory, in which case, the source of the
+error is given by the string <I>routine</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Grid_Size"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Grid_Size (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of neighbors to a point in the lattice of the array that grid <I>id</I> has
+been setup for.
+</p>
+  <h3 class="fn"><table>
+     <a name="Grid_Neighbors"></a><tr><td valign="baseline"><a href="Mylib.html#Offs_Type">Offs_Type</a> *</td>
+     <td valign="baseline">Grid_Neighbors (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to a vector of length <I><a href="Connectivity.html#Grid_Size">Grid_Size</a>(id,iscon2n)</I> that gives the
+offsets to each neighbor of a voxel in the array that grid <I>id</I> has been setup for.
+The values in the vector are read-only, and the space for the vector
+belongs to the grid.
+</p>
+  <h3 class="fn"><table>
+     <a name="Grid_Distances"></a><tr><td valign="baseline">double *</td>
+     <td valign="baseline">Grid_Distances (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to a vector, say <I>dist</I>, of length <I><a href="Connectivity.html#Grid_Size">Grid_Size</a>(id,iscon2n)</I> that gives the
+Euclidean distance to each neighbor of a voxel in the array that grid <I>id</I> has
+been set up for, i.e. <I>dist[i]</I> is the distance between a voxel and one offset from it
+by <I>ngh[i]</I> where <I>ngh = <a href="Connectivity.html#Grid_Neighbors">Grid_Neighbors</a>(id,iscon2n)</I>.
+The values in the vector are read-only, and the space for the vector
+belongs to the grid.
+</p>
+  <h3 class="fn"><table>
+     <a name="Grid_Backtrack"></a><tr><td valign="baseline">int *</td>
+     <td valign="baseline">Grid_Backtrack (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to a vector, say <I>bck</I>, of length <I><a href="Connectivity.html#Grid_Size">Grid_Size</a>(id,iscon2n)</I> that gives the
+index into <I>ngh = <a href="Connectivity.html#Grid_Neighbors">Grid_Neighbors</a>(id,iscon2n)</I> of the direction <B>opposite</B> to <I>ngh[i]</I>.  That is,
+<I>ngh[bck[i]] = -ngh[i]</I>.
+The values in <I>bck</I> are read-only, and the space for it belongs to the grid.
+</p>
+  <h3 class="fn"><table>
+     <a name="Boundary_Pixels"></a><tr><td valign="baseline">boolean *</td>
+     <td valign="baseline">Boundary_Pixels (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>p</I>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+For the given voxel <I>p</I>, return a pointer to a boolean vector, say <I>in</I>, of length
+<I><a href="Connectivity.html#Grid_Size">Grid_Size</a>(id,iscon2n)</I> for which <I>in[k]</I> is true if and only if <I>p+ngh[k]</I> is
+in the array or slice that grid <I>id</I> has been set up for.
+</p>
+  <h3 class="fn"><table>
+     <a name="Boundary_Pixels_2d"></a><tr><td valign="baseline">boolean *</td>
+     <td valign="baseline">Boundary_Pixels_2d (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>p</I>, boolean <I>iscon4</I>)</td></tr>
+  </table></h3>
+<p>
+A version of <a href="Connectivity.html#Boundary_Pixels">Boundary_Pixels</a> optimized for 2D.
+</p>
+  <h3 class="fn"><table>
+     <a name="Boundary_Pixels_3d"></a><tr><td valign="baseline">boolean *</td>
+     <td valign="baseline">Boundary_Pixels_3d (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>p</I>, boolean <I>iscon6</I>)</td></tr>
+  </table></h3>
+<p>
+A version of <a href="Connectivity.html#Boundary_Pixels">Boundary_Pixels</a> optimized for 3D.
+</p>
+  <h3 class="fn"><table>
+     <a name="Release_Grid"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Release_Grid (<a href="Connectivity.html#Grid_Id">Grid_Id</a> <I>id</I>)</td></tr>
+  </table></h3>
+<p>
+Return grid <I>id</I> to the grid resource pool so that it can be used by the next
+process requiring a grid.
+</p>
+  <h3 class="fn"><table>
+     <a name="Reset_Grids"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Reset_Grids ()</td></tr>
+  </table></h3>
+<p>
+Free all memory blocks associated with the grids in the grid resource pool.
+The routine waits until all grids have been released before returning.
+</p>
+  <h3 class="fn"><table>
+     <a name="Flood_Object"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Flood_Object (<a href="AForm.html#APart">APart</a> *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>seed</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, &nbsp;boolean (*<I>test</I>)  (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *argt), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arge</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>eval</I>) (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arge), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argc</I>, boolean    (*<I>check</I>) (<a href="Mylib.html#Size_Type">Size_Type</a> n, void *argc), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arga</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>act</I>) (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arga))</td></tr>
+  </table></h3>
+<p>
+Perform a flood fill, with respect to <I>2n</I>-connectivity if <I>iscon2n</I> is true,
+<i>3<sup>n</sup>-1</i>-connected
+otherwise, of voxels in array or slice
+<I>source</I> starting from voxel <I>seed</I> to all voxels <I>p</I> for which <I>test(p,argt)</I> is true.
+During this flood fill <I>eval(p,arge)</I> is called once on each voxel in the flood fill region.
+Once the flood fill completes, <I>check(n,argc)</I> is called where <I>n</I> is the number of voxels
+in the flood-fill region, and if this returns true, then in a second pass over the
+flood-fill region, <I>act(p,arga)</I> is called on each voxel in the region.
+If <I>source</I> is a <a href="Slice.html">Slice</a>, then <I>seed</I> must be inside the slice and the flood fill is
+restricted to the region delimited by the slice.
+The routine <I>test</I> is called on a voxel at most once, so the predicate it evaluates must
+be invariant to the order in which it is called on voxels in <I>A</I>.
+If an 'arg' parameter is not needed by its associated handler than it may be NULL, and any
+handler, if it is not needed, can also be NULL.
+If <I>check</I> is NULL, then the second pass takes place.
+<B>NB</B>: The second pass does not involve calling <I>test</I>, so the handler <I>act</I> can
+change the values in an underlying array or relevant variables as it pleases without affecting
+the set of voxels upon which it will be called.
+The parameter <I>share</I> controls the sharing of <I>mark</I> array amongst threads working on disjoint
+slices of a common image.  Setting it to zero is always safe.  For a complete explanation
+see the
+<a href="#share">subsection</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Flood_All"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Flood_All (<a href="AForm.html#APart">APart</a> *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, &nbsp;boolean (*<I>test</I>)    (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *argt), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arge</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>eval</I>) (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arge), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argc</I>, boolean (*<I>check</I>)  (<a href="Mylib.html#Size_Type">Size_Type</a> n, void *argc), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arga</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>act</I>)  (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arga))</td></tr>
+  </table></h3>
+<p>
+Perform a flood fill on every <I>iscon2n</I> connected region of voxels for which <I>test</I> is true.
+The handlers <I>eval</I>, <I>check</I>, and <I>act</I> have the same roles as for <a href="Connectivity.html#Flood_Object">Flood_Object</a>.
+The parameter <I>share</I> controls the sharing of <I>mark</I> array amongst threads working on disjoint
+slices of a common image.  Setting it to zero is always safe.  For a complete explanation
+see the
+<a href="#share">subsection</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Flood_Surface"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Flood_Surface (<a href="AForm.html#APart">APart</a> *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>seed</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, &nbsp;boolean (*<I>test</I>)  (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *argt), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arge</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>eval</I>) (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arge), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argc</I>, boolean (*<I>check</I>) (<a href="Mylib.html#Size_Type">Size_Type</a> n, <a href="Mylib.html#Size_Type">Size_Type</a> a, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Mylib.html#Size_Type">Size_Type</a> d, void *argc), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>arga</I>, void &thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<I>act</I>) (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, int x, void *arga))</td></tr>
+  </table></h3>
+<p>
+Flood fill the <I>(n-1)</I>-dimensional <B>outer border</B>
+of the <I>iscon2n</I> connected region of voxels that include
+<I>seed</I> and for which <I>test(p,argt)</I> is true.
+The <B>outer border</B> is the subset of voxels of the region that have at least one
+<B>outer contour face</B>, i.e. a face that is part of the outer contour of the region.
+It must be given a seed that is <B>leftmost</B>
+in that a step in the negative x-direction takes one to a voxel that is not in the region
+and that is not in a <B>hole</B> of the region (i.e. an area surrounded by an <I>iscon2n</I> connected
+subset of voxels from the region).  The handlers for <a href="Connectivity.html#Flood_Surface">Flood_Surface</a> play the same roles as
+those for <a href="Connectivity.html#Flood_Object">Flood_Object</a>, with some subtle changes as follows.
+<ol>
+<li>
+The handler <I>evaluate</I> is called on each voxel on the outer border of the flood-fill region.
+<li>
+The handler <I>check(s,a,d)</I> is called with three size parameters.
+<I>s</I> is the number of voxels in the outer border, and <I>a</I>, is the surface area of the region,
+which is the number of faces in the outer countour of the region.
+An <B><I>x</I>-face</B> is an outer contour face oriented in the <I>x</I>-direction.  The third parameter, <I>d</I>, is
+the number of voxels in the outer border that have 2 x-faces.
+<li>
+The handler <I>act(p,x)</I> is called on every outer border voxel where <I>x</I> is the number of
+x-faces of the voxel (0, 1, or 2).
+</ol>
+</p>
+<p>
+The parameter <I>share</I> controls the sharing of <I>mark</I> array amongst threads working on disjoint
+slices of a common image.  Setting it to zero is always safe.  For a complete explanation
+see the
+<a href="#share">subsection</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Find_Leftmost_Seed"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Find_Leftmost_Seed (<a href="AForm.html#APart">APart</a> *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>seed</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *<I>argt</I>, boolean (*<I>test</I>)  (<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *argt))</td></tr>
+  </table></h3>
+<p>
+Return the voxel with the smallest index in the region delineated by the parameters
+<I>seed</I>, <I>iscon2n</I>, and <I>text</I>.  This index is guaranteed to be <B>leftmost</B> in that a
+step to the left, or in the <I>-x</I> direction, takes one to a voxel outside the region
+and not in a hole.
+The parameter <I>share</I> controls the sharing of <I>mark</I> array amongst threads working on disjoint
+slices of a common image.  Setting it to zero is always safe.  For a complete explanation
+see the
+<a href="#share">subsection</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Reset_Flood"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Reset_Flood ()</td></tr>
+  </table></h3>
+<p>
+Release all the memory held by the resource pool of mark-array, queue pairs used by the
+flood fill routines.  The routine will wait until all resources in the pool are free.
+</td></tr></table>
+</body>
+</html>

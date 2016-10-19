@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Convolver Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Convolver Class Reference</h1>
+
+<p>
+Direct convolution of a filter at any location within an Array.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;filters.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+</table>
+<p class="group"><i>Convolver Routines</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Convolver *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Make_Convolver">Make_Convolver</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>target</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, Double_Array *<I>filter</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, Coordinate *<I>anchor</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Convolver_Filter">Convolver_Filter</a></b>
+     (Convolver *<I>c</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Convolver_Anchor">Convolver_Anchor</a></b>
+     (Convolver *<I>c</I>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Convolver_Index">Convolver_Index</a></b>
+     (Convolver *<I>c</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Convolver_Coordinate">Convolver_Coordinate</a></b>
+     (Convolver *<I>c</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Place_Convolver">Place_Convolver</a></b>
+     (Convolver *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Index_Type <I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Move_Convolver_Forward">Move_Convolver_Forward</a></b>
+     (Convolver *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Move_Convolver_Backward">Move_Convolver_Backward</a></b>
+     (Convolver *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Convolve">Convolve</a></b>
+     (Convolver *<I>c</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Convolve_Segment">Convolve_Segment</a></b>
+     (Convolver *<I>c</I>, Indx_Type <I>offset</I>, Size_Type <I>span</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Free_Convolver">Free_Convolver</a></b>
+     (Convolver *<I>c</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Kill_Convolver">Kill_Convolver</a></b>
+     (Convolver *<I>c</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Reset_Convolver">Reset_Convolver</a></b>
+     ()</td></tr>
+</table>
+<p class="group"><i>Convolution Filters</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Gaussian_Filter">Gaussian_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>sigma</I>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Box_Filter">Box_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>radius</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Filter_Power">Filter_Power</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Double_Vector *<I>filter</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, int <I>power</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Filter_Product">Filter_Product</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Double_Array *<I>filter1</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Double_Array *<I>filter2</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#LOG_Filter">LOG_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, double <I>sigma</I>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#DOG_Filter">DOG_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, double <I>sigma1</I>, double <I>sigma2</I>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#DOB_Filter">DOB_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, int <I>radius1</I>, int <I>radius2</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#ALOG_Filter">ALOG_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, double *<I>sigma</I>, int *<I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#ADOG_Filter">ADOG_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, double *<I>sigma1</I>, double *<I>sigma2</I>, int *<I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#ADOB_Filter">ADOB_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, int *<I>radius1</I>, int *<I>radius2</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Matrix *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Convolver.html#Gabor_Filter">Gabor_Filter</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>aspect</I>, double <I>sigma</I>, double <I>wavelen</I>, double phase <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double <I>orient</I>, int <I>radius1</I>, int <I>radius2</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+A <a href="Convolver.html">Convolver</a> object is basically a <a href="Frame.html">Frame</a> coupled with a <I>PLAIN_KIND</I>, <I>FLOAT64_TYPE</I>
+<B>filter</B> array of the same shape, that is created by calling <a href="Convolver.html#Make_Convolver">Make_Convolver</a> with the
+target array for the frame, the filter array (that also defines the shape of the frame),
+and the offset <a class="ref" href="Frame.html#anchor">anchor</a> for the frame.  The added functionality is that one can request
+the convolution of the filter with the underlying array of the frame at the <a class="ref" href="Frame.html#current position">current position</a>
+of the frame.  This is accomplished with a direct, brute-force calculation of the convolution
+in time proportional to the size of the filter by calling <a href="Convolver.html#Convolve">Convolve</a>.  One can also request
+the convolution of a portion of a filter with <a href="Convolver.html#Convolve_Segment">Convolve_Segment</a>.  One can get the filter
+array, the anchor, and the index or coordinate of the current Convolver postion with the
+routines <a href="Convolver.html#Convolver_Filter">Convolver_Filter</a>, <a href="Convolver.html#Convolver_Anchor">Convolver_Anchor</a>, <a href="Convolver.html#Convolver_Index">Convolver_Index</a>, and <a href="Convolver.html#Convolver_Coordinate">Convolver_Coordinate</a>.
+In all four instances, one is being give a pointer to the object and not a reference (i.e.
+don't free or kill the pointer!).
+</p>
+<p>
+A <a href="Convolver.html">Convolver</a> object is inherently short-lived and therefore <B>Mylib</B> does not realize the
+full repertoire of generic routines for the class, but simply allows one to free and/or
+kill a convolver with <a href="Convolver.html#Free_Convolver">Free_Convolver</a> and <a href="Convolver.html#Kill_Convolver">Kill_Convolver</a>, and to reset the class (by
+killing all freed convolvers) with <a href="Convolver.html#Reset_Convolver">Reset_Convolver</a>.
+</p>
+<p>
+The convolution of a small array over a <a class="ref" href="Frame.html#window">window</a> at every position in an array is a common
+operation for smoothing noise, detecting edges, and computing derivatives at a point within
+an image.  <B>Mylib</B> has optimized routines for performing such operations over an entire
+array or slice (see the <a href="Filters.html">Filters</a> module) when such operations can be further optimized over
+a brute-force computation, such as when a multi-dimensional filter is <B>separable</B>,
+e.g. there exist functions <I>g</I> and <I>h</I> such that <I>f(x,y) = g(x)h(y)</I>.  A <a href="Convolver.html">Convolver</a> is useful
+in those cases where such optimizations are not possible, or the filter is only required at a sparse
+subset of an array, e.g. a <a href="Region.html">Region</a>.  The class contains the routines described in the
+remainder of this overview that help one build common filters for use with a <a href="Convolver.html">Convolver</a>.
+</p>
+<p>
+<a href="Convolver.html#Gaussian_Filter">Gaussian_Filter</a> produces a 1-dimensional filter with a specifiable standard deviation <I>sigma</I>.
+The domain of the Gaussian function is the entire real line, so one must specify the support
+or range of values <I>radius</I> that the filter is over.  The resulting array is of length
+<I>2*radius+1</I> and the anchor of the filter should be given as <I>radius</I> as this is where
+the center of the Gaussian is located.  Because of the implied truncation, the values in
+the filter are scaled up a bit so that their sum is 1 as should be true of any cumulative
+distribution function.  Gaussian filters of multiple dimensions are separable, and therefore
+a possibly asymmetric <I>n</I>-dimensional Gaussian filter can be built up with <I>n-1</I> calls
+to <a href="Convolver.html#Filter_Product">Filter_Product</a> with a different Gaussian filter for each dimension, and a symmetric
+<I>n</I>-dimensional Gaussian filter can be created with a single call to <a href="Convolver.html#Filter_Power">Filter_Power</a>.
+For example:
+</p>
+<pre>
+ Double_Array AGaussian(int n, double *sigma, int *radii)
+ { Double_Array *filter = Gaussian_Filter(sigma[0],radii[0]);
+   int           i;
+   for (i = 1; i < n; i++)
+     filter = Filter_Product(Gaussian_Filter(sigma[i],radii[i]),filter);
+   return (filter);
+ }
+</pre>
+<p>
+produces an <I>n</I>-dimensional Gaussian filter with standard deviation <I>sigma[i]</I>
+and support <I>radii[i]</I> in dimension <I>i</I>.  Similarly <a href="Convolver.html#Box_Filter">Box_Filter</a> produces a
+one-dimensional box or average filter because it too is separable.
+</p>
+<p>
+On the otherhand, the Laplacian of Gaussian (LOG) and difference of Gaussian (DOG) filters
+are not separable, so the routines <a href="Convolver.html#LOG_Filter">LOG_Filter</a>, <a href="Convolver.html#DOG_Filter">DOG_Filter</a>, <a href="Convolver.html#ALOG_Filter">ALOG_Filter</a>, and <a href="Convolver.html#ADOG_Filter">ADOG_Filter</a>
+build <I>n</I>-dimensional symmetric and assymmetric filters directly.  While a difference of
+boxes (DOB) filter is separable, the class provides routines <a href="Convolver.html#DOB_Filter">DOB_Filter</a> and <a href="Convolver.html#ADOB_Filter">ADOB_Filter</a>
+to build them directly.  Since these filters are generally used as edge and blob detectors,
+the values are offset equally by the minimal amount that makes the sum of all the elements sum
+to 0.
+</p>
+<p>
+Finally, the class provides the special <a href="Convolver.html#Gabor_Filter">Gabor_Filter</a> which is a 2D-filter that realizes
+the receptor field found in neurons of the retina and has generally been found to be useful in
+detecting texture and orientation.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Make_Convolver"></a><tr><td valign="baseline"><a href="Convolver.html">Convolver</a> *</td>
+     <td valign="baseline">Make_Convolver<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>target</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, <a href="Array.html#Double_Array">Double_Array</a> *<I>filter</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>anchor</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Creates a convolution object given a target array <I>target</I> and a FLOAT64_TYPE <I>filter</I> and
+an anchor point <I>anchor</I> relative to the filter, that can dynamically be placed at different
+positions with the array.  The filter is assumed to be a small array (of any dimensionality)
+that is to be convolved with elements of the array at points of interest.  Implicitly the
+convolver object has a <a href="Frame.html">Frame</a> whose shape is the same as <I>filter</I> and whose anchor point is
+<I>anchor</I>.  When the convolver is placed at a position the anchor point of the underlying
+frame is placed at the position a convolution at that point would take place with the
+current window of the frame when so positioned.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convolver_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">Convolver_Filter (<a href="Convolver.html">Convolver</a> *<I>c</I>)</td></tr>
+  </table></h3>
+<p>
+Returns a pointer to the filter array for Convolver <I>c</I>.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convolver_Anchor"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Convolver_Anchor (<a href="Convolver.html">Convolver</a> *<I>c</I>)</td></tr>
+  </table></h3>
+<p>
+Returns a pointer to the anchor point for Convolver <I>c</I>.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convolver_Index"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Convolver_Index (<a href="Convolver.html">Convolver</a> *<I>c</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the current index of position of Convolver <I>c</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convolver_Coordinate"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Convolver_Coordinate (<a href="Convolver.html">Convolver</a> *<I>c</I>)</td></tr>
+  </table></h3>
+<p>
+Returns a pointer to the <a href="Array.html#Coordinate">Coordinate</a> corresponding to the current
+index or position of Convolver <I>c</I>.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Place_Convolver"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Place_Convolver (<a href="Convolver.html">Convolver</a> *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Index_Type <I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Places convolver <I>c</I> at index <I>p</I> of its target array.  Conceptually the anchor of the filter
+is placed over the coordinate corresponding to <I>p</I> and the frame of the filter is then offset
+with respect to the anchor.
+For example, if <I>p</I> corresponds to the coordinate <I>(2,3,4)</I> in a 3D array, and the anchor of
+the filter is <I>(-3,2,5)</I>, then the <I>0</I>-origin of the filter corresponds with the
+point <I>(2-(-3),3-2,4-5)</I> = <I>(5,1,-1)</I>.  Note carefully that the filter need not lie within the
+array and therefore the <a class="ref" href="Mylib.html#current boundary effect">current boundary effect</a> applies to all off-array elements that may
+be convolved with the filter.
+</p>
+  <h3 class="fn"><table>
+     <a name="Move_Convolver_Forward"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Move_Convolver_Forward (<a href="Convolver.html">Convolver</a> *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Advance the current position of the convolver <I>c</I> forward by one.
+</p>
+  <h3 class="fn"><table>
+     <a name="Move_Convolver_Backward"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Move_Convolver_Backward (<a href="Convolver.html">Convolver</a> *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Move the current position of the convolver <I>c</I> backward by one.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convolve"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Convolve (<a href="Convolver.html">Convolver</a> *<I>c</I>)</td></tr>
+  </table></h3>
+<p>
+Return the value of the convolution of <I>c</I> at its current position.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convolve_Segment"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Convolve_Segment (<a href="Convolver.html">Convolver</a> *<I>c</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>offset</I>, <a href="Mylib.html#Size_Type">Size_Type</a> <I>span</I>)</td></tr>
+  </table></h3>
+<p>
+Return the convolution of <I>c</I> at its current position, over just the subrange
+<I>[offset,offset+span)</I> of indices in the filter.
+</p>
+  <h3 class="fn"><table>
+     <a name="Free_Convolver"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Free_Convolver (<a href="Convolver.html">Convolver</a> *<I>c</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Free the convolver <I>c</I>.
+Beware, a <a href="Convolver.html">Convolver</a> is a short-lived object and therefore does not have the full
+repertoire of object primitives: it can be created, freed and/or killed, that's it.
+</p>
+  <h3 class="fn"><table>
+     <a name="Kill_Convolver"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Kill_Convolver (<a href="Convolver.html">Convolver</a> *<I>c</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Kill the convolver <I>c</I>.
+Beware, a <a href="Convolver.html">Convolver</a> is a short-lived object and therefore does not have the full
+repertoire of object primitives: it can be created, freed and/or killed, that's it.
+</p>
+  <h3 class="fn"><table>
+     <a name="Reset_Convolver"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Reset_Convolver ()</td></tr>
+  </table></h3>
+<p>
+Reset the <a href="Convolver.html">Convolver</a> class by killing all freed convolvers in the free pool of the class.
+</p>
+  <h3 class="fn"><table>
+     <a name="Gaussian_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Vector">Double_Vector</a> *</td>
+     <td valign="baseline">Gaussian_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>sigma</I>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a 1-dimensional Gaussian filter with standard deviation <I>sigma</I>.  A Gaussian technically
+has an infinite domain but the routine only samples <I>radius</I> pixels from both sides of its maximum
+at 0, so that the returned vector is of length <I>2*radius+1</I>.  The elements are normalized
+so that they sum to 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Box_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Vector">Double_Vector</a> *</td>
+     <td valign="baseline">Box_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a 1-dimensional vector of length <I>2*radius+1</I> whose elements
+have the value <I>1/(2*radius+1)</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Filter_Power"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">Filter_Power<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>filter</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, int <I>power</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a (<I>power</I>)-dimensional filter from a 1-dimensional separable filter.  For example
+<I>Filter_Power(<a href="Convolver.html#Gaussian_Filter">Gaussian_Filter</a>(0.5,2),3)</I> produces a symmetric 5x5x5 3-dimensional Gaussian filter.
+</p>
+  <h3 class="fn"><table>
+     <a name="Filter_Product"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">Filter_Product<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Double_Array">Double_Array</a> *<I>filter1</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Double_Array">Double_Array</a> *<I>filter2</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Generates an <I>m+n</I>-dimensional filter by taking the product of <I>m</I>-dimensional <I>filter1</I>
+and <I>n</I>-dimensional <I>filter2</I>, where <I>filter1</I> is providing the outer dimensions and
+<I>filter2</I> the inner dimension.  That is, the order of the operands is important.
+Formally, <I>f(x&middot;y)</I> = <I>filter1[x]*filter2[y]</I>, where <I>f</I> is the product, and <I>x</I>
+and <I>y</I> are <I>m</I>- and <I>n</I>-dimensional coordinates, respectively.
+</p>
+  <h3 class="fn"><table>
+     <a name="LOG_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">LOG_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, double <I>sigma</I>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Generates an <I>n</I>-dimensional Laplacian of Gaussian (LOG) filter with standard deviation
+<I>sigma</I> and support <I>radius</I> (i.e. each dimension will be of length <I>2*radius+1</I>).
+Formally, the Laplacian of a Gaussian <I>G<sub>&sigma;</sub></I> is:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&Delta;G<sub>&sigma;</sub>(x<sub>1</sub>, x<sub>2</sub>, &hellip;) = G<sub>&sigma;</sub>(x<sub>1</sub>, x<sub>2</sub>, &hellip;) (&Sigma;<sub>i</sub> x<sub>i</sub><sup>2</sup> / &sigma;<sup>4</sup> - n / &sigma;<sup>2</sup>)</i>
+<br><br>
+The elements are normalized so they sum to 0.
+</p>
+  <h3 class="fn"><table>
+     <a name="DOG_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">DOG_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, double <I>sigma1</I>, double <I>sigma2</I>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Generates an <I>n</I>-dimensional filter that is the difference of Gaussians (DOG) where a Gaussian
+with a standard deviation of <I>sigma2</I> is subtracted from a Guassian with a standard deviation of <I>sigma1</I>,
+and where the support of the filter in each dimension is <I>radius</I> (i.e. each dimension is of
+length <I>2*radius+1</I> with the maximum of the filter at the center of the array).
+A DOG filter approximates an LOG filter when <I>sigma2 = 1.6sigma1</I>.
+The elements are normalized so they sum to 0.
+</p>
+  <h3 class="fn"><table>
+     <a name="DOB_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">DOB_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, int <I>radius1</I>, int <I>radius2</I>)</td></tr>
+  </table></h3>
+<p>
+Generates an <I>n</I>-dimensional filter that is the difference of box filters (DOB) where a filter
+of radius <I>radius2</I> is subtracted from a filter of <I>radius1</I>.  The DOB is in some sense an
+even simpler form of a DOG filter, which in turn is an approximation of a DOG filter.
+The support of the filter in each dimension is the greater of <I>radius1</I> and <I>radius2</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="ALOG_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">ALOG_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, double *<I>sigma</I>, int *<I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Generates an <I>n</I>-dimensional Laplacian of Gaussian (LOG) filter with standard deviations
+<I>sigma[i]</I> and support <I>radius[i]</I> in each dimension <I>i</I>.
+Formally, the Gaussian is
+<i>G<sub>&sigma;<sub>1</sub></sub>(x<sub>1</sub>)&middot;G<sub>&sigma;<sub>2</sub></sub>(x<sub>2</sub>)&middot; &hellip; &middot;G<sub>&sigma;<sub>n</sub></sub>(x<sub>n</sub>)</i>
+as Guassian filters are separable, and its Laplacian is:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;G<sub>&sigma;<sub>1</sub></sub>(x<sub>1</sub>)&middot;G<sub>&sigma;<sub>2</sub></sub>(x<sub>2</sub>)&middot; &hellip; &middot;G<sub>&sigma;<sub>n</sub></sub>(x<sub>n</sub>) (&Sigma;<sub>i</sub> x<sub>i</sub><sup>2</sup> / &sigma;<sub>i</sub><sup>4</sup> - &Sigma;<sub>i</sub> 1 / &sigma;<sub>i</sub><sup>2</sup>)</i>
+<br><br>
+The elements are normalized so they sum to 0.
+</p>
+  <h3 class="fn"><table>
+     <a name="ADOG_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">ADOG_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, double *<I>sigma1</I>, double *<I>sigma2</I>, int *<I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Generates an <I>n</I>-dimensional filter that is the difference of Gaussians (DOG) where an assymmetric
+Gaussian with standard deviations of <I>sigma2[i]</I> is subtracted from an assymetric Guassian with
+standard deviations <I>sigma1[i]</I>,
+and where the support of the filter in each dimension <I>i</I> is <I>radius[i]</I> (i.e. each dimension
+is of length <I>2*radius[i]+1</I> with the maximum of the filter at the center of the array).
+A DOG filter approximates an LOG filter when <I>sigma2[i] = 1.6sigma1[i]</I>.
+The elements are normalized so they sum to 0.
+</p>
+  <h3 class="fn"><table>
+     <a name="ADOB_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Array">Double_Array</a> *</td>
+     <td valign="baseline">ADOB_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, int *<I>radius1</I>, int *<I>radius2</I>)</td></tr>
+  </table></h3>
+<p>
+Generates an <I>n</I>-dimensional filter that is the difference of box filters (DOB) where a filter
+of <B>shape</B> <I>radius2</I> is subtracted from a filter of <B>shape</B> <I>radius1</I>.  The DOB is in some sense an
+even simpler form of a DOG filter, which in turn is an approximation of a DOG filter.
+The support of the filter in each dimension <I>i</I> is the greater of <I>radius1[i]</I> and <I>radius2[i]</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Gabor_Filter"></a><tr><td valign="baseline"><a href="Array.html#Double_Matrix">Double_Matrix</a> *</td>
+     <td valign="baseline">Gabor_Filter<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>aspect</I>, double <I>sigma</I>, double <I>wavelen</I>, double phase <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double <I>orient</I>, int <I>radius1</I>, int <I>radius2</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a 2-dimensional Gabor filter with the given parameters of size <I>radius1 x radius2</I>.
+Basically a Gabor filter is an assymmetric Gaussian of standard deviations <I>&sigma; = sigma</I>
+and <I>&sigma;/(&alpha; = aspect)</I> convolved with a sine wave of wavelength <I>&lambda; = wavelen</I>
+offset by phase <I>&phi; = phase</I> and then rotated by angle <I>&theta; = orient</I>.  Formally:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;Gabor(i,j) = e<sup>(x<sup>2</sup> + (&alpha;y)<sup>2</sup>)/(2&sigma;<sup>2</sup>)</sup> cos( &lambda;x+&phi;)</i>
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;</i>where <i>x = i cos&theta; + j sin&theta;</i> and <i>y = j cos&theta; - i sin&theta;</i>
+</td></tr></table>
+</body>
+</html>

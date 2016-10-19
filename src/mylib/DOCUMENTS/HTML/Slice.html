@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Slice Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Slice Class Reference</h1>
+
+<p>
+A sub-array of an Array defined by any two corner coordinates.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;array.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Slice *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Make_Slice">Make_Slice</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>target</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, Coordinate *<I>beg</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>, Coordinate *<I>end</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Slice_First">Slice_First</a></b>
+     (Slice *<I>s</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Slice_Last">Slice_Last</a></b>
+     (Slice *<I>s</I>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Slice_Index">Slice_Index</a></b>
+     (Slice *<I>s</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Slice_Coordinate">Slice_Coordinate</a></b>
+     (Slice *<I>s</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Set_Slice_To_Index">Set_Slice_To_Index</a></b>
+     (Slice *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Indx_Type <I>idx</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Inc_Slice_Index">Inc_Slice_Index</a></b>
+     (Slice *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Dec_Slice_Index">Dec_Slice_Index</a></b>
+     (Slice *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Inside_Slice">Inside_Slice</a></b>
+     (Slice *<I>s</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Set_Slice_To_First">Set_Slice_To_First</a></b>
+     (Slice *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Set_Slice_To_Last">Set_Slice_To_Last</a></b>
+     (Slice *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Next_Slice_Index">Next_Slice_Index</a></b>
+     (Slice *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Prev_Slice_Index">Prev_Slice_Index</a></b>
+     (Slice *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Slice.html#Make_Array_From_Slice">Make_Array_From_Slice</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Slice *<I>s</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+A <a href="Slice.html">Slice</a> of an <I>n</I>-dimensional array is an <I>n</I>-dimensional sub-array of all the elements
+within a rectangular grid specified by giving its minimum and maximum
+coordinates as a pair of <I>n</I>-dimensional <a href="Array.html#Coordinate">Coordinate</a>s.  For example, if <I>A</I> is a
+10x10x10 array, then the slice defined by the coordinates (2,3,4) and (4,6,8) is
+the sub-array <I>A[2..4][3..6][4..8]</I>.  The type and scale of a slice are the same
+as its underlying array.  The kind of a slice is the same as its underlying array except
+that it is <I>PLAIN_KIND</I> if it takes a proper subset of the outer dimension of an <I>RGB_KIND</I>
+or <I>RGBA_KIND</I> array, or if it takes the innermost dimension of a <I>COMPLEX_KIND</I> array.
+This class has the full complement of conventional class primitives save that reading
+and writing are not available as a <a href="Slice.html">Slice</a> is intrinsically short lived.
+</p>
+<p>
+<a href="Slice.html">Slice</a>s, along with <a href="Array.html">Array</a>s and <a href="Frame.html">Frame</a>s, are considered <B>array forms</B> that are modeled
+in <B>Mylib</B> by the class <a href="AForm.html">AForm</a>.  These three separate classes all model a rectangular lattice of
+values in <I>n</I>-dimensions and hence many of the routines in the <B>Mylib</B> library operate on
+<a href="AForm.html">AForm</a>s as opposed to a specific one of the three types.  One of the major purposes of
+a slice is to allow a user to apply an operation or a routine to a rectangular sub-region
+of an array.  Thus there are many routines not listed on this page that apply to <a href="Slice.html">Slice</a>s
+indirectly as they operate on <a href="AForm.html">AForm</a>s.
+</p>
+<p>
+There other major reason for a slice, is to allow a user to conveniently iterate over
+the elements of a slice in order to realize their own codes that operate on slices.
+Note that this is difficult because an array is layed out in row major order, and hence
+the elements of a slice consist of a collection of <I>non-consecutive</I> segments within
+the linear <a href="Array.html#data">data</a> vector of the underlying array.
+</p>
+<p>
+A <a href="Slice.html">Slice</a> maintains a <B>current index</B> into its underlying array along with auxiliary
+information so that one can efficiently get to the next index within the slice or report
+if an index is in the slice.  Note carefully, that the current index need not
+necessarily be in the rectangular hyper-volume of the slice.
+</p>
+<p>
+A slice is created with <a href="Slice.html#Make_Slice">Make_Slice</a>, and its mininum coordinate, maximum coordinate,
+current index, and coordinate (in the underlying array) for the current index
+can be retrieved with <a href="Slice.html#Slice_First">Slice_First</a>, <a href="Slice.html#Slice_Last">Slice_Last</a>, <a href="Slice.html#Slice_Index">Slice_Index</a>, and
+<a href="Slice.html#Slice_Coordinate">Slice_Coordinate</a>.  Note that a slice is an opaque object, i.e. unlike say an <a href="Array.html">Array</a>,
+you cannot directly access any of its fields.
+</p>
+<p>
+As mentioned previously a slice is an <a href="AForm.html">AForm</a> and as such it is guaranteed to have
+an underlying array, kind, size, and shape which can be fetched with
+<a href="AForm.html#AForm_Array">AForm_Array</a>, <a href="AForm.html#AForm_Kind">AForm_Kind</a>, <a href="AForm.html#AForm_Kind">AForm_Kind</a>, and <a href="AForm.html#AForm_Shape">AForm_Shape</a>.  Moreover, you
+can ask if an array form is a slice via <a href="AForm.html#AForm_Class">AForm_Class</a> or <a href="AForm.html#Is_Slice">Is_Slice</a>.
+</p>
+<p>
+One can set the current index, increase it by 1, decrease it by 1, and ask if the
+current index is inside the slice with <a href="Slice.html#Set_Slice_To_Index">Set_Slice_To_Index</a>, <a href="Slice.html#Inc_Slice_Index">Inc_Slice_Index</a>,
+<a href="Slice.html#Dec_Slice_Index">Dec_Slice_Index</a>, and <a href="Slice.html#Inside_Slice">Inside_Slice</a>.  This group of routines allows one to traverse
+the array and efficiently know if one is inside or outside the slice as <a href="Slice.html#Inc_Slice_Index">Inc_Slice_Index</a>
+and <a href="Slice.html#Dec_Slice_Index">Dec_Slice_Index</a> take O(1) expected time regardless of the dimensionality of the
+slice.  For example, suppose <I>A</I> is a 10x10x10 array:
+</p>
+<pre>
+ Indx_Type p;
+ Slice    *s = Make_Slice(A,Coord3(2,3,4),Coord3(4,6,8));
+
+ Set_Slice_To_Index(0);
+ for (p = 0; p < A->size; p++)
+   { if (Inside(s))
+       ; // p is inside slice
+     else
+       ; // p is oustide slice
+     Inc_Slice_Index(s);
+   }
+</pre>
+<p>
+Perhaps most importantly, one can set the current index to the minimum or maxiumum coordinate,
+and advance the current index to the next or previous
+index <I>in the slice</I>, with <a href="Slice.html#Set_Slice_To_First">Set_Slice_To_First</a>, <a href="Slice.html#Set_Slice_To_Last">Set_Slice_To_Last</a>, <a href="Slice.html#Next_Slice_Index">Next_Slice_Index</a>,
+and <a href="Slice.html#Prev_Slice_Index">Prev_Slice_Index</a>.  This group of routines allows one to iterate over the elements
+in the rectangular region of the slice efficiently as <a href="Slice.html#Next_Slice_Index">Next_Slice_Index</a> and <a href="Slice.html#Prev_Slice_Index">Prev_Slice_Index</a>
+take O(1) expected time regardless of the dimensionality of the
+slice.  For example, suppose <I>A</I> is a 10x10x10 array:
+</p>
+<pre>
+ Indx_Type p, e;
+ Slice    *s = Make_Slice(A,Coord3(2,3,4),Coord3(4,6,8));
+
+ e = Set_Slice_To_Last(s);
+ for (p = Set_Slice_To_First(s); 1; p = Next_Slice_Index(s))
+   { // operate on next index p in the slice
+     if (p == e) break;
+   }
+</pre>
+<p>
+Finally, one can create an <a href="Array.html">Array</a> that has the shape and values of a slice with
+<a href="Slice.html#Make_Array_From_Slice">Make_Array_From_Slice</a>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Make_Slice"></a><tr><td valign="baseline"><a href="Slice.html">Slice</a> *</td>
+     <td valign="baseline">Make_Slice<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>target</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>beg</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>end</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Creates a slice object given a target array <I>target</I> and the minimum and maximum coordinates,
+<I>beg</I> and <I>end</I>, respectively, defining the rectangle of the slice.
+If the underlying array is <I>RGB_KIND</I>, <I>RGBA_KIND</I>, or <I>COMPLEX_KIND</I>, then one is free to
+specify only <a class="ref" href="Array.html#core coordinate">core coordinate</a>s for the <I>beg</I> and <I>end</I> coordinates in which case the entire
+range of the special dimension is assumed. <B>NB:</B> A reference to <I>target</I> is created and held by
+the slice so that <I>target</I> cannot disappear until the slice does.  Also, the <a href="Array.html#Coordinate">Coordinate</a>s
+<I>beg</I> and <I>end</I> are <I>subsumed</I> by this routine, meaning that they must have a reference
+count of 1 upon entry and that those references will be taken over by the slice object being
+created.
+</p>
+  <h3 class="fn"><table>
+     <a name="Slice_First"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Slice_First (<a href="Slice.html">Slice</a> *<I>s</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the minimum <a href="Array.html#Coordinate">Coordinate</a> (<I>beg</I> in <a href="Slice.html#Make_Slice">Make_Slice</a>) of the slice <I>s</I>.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Slice_Last"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Slice_Last (<a href="Slice.html">Slice</a> *<I>s</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the maximum <a href="Array.html#Coordinate">Coordinate</a> (<I>end</I> in <a href="Slice.html#Make_Slice">Make_Slice</a>) of the slice <I>s</I>.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Slice_Index"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Slice_Index (<a href="Slice.html">Slice</a> *<I>s</I>)</td></tr>
+  </table></h3>
+<p>
+Return the current index of slice <I>s</I> which is an index into the <a href="Array.html#data">data</a> vector of <I>s</I>'s
+underlying array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Slice_Coordinate"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Slice_Coordinate (<a href="Slice.html">Slice</a> *<I>s</I>)</td></tr>
+  </table></h3>
+<p>
+Return the <a href="Array.html#Coordinate">Coordinate</a> corresponding to the current index of slice <I>s</I> which is an
+index into the <a href="Array.html#data">data</a> vector of <I>s</I>'s underlying array.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Slice_To_Index"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Set_Slice_To_Index (<a href="Slice.html">Slice</a> *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>idx</I>)</td></tr>
+  </table></h3>
+<p>
+Set slice <I>s</I>'s current index within its underlying array to <I>idx</I> and return true
+only if this position is within the slice.
+</p>
+  <h3 class="fn"><table>
+     <a name="Inc_Slice_Index"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Inc_Slice_Index (<a href="Slice.html">Slice</a> *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Increase slice <I>s</I>'s index by 1 and return true if the new position is within
+the slice.
+</p>
+  <h3 class="fn"><table>
+     <a name="Dec_Slice_Index"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Dec_Slice_Index (<a href="Slice.html">Slice</a> *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Decrease slice <I>s</I>'s index by 1 and return true if the new position is within
+the slice.
+</p>
+  <h3 class="fn"><table>
+     <a name="Inside_Slice"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Inside_Slice (<a href="Slice.html">Slice</a> *<I>s</I>)</td></tr>
+  </table></h3>
+<p>
+Return true only if the current index of <I>s</I> is within the slice.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Slice_To_First"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Set_Slice_To_First (<a href="Slice.html">Slice</a> *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Set slice <I>s</I>'s current index to that corresponding to its minimum coordinate and return this
+index.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Slice_To_Last"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Set_Slice_To_Last (<a href="Slice.html">Slice</a> *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Set slice <I>s</I>'s current index to that corresponding to its maximum coordinate and return this
+index.
+</p>
+  <h3 class="fn"><table>
+     <a name="Next_Slice_Index"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Next_Slice_Index (<a href="Slice.html">Slice</a> *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+The current index of the slice <I>s</I> must be within the slice upon entry.  The routine advances
+the index to the next value that is within the slice.  If the current index is that of the
+last index in the slice, then the index is advanced to the first index of the slice in a
+circular fashion.  This routine serves as the basic forward iterator for enumerating all the
+indices of elements in a slice.  The routine returns the updated index.
+</p>
+  <h3 class="fn"><table>
+     <a name="Prev_Slice_Index"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Prev_Slice_Index (<a href="Slice.html">Slice</a> *<I>s</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Exactly the same as <a href="Slice.html#Next_Slice_Index">Next_Slice_Index</a> except the index moves backwards through the indices
+of slice <I>s</I> in a cyclic fashion.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Array_From_Slice"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Make_Array_From_Slice<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Slice.html">Slice</a> *<I>s</I>)</td></tr>
+  </table></h3>
+<p>
+Generate an array whose shape and value is that modeled by the slices <I>s</I>.  The array has
+the kind (as returned by <a href="AForm.html#AForm_Kind">AForm_Kind</a>), type, and scale of the slice.  See also <a href="Array.html#Clip_Array">Clip_Array</a>
+<a href="Array.html#Clip_Array_Inplace">Clip_Array_Inplace</a> for similar but distinct functionality.
+</td></tr></table>
+</body>
+</html>

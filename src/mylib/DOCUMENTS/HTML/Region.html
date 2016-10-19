@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Region Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Region Class Reference</h1>
+
+<p>
+A compact encoding of any connected collection of voxels.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;region.h&gt;
+</pre>
+<hr />
+
+<a name="Fields"></a>
+<h2>Visible Fields</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#rastlen"> rastlen </a></b>
+     </td><td class="define" valign="baseline">: Size_Type</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#raster"> raster </a></b>
+     </td><td class="define" valign="baseline">: Indx_Type *</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Length of the raster pair vector (always even)</td></tr>
+    <tr><td class="comment" valign="baseline">Voxels are [raster[i],raster[i+1]] for i in [0,rastlen) and i even</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Region *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Record_Region">Record_Region</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I>, int <I>share</I>, boolean <I>iscon2n</I>, Indx_Type <I>leftmost</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>with_holes</I>, void *<I>argt</I>, boolean (*<I>test</I>)(Indx_Type p, void *argt))</td></tr>
+<tr><td class="return" valign="baseline">Region *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Record_Basic">Record_Basic</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I>, int <I>share</I>, boolean <I>iscon2n</I>, Indx_Type <I>leftmost</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean <I>with_holes</I>, Comparator <I>cmprsn</I>, Value <I>level</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Region *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Record_Level_Set">Record_Level_Set</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Level_Tree *<I>t</I>, Level_Set *<I>r</I>, boolean <I>with_holes</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">Region *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Record_P_Vertex">Record_P_Vertex</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Partition    *<I>p</I>, int        <I>v</I>, boolean <I>with_holes</I>, int <I>share</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Regions *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Fill_Region_Holes">Fill_Region_Holes</a></b>
+     (Region *<I>reg</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Get_Region_Connectivity">Get_Region_Connectivity</a></b>
+     (Region *<I>reg</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Get_Region_Dimensionality">Get_Region_Dimensionality</a></b>
+     (Region *<I>reg</I>)</td></tr>
+<tr><td class="return" valign="baseline">Dimn_Type *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Get_Region_Dimensions">Get_Region_Dimensions</a></b>
+     (Region *<I>reg</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#For_Region">For_Region</a></b>
+     (Region *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(Indx_Type p, void *arg))</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#For_Region_Outline">For_Region_Outline</a></b>
+     (Region *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(Indx_Type p, void *arg))</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#For_Region_Holes">For_Region_Holes</a></b>
+     (Region *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(Indx_Type p, void *arg))</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#For_Region_Exterior">For_Region_Exterior</a></b>
+     (Region *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(Indx_Type p, void *arg))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Range_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Region_Range">Region_Range</a></b>
+     (Range_Bundle *<I>rng</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, APart *<I>part</I>, Region *<I>reg</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Size_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Region_Volume">Region_Volume</a></b>
+     (Region *<I>reg</I>)</td></tr>
+<tr><td class="return" valign="baseline">Size_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Region_Area">Region_Area</a></b>
+     (Region *<I>reg</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Region_COM">Region_COM</a></b>
+     (Double_Vector *<I>com</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, Region *<I>reg</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Region_Select_COM">Region_Select_COM</a></b>
+     (Double_Vector *<I>com</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, Region *<I>reg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APart *<I>part</I>, Comparison <I>cmprsn</I>, Value <I>level</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Extent_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Region_Extent">Region_Extent</a></b>
+     (Extent_Bundle *<I>ext</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, Region *<I>reg</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Region.html#Touches_Boundary">Touches_Boundary</a></b>
+     (Extent_Bundle *<I>ext</I>, APart *<I>part</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+A <a href="Region.html">Region</a> object models any <I>2n</I>- or
+<i>(3<sup>n</sup>-1)</i>-connected
+set of voxels in an <I>n</I>-dimension array or slice.
+The basic encoding models the set as runs of consecutive voxels that are in the
+region, that is, the voxels of a region are precisely
+<font size="+1">&cup;</font>
+{ [ <I>raster</I>[<I>i</I>], <I>raster</I>[<I>i</I>+1] ] : <I>i</I> &isin; [0,<I>rastlen</I>-1] and <I>i</I> even }.
+That is, to perform some simple computation on a region, the following template suffices:
+</p>
+<pre>
+ Region   *r;
+ Size_Type k;
+ Indx_Type p;
+
+ for (k = 0; k < r->rastlen; k += 2)
+   for (p = r->raster[k]; p <= r->raster[k+1]; p++)
+     //  Compute something on voxel p
+</pre>
+<p>
+Note carefully, that indices <I>p</I> into a particular lattice are being referred to, so while a region
+isn't coupled to a particular array, it is only applicable to arrays of the same shape as that
+over which the region was recorded.  One may conceptually think of a region as an arbitrary
+connected mask that can be applied to any array of the appropriate shape.
+</p>
+<a name="outer border"><a>
+<a name="hole"><a>
+<a name="exterior"><a>
+<p>
+A given <I>C</I>-connected region <I>R</I> has an <I>(n-1)</I>-dimensional <B>outer contour</B> and may have any number
+of <B>inner countour</B>s surrounding holes.  If <I>C</I> is <I>2n</I> (connectivity), then let <I>S</I> be
+<i>(3<sup>n</sup>-1)</i>,
+and if <I>C</I> is
+<i>(3<sup>n</sup>-1)</i> then
+let <I>S</I> be <I>2n</I>.
+A <B>hole</B> is a maximal, <I>S</I>-connected set of voxels not in
+the region <I>R</I> that is completely surrounded by voxels in <I>R</I>.
+The <B>exterior</B> of <I>R</I> is the unique, maximal, <I>S</I>-connected set of voxels that
+cannot be surrounded by pixels of <I>R</I>.
+The <B>outer border</B> of <I>R</I> is the <I>C</I>-connected set of voxels
+that are <I>S</I>-connected to an exterior voxel.
+The example below shows a 2-dimensional region of yellow voxels that is both 4- and 8-connected.
+Note carefully that the outer contour, outer border, and which voxels are in a hole depends on
+whether one considers the region to be 4- or 8-connected.
+</p>
+<br>
+<p align="center"><img src="IMAGES/Surfaces.jpg"></p>
+<br>
+<a name="outer hull"><a>
+<p>
+The <B>outer hull</B> of a region <I>R</I> is <I>R</I> plus all the voxels in all the holes surrounded by <I>R</I>.
+One often needs only the outer hull of <I>R</I>, which can also be
+encoded as a region as it is appropriately connected.
+The recording routines can be directed to compute the outer hull versus the region with
+holes by appropriately setting the boolean parameter <I>with_holes</I>.
+Note carefully, that the class routines compute the outer hull in time proportional to the
+surface area of the outer contour, whereas the proper detection of any holes requires time
+proportional to the volume of the outer hull.
+</p>
+<p>
+The hidden portion of a region object contains
+(a) the <a class="ref" href="Array.html#shape">shape</a> of the array over which the region was recorded,
+(b) the surface area of the outer contour, i.e. the number of <I>(n-1)</I>-dimensional hyper
+faces in the outer contour,
+(c) an encoding of the set of voxels in the outer border of the region, and
+(d) an enoding that determines whether an exterior run (a run of non-<I>R</I> voxels between two
+runs of <I>R</I> voxels) are in a hole or not.
+The coding of this information is
+sufficiently complex that it remains hidden, but it is still effectively available through
+the routines of the class.
+</p>
+<a name="leftmost"><a>
+<p>
+A region can be "recorded" by <a href="Region.html#Record_Region">Record_Region</a> for any set of voxels in a given array or slice
+that are connected to a leftmost seed and satisfy a user-definable predicate.  A voxel is
+<B>leftmost</B> if a step in the negative x-direction takes one to a voxel that is not in the region
+and not in a hole surrounded by the region.  The voxel in a region with the minimum index
+is always leftmost and can be computed with <a href="Connectivity.html#Find_Leftmost_Seed">Find_Leftmost_Seed</a> if necessary.  A region can
+also more simply be recorded by <a href="Region.html#Record_Basic">Record_Basic</a> as the set of voxels connected to the leftmost
+seed and satisfying a given comparison, i.e. &lt; &le; ..., with respect to a given, fixed
+value.  One can also record a region of any <a href="Partition.html">Partition</a> or <a href="Level_Tree.html#Level_Set">Level_Set</a>, with <a href="Region.html#Record_P_Vertex">Record_P_Vertex</a>
+and <a href="Region.html#Record_Level_Set">Record_Level_Set</a>.
+</p>
+<p>
+Once recorded, the connectivity under which a region was recorded and the shape of the array
+over which it was recorded can be fetched with <a href="Region.html#Get_Region_Connectivity">Get_Region_Connectivity</a>,
+<a href="Region.html#Get_Region_Dimensionality">Get_Region_Dimensionality</a>, and <a href="Region.html#Get_Region_Dimensions">Get_Region_Dimensions</a>.
+One can iterate over the voxels in a region with <a href="Region.html#For_Region">For_Region</a>, but when speed matters
+we suggest one use the simple code template above with respect to the visible fields of
+the region.  For iterating over the voxels in the outline, the holes, or the exterior of
+a region, one can use <a href="Region.html#For_Region_Outline">For_Region_Outline</a>, <a href="Region.html#For_Region_Holes">For_Region_Holes</a>, <a href="Region.html#For_Region_Exterior">For_Region_Exterior</a>.
+</p>
+<p>
+One can fill in a <a href="Array.html#Range_Bundle">Range_Bundle</a> giving the minimum and maximum values in a particular array
+(and not necessarily the one over which the region was recorded), with <a href="Region.html#Region_Range">Region_Range</a>.
+One can get the volume, area, and center of mass with <a href="Region.html#Region_Volume">Region_Volume</a>, <a href="Region.html#Region_Area">Region_Area</a>, and
+<a href="Region.html#Region_COM">Region_COM</a>.  The center of mass is returned as an <I>n</I>-dimensional <a href="Array.html#Double_Vector">Double_Vector</a> as it
+need not lie on an integer lattice point.  One can round this vector to a <a href="Array.html#Coordinate">Coordinate</a>
+with routines such as <a href="Array.html#Floor_Coord">Floor_Coord</a>.  One can also compute the center of mass with respect
+to a subset of voxels defined by a comparison and a level (as for <a href="Region.html#Record_Basic">Record_Basic</a>) with
+<a href="Region.html#Region_Select_COM">Region_Select_COM</a>.  Finally, one can compute the rectalinear extent of a region with
+<a href="Region.html#Region_Extent">Region_Extent</a> and inquire as to whether that implies the region touches the boundary
+of an array or slice thereof with <a href="Region.html#Touches_Boundary">Touches_Boundary</a>.
+</p>
+<hr />
+
+<h2>Visible Fields Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="rastlen"></a><tr><td valign="top">rastlen</td><td>: <a href="Mylib.html#Size_Type">Size_Type</a></td></tr>
+     <a name="raster"></a><tr><td valign="top">raster</td><td>: <a href="Mylib.html#Indx_Type">Indx_Type</a> *</td></tr>
+  </table></h3>
+<p>
+Most of a <a href="Region.html">Region</a> object is hidden, but for efficiency purposes, one is given direct access
+to the run length encoding of the set of voxels in the region.  The set of voxels in a
+region is precisely
+<font size="+1">&cup;</font>
+{ [ <I>raster</I>[<I>i</I>], <I>raster</I>[<I>i</I>+1] ] : <I>i</I> &isin; [0,<I>rastlen</I>-1] and <I>i</I> even }.
+In terms of code, one would perform a computation on each voxel as follows:
+</p>
+<pre>
+ Region   *r;
+ Size_Type k;
+ Indx_Type p;
+
+ for (k = 0; k < r->rastlen; k += 2)
+   for (p = r->raster[k]; p <= r->raster[k+1]; p++)
+     //  Compute something on voxel p
+</pre>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Record_Region"></a><tr><td valign="baseline"><a href="Region.html">Region</a> *</td>
+     <td valign="baseline">Record_Region<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I>, int <I>share</I>, boolean <I>iscon2n</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>leftmost</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>with_holes</I>, void *<I>argt</I>, boolean (*<I>test</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *argt))</td></tr>
+  </table></h3>
+<p>
+Generate a <a href="Region.html">Region</a> object that compactly models the set of voxels in <I>image</I> that are
+<I>iscon2n</I> connected to a <a class="ref" href="Region.html#leftmost">leftmost</a> seed pixel <I>leftmost</I> and satisfy the predicate
+<I>test(p,argt)</I>.  If <I>image</I> is a slice, then the region is limited to the volume of the
+slice, albeit defined with respect to the underlying array of the slice.  If <I>with_holes</I> is
+false then a description of the <a class="ref" href="Region.html#outer hull">outer hull</a> of the defined region is returned, otherwise an
+encoding of the region, properly excluding any holes within it, is returned.  When <I>with_holes</I>
+is false, the region is computed in time proportional to the surface area of the outer
+hull, and when it is true, the routine is less efficient, taking time proportional to the
+volume of the outer hull.  The parameter
+<I><a class="ref" href="Connectivity.html#share">share</a></I> determines how the surface flood fill, <a href="Connectivity.html#Flood_Surface">Flood_Surface</a>, called by this routine,
+uses the resource pool of working storage for said operation.  This parameter can be safely
+set to 0, but if one wishes to write a threaded application they should understand the
+details that are described in the <a href="Connectivity.html">Connectivity</a> module page
+<a href="Connectivity.html#share">here</a>.
+Finally, note that the <a href="Region.html">Region</a> only records the dimensionality and shape of the underlying
+array of <I>apart</I>, but does not reference it.  In this way, a region can be though of as an
+irregular mask that can be applied to any other array of the same dimensionality and shape.
+</p>
+  <h3 class="fn"><table>
+     <a name="Record_Basic"></a><tr><td valign="baseline"><a href="Region.html">Region</a> *</td>
+     <td valign="baseline">Record_Basic<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I>, int <I>share</I>, boolean <I>iscon2n</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>leftmost</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean <I>with_holes</I>, <a href="Mylib.html#Comparator">Comparator</a> <I>cmprsn</I>, <a href="Mylib.html#Value">Value</a> <I>level</I>)</td></tr>
+  </table></h3>
+<p>
+A simplified version of <a href="Region.html#Record_Region">Record_Region</a> above, that defines the region as all pixels that
+satisfy '<I>val[p] cmprsn level</I>' where <I>val[p]</I> is the value of pixel <I>p</I> in <I>image</I>.  For
+example, if <I>cmprsn</I> = <I>GE_COMP</I> and <I>level</I> = 12, then the region is all pixels <I>iscon2n</I>
+connected to <I>leftmost</I> that are greater than or equal to 12.
+</p>
+  <h3 class="fn"><table>
+     <a name="Record_Level_Set"></a><tr><td valign="baseline"><a href="Region.html">Region</a> *</td>
+     <td valign="baseline">Record_Level_Set<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, boolean <I>with_holes</I>, int <I>share</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a Region for level set <I>r</I> in level tree <I>t</I>.  The parameters <I>with_holes</I> and
+<I>share</I> are as for <a href="Region.html#Record_Region">Record_Region</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Record_P_Vertex"></a><tr><td valign="baseline"><a href="Region.html">Region</a> *</td>
+     <td valign="baseline">Record_P_Vertex<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Partition.html">Partition</a>    *<I>p</I>, int        <I>v</I>, boolean <I>with_holes</I>, int <I>share</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a Region for region or vertex <I>v</I> of the <a href="Partition.html">Partition</a> <I>p</I>.  The parameters
+<I>with_holes</I> and <I>share</I> are as for <a href="Region.html#Record_Region">Record_Region</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Fill_Region_Holes"></a><tr><td valign="baseline">Regions *</td>
+     <td valign="baseline">Fill_Region_Holes (<a href="Region.html">Region</a> *<I>reg</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Modify the value of <I>reg</I> so that all holes within the region are filled, giving one
+a region representing the <a class="ref" href="Region.html#outer hull">outer hull</a> of the region.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Region_Connectivity"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Get_Region_Connectivity (<a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if the region was recorded with <I>2n</I>-connectivity, and false if it was
+recorded with
+<i>(3<sup>n</sup>-1)</i>-connectivity.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Region_Dimensionality"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_Region_Dimensionality (<a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Return the dimensionality of the region <I>reg</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Region_Dimensions"></a><tr><td valign="baseline"><a href="Mylib.html#Dimn_Type">Dimn_Type</a> *</td>
+     <td valign="baseline">Get_Region_Dimensions (<a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Return the dimensions of the arrays to which <I>reg</I> can be applied.
+</p>
+  <h3 class="fn"><table>
+     <a name="For_Region"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">For_Region (<a href="Region.html">Region</a> *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arg))</td></tr>
+  </table></h3>
+<p>
+For each voxel <I>p</I> in the region <I>reg</I>, call <I>handler(p,arg)</I> on the voxel.
+</p>
+  <h3 class="fn"><table>
+     <a name="For_Region_Outline"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">For_Region_Outline (<a href="Region.html">Region</a> *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arg))</td></tr>
+  </table></h3>
+<p>
+For each voxel <I>p</I> in the <a class="ref" href="Region.html#outer border">outer border</a> of <I>reg</I>, call <I>handler(p,arg)</I> on the voxel.
+</p>
+  <h3 class="fn"><table>
+     <a name="For_Region_Holes"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">For_Region_Holes (<a href="Region.html">Region</a> *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arg))</td></tr>
+  </table></h3>
+<p>
+For each voxel <I>p</I> in a <a class="ref" href="Region.html#hole">hole</a> of <I>reg</I>, call <I>handler(p,arg)</I> on the voxel.
+</p>
+  <h3 class="fn"><table>
+     <a name="For_Region_Exterior"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">For_Region_Exterior (<a href="Region.html">Region</a> *<I>reg</I>, void *<I>arg</I>, void (*<I>handler</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arg))</td></tr>
+  </table></h3>
+<p>
+For each voxel <I>p</I> not in the <a class="ref" href="Region.html#outer hull">outer hull</a> of <I>reg</I>, call <I>handler(p,arg)</I> on the voxel.
+</p>
+  <h3 class="fn"><table>
+     <a name="Region_Range"></a><tr><td valign="baseline"><a href="Array.html#Range_Bundle">Range_Bundle</a> *</td>
+     <td valign="baseline">Region_Range (<a href="Array.html#Range_Bundle">Range_Bundle</a> *<I>rng</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="AForm.html#APart">APart</a> *<I>part</I>, <a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Determines the range of values in the region <I>reg</I> super-imposed on <I>part</I> and places the
+values in <I>rng</I>.  The array underlying <I>part</I> must have the same shape as the <I>reg</I> (which
+is the shape of the underlying array over which it was recorded).
+</p>
+  <h3 class="fn"><table>
+     <a name="Region_Volume"></a><tr><td valign="baseline"><a href="Mylib.html#Size_Type">Size_Type</a></td>
+     <td valign="baseline">Region_Volume (<a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the number of pixels in <I>reg</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Region_Area"></a><tr><td valign="baseline"><a href="Mylib.html#Size_Type">Size_Type</a></td>
+     <td valign="baseline">Region_Area (<a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the surface area of the outer contour, i.e. the number of <I>(n-1)</I>-dimensional hyper
+faces in the outer contour.
+</p>
+  <h3 class="fn"><table>
+     <a name="Region_COM"></a><tr><td valign="baseline"><a href="Array.html#Double_Vector">Double_Vector</a> *</td>
+     <td valign="baseline">Region_COM (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>com</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the center of mass (com) of the region <I>reg</I> as a double vector that can, if desired, be
+rounded to a nearest <a href="Array.html#Coordinate">Coordinate</a> with routines such as <a href="Array.html#Floor_Coord">Floor_Coord</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Region_Select_COM"></a><tr><td valign="baseline"><a href="Array.html#Double_Vector">Double_Vector</a> *</td>
+     <td valign="baseline">Region_Select_COM (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>com</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <a href="Region.html">Region</a> *<I>reg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AForm.html#APart">APart</a> *<I>part</I>, Comparison <I>cmprsn</I>, <a href="Mylib.html#Value">Value</a> <I>level</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the center of mass of the pixels within <I>reg</I> that satisfy the given comparison
+<I>cmprsn</I> with value <I>level</I> in the array or slice <I>part</I>, i.e.
+all pixels <I>p</I> that satisfy '<I>val[p] cmprsn level</I>' where <I>val[p]</I> is the value of
+pixel <I>p</I> in the array underlying <I>part</I>.
+The array underlying <I>part</I> must have the same shape as the <I>reg</I> (which
+is the shape of the underlying array over which it was recorded).
+</p>
+  <h3 class="fn"><table>
+     <a name="Region_Extent"></a><tr><td valign="baseline"><a href="Array.html#Extent_Bundle">Extent_Bundle</a> *</td>
+     <td valign="baseline">Region_Extent (<a href="Array.html#Extent_Bundle">Extent_Bundle</a> *<I>ext</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <a href="Region.html">Region</a> *<I>reg</I>)</td></tr>
+  </table></h3>
+<p>
+Determines the extent of the region <I>reg</I> and fills in the bundle <I>ext</I> with the minimum
+and maximum coordinates of the extent box.  Note that these are a pair of <I>n</I>-dimensional
+opposing corners of the <I>n</I>-dimensional extent box where <I>n</I> is the dimensionality of the
+region.  If the <I>min</I> and <I>max</I> fields of the <a href="Array.html#Extent_Bundle">Extent_Bundle</a> are NULL on input,
+then the routine generates <a href="Array.html#Coordinate">Coordinate</a>s of the appropriate size, otherwise whatever array
+they point to is converted to an <I>n</I>-element <a href="Array.html#Coordinate">Coordinate</a> if they are not already thus,
+and then filled in with the extent values.  The caller is responsible for freeing or
+killing these coordinates.
+</p>
+  <h3 class="fn"><table>
+     <a name="Touches_Boundary"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Touches_Boundary (<a href="Array.html#Extent_Bundle">Extent_Bundle</a> *<I>ext</I>, <a href="AForm.html#APart">APart</a> *<I>part</I>)</td></tr>
+  </table></h3>
+<p>
+Given an extent <I>ext</I> in an <a href="Array.html#Extent_Bundle">Extent_Bundle</a> (presumably filled in by <a href="Region.html#Region_Extent">Region_Extent</a>), this
+routine returns true only if the extent box touches the boundaries of the array underlying
+<I>part</I>, i.e. <I><a href="AForm.html#AForm_Array">AForm_Array</a>(part)</I>.
+</td></tr></table>
+</body>
+</html>

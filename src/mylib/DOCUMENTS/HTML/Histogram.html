@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Histogram Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Histogram Class Reference</h1>
+
+<p>
+Flexible statistical analyses of the values in any AForm object.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;histogram.h&gt;
+</pre>
+<hr />
+
+<a name="Fields"></a>
+<h2>Visible Fields</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#kind"> kind </a></b>
+     </td><td class="define" valign="baseline">: Value_Kind</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#nbins"> nbins </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#binsize"> binsize </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#offset"> offset </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#total"> total </a></b>
+     </td><td class="define" valign="baseline">: Size_Type</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#counts"> counts </a></b>
+     </td><td class="define" valign="baseline">: Size_Type *</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Domain of histogram</td></tr>
+    <tr><td class="comment" valign="baseline">Histogram has nbins bins where the values</td></tr>
+    <tr><td class="comment" valign="baseline">&nbsp;&nbsp;covered by bin i are:</td></tr>
+    <tr><td class="comment" valign="baseline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[offset + i*binsize, offset + (i+1)*binsize)</td></tr>
+    <tr><td class="comment" valign="baseline">Total # of values in the histogram, &Sigma; counts[i]</td></tr>
+    <tr><td class="comment" valign="baseline">counts[i] is the # of values in bin i</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Constants"></a>
+<h2>Macro Constants</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="BIN_COUNT"></a>
+       <b><a href="Histogram.html#BIN_COUNT"> BIN_COUNT </a></b>
+     </td><td class="define" valign="baseline">= 0x01</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="CUMULATIVE_COUNT"></a>
+       <b><a href="Histogram.html#CUMULATIVE_COUNT"> CUMULATIVE_COUNT </a></b>
+     </td><td class="define" valign="baseline">= 0x02</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="CUMULATIVE_PERCENT"></a>
+       <b><a href="Histogram.html#CUMULATIVE_PERCENT"> CUMULATIVE_PERCENT </a></b>
+     </td><td class="define" valign="baseline">= 0x04</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="ASCENDING_HGRAM"></a>
+       <b><a href="Histogram.html#ASCENDING_HGRAM"> ASCENDING_HGRAM </a></b>
+     </td><td class="define" valign="baseline">= 0x08</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="CLIP_HGRAM_HIGH"></a>
+       <b><a href="Histogram.html#CLIP_HGRAM_HIGH"> CLIP_HGRAM_HIGH </a></b>
+     </td><td class="define" valign="baseline">= 0x10</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="CLIP_HGRAM_LOW"></a>
+       <b><a href="Histogram.html#CLIP_HGRAM_LOW"> CLIP_HGRAM_LOW </a></b>
+     </td><td class="define" valign="baseline">= 0x20</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="CLIP_HGRAM"></a>
+       <b><a href="Histogram.html#CLIP_HGRAM"> CLIP_HGRAM </a></b>
+     </td><td class="define" valign="baseline">= 0x30</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="BIN_MIDDLE"></a>
+       <b><a href="Histogram.html#BIN_MIDDLE"> BIN_MIDDLE </a></b>
+     </td><td class="define" valign="baseline">= 0x40</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Show bin counts</td></tr>
+    <tr><td class="comment" valign="baseline">Show cumulative counts</td></tr>
+    <tr><td class="comment" valign="baseline">Show cumulative per cent of the total</td></tr>
+    <tr><td class="comment" valign="baseline">Display in ascending order (descending by default)</td></tr>
+    <tr><td class="comment" valign="baseline">Do not display any 0 count bins at the top</td></tr>
+    <tr><td class="comment" valign="baseline">Do not display any 0 count bins at the bottom</td></tr>
+    <tr><td class="comment" valign="baseline">Do not display any 0 count bins at either extreme</td></tr>
+    <tr><td class="comment" valign="baseline">Display the mid-value of a bin as opposed to its range</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Value</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Bin2Value">Bin2Value</a></b>
+     (Histogram *<I>h</I>, int <I>b</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Value2Bin">Value2Bin</a></b>
+     (Histogram *<I>h</I>, Value <I>v</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Bin2Percentile">Bin2Percentile</a></b>
+     (Histogram *<I>h</I>, int <I>b</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Percentile2Bin">Percentile2Bin</a></b>
+     (Histogram *<I>h</I>, double <I>f</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Value2Percentile">Value2Percentile</a></b>
+     (Histogram *<I>h</I>, Value <I>v</I>)</td></tr>
+<tr><td class="return" valign="baseline">Value</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Percentile2Value">Percentile2Value</a></b>
+     (Histogram *<I>h</I>, double <I>f</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Make_Histogram">Make_Histogram</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Value_Kind <I>kind</I>, int <I>nbins</I>, Value <I>binsize</I>, Value <I>offset</I>)</td></tr>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Empty_Histogram">Empty_Histogram</a></b>
+     (Histogram *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Array">Histogram_Array</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (AForm *<I>a</I>, int <I>nbins</I>, Value <I>binsize</I>, Value <I>offset</I>)</td></tr>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Region">Histogram_Region</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Region *<I>r</I>, int <I>nbins</I>, Value <I>binsize</I>, Value <I>offset</I>)</td></tr>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_P_Vertex">Histogram_P_Vertex</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Partition *<I>p</I>, int <I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int <I>nbins</I>, Value <I>binsize</I>, Value <I>offset</I>)</td></tr>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Level_Set">Histogram_Level_Set</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Level_Tree *<I>t</I>, Level_Set *<I>r</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int <I>nbins</I>, Value <I>binsize</I>, Value <I>offset</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histagain_Array">Histagain_Array</a></b>
+     (Histogram *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, AForm *<I>a</I>, boolean <I>clip</I>)</td></tr>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histagain_Region">Histagain_Region</a></b>
+     (Histogram *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>a</I>, Region *<I>r</I>, boolean <I>clip</I>)</td></tr>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histagain_P_Vertex">Histagain_P_Vertex</a></b>
+     (Histogram *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>a</I>, Partition *<I>p</I>, int <I>v</I>, boolean <I>clip</I>)</td></tr>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histagain_Level_Set">Histagain_Level_Set</a></b>
+     (Histogram *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>a</I>, Level_Tree *<I>t</I>, Level_Set *<I>r</I>, boolean <I>clip</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Histogram *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Slice">Histogram_Slice</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Histogram *<I>h</I>, int <I>min</I>, int <I>max</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Mean">Histogram_Mean</a></b>
+     (Histogram *<I>h</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Sigma">Histogram_Sigma</a></b>
+     (Histogram *<I>h</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Variance">Histogram_Variance</a></b>
+     (Histogram *<I>h</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Central_Moment">Histogram_Central_Moment</a></b>
+     (Histogram *<I>h</I>, int <I>n</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Entropy">Histogram_Entropy</a></b>
+     (Histogram *<I>h</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Cross_Entropy">Histogram_Cross_Entropy</a></b>
+     (Histogram *<I>h</I>, Histogram *<I>g</I>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Histogram_Relative_Entropy">Histogram_Relative_Entropy</a></b>
+     (Histogram *<I>h</I>, Histogram *<I>g</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Otsu_Threshold">Otsu_Threshold</a></b>
+     (Histogram *<I>h</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Triangle_Threshold">Triangle_Threshold</a></b>
+     (Histogram *<I>h</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Intermeans_Threshold">Intermeans_Threshold</a></b>
+     (Histogram *<I>h</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Histogram.html#Print_Histogram">Print_Histogram</a></b>
+     (Histogram *<I>h</I>, FILE *<I>output</I>, int <I>indent</I>, int <I>flags</I>, Value <I>binsize</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+<B>Histogram</B> objects capture the distribution of values in an <a href="Array.html">Array</a>, <a href="Slice.html">Slice</a>, or
+<a href="Frame.html">Frame</a>, i.e. <a href="AForm.html">AForm</a>.  From a given histogram one can compute
+any of a variety of statistics about the values in an array form, and to compute
+foreground/background thresholds that are a function of its distribution.
+Almost all of the fields of a histogram are visibile to a user, but should only be
+used in a read-only fashion.  It is not safe for a user to change any of the visible
+fields as doing so may create a semantic conflict with the private fields.  A histogram
+can be read from and written to a file.
+</p>
+<p>
+A histogram is created
+(a) for an <a href="AForm.html">AForm</a> by calling <a href="Histogram.html#Histogram_Array">Histogram_Array</a>,
+(b) for a <a href="Region.html">Region</a>, <a href="Partition.html">Partition</a> <a href="Partition.html#P_Vertex">P_Vertex</a>, or <a href="Level_Tree.html">Level_Tree</a> <a href="Level_Tree.html#Level_Set">Level_Set</a> by calling
+<a href="Histogram.html#Histogram_Region">Histogram_Region</a>, <a href="Histogram.html#Histogram_P_Vertex">Histogram_P_Vertex</a>, or <a href="Histogram.html#Histogram_Level_Set">Histogram_Level_Set</a>, respectively, or
+(c) by reforming the bin range of an existing histogram with <a href="Histogram.html#Histogram_Slice">Histogram_Slice</a>.
+An initially empty histogram can also be created directly by calling <a href="Histogram.html#Make_Histogram">Make_Histogram</a>.
+Every bin boundary corresponds to a value which in turn corresponds to a percentile of
+the data points greater than said value.  There are conversion routines to map between
+bins, values, and percentiles (<a href="Histogram.html#Bin2Value">Bin2Value</a>, <a href="Histogram.html#Value2Bin">Value2Bin</a>, <a href="Histogram.html#Bin2Percentile">Bin2Percentile</a>, <a href="Histogram.html#Percentile2Bin">Percentile2Bin</a>,
+<a href="Histogram.html#Value2Percentile">Value2Percentile</a>, <a href="Histogram.html#Percentile2Value">Percentile2Value</a>).  The routine <a href="Histogram.html#Print_Histogram">Print_Histogram</a> provides
+a flexible set of options for producing an ASCII display of a histogram using the
+set of flags given in the
+<a href="Histogram.html#Constants">Macro Constants</a>
+section.
+</p>
+<p>
+Histograms, once computed, provide a convenient way to deliver statistics about the
+distribution of values in the array form or region the histogram was computed from.
+For example, if one builds a 256 bin histogram for a <I>UINT8_TYPE</I> array form, then
+thereafter one can deliver the mean, standard deviation, and any central moment
+with <a href="Histogram.html#Histogram_Mean">Histogram_Mean</a>, <a href="Histogram.html#Histogram_Sigma">Histogram_Sigma</a>, <a href="Histogram.html#Histogram_Variance">Histogram_Variance</a>, and <a href="Histogram.html#Histogram_Central_Moment">Histogram_Central_Moment</a>
+in <I>O(<a href="Histogram.html#nbins">nbins</a>)</I> time versus time proportional to the number of elements in the array form.
+Of course, the accuracy of a statistic versus that computed over the set of values
+in the array, depends on the bin size and the total number of elements.
+In the example above the statistics are perfectly accurate as the bin size is 1.  But
+if a histogram of 256 bins were builts for a <I>UINT16_TYPE</I> array form, then each bin
+covers 256 values and depending on the distribution of values in the array, the computed
+statistic could deviate from the true value.  As long as the total number of data points
+is large, the accuracy of distributional statistics is generally acceptable.
+</p>
+<p>
+In addition to distributional statistics, one can compute entropy, and the cross entropy
+and relative entropy between two histograms (<a href="Histogram.html#Histogram_Entropy">Histogram_Entropy</a>, <a href="Histogram.html#Histogram_Cross_Entropy">Histogram_Cross_Entropy</a>,
+<a href="Histogram.html#Histogram_Relative_Entropy">Histogram_Relative_Entropy</a>).  The class also currently offers three distribution-based
+methods for computing a foreground/background threshold (<a href="Histogram.html#Otsu_Threshold">Otsu_Threshold</a>, <a href="Histogram.html#Triangle_Threshold">Triangle_Threshold</a>,
+<a href="Histogram.html#Intermeans_Threshold">Intermeans_Threshold</a>).
+</p>
+<p>
+A common scenario is to use a histogram as the means to compute one or more of the above
+quantities with
+respect to a <a href="Frame.html">Frame</a> that is passed over every element in an array, implying that a histogram
+of the same type and range is needed thousands if not millions of times.  Rather than create
+and free a histogram for each frame placement, the routine <a href="Histogram.html#Histagain_Array">Histagain_Array</a> allows one to
+accumulate the counts for a given array form into the bins of an existing histogram.  Note
+carefully that the counts accumulate.  To get a histogram for just the object at hand, one
+must explicitly reset the buckets to zero with <a href="Histogram.html#Empty_Histogram">Empty_Histogram</a>.
+Please see the example included
+with the description of this routine.  Moreover, one can also refill a histogram with the
+pixel values in a <a href="Region.html">Region</a>, <a href="Partition.html">Partition</a> <a href="Partition.html#P_Vertex">P_Vertex</a>, or <a href="Level_Tree.html">Level_Tree</a> <a href="Level_Tree.html#Level_Set">Level_Set</a> by calling
+<a href="Histogram.html#Histagain_Region">Histagain_Region</a>, <a href="Histogram.html#Histagain_P_Vertex">Histagain_P_Vertex</a>, or <a href="Histogram.html#Histagain_Level_Set">Histagain_Level_Set</a>, respectively.
+</p>
+<hr />
+
+<h2>Visible Fields Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="kind"></a><tr><td valign="top">kind</td><td>: <a href="Mylib.html#Value_Kind">Value_Kind</a></td></tr>
+  </table></h3>
+<p>
+A histogram can be over values of any of the three <a href="Mylib.html#Value_Kind">Value_Kind</a>s.  This field
+specifies which one.
+</p>
+  <h3 class="fn"><table>
+     <a name="nbins"></a><tr><td valign="top">nbins</td><td>: int</td></tr>
+  </table></h3>
+<p>
+The number of bins in the histogram.
+</p>
+  <h3 class="fn"><table>
+     <a name="binsize"></a><tr><td valign="top">binsize</td><td>: <a href="Mylib.html#Value">Value</a></td></tr>
+  </table></h3>
+<p>
+The width or size of each bin in the histogram
+</p>
+  <h3 class="fn"><table>
+     <a name="offset"></a><tr><td valign="top">offset</td><td>: <a href="Mylib.html#Value">Value</a></td></tr>
+  </table></h3>
+<p>
+The offset or lower boundary of the first bin, bin 0, in the histogram.
+Thus, the range covered by bin b is <I>[<a href="Histogram.html#offset">offset</a>+b*<a href="Histogram.html#binsize">binsize</a>,<a href="Histogram.html#offset">offset</a>+(b+1)*<a href="Histogram.html#binsize">binsize</a>)</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="total"></a><tr><td valign="top">total</td><td>: <a href="Mylib.html#Size_Type">Size_Type</a></td></tr>
+  </table></h3>
+<p>
+The total number of data points in the histogram or equivalently the sum of all the
+<a href="Histogram.html#counts">counts</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="counts"></a><tr><td valign="top">counts</td><td>: <a href="Mylib.html#Size_Type">Size_Type</a> *</td></tr>
+  </table></h3>
+<p>
+A vector of <a href="Histogram.html#nbins">nbins</a> counts for each bin 0 to <a href="Histogram.html#nbins">nbins</a>&minus;1, i.e. <I>counts[b]</I> is the
+number of data points whose value is int the range covered by bin <I>b</I>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Bin2Value"></a><tr><td valign="baseline"><a href="Mylib.html#Value">Value</a></td>
+     <td valign="baseline">Bin2Value (<a href="Histogram.html">Histogram</a> *<I>h</I>, int <I>b</I>)</td></tr>
+  </table></h3>
+<p>
+Return the lower border of bin <I>b</I>, i.e. <a href="Histogram.html#offset">offset</a> + b*<a href="Histogram.html#binsize">binsize</a>.
+The parameter <I>b</I> does <B>not</B> need to be between 0 and <a href="Histogram.html#nbins">nbins</a>&minus;1
+in which case the return value will not be in the domain of the histogram.
+</p>
+  <h3 class="fn"><table>
+     <a name="Value2Bin"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Value2Bin (<a href="Histogram.html">Histogram</a> *<I>h</I>, <a href="Mylib.html#Value">Value</a> <I>v</I>)</td></tr>
+  </table></h3>
+<p>
+Return the bin number b that contains the value <I>v</I>, i.e.
+<i>max<sub>b</sub> s.t.</i>
+<I><a href="Histogram.html#Bin2Value">Bin2Value</a>(b) &le; v</I>.
+The parameter <I>v</I> does not need to be in the domain of the histogram,
+in which case the return value will not be a bin number between 0 and <a href="Histogram.html#nbins">nbins</a>&minus;1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Bin2Percentile"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Bin2Percentile (<a href="Histogram.html">Histogram</a> *<I>h</I>, int <I>b</I>)</td></tr>
+  </table></h3>
+<p>
+Return the percent of values in the histogram in bins <I>b</I> and higher, i.e.
+<i>&Sigma;<sub>c&ge;b</sub></i>
+<I><a href="Histogram.html#counts">counts</a>[c] / <a href="Histogram.html#total">total</a></I>.
+The parameter <I>b</I> does <B>not</B> need to be between 0 and <a href="Histogram.html#nbins">nbins</a>&minus;1
+but the return value will always be between 0 and 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Percentile2Bin"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Percentile2Bin (<a href="Histogram.html">Histogram</a> *<I>h</I>, double <I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return the larget bin number b for which the tail of the histogram starting at b contains more than
+fraction <I>f</I> of the data points, i.e.
+<i>max<sub>b</sub> s.t.</i>
+<I><a href="Histogram.html#Bin2Percentile">Bin2Percentile</a>(b) &ge; f</I>.
+The parameter <I>f</I> must be between 0 and 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Value2Percentile"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Value2Percentile (<a href="Histogram.html">Histogram</a> *<I>h</I>, <a href="Mylib.html#Value">Value</a> <I>v</I>)</td></tr>
+  </table></h3>
+<p>
+Return the percentile of values in the histogram that are estimated to be not less than <I>v</I>,
+i.e. <I><a href="Histogram.html#Bin2Percentile">Bin2Percentile</a>(b) &minus; (v&minus;b)*<a href="Histogram.html#counts">counts</a>[b]/<a href="Histogram.html#total">total</a></I> where b = <a href="Histogram.html#Value2Bin">Value2Bin</a>(v).
+Note that linear interpolation is used to estimate the number of values in bin b not less than
+<I>v</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Percentile2Value"></a><tr><td valign="baseline"><a href="Mylib.html#Value">Value</a></td>
+     <td valign="baseline">Percentile2Value (<a href="Histogram.html">Histogram</a> *<I>h</I>, double <I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return the value for which the tail of the histogram greater than v contains fraction <I>f</I> of
+the data points, i.e.
+<i>max<sub>b</sub> s.t.</i>
+<I><a href="Histogram.html#Value2Percentile">Value2Percentile</a>(v) &ge; f</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Histogram"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Make_Histogram<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Value_Kind">Value_Kind</a> <I>kind</I>, int <I>nbins</I>, <a href="Mylib.html#Value">Value</a> <I>binsize</I>, <a href="Mylib.html#Value">Value</a> <I>offset</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a histogram of the given <I>kind</I> with <I>nbins</I> bins of size <I>binsize</I> covering the
+range starting at <I>offset</I>.  The histogram is initialized to be empty, i.e. <a href="Histogram.html#total">total</a> is zero
+as is every element of <a href="Histogram.html#counts">counts</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Empty_Histogram"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Empty_Histogram (<a href="Histogram.html">Histogram</a> *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Empty all buckets of the histogram, i.e. set all buckets to 0.
+</p>
+  <h3 class="fn"><table>
+     <a name="Histogram_Array"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histogram_Array<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html">AForm</a> *<I>a</I>, int <I>nbins</I>, <a href="Mylib.html#Value">Value</a> <I>binsize</I>, <a href="Mylib.html#Value">Value</a> <I>offset</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a histogram of <a href="AForm.html">AForm</a> <I>a</I> with <I>nbins</I> of width <I>binsize</I> where the first bin's
+lower boundary is <I>offset</I> (see field descriptor for <a href="Histogram.html#offset">offset</a>).  The type of values
+given for <I>binsize</I> and <I>offset</I> should be congruent with the type of <I>a</I>.  When <I>nbins</I> or
+<I>binsize</I> or both are zero, then the value of the parameter(s) with value 0, and the value of
+<I>offset</I> are selected according to the rules given in the following table, where the range
+of values in <I>a</I> is assumed to be [min,max]:
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="2" cellspacing="1" width="650px">
+<tr><th width="30%">Parameters</th><th width="y0%">Effect</th></tr>
+<tr class="odd"> <td valign="top">nbins = 0, binsize = 0</td>
+<td valign="top">
+<p>
+Bins are of length 1 and <I>nbins</I> is chosen so that the bins cover the range of values in <I>a</I>
+starting at floor(min).
+</td></tr>
+<tr class="even"> <td valign="top">nbins = 0, binsize &ne; 0</td>
+<td valign="top">
+Bins are of length <I>binsize</I> and <I>nbins</I> is chosen so that the bins cover the range of values
+in <I>a</I> starting at the first multiple of <I>binsize</I> &le; min.
+</td></tr>
+<tr class="odd"> <td valign="top">nbins &ne; 0, binsize = 0</td>
+<td valign="top">
+The bin size is the smallest number of the form [1,2,5]*10<sup>a</sup> for which <I>nbins</I>
+of this size cover the range [min,max].  The bins start at the first multiple
+of <I>binsize</I> &le; min and <I>nbins</I> is adjusted downwards so that the binning just covers
+the required range [min,max].
+</td></tr>
+<tr class="even"> <td valign="top">nbins &ne; 0, binsize &ne; 0</td>
+<td valign="top">
+The implied binning is used as specified and any values not in the implied range
+are clipped, i.e. they are not added to the histogram implying that the total count
+of the histogram can be less than the size of <I>a</I>.
+</td></tr>
+</table><p>
+</p>
+<p>
+Note that when either of the two parameters is 0 then the value provided for <I>offset</I> is
+ignored as it is irrelevant.  Moreover, in the case where <I>a</I> is of one of the small integer
+types -- <I>UINT8_TYPE</I>, <I>UINT16_TYPE</I>, <I>INT8_TYPE</I>, <I>INT16_TYPE</I> -- if one specifies <I>nbins</I>
+as the number of values in the range of the type, and <I>offset</I> as the smallest value in the
+range of the type, and <I>binsize</I> as 1, then the histogram module is smart enough to know that
+it does not need to check that values are in range, and consequently fills such histograms
+with the efficiency of hand-tailored code.  Concretely, the calls below make for very
+efficient histogram constructions:
+</p>
+<pre>
+  Histogram_Array(a,256,VALU(1),VALU(0))            // for UINT8_TYPE
+  Histogram_Array(a,0x10000,VALU(1),VALU(0))        // for UINT16_TYPE
+  Histogram_Array(a,256,VALI(1),VALI(-128))         // for INT8_TYPE
+  Histogram_Array(a,0x10000,VALI(1),VALI(0xffff))   // for INT16_TYPE
+</pre>
+  <h3 class="fn"><table>
+     <a name="Histogram_Region"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histogram_Region<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Region.html">Region</a> *<I>r</I>, int <I>nbins</I>, <a href="Mylib.html#Value">Value</a> <I>binsize</I>, <a href="Mylib.html#Value">Value</a> <I>offset</I>)</td></tr>
+     <a name="Histogram_P_Vertex"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histogram_P_Vertex<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Partition.html">Partition</a> *<I>p</I>, int <I>v</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int <I>nbins</I>, <a href="Mylib.html#Value">Value</a> <I>binsize</I>, <a href="Mylib.html#Value">Value</a> <I>offset</I>)</td></tr>
+     <a name="Histogram_Level_Set"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histogram_Level_Set<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int <I>nbins</I>, <a href="Mylib.html#Value">Value</a> <I>binsize</I>, <a href="Mylib.html#Value">Value</a> <I>offset</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a histogram of the pixel values in the respective <a href="Region.html">Region</a>, <a href="Partition.html#P_Vertex">P_Vertex</a> region <I>v</I>
+of <a href="Partition.html">Partition</a> <I>p</I>, or <a href="Level_Tree.html#Level_Set">Level_Set</a> <I>r</I> of <a href="Level_Tree.html">Level_Tree</a> <I>t</I>.  The interpretation of the arguments
+<I>bins</I>, <I>binsize</I>, and <I>offset</I> are exactly as for <a href="Histogram.html#Histogram_Array">Histogram_Array</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Histagain_Array"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histagain_Array (<a href="Histogram.html">Histogram</a> *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="AForm.html">AForm</a> *<I>a</I>, boolean <I>clip</I>)</td></tr>
+  </table></h3>
+<p>
+<B>Accumulates</B> into the bins of histogram <I>h</I>, the counts for the values in <I>a</I>.  One must explicitly
+reset the histogram with <a href="Histogram.html#Empty_Histogram">Empty_Histogram</a> if one wants just the histogram of <I>a</I>.
+The type of array <I>a</I> must
+be compatible with the type of <I>h</I>, and one should only call this routine with <I>clip</I> set to 0
+(false) if one is certain that the values in <I>a</I> are within the range of the domain covered by <I>h</I>,
+i.e. [<a href="Histogram.html#offset">offset</a>,<a href="Histogram.html#offset">offset</a>+<a href="Histogram.html#nbins">nbins</a>*<a href="Histogram.html#binsize">binsize</a>].  Otherwise one must call it with <I>clip</I> set to true,
+in which case out of range values will be detected and clipped (and therefore the routine will not
+refill the histogram as efficiently).
+</p>
+<p>
+The idea of this routine is to allow one to more efficiently accumulate thousands of
+histograms, over for example frame windows, where the domain and type of the histogram
+are fixed.  This saves the expense of creating and freeing every histogram.  For example,
+suppose <I>A</I> is a 3D, <I>UINT8_TYPE</I> array.  The code snippet below computes the entropy
+in a 5x5x5 window centered at every pixel of <I>A</I>:
+</p>
+<pre>
+ Frame     *f;
+ Histogram *h;
+ Indx_Type  p;
+ double     end;
+
+ h = Make_Histogram(UVAL,256,VALU(1),VALU(0));
+ f = Make_Frame(A,Coord3(5,5,5),Coord3(2,2,2));
+ Place_Frame(f,0);
+ for (p = 0; p < A->size; p++)
+   { Histagain_Array(Empty_Histogram(h),f,0);
+     ent = Histogram_Entropy(h);
+     //  ... do something with ent = the entropy in a 5x5x5 shape about p
+     Move_Frame_Forward(f);
+   }
+ Free_Frame(f);
+ Free_Histogram(h);
+</pre>
+  <h3 class="fn"><table>
+     <a name="Histagain_Region"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histagain_Region (<a href="Histogram.html">Histogram</a> *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>a</I>, <a href="Region.html">Region</a> *<I>r</I>, boolean <I>clip</I>)</td></tr>
+     <a name="Histagain_P_Vertex"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histagain_P_Vertex (<a href="Histogram.html">Histogram</a> *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>a</I>, <a href="Partition.html">Partition</a> *<I>p</I>, int <I>v</I>, boolean <I>clip</I>)</td></tr>
+     <a name="Histagain_Level_Set"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histagain_Level_Set (<a href="Histogram.html">Histogram</a> *<I>h</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>a</I>, <a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, boolean <I>clip</I>)</td></tr>
+  </table></h3>
+<p>
+<B>Accumulate</B> into the bins of histogram <I>h</I>, the counts for pixels in the respective
+<a href="Region.html">Region</a>, <a href="Partition.html#P_Vertex">P_Vertex</a> region <I>v</I> of <a href="Partition.html">Partition</a> <I>p</I>, or <a href="Level_Tree.html#Level_Set">Level_Set</a> <I>r</I> of <a href="Level_Tree.html">Level_Tree</a> <I>t</I>.
+Note carefully, that you must explicitly reset the histogram with <a href="Histogram.html#Empty_Histogram">Empty_Histogram</a> if you
+want just the histogram of the given object.
+The interpretation of the argument clip is exactly as for <a href="Histogram.html#Histagain_Array">Histagain_Array</a> above.
+</p>
+  <h3 class="fn"><table>
+     <a name="Histogram_Slice"></a><tr><td valign="baseline"><a href="Histogram.html">Histogram</a> *</td>
+     <td valign="baseline">Histogram_Slice<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Histogram.html">Histogram</a> *<I>h</I>, int <I>min</I>, int <I>max</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a histogram based on the histogram <I>h</I> consisting of the bins whose indices are
+in the interval [<I>min</I>,<I>max</I>-1].  <I>min</I> and <I>max</I> need not be between 0 and <I>h-&gt;<a href="Histogram.html#nbins">nbins</a></I>
+but it must be that <I>min</I> &lt; <I>max</I>.
+If <I>min</I> &lt; 0 or <I>max</I> &gt; h-&gt;nbins then the new histogram's domain will be expanded as
+necessary to cover the implied range of
+[<a href="Histogram.html#Bin2Value">Bin2Value</a>(min),<a href="Histogram.html#Bin2Value">Bin2Value</a>(max)].
+</p>
+  <h3 class="fn"><table>
+     <a name="Histogram_Mean"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Histogram_Mean (<a href="Histogram.html">Histogram</a> *<I>h</I>)</td></tr>
+     <a name="Histogram_Sigma"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Histogram_Sigma (<a href="Histogram.html">Histogram</a> *<I>h</I>)</td></tr>
+     <a name="Histogram_Variance"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Histogram_Variance (<a href="Histogram.html">Histogram</a> *<I>h</I>)</td></tr>
+     <a name="Histogram_Central_Moment"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Histogram_Central_Moment (<a href="Histogram.html">Histogram</a> *<I>h</I>, int <I>n</I>)</td></tr>
+  </table></h3>
+<p>
+Return the requested statistics for the histogram <I>h</I>.  <B>Histogram_Mean</B> returns the
+mean or average.  <B>Histogram_Sigma</B> returns the standard deviation.  <B>Histogram_Variance</B>
+returns the variance, or square of the standard deviation.  <B>Histogram_Central_Moment</B>
+returns the <I>n</I><sup>th</sup> moment of the distribution, i.e.
+<i>&Sigma;<sub>i</sub> (x<sub>i</sub> - &mu;)<sup>n</sup></i>
+where &mu; is the mean of the data series
+<i>{ x<sub>1</sub>, x<sub>2</sub>, ...  x<sub>N</sub> }</i>.
+Note carefully, that the accuracy of a statistic computed from the histogram in
+relation to the same statistic computed directly over the series of values in the <a href="AForm.html">AForm</a>
+from which the histogram was derived, depends on the binning of values into the
+histogram.  The general rule of thumb is that the smaller the <a href="Histogram.html#binsize">binsize</a> the more
+accurate the statistic.
+</p>
+  <h3 class="fn"><table>
+     <a name="Histogram_Entropy"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Histogram_Entropy (<a href="Histogram.html">Histogram</a> *<I>h</I>)</td></tr>
+     <a name="Histogram_Cross_Entropy"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Histogram_Cross_Entropy (<a href="Histogram.html">Histogram</a> *<I>h</I>, <a href="Histogram.html">Histogram</a> *<I>g</I>)</td></tr>
+     <a name="Histogram_Relative_Entropy"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Histogram_Relative_Entropy (<a href="Histogram.html">Histogram</a> *<I>h</I>, <a href="Histogram.html">Histogram</a> *<I>g</I>)</td></tr>
+  </table></h3>
+<p>
+<B>Histogram_Entropy</B> returns the entropy of the distribution of <I>h</I>, i.e.
+<i>&minus; &Sigma;<sub>b</sub> p(b) log<sub>2</sub> p(b)</i>
+where <I>p(b)</I> is <I><a href="Histogram.html#counts">counts</a>[b]/<a href="Histogram.html#total">total</a></I> for each bin <I>b</I>.
+The cross entropy between two historams, <I>h</I> and <I>g</I>,
+returned by <B>Histogram_Cross_Entropy</B> is
+<i>&minus; &Sigma;<sub>b</sub> p(b) log<sub>2</sub> q(b)</i>
+where <I>q(b)</I>, analagous to <I>p(b)</I>, is the distribution for <I>g</I>.
+The histograms <I>h</I> and <I>g</I> must have the same
+<a href="Histogram.html#binsize">binsize</a> and while their <a href="Histogram.html#offset">offset</a>s can be different, the difference must be a
+multiple of the bin size.
+Finally, <B>Histogram_Relative_Entropy</B> returns the relative entropy between <I>h</I> and <I>g</I>, i.e.
+<i>&minus; &Sigma;<sub>b</sub> p(b) log<sub>2</sub> p(b)/q(b)</i>.
+Note carefully, that the accuracy of a statistic computed from the histogram in
+relation to the same statistic computed directly over the series of values in the <a href="AForm.html">AForm</a>
+from which the histogram was derived, depends on the binning of values into the
+histogram.  The general rule of thumb is that the smaller the <a href="Histogram.html#binsize">binsize</a> the more
+accurate the statistic.
+</p>
+  <h3 class="fn"><table>
+     <a name="Otsu_Threshold"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Otsu_Threshold (<a href="Histogram.html">Histogram</a> *<I>h</I>)</td></tr>
+  </table></h3>
+<p>
+Return the Otsu threshold (<I>IEEE Trans. Sys., Man, &amp; Cybernetics</I>, 9, 1 (1979), 62-66)
+for the <a href="AForm.html">AForm</a> over which the histogram <I>h</I> was built.  The routine returns the index
+of the smallest bucket that should be considered foreground as the threshold is only
+accurate to the nearest multiple of the <a href="Histogram.html#binsize">binsize</a> of the histogram.  Use <a href="Histogram.html#Bin2Value">Bin2Value</a>
+in order to convert the index into a threshold value.
+</p>
+<p>
+In brief, the method picks the threshold that produces the greatest inter-class variance
+between the induced foreground and background classes.
+</p>
+  <h3 class="fn"><table>
+     <a name="Triangle_Threshold"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Triangle_Threshold (<a href="Histogram.html">Histogram</a> *<I>h</I>)</td></tr>
+  </table></h3>
+<p>
+Apply the "triangle method" of Zack, Rogers, and Latt (<I>J. Histochem. Cytochem.</I> 25,
+7 (1977), 741-753) to compute and return the smallest bin index that should be considered
+foreground in the image array the histogram was derived from.
+Use <a href="Histogram.html#Bin2Value">Bin2Value</a> in order to convert the index into a threshold value.
+</p>
+<p>
+In brief, the method converges to the threshold that is half-way between the means of
+the foreground and background classes.  Initially the threshold is placed at the half
+way between the min and the max value in the histogram.
+</p>
+  <h3 class="fn"><table>
+     <a name="Intermeans_Threshold"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Intermeans_Threshold (<a href="Histogram.html">Histogram</a> *<I>h</I>)</td></tr>
+  </table></h3>
+<p>
+Return the inter-means threshold (<I>IEEE. Trans. on Cybernetics</I> (1978) 630-632 by
+Ridlar and Calvard) for the image array the histogram was derived from, to the nearest
+bin index.  Use <a href="Histogram.html#Bin2Value">Bin2Value</a> in order to convert the index into a threshold value.
+</p>
+<p>
+In brief, the method picks the threshold whose bin top is the furthest from the line
+that runs from the top of the bin with the highest count to the empty bin one greater
+than the non-empty bin with the greatest index.
+</p>
+  <h3 class="fn"><table>
+     <a name="Print_Histogram"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Print_Histogram (<a href="Histogram.html">Histogram</a> *<I>h</I>, FILE *<I>output</I>, int <I>indent</I>, int <I>flags</I>, <a href="Mylib.html#Value">Value</a> <I>binsize</I>)</td></tr>
+  </table></h3>
+<p>
+Print an ascii display of histogram <I>h</I> on stream <I>output</I> indented by <I>indent</I> spaces.
+If <I>binsize</I> is not 0 then the histogram will be displayed in bins of the given size,
+with the bin boundaries being multiples of <I>binsize</I>.  If <I>binsize</I> is not a multiple
+of the histogram's binsize (<I>h</I>-&gt;<a href="Histogram.html#binsize">binsize</a>), then the counts of spanning bins in the
+underlying histogram are interpolated.
+The parameter <I>flag</I> is the bitwise or of one or more of the
+<a href="Histogram.html#Constants">constants</a> introduced at the
+top of this page and that determine what is displayed and how it is displayed
+as outlined in the following table:
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="5" cellspacing="1" width="650px">
+<tr><th width="32%">Flag</th><th width="65%">Effect</th></tr>
+<tr class="odd"> <td valign="baseline">BIN_COUNT</td>
+<td valign="baseline">Show bin counts</td>
+</tr>
+<tr class="odd"> <td valign="baseline">CUMULATIVE_COUNT</td>
+<td valign="baseline">Show cumulative counts</td>
+</tr>
+<tr class="odd"> <td valign="baseline">CUMULATIVE_PERCENT</td>
+<td valign="baseline">Show cumulative per cent of the total</td>
+</tr>
+<tr class="odd"> <td valign="baseline">ASCENDING_HGRAM</td>
+<td valign="baseline">Display in ascending order (descending by default)</td>
+</tr>
+<tr class="odd"> <td valign="baseline">CLIP_HGRAM_HIGH</td>
+<td valign="baseline">Do not display any 0 count bins at the top</td>
+</tr>
+<tr class="odd"> <td valign="baseline">CLIP_HGRAM_LOW</td>
+<td valign="baseline">Do not display any 0 count bins at the bottom</td>
+</tr>
+<tr class="odd"> <td valign="baseline">CLIP_HGRAM</td>
+<td valign="baseline">Do not display any 0 count bins at either extreme</td>
+</tr>
+<tr class="odd"> <td valign="baseline">BIN_MIDDLE</td>
+<td valign="baseline">Display the mid-value of a bin as opposed to its range</td>
+</tr>
+</table>
+</p>
+<p>
+As an example, suppose <I>A</I> is a <I>UINT8_TYPE</I> array with a million elements that are randomly
+generated numbers between 1 and 6 inclusive.  Suppose that we make a histogram
+<I>h</I> with the call
+<I><a href="Array.html#Make_Array">Make_Array</a>(A,8,VALU(1),VALU(0))</I>.
+Then calling <I>Print_Histogram</I> with the flags
+<I>BIN_COUNT</I>| <I>CUMULATIVE_COUNT</I>|<I>CUMULATIVE_PERCENT</I> and binsize set to 0 (i.e. no effect),
+produces the following output:
+</p>
+<pre>
+   7:       0        0     0.0%
+   6:  166678   166678    16.7%
+   5:  167038   333716    33.4%
+   4:  166591   500307    50.0%
+   3:  166329   666636    66.7%
+   2:  166517   833153    83.3%
+   1:  166847  1000000   100.0%
+   0:       0  1000000   100.0%
+</pre>
+<p>
+Calling <I>Print_Histogram</I> with the flags
+<I>CUMULATIVE_COUNT</I>|<I>ASCENDING_HGRAM</I>|<I>CLIP_HGRAM</I> and binsize set to 0 (i.e. no effect),
+on the same histogram would produce:
+</p>
+<pre>
+   1:   166847
+   2:   333364
+   3:   499693
+   4:   666284
+   5:   833322
+   6:  1000000
+</pre>
+<p>
+As another example, suppose <I>A</I> is a <I>FLOAT64_TYPE</I> array with a million elements that are randomly
+generated numbers between .2 and .3 inclusive.  Suppose that we make a histogram
+<I>h</I> with the call
+<I><a href="Array.html#Make_Array">Make_Array</a>(A,8,VALF(0),VALU(0))</I>.  Recall that with such
+parameter settings we are asking <I>Make_Array</I> to pick the largest number of bins not
+greater than 8 such that bins whose size is of the form [1,2,5]*10<sup>a</sup>
+cover the range of elements in <I>A</I>.  In this instance it is 5 bins of size .02.
+Then calling <I>Print_Histogram</I> with the flags <I>BIN_COUNT</I>|<I>CUMULATIVE_PERCENT</I> and
+binsize set to 0 (i.e. no effect), produces the following output:
+</p>
+<pre>
+   0.28 - 0.30:  200167    20.0%
+   0.26 - 0.28:  200357    40.1%
+   0.24 - 0.26:  199802    60.0%
+   0.22 - 0.24:  199738    80.0%
+   0.20 - 0.22:  199936   100.0%
+</pre>
+<p>
+Calling <I>Print_Histogram</I> with the flags
+<I>BIN_COUNT</I>|<I>CUMULATIVE_PERCENT</I> and binsize set to <I>VALF(.0125)</I>
+on the same histogram produces the output below.  Note carefully that the numbers
+for each "pseudo-bin" of size .0125 are obtained by linearly interperlating fractional
+parts of the .02 bins recorded in the histogram.
+</p>
+<pre>
+   0.2875 - 0.3000:   125105    12.5%
+   0.2750 - 0.2875:   125152    25.0%
+   0.2625 - 0.2750:   125223    37.5%
+   0.2500 - 0.2625:   124946    50.0%
+   0.2375 - 0.2500:   124868    62.5%
+   0.2250 - 0.2375:   124836    75.0%
+   0.2125 - 0.2250:   124911    87.5%
+   0.2000 - 0.2125:   124959   100.0%
+</pre>
+<p>
+Finally, calling <I>Print_Histogram</I> with the flags
+<I>BIN_COUNT</I>|<I>CUMULATIVE_PERCENT</I>|<I>BIN_MIDDLE</I> and binsize set to 0 (i.e. no effect),
+on the same histogram would produce:
+</p>
+<p>
+BIN_COUNT|CUMULATIVE_PERCENT|BIN_MIDDLE,VALF(0)
+</p>
+<pre>
+   0.29:   200167    20.0%
+   0.27:   200357    40.1%
+   0.25:   199802    60.0%
+   0.23:   199738    80.0%
+   0.21:   199936   100.0%
+</td></tr></table>
+</body>
+</html>

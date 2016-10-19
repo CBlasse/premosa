@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Mylib Core Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Mylib Core Module Reference</h1>
+
+<p>
+System-wide types and routines.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;mylib.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Value"> Value </a></b>
+   </td><td class="define" valign="baseline">: union</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#uval"> uval </a></b>
+     </td><td class="define" valign="baseline">: uint64</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#ival"> ival </a></b>
+     </td><td class="define" valign="baseline">: int64</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#rval"> rval </a></b>
+     </td><td class="define" valign="baseline">: float64</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Holds uint8, uint16, uint32, and uint64 values</td></tr>
+    <tr><td class="comment" valign="baseline">Holds int8, int16, int32, and int64 values</td></tr>
+    <tr><td class="comment" valign="baseline">Holds float32 and float64 values</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Value_Kind"> Value_Kind </a></b>
+     </td><td class="define" valign="baseline">: { UVAL, IVAL, FVAL }</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Value_Type"> Value_Type </a></b>
+     </td><td class="define" valign="baseline">: { UINT8_TYPE, UINT16_TYPE, UINT32_TYPE, UINT64_TYPE, <br>&nbsp;&nbsp;&nbsp;&nbsp;INT8_TYPE, INT16_TYPE, INT32_TYPE, INT64_TYPE, <br>&nbsp;&nbsp;&nbsp;&nbsp;FLOAT32_TYPE, FLOAT64_TYPE }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Operator"> Operator </a></b>
+     </td><td class="define" valign="baseline">: { SET_OP, ADD_OP, SUB_OP, MUL_OP, DIV_OP, POW_OP, LSH_OP, RSH_OP, MIN_OP, MAX_OP }</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Comparator"> Comparator </a></b>
+     </td><td class="define" valign="baseline">: { LE_COMP, LT_COMP, EQ_COMP, NE_COMP, GT_COMP, GE_COMP }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="uint8"></a>
+       <b><a href="Mylib.html#uint8"> uint8 </a></b>
+     </td><td class="define" valign="baseline">: unsigned char</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="uint16"></a>
+       <b><a href="Mylib.html#uint16"> uint16 </a></b>
+     </td><td class="define" valign="baseline">: unsigned short</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="uint32"></a>
+       <b><a href="Mylib.html#uint32"> uint32 </a></b>
+     </td><td class="define" valign="baseline">: unsigned int</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="uint64"></a>
+       <b><a href="Mylib.html#uint64"> uint64 </a></b>
+     </td><td class="define" valign="baseline">: unsigned long long</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="int8"></a>
+       <b><a href="Mylib.html#int8"> int8 </a></b>
+     </td><td class="define" valign="baseline">: signed char</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="int16"></a>
+       <b><a href="Mylib.html#int16"> int16 </a></b>
+     </td><td class="define" valign="baseline">: signed short</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="int32"></a>
+       <b><a href="Mylib.html#int32"> int32 </a></b>
+     </td><td class="define" valign="baseline">: signed int</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="int64"></a>
+       <b><a href="Mylib.html#int64"> int64 </a></b>
+     </td><td class="define" valign="baseline">: signed long long</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="float32"></a>
+       <b><a href="Mylib.html#float32"> float32 </a></b>
+     </td><td class="define" valign="baseline">: float</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="float64"></a>
+       <b><a href="Mylib.html#float64"> float64 </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">An 8-bit unsigned integer</td></tr>
+    <tr><td class="comment" valign="baseline">A 16-bit unsigned integer</td></tr>
+    <tr><td class="comment" valign="baseline">A 32-bit unsigned integer</td></tr>
+    <tr><td class="comment" valign="baseline">A 64-bit unsigned integer</td></tr>
+    <tr><td class="comment" valign="baseline">An 8-bit signed integer</td></tr>
+    <tr><td class="comment" valign="baseline">A 16-bit signed integer</td></tr>
+    <tr><td class="comment" valign="baseline">A 32-bit signed integer</td></tr>
+    <tr><td class="comment" valign="baseline">A 64-bit signed integer</td></tr>
+    <tr><td class="comment" valign="baseline">A 32-bit floating point number</td></tr>
+    <tr><td class="comment" valign="baseline">A 64-bit floating point number</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="string"></a>
+       <b><a href="Mylib.html#string"> string </a></b>
+     </td><td class="define" valign="baseline">: char *</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="boolean"></a>
+       <b><a href="Mylib.html#boolean"> boolean </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="tristate"></a>
+       <b><a href="Mylib.html#tristate"> tristate </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A pointer to a '\0'-terminated sequence of char's</td></tr>
+    <tr><td class="comment" valign="baseline">0 denotes false and not-0 denotes true</td></tr>
+    <tr><td class="comment" valign="baseline">< 0 denotes less, 0 denotes equal, and > denotes greater</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Dimn_Type"> Dimn_Type </a></b>
+     </td><td class="define" valign="baseline">: int32</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Indx_Type"> Indx_Type </a></b>
+     </td><td class="define" valign="baseline">: int64</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Size_Type"> Size_Type </a></b>
+     </td><td class="define" valign="baseline">: int64</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Offs_Type"> Offs_Type </a></b>
+     </td><td class="define" valign="baseline">: int64</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Type of an array dimension</td></tr>
+    <tr><td class="comment" valign="baseline">Type of an index into the data space of an array</td></tr>
+    <tr><td class="comment" valign="baseline">Type of the size of an array</td></tr>
+    <tr><td class="comment" valign="baseline">Type of an offset from an index in an array</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Constants"></a>
+<h2>Macro Constants</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#NUM_THREADS"> NUM_THREADS </a></b>
+     </td><td class="define" valign="baseline">= 8</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline"># of simultaneous executing threads supported</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="DIMN_TYPE"></a>
+       <b><a href="Mylib.html#DIMN_TYPE"> DIMN_TYPE </a></b>
+     </td><td class="define" valign="baseline">= INT32_TYPE</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="INDX_TYPE"></a>
+       <b><a href="Mylib.html#INDX_TYPE"> INDX_TYPE </a></b>
+     </td><td class="define" valign="baseline">= INT64_TYPE</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="SIZE_TYPE"></a>
+       <b><a href="Mylib.html#SIZE_TYPE"> SIZE_TYPE </a></b>
+     </td><td class="define" valign="baseline">= INT64_TYPE</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="OFFS_TYPE"></a>
+       <b><a href="Mylib.html#OFFS_TYPE"> OFFS_TYPE </a></b>
+     </td><td class="define" valign="baseline">= INT64_TYPE</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Value_Type of a Dimn_Type</td></tr>
+    <tr><td class="comment" valign="baseline">Value_Type of an Indx_Type</td></tr>
+    <tr><td class="comment" valign="baseline">Value_Type of a Size_Type</td></tr>
+    <tr><td class="comment" valign="baseline">Value_Type of an Offs_Type</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="DIMN_SCALE"></a>
+       <b><a href="Mylib.html#DIMN_SCALE"> DIMN_SCALE </a></b>
+     </td><td class="define" valign="baseline">= 32</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="INDX_SCALE"></a>
+       <b><a href="Mylib.html#INDX_SCALE"> INDX_SCALE </a></b>
+     </td><td class="define" valign="baseline">= 64</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="SIZE_SCALE"></a>
+       <b><a href="Mylib.html#SIZE_SCALE"> SIZE_SCALE </a></b>
+     </td><td class="define" valign="baseline">= 64</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="OFFS_SCALE"></a>
+       <b><a href="Mylib.html#OFFS_SCALE"> OFFS_SCALE </a></b>
+     </td><td class="define" valign="baseline">= 64</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Array.scale of a Dimn_Type</td></tr>
+    <tr><td class="comment" valign="baseline">Array.scale of an Indx_Type</td></tr>
+    <tr><td class="comment" valign="baseline">Array.scale of a Size_Type</td></tr>
+    <tr><td class="comment" valign="baseline">Array.scale of an Offs_Type</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Value</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#VALU">VALU</a></b>
+     (uint64 <I>u</I>)</td></tr>
+<tr><td class="return" valign="baseline">Value</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#VALI">VALI</a></b>
+     (int64 <I>i</I>)</td></tr>
+<tr><td class="return" valign="baseline">Value</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#VALF">VALF</a></b>
+     (float64 <I>f</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Use_Zero_Boundary">Use_Zero_Boundary</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Use_Reflective_Boundary">Use_Reflective_Boundary</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Use_Wrap_Boundary">Use_Wrap_Boundary</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Use_Extend_Boundary">Use_Extend_Boundary</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Mylib.html#Use_Inversion_Boundary">Use_Inversion_Boundary</a></b>
+     ()</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+The <B>Mylib</B> module contains types, constants, enumerated scalars,
+and routines, that are used throughout the system and are not properly a part of any
+class or module per se.
+</p>
+<p>
+A number of type definitions are used throughout mainly because they further document
+the meaning of a return value or parameter.  For example, a <a href="Mylib.html#boolean">boolean</a> is just an <I>int</I>, but
+when an entity is declared to be of type <I>boolean</I> one immediately understands that it is only
+conveying true or false according to whether its value is non-zero or not, respectively.
+Similarly, a <a href="Mylib.html#string">string</a> is always a C-style 0-terminated sequence of <I>char</I>s.
+</p>
+<p>
+We carefully adhere to using such descriptive types for variables pertaining to arrays.
+Specifically:
+<a href="Mylib.html#Dimn_Type">Dimn_Type</a> is used consistently for the type of an array's dimension, <a href="Mylib.html#Indx_Type">Indx_Type</a> for an
+index into an array, <a href="Mylib.html#Size_Type">Size_Type</a> for the size of an array, and <a href="Mylib.html#Offs_Type">Offs_Type</a> for an offset
+relative to an index in an array.  Note carefully that a dimension is limited to
+2 billion but the size of an array is effectively unbounded.  Moreover, by choosing
+signed versus unsigned integers for these types, while we lose the ability to have dimensions
+up to 4 billion, the potential for subtle signed-unsigned value comparison bugs and other
+such complications are avoided, easing programming for both implementors and users alike.
+In addition there are also macro defined constants for the <a href="Mylib.html#Value_Type">Value_Type</a> and <a href="Array.html#scale">scale</a> of each
+of these four array location types as it is not uncommon for one to make arrays of them, e.g.
+a <a href="Array.html#Coordinate">Coordinate</a> is a <a href="Array.html#Vector">Vector</a> of dimension values.
+</p>
+<p>
+Many routines operate on an <a href="Array.html">Array</a> where the array may have any dimensionality and its
+elements can be of any type.  Similarly, many routines need to recieve or return a <a href="Mylib.html#Value">Value</a>
+that is a single number that may be of any of the ten scalar types over which an array may
+be defined.  The enum <a href="Mylib.html#Value_Type">Value_Type</a> captures the ten possible types and a <a href="Mylib.html#Value">Value</a> is realized
+as a union that can hold any <a href="Mylib.html#Value_Type">Value_Type</a> as either a <I>uint64</I>, an <I>int64</I>, or a <I>float64</I>.
+The enum <a href="Mylib.html#Value_Kind">Value_Kind</a> indicates whether a <a href="Mylib.html#Value_Type">Value_Type</a> should be interpreted as a <I>uint64</I>
+(i.e. <I>UVAL</I>), an <I>int64</I> (i.e. <I>IVAL</I>), or a <I>float64</I> (i.e. <I>FVAL</I>).
+The 3-routines <a href="Mylib.html#VALU">VALU</a>, <a href="Mylib.html#VALI">VALI</a>, and <a href="Mylib.html#VALF">VALF</a> are used to easily create values, e.g.
+</p>
+<pre>
+ VALF(2.3)
+ VALI(2*i+3)
+</pre>
+<p>
+where in the example <I>i</I> is an integer variable.
+The important feature of a <a href="Mylib.html#Value">Value</a> is that its size is 8-bytes and so it is passed and
+returned exactly as C base type, say a <I>double</I>, would be.  On some machines the routines
+are realized as macros.
+</p>
+<p>
+Routines in <B>Mylib</B> often need the concept of border values beyond the boundary
+of the array.  Matlab makes you create another array that explicitly has the required
+border.  This is exceedingly wasteful in memory, especially when one is working on a
+very large 3D or 4D array, a common occurence with microscopy data.  <B>Mylib</B> currently
+supports five types of boundaries that are implicit in that any library routine that
+needs values beyond the border of the array computes them on the fly.  For users, that
+need to write code that involves boundary effects, the library simplifes matters with
+a <a href="Frame.html">Frame</a> object that allows one to get these border values explicity in a small window
+of current interest as one traverses the array in question.
+</p>
+<a name="current boundary effect"><a>
+<p>
+The <B>current boundary effect</B> is set globally for the system by calling one of
+five boundary routines that sets the implicit boundary type according to the name of
+the routine.  Initially the "0-boundary" is the current boundary effect.  A given
+boundary effect stays in force until it is changed with another such call.  Note that
+this is not re-entrant albeit it is thread-safe.  The five
+boundary setting routines and the definition of their boundaries are given in the table
+below.  To keep it conceptually simple it is assumed <I>A[0..W]</I> is a one-dimensional array
+and the table shows how the value of <I>A[-x]</I> and <I>A[W+x]</I> is computed for <I>x</I> &gt; 0.
+One can extrapolate a boundary effect to higher dimensions by induction.
+</p>
+<p><table class="valuelist" border="1" cellpadding="2" cellspacing="1" width="100%">
+<tr><th width="34%">Function</th><th colspan = 2 width="66%">Boundary Effect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
+<tr><td valign="top">Use_Zero_Boundary</td>
+<td valign="top">A[-x] = 0</td><td valign="top">A[W+x] = 0</td></tr>
+<tr><td valign="top">Use_Reflective_Boundary</td>
+<td valign="top">A[-x] = A[x]</td><td valign="top">A[W+x] = A[w-x]</td></tr>
+<tr><td valign="top">Use_Wrap_Boundary</td>
+<td valign="top">A[-x] = A[W-x]</td><td valign="top">A[W+x] = A[x]</td></tr>
+<tr><td valign="top">Use_Extend_Boundary</td>
+<td valign="top">A[-x] = A[0]</td><td valign="top">A[W+x] = A[W]</td></tr>
+<tr><td valign="top">Use_Inversion_Boundary</td>
+<td valign="top">A[-x] = 2*A[0]-A[x]</td><td valign="top">A[W+x] = 2*A[W]-A[W-x]</td></tr>
+</table></p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Value"></a>     <tr><td class="name" valign="top">Value</td>
+      <td class="define">: union</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>uval</i></td><td class="define">: uint64</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>ival</i></td><td class="define">: int64</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>rval</i></td><td class="define">: float64</td></tr>
+    </table>
+  </h3>
+<p>
+A <B>Value</B> is a union that holds either a <I>uint64</I>, <I>int64</I>, or <I>float64</I> and is thus capable of
+encoding any value over the ten possible types for array elements.   The appealing property of
+a Value is that it behaves like an 8-byte scalar, e.g. a <I>double</I>, and so is passed by value,
+can be returned by a function, and so on.   The routines <a href="Mylib.html#VALU">VALU</a>, <a href="Mylib.html#VALI">VALI</a>, and <a href="Mylib.html#VALF">VALF</a> create
+values for you.
+</p>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Value_Kind"></a><tr><td valign="top">Value_Kind</td><td>: { UVAL, IVAL, FVAL }</td></tr>
+  </table></h3>
+<p>
+The three possible cases for the union of a <a href="Mylib.html#Value">Value</a>.  <B>UVAL</B> indicates a value holds a
+<I>uint64</I> value, <B>IVAL</B> indicates an <I>int64</I> value, and <B>FVAL</B> indicates a <I>float64</I> value.
+</p>
+  <h3 class="fn"><table>
+     <a name="Value_Type"></a><tr><td valign="top">Value_Type</td><td>: { UINT8_TYPE, UINT16_TYPE, UINT32_TYPE, UINT64_TYPE, <br>&nbsp;&nbsp;&nbsp;&nbsp;INT8_TYPE, INT16_TYPE, INT32_TYPE, INT64_TYPE, <br>&nbsp;&nbsp;&nbsp;&nbsp;FLOAT32_TYPE, FLOAT64_TYPE }</td></tr>
+  </table></h3>
+<p>
+The ten possible types of elements for an array.  The interpretation of each <I>enum</I> constant
+should be obvious, e.g. <B>UINT32_TYPE</B> denotes that the elements are of type <I>uint32</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Operator"></a><tr><td valign="top">Operator</td><td>: { SET_OP, ADD_OP, SUB_OP, MUL_OP, DIV_OP, POW_OP, LSH_OP, RSH_OP, MIN_OP, MAX_OP }</td></tr>
+  </table></h3>
+<p>
+An Operator value specifies that a particular binary operation is to be applied.  For
+examples, see <a href="Array.html#Array_Op_Scalar">Array_Op_Scalar</a> and <a href="Array.html#Array_Op_Array">Array_Op_Array</a>.  The values and associated operations
+are as follows:
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="2" cellspacing="1" width="250px">
+<tr><th width="50%">Operator</th><th width="50%">Effect</th></tr>
+<tr class="odd"> <td valign="top"><tt>SET_OP</tt></td> <td valign="top"><tt>a = b</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>ADD_OP</tt></td> <td valign="top"><tt>a + b</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>SUB_OP</tt></td> <td valign="top"><tt>a - b</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MUL_OP</tt></td> <td valign="top"><tt>a * b</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>DIV_OP</tt></td> <td valign="top"><tt>a / b</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>POW_OP</tt></td> <td valign="top"><tt>a ^ b</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>LSH_OP</tt></td> <td valign="top"><tt>a << b</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>RSH_OP</tt></td> <td valign="top"><tt>a >> b</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>MIN_OP</tt></td> <td valign="top"><tt>min(a,b)</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MAX_OP</tt></td> <td valign="top"><tt>max(a,b)</tt></td> </tr>
+</table><p>
+  <h3 class="fn"><table>
+     <a name="Comparator"></a><tr><td valign="top">Comparator</td><td>: { LE_COMP, LT_COMP, EQ_COMP, NE_COMP, GT_COMP, GE_COMP }</td></tr>
+  </table></h3>
+<p>
+A Comparator value specifies that a particular comparison is to be performed.  For
+examples, see <a href="Draw.html#Draw_Floodfill">Draw_Floodfill</a> and <a href="Region.html#Record_Basic">Record_Basic</a>.  The values and associated
+comparisons are as follows:
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="2" cellspacing="1" width="250px">
+<tr><th width="50%">Operator</th><th width="50%">Effect</th></tr>
+<tr class="odd"> <td valign="top"><tt>LE_COMP</tt></td> <td valign="top"><tt>a <= b</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>LT_COMP</tt></td> <td valign="top"><tt>a < b</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>EQ_COMP</tt></td> <td valign="top"><tt>a = b</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>NE_COMP</tt></td> <td valign="top"><tt>a != b</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>GT_COMP</tt></td> <td valign="top"><tt>a > b</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>GE_COMP</tt></td> <td valign="top"><tt>a >= b</tt></td> </tr>
+</table><p>
+<hr />
+
+<h2>Descriptive Types Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Dimn_Type"></a><tr><td valign="top">Dimn_Type</td><td>: int32</td></tr>
+     <a name="Indx_Type"></a><tr><td valign="top">Indx_Type</td><td>: int64</td></tr>
+     <a name="Size_Type"></a><tr><td valign="top">Size_Type</td><td>: int64</td></tr>
+     <a name="Offs_Type"></a><tr><td valign="top">Offs_Type</td><td>: int64</td></tr>
+  </table></h3>
+<p>
+<B>Dimn_Type</B> denotes the type of a dimension of an array, <B>Indx_Type</B> the type of an index
+into an array, <B>Size_Type</B> the size of an array, and <B>Offs_Type</B> an offset
+relative to an index into an array.  Note carefully that a dimension is limited to
+2 billion but the size of an array is effectively unbounded.  Moreover, by choosing
+signed versus unsigned integers for these types, while we lose the ability to have dimensions
+up to 4 billion, the potential for subtle signed-unsigned value comparison bugs and other
+such complications are avoided, easing programming for both implementors and users alike.
+</p>
+<hr />
+
+<h2>Macro Constants Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="NUM_THREADS"></a><tr><td valign="top">NUM_THREADS</td><td>= 8</td></tr>
+  </table></h3>
+<p>
+In order to be thread safe, <B>Mylib</B> routines involve critical sections when a common resource
+must be shared amongst threads.  In order to allow for parallelism, <B>Mylib</B> often
+maintains <B>NUM_THREADS</B> instances of the resource and lets up to that many threads proceed
+through their critical sections in parallel, each with a different instance of the resource.
+As such <B>NUM_THREADS</B> is a critical determiner of threaded code performance and ideally
+it should be equal to the number of hardware cores of the underlying machine.  In the
+current package it is set to 8.  If you decide to tune this parameter, you must rebuild the
+system after redefining it.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="VALU"></a><tr><td valign="baseline"><a href="Mylib.html#Value">Value</a></td>
+     <td valign="baseline">VALU (uint64 <I>u</I>)</td></tr>
+     <a name="VALI"></a><tr><td valign="baseline"><a href="Mylib.html#Value">Value</a></td>
+     <td valign="baseline">VALI (int64 <I>i</I>)</td></tr>
+     <a name="VALF"></a><tr><td valign="baseline"><a href="Mylib.html#Value">Value</a></td>
+     <td valign="baseline">VALF (float64 <I>f</I>)</td></tr>
+  </table></h3>
+<p>
+These simple functions create <a href="Mylib.html#Value">Value</a>s of each possible <a href="Mylib.html#Value_Kind">Value_Kind</a>.  On compilers that
+support it, they are realized as macros.
+</p>
+  <h3 class="fn"><table>
+     <a name="Use_Zero_Boundary"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Use_Zero_Boundary ()</td></tr>
+  </table></h3>
+<p>
+Set the current boundary effect to the "zero-border", i.e., A[-x] = A[W+x] = 0 for x &gt; 0
+and A[0..W] a one-dimensional array.  The image below illustrates this border for a 2-dimensional
+array delimited by the white rectangle, with the border elements in green.
+<p class="center"><img src="IMAGES/Border.Zero.jpg"></p>
+</p>
+  <h3 class="fn"><table>
+     <a name="Use_Reflective_Boundary"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Use_Reflective_Boundary ()</td></tr>
+  </table></h3>
+<p>
+Set the current boundary effect to the "reflective-border", i.e., A[-x] = A[x] and
+A[W+x] = A[W-x] for x &gt; 0 and A[0..W] a one-dimensional array.  The image below illustrates
+this border for a 2-dimensional array delimited by the white rectangle, with the border elements
+in green.
+<p class="center"><img src="IMAGES/Border.Reflect.jpg"></p>
+</p>
+  <h3 class="fn"><table>
+     <a name="Use_Wrap_Boundary"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Use_Wrap_Boundary ()</td></tr>
+  </table></h3>
+<p>
+Set the current boundary effect to the "wrap-border", i.e., A[-x] = A[W-x] and
+A[W+x] = A[x] for x &gt; 0 and A[0..W] a one-dimensional array.  The image below illustrates
+this border for a 2-dimensional array delimited by the white rectangle, with the border elements
+in green.
+<p class="center"><img src="IMAGES/Border.Wrap.jpg"></p>
+</p>
+  <h3 class="fn"><table>
+     <a name="Use_Extend_Boundary"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Use_Extend_Boundary ()</td></tr>
+  </table></h3>
+<p>
+Set the current boundary effect to the "extend-border", i.e., A[-x] = A[0] and
+A[W+x] = A[W] for x &gt; 0 and A[0..W] a one-dimensional array.  The image below illustrates
+this border for a 2-dimensional array delimited by the white rectangle, with the border elements
+in green.
+<p class="center"><img src="IMAGES/Border.Extend.jpg"></p>
+</p>
+  <h3 class="fn"><table>
+     <a name="Use_Inversion_Boundary"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Use_Inversion_Boundary ()</td></tr>
+  </table></h3>
+<p>
+Set the current boundary effect to the "inversion-border", i.e., A[-x] = 2*A[0]-A[x] and
+A[W+x] = 2*A[W]-A[W-x] for x &gt; 0 and A[0..W] a one-dimensional array.  The image below
+illustrates this border for a 2-dimensional array delimited by the white rectangle, with the
+border elements in green.
+<p class="center"><img src="IMAGES/Border.Invert.jpg"></p>
+</td></tr></table>
+</body>
+</html>

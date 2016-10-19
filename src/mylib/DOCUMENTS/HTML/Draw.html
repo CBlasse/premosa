@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Draw Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Draw Module Reference</h1>
+
+<p>
+Routines that paint shapes and <B>Mylib</B> objects onto an Array or Slice.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;draw.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Plain_Bundle"> Plain_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#op"> op </a></b>
+     </td><td class="define" valign="baseline">: Drawer</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#val"> val </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Color_Bundle"> Color_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#op"> op </a></b>
+     </td><td class="define" valign="baseline">: Drawer</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#red"> red </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#green"> green </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#blue"> blue </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#alpha"> alpha </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Complex_Bundle"> Complex_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#op"> op </a></b>
+     </td><td class="define" valign="baseline">: Drawer</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#real"> real </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#imag"> imag </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Drawer"> Drawer </a></b>
+     </td><td class="define" valign="baseline">: { SET_PIX, ADD_PIX, SUB_PIX, MUL_PIX, MIN_PIX, MAX_PIX }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Brush_Bundle"> Brush_Bundle </a></b>
+     </td><td class="define" valign="baseline">: union { Plain_Bundle; Color_Bundle; Complex_Bundle }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Region">Draw_Region</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Region *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Region_Outline">Draw_Region_Outline</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Region *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Region_Exterior">Draw_Region_Exterior</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Region *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Region_Holes">Draw_Region_Holes</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Region *<I>r</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Region_Image">Draw_Region_Image</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>image</I>, Region *<I>r</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Level_Set">Draw_Level_Set</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level_Tree *<I>t</I>, Level_Set *<I>r</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Level_Set_Outline">Draw_Level_Set_Outline</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level_Tree *<I>t</I>, Level_Set *<I>r</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Level_Set_Exterior">Draw_Level_Set_Exterior</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level_Tree *<I>t</I>, Level_Set *<I>r</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Level_Set_Holes">Draw_Level_Set_Holes</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level_Tree *<I>t</I>, Level_Set *<I>r</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Level_Set_Image">Draw_Level_Set_Image</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>image</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level_Tree *<I>t</I>, Level_Set *<I>r</I>, int <I>share</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_P_Vertex">Draw_P_Vertex</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Partition *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_P_Vertex_Outline">Draw_P_Vertex_Outline</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_P_Vertex_Exterior">Draw_P_Vertex_Exterior</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_P_Vertex_Holes">Draw_P_Vertex_Holes</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition *<I>v</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_P_Vertex_Image">Draw_P_Vertex_Image</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>image</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Floodfill">Draw_Floodfill</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APart *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indx_Type <I>seed</I>, void *<I>arg</I>, boolean (*<I>test</I>)(Indx_Type p, void *arg))</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Basic">Draw_Basic</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, APart *<I>source</I>, int <I>share</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean <I>iscon2n</I>, Indx_Type <I>seed</I>, Comparator <I>cmprsn</I>, Value <I>level</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Point">Draw_Point</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Coordinate *<I>point</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Cross">Draw_Cross</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Coordinate *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Rectangle">Draw_Rectangle</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coordinate *<I>corner1</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Coordinate *<I>corner2</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Circle">Draw_Circle</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Coordinate *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Line">Draw_Line</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>, Coordinate *<I>b</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Coordinate *<I>e</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Draw.html#Draw_Image">Draw_Image</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Brush_Bundle *<I>brush</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+The drawing module has routines that paint, with a given kind of <B>brush</B>, shapes
+and <B>Mylib</B> objects like <a href="Region.html">Region</a>s, <a href="Level_Tree.html#Level_Set">Level_Set</a>s, and <a href="Partition.html#P_Vertex">P_Vertex</a>es (i.e. <a href="Partition.html">Partition</a> regions)
+onto an array
+called a <B>canvas</B> in this context.  The canvas need not be the array over which an
+object was created, and it can be of any kind or type, but the <a class="ref" href="Array.html#core shape">core shape</a> of the
+canvas must be the same as that of the array over which an object was created (if
+relevant).
+</p>
+<p>
+A generic <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> is used to pass a brush to a drawing routine, where the type
+(<a href="Mylib.html#Value_Kind">Value_Kind</a> actually) and kind of the brush to actually use is inferred from the type
+and kind of the associated canvas.
+For a PLAIN_KIND canvas one sets a <a href="Draw.html#Plain_Bundle">Plain_Bundle</a> where the <a href="Mylib.html#Value_Kind">Value_Kind</a> of the <a href="Mylib.html#Value">Value</a> field of
+the brush should be appropriate for the type of the canvas (e.g. <I>UVAL</I> if the canvs is
+<I>UINT8_TYPE</I>, <I>UINT16_TYPE</I>, <I>UINT32_TYPE</I>, or <I>UINT64_TYPE</I>, etc.).  Similarly, for an RGB_KIND
+or RGBA_KIND canvas one sets up a <a href="Draw.html#Color_Bundle">Color_Bundle</a>, and for a COMPLEX_KIND canvas one specifies
+a <a href="Draw.html#Complex_Bundle">Complex_Bundle</a>.  Each drawing routine will apply a brush to a set of pixels in a canvas,
+where the manner in which the brush's value(s) is combined with the value of a pixel in the
+canvas is determined by the <I>op</I> field of the brush.  One can simply set the
+pixel of the canvas to the value of the brush, or one can add, subtract, multiply, or divide the
+canvas pixel by the brush value, or take the maximum or minimum.  For color and complex
+brushes the combining is with the brush values given for each special dimension.
+</p>
+<p>
+For example, the <I>Color_Bundle</I> <I>{ SET_PIX, 255, 255, 0 }</I>, would paint a yellow pixel
+in a UINT8_TYPE, RGB_KIND canvas.  The <I>Complex_Bundle</I>
+<I>{ MUL_PIX, .5, .5 }</I>, would halve the "painted" values of a FLOAT_TYPE (<I>FVAL</I>), COMPLEX_KIND
+canvas.  Finally, the <I>Plain_Bundle</I> <I>{ MAX_PIX, -10 }</I> would set all painted pixels less than
+-10 to -10 in an INT_TYPE (<I>IVAL</I>), PLAIN_KIND array.
+</p>
+<p>
+One can draw <a href="Region.html">Region</a>s, or their outline, exterior, or holes, and the same is possible
+for <a href="Level_Tree.html#Level_Set">Level_Set</a>s and <a href="Partition.html#P_Vertex">P_Vertex</a>es (i.e. <a href="Partition.html">Partition</a> regions).  One can also paint with a
+general flood
+fill or more
+simply a connected set of pixels of above or below some threshold with <a href="Draw.html#Draw_Floodfill">Draw_Floodfill</a>
+and <a href="Draw.html#Draw_Basic">Draw_Basic</a>, respectively.  One can paint a point, a cross, a rectangle, a circle,
+and a line (in any number of dimensions) with appropriate draw routines.  Finally one can
+effectively set an entire image with <a href="Draw.html#Draw_Image">Draw_Image</a>.
+</p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Plain_Bundle"></a>     <tr><td class="name" valign="top">Plain_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>op</i></td><td class="define">: <a href="Draw.html#Drawer">Drawer</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>val</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+    </table>
+  </h3>
+<p>
+Specifies a value, <I>val</I>, and combination operation, <I>op</I>, for a paint operation on a
+PLAIN_KIND canvas.  Practically, paint brushes are easy to initialize, for example:
+</p>
+<pre>
+ Plain_Bundle clip = { MAX_PIX, -10 };
+</pre>
+<p>
+sets up a bundle for clipping pixels to a minimum of -10 in INT_TYPE (<I>IVAL</I>) canvases.  Note
+carefully that <I>val</I> is set to the <I>int64</I> arrangement of bits encoding -10 in a
+double word.  One could subsequently interpret this arrangement of bits as a <I>uint64</I> or
+<I>float64</I> value from the <a href="Mylib.html#Value">Value</a> field, but presumably you're canvas is an integer type
+canvas so it will be interpreted as an <I>int64</I>.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Color_Bundle"></a>     <tr><td class="name" valign="top">Color_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>op</i></td><td class="define">: <a href="Draw.html#Drawer">Drawer</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>red</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>green</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>blue</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>alpha</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+    </table>
+  </h3>
+<p>
+Specifies a combination operation, <I>op</I>, and a value to apply to each of the special
+dimensions of an RGB_KIND, or RGBA_KIND canvas.  If the canvas is RGB_KIND, then the
+value of <I>alpha</I> is ignored.  A paint brush is easy to initialize, for
+example:
+</p>
+<pre>
+ Color_Bundle yellow = { SET_PIX, 255, 255, 0, 0 };
+</pre>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Complex_Bundle"></a>     <tr><td class="name" valign="top">Complex_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>op</i></td><td class="define">: <a href="Draw.html#Drawer">Drawer</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>real</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>imag</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+    </table>
+  </h3>
+<p>
+Specifies a combination operation, <I>op</I>, and a value to apply to each of the special
+dimensions of a COMPLEX_KIND canvas.
+A paint brush is easy to initialize, for example:
+</p>
+<pre>
+ Color_Bundle halve = { MUL_PIX, .5, .5 };
+</pre>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Drawer"></a><tr><td valign="top">Drawer</td><td>: { SET_PIX, ADD_PIX, SUB_PIX, MUL_PIX, MIN_PIX, MAX_PIX }</td></tr>
+  </table></h3>
+<p>
+Specifies how brush values are to be combined with canvas values.  In the table below <I>c</I> is
+the canvas data, <I>p</I> is the canvas pixel to be combined with the brush, and <I>v</I> is the brush's
+value for the given dimension of the canvas.
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="2" cellspacing="1" width="250px">
+<tr><th width="50%">Operator</th><th width="50%">Effect</th></tr>
+<tr class="odd"> <td valign="top"><tt>SET_PIX</tt></td> <td valign="top"><tt>c = v</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>ADD_PIX</tt></td> <td valign="top"><tt>c = c + v</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>SUB_PIX</tt></td> <td valign="top"><tt>c = c - v</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MUL_PIX</tt></td> <td valign="top"><tt>c = c * v</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>DIV_PIX</tt></td> <td valign="top"><tt>c = c / v</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>MIN_PIX</tt></td> <td valign="top"><tt>c = min(c,v)</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MAX_PIX</tt></td> <td valign="top"><tt>c = max(c,v)</tt></td> </tr>
+</table><p>
+<p>
+Generally, the type of <I>v</I> is assumed to be the same as that of <I>c</I>, with the <B>exception</B> of
+the multiplicative combiners, <I>MUL_PIX</I> and <I>DIV_PIX</I>, where it is assumed that the <a href="Mylib.html#Value_Kind">Value_Kind</a> of
+<I>v</I> is <I>FVAL</I> (floating point).
+</p>
+<hr />
+
+<h2>Descriptive Types Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Brush_Bundle"></a><tr><td valign="top">Brush_Bundle</td><td>: union { Plain_Bundle; Color_Bundle; Complex_Bundle }</td></tr>
+  </table></h3>
+<p>
+Generic declaration that could be any one of the specific paint brush kinds.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Draw_Region"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Region (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Region.html">Region</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Paint all the pixels in the <a href="Region.html">Region</a> <I>r</I> on the canvas <I>canvas</I> using paint brush <I>brush</I>.
+Holes are observed, i.e. not painted.
+The canvas must have the same core shape as the array from which <I>r</I> was recorded.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Region_Outline"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Region_Outline (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Region.html">Region</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Paint all the pixels on the <a class="ref" href="Region.html#outer border">outer border</a> of the <a href="Region.html">Region</a> <I>r</I> on the canvas <I>canvas</I> using
+paint brush <I>brush</I>.
+The canvas must have the same core shape as the array from which <I>r</I> was recorded.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Region_Exterior"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Region_Exterior (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Region.html">Region</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Paint all the pixels <a class="ref" href="Region.html#exterior">exterior</a> to the <a href="Region.html">Region</a> <I>r</I> on the canvas <I>canvas</I> using
+paint brush <I>brush</I>.
+The canvas must have the same core shape as the array from which <I>r</I> was recorded.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Region_Holes"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Region_Holes (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Region.html">Region</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Paint all the pixels in <a class="ref" href="Region.html#hole">hole</a>s of the <a href="Region.html">Region</a> <I>r</I> on the canvas <I>canvas</I> using
+paint brush <I>brush</I>.
+The canvas must have the same core shape as the array from which <I>r</I> was recorded.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Region_Image"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Region_Image (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>image</I>, <a href="Region.html">Region</a> *<I>r</I>)</td></tr>
+  </table></h3>
+<p>
+Set the pixels in canvas <I>canvas</I> to the corresponding pixels of <I>image</I> within the <a href="Region.html">Region</a>
+<I>region</I>.
+The canvas must have the same core shape as the array from which <I>r</I> was recorded.
+Moreover, the canvas and the image must be of the same kind, type, and shape.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Level_Set"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Level_Set (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_Level_Set_Outline"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Level_Set_Outline (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_Level_Set_Exterior"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Level_Set_Exterior (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_Level_Set_Holes"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Level_Set_Holes (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_Level_Set_Image"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Level_Set_Image (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>image</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Level_Tree.html">Level_Tree</a> *<I>t</I>, <a href="Level_Tree.html#Level_Set">Level_Set</a> *<I>r</I>, int <I>share</I>)</td></tr>
+  </table></h3>
+<p>
+The <I>Draw_Level_Set(_X)</I> routines are equivalent to <I>Draw_Region(_X)</I> above, save that
+the painting is with respect to <a href="Level_Tree.html#Level_Set">Level_Set</a> <I>r</I> in <a href="Level_Tree.html">Level_Tree</a> <I>t</I>, versus the <a href="Region.html">Region</a>
+<I>r</I> of the former routines.
+For unthreaded applications, the parameter <I>share</I> can safely be set to 0.  For those
+that need to know more see
+<a href="Connectivity.html#share">this</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_P_Vertex"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_P_Vertex (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Partition.html">Partition</a> *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_P_Vertex_Outline"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_P_Vertex_Outline (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Partition.html">Partition</a> *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_P_Vertex_Exterior"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_P_Vertex_Exterior (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Partition.html">Partition</a> *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_P_Vertex_Holes"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_P_Vertex_Holes (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Partition.html">Partition</a> *<I>v</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+     <a name="Draw_P_Vertex_Image"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_P_Vertex_Image (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>image</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Partition.html">Partition</a> *<I>p</I>, int <I>v</I>, int <I>share</I>)</td></tr>
+  </table></h3>
+<p>
+The <I>Draw_P_Vertex(_X)</I> routines are equivalent to <I>Draw_Region(_X)</I> above, save that
+the painting is with respect to <a href="Partition.html#P_Vertex">P_Vertex</a> region or vertex <I>v</I> in <a href="Partition.html">Partition</a> <I>p</I>, versus
+the <a href="Region.html">Region</a>
+<I>r</I> of the former routines.
+For unthreaded applications, the parameter <I>share</I> can safely be set to 0.  For those
+that need to know more see
+<a href="Connectivity.html#share">this</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Floodfill"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Floodfill (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AForm.html#APart">APart</a> *<I>source</I>, int <I>share</I>, boolean <I>iscon2n</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Mylib.html#Indx_Type">Indx_Type</a> <I>seed</I>, void *<I>arg</I>, boolean (*<I>test</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, void *arg))</td></tr>
+  </table></h3>
+<p>
+With brush <I>brush</I>, paint all the pixels in canvas <I>canvas</I> that correspond to the pixels
+in the array or slice <I>source</I> that are <I>iscon2n</I>-connected to the pixel <I>seed</I> and for which
+<I>test(p,arg)</I> is true.
+The canvas must have the same core shape as <a href="AForm.html#AForm_Array">AForm_Array</a>(source).
+For unthreaded applications, the parameter <I>share</I> can safely be set to 0.  For those
+that need to know more see
+<a href="Connectivity.html#share">this</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Basic"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Basic (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="AForm.html#APart">APart</a> *<I>source</I>, int <I>share</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean <I>iscon2n</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>seed</I>, <a href="Mylib.html#Comparator">Comparator</a> <I>cmprsn</I>, <a href="Mylib.html#Value">Value</a> <I>level</I>)</td></tr>
+  </table></h3>
+<p>
+With brush <I>brush</I>, paint all the pixels in canvas <I>canvas</I> that correspond to the pixels
+in the array or slice <I>source</I> that are <I>iscon2n</I>-connected to the pixel <I>seed</I> and for which
+'<I>val[p] cmprsn level</I> ' is true, where <I>val[p]</I> is the value of pixel <I>p</I> in <I>source</I>.
+For example, if <I>cmprsn = GE_COMP</I> and <I>level = 12</I>, then the region of all pixels
+<I>iscon2n</I>-connected to <I>seed</I> with value greater than or equal to 12 are painted.
+The canvas must have the same core shape as <a href="AForm.html#AForm_Array">AForm_Array</a>(source).
+For unthreaded applications, the parameter <I>share</I> can safely be set to 0.  For those
+that need to know more see
+<a href="Connectivity.html#share">this</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Point"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Point (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>point</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Paint the <a class="ref" href="Array.html#core coordinate">core coordinate</a> <I>point</I> of canvas <I>canvas</I> with brush <I>brush</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Cross"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Cross (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Paint an <I>n</I>-dimensional cross centered on <a class="ref" href="Array.html#core coordinate">core coordinate</a> <I>center</I> with arms of
+length <I>radius</I> pixels on canvas <I>canvas</I> with brush <I>brush</I>.
+Pixels of the cross outside the boundary of the canvas are clipped.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Rectangle"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Rectangle (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Array.html#Coordinate">Coordinate</a> *<I>corner1</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>corner2</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Paint an <I>n</I>-dimensional rectangle with minimum <a class="ref" href="Array.html#core coordinate">core coordinate</a> <I>b</I> and maximum core
+coordinate <I>e</I> on canvas <I>canvas</I> with brush <I>brush</I>.
+Pixels of the rectangle outside the boundary of the canvas are clipped.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Circle"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Circle (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Paint an <I>n</I>-dimensional sphere centered on <a class="ref" href="Array.html#core coordinate">core coordinate</a> <I>center</I> with radius of <I>r</I> pixels
+on canvas <I>canvas</I> with brush <I>brush</I>.
+Pixels of the sphere outside the boundary of the canvas are clipped.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Line"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Line (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>b</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>e</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Paint an <I>n</I>-dimensional line from <a class="ref" href="Array.html#core coordinate">core coordinate</a> <I>b</I> to core coorindate <I>e</I>
+on canvas <I>canvas</I> with brush <I>brush</I>.  The line is not anti-aliased but simply
+guaranteed to be a connected discretization of the line.
+Pixels of the line outside the boundary of the canvas are clipped.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Image"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_Image (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Draw.html#Brush_Bundle">Brush_Bundle</a> *<I>brush</I>)</td></tr>
+  </table></h3>
+<p>
+Paint every pixel of <I>image</I> with brush <I>brush</I>.
+</td></tr></table>
+</body>
+</html>

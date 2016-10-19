@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by mylib 1.0 -->
+
+<svg
+   xmlns:mylib="http://www.mylib.org/mylib1.0"
+   xmlns="http://www.w3.org/2000/svg"
+   width="6.5in"
+   height="1.25in"
+   viewBox="0 0 650 125"
+   preserveAspectRatio="none"
+   version="1.1">
+<rect x="5" y="5" width="640" height="115"
+ stroke="#0000ff" stroke-width="2" fill="none" />
+<path d=" M 50 50 L 200 50"
+ stroke="#000000" stroke-width="40" fill="none" />
+<path d=" M 50 50 L 200 50"
+ stroke="#ffc0cb" stroke-width="2" fill="none" />
+<circle cx="50" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" fill="#ffc0cb" />
+<circle cx="200" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" fill="#ffc0cb" />
+<text x="125" y="100" font-family="sans-serif" font-size="28" text-anchor="middle" stroke="none" fill="#000000">
+    'butt' cap
+</text>
+<path d=" M 250 50 L 400 50"
+ stroke="#000000" stroke-width="40" stroke-linecap="round" fill="none" />
+<path d=" M 250 50 L 400 50"
+ stroke="#ffc0cb" stroke-width="2" fill="none" />
+<circle cx="250" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" fill="#ffc0cb" />
+<circle cx="400" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" fill="#ffc0cb" />
+<text x="325" y="100" font-family="sans-serif" font-size="28" text-anchor="middle" stroke="none" fill="#000000">
+    'round' cap
+</text>
+<path d=" M 450 50 L 600 50"
+ stroke="#000000" stroke-width="40" stroke-linecap="square" fill="none" />
+<path d=" M 450 50 L 600 50"
+ stroke="#ffc0cb" stroke-width="2" fill="none" />
+<circle cx="450" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" fill="#ffc0cb" />
+<circle cx="600" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" fill="#ffc0cb" />
+<text x="525" y="100" font-family="sans-serif" font-size="28" text-anchor="middle" stroke="none" fill="#000000">
+    'square' cap
+</text>
+</svg>

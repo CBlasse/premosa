@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Tiff Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Tiff Class Reference</h1>
+
+<p>
+Direct I/O of individual multi-channel Tiff Image File Descriptors (IFDs).
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;image.h&gt;
+</pre>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Channel_Kind"> Channel_Kind </a></b>
+     </td><td class="define" valign="baseline">: { PLAIN_CHAN, MAPPED_CHAN, RED_CHAN, <br>&nbsp;&nbsp;&nbsp;&nbsp;GREEN_CHAN, BLUE_CHAN, ALPHA_CHAN }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="RTiff"></a>
+       <b><a href="Tiff.html#RTiff"> RTiff </a></b>
+     </td><td class="define" valign="baseline">: Tiff</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="WTiff"></a>
+       <b><a href="Tiff.html#WTiff"> WTiff </a></b>
+     </td><td class="define" valign="baseline">: Tiff</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A Tiff opened for reading</td></tr>
+    <tr><td class="comment" valign="baseline">A Tiff opened for writing</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Tiff *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Open_Tiff">Open_Tiff</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (string <I>file_name</I>, string <I>mode</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Close_Tiff">Close_Tiff</a></b>
+     (Tiff *<I>tif</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Get_IFD_Shape">Get_IFD_Shape</a></b>
+     (RTiff *<I>tif</I>, int *<I>width</I>, int *<I>height</I>, int *<I>num_chan</I>)</td></tr>
+<tr><td class="return" valign="baseline">Value_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Get_IFD_Channel_Type">Get_IFD_Channel_Type</a></b>
+     (RTiff *<I>tif</I>, int <I>channel</I>)</td></tr>
+<tr><td class="return" valign="baseline">Channel_Kind</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Get_IFD_Channel_Kind">Get_IFD_Channel_Kind</a></b>
+     (RTiff *<I>tif</I>, int <I>channel</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Get_IFD_Channel">Get_IFD_Channel</a></b>
+     (RTiff *<I>tif</I>, int <I>channel</I>, Array *<I>plane</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">string</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Get_IFD_Annotation">Get_IFD_Annotation</a></b>
+     (RTiff *<I>tif</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Get_IFD_Map">Get_IFD_Map</a></b>
+     (RTiff *<I>tif</I>, Array *<I>map</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Advance_Tiff">Advance_Tiff</a></b>
+     (RTiff *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Rewind_Tiff">Rewind_Tiff</a></b>
+     (RTiff *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Tiff_EOF">Tiff_EOF</a></b>
+     (RTiff *<I>tif</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Add_IFD_Channel">Add_IFD_Channel</a></b>
+     (WTiff *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>plane</I>, Channel_Kind <I>kind</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Set_IFD_Map">Set_IFD_Map</a></b>
+     (WTiff *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array *<I>map</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Tiff.html#Update_Tiff">Update_Tiff</a></b>
+     (WTiff *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Image_Compress <I>compress</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+While the <a href="Image.html">Image I/O</a> module provides the simplist possible interface to get images and stacks
+into and out of tiff-encoded files, the <B>Tiff</B> class provides more flexibility, at the
+expense of somewhat greater complexity, by (a) realizing routines that give serial access to the
+individual IFDs of the file, (b) removing the restriction that all IFDs have to
+be of the same dimensions, and (c) not automatically mapping color-mapped channels.
+Before introducing the routines, we describe the aspects of a tiff encoding that need to
+be understood by a user of the class.
+</p>
+<p>
+A <B>Tiff</B>-encoded file contains a sequence of one or more <B>image file descriptors</B> (IFDs) each of
+which contains any number of <B>channels</B> each of which is a 2D array, all of the same shape.
+Each channel's array can contain signed or unsigned integers of some specific number of bits,
+or a 32-bit floating point number.  Each channel also has a photometric interpretation which
+in effect can be one of RED, GREEN, BLUE, ALPHA, MAPPED, or PLAIN, with the restriction
+that the only channel that can be MAPPED is the first.  (Tiff actually uses
+a somewhat baroque and complicated set of tags to encode these interpretations, but
+in effect the list just given is the information that is present.)
+Note carefully, that unlike the <a href="Image.html">Image I/O</a> module, the IFDs in this context do *not* have to
+have the same dimensions or number and types
+of channels/layers as other IFDs in the tif file.  This can be useful if you want to store
+something more complicated in a tiff.  For example, every even-numbered IFD could be a thumbnail
+of the previous odd-numbered IFD.  What is in the sequence of IFDs could even be encoded in
+the text field of the first channel of the first IFD, which is put into or taken from the
+<B>JF_ANO_BLOCK</B> tag of the tiff (there is only <B>one</B> per file, see 2. below).
+</p>
+<p>
+If the first channel is MAPPED then the IFD also contains a 16-bit rgb-color map,
+presumably for mapping the values of that channel.
+Unfortunately, the tiff format is not general enough to associate color maps with different
+channels, there is at most one map and its presence is always contingent on the first channel
+being designated as MAPPED.  However, there is nothing to prevent the application
+of this map to other channels if it suites your purpose, and there is generally no reason
+why the application can't arrange the channels so the first one is a color-mapped one.
+</p>
+<p>
+The <B>Tiff</B> class, unlike the routines of the <a href="Image.html">Image I/O</a> module, does not use the concept of
+<a class="ref" href="Image.html#layer">layer</a>s, but works directly with the channels in each IFD.
+One should further note the following subtleties:
+<ol>
+<li>
+The scale of an array is actually operative here: the values of a 12-bit UINT16_TYPE array will be
+written as 12-bit numbers to the tiff file, which in turn, when read, will produce an array
+with a scale of 12.
+<br>
+<li>
+The <a href="Array.html#text">text</a> field of the array that is the first channel of the first IFD output, is written to a
+<B>JF_ANO_BLOCK</B> tag upon the write, and this text tag can be fetched from the first IFD when
+reading with <a href="Tiff.html#Get_IFD_Annotation">Get_IFD_Annotation</a> if it is present.  There is no
+limitation on the size of a text field, so one can in principle encode arbitrarily complex
+meta-data about an image in this field in an ASCII-oriented format such as XML.
+<br>
+<li>
+The software also applies to LSM files produced by Zeiss microscopes.  The format is a small
+variation on the tiff format.  LSM's frequently contain thumbnails as well as the primary
+image.  These are <B>not</B> ignored by a <a href="Tiff.html">Tiff</a> reader (unlike the <a href="Image.html">Image I/O</a> module routines which
+filter them out).
+<br>
+<li>
+All the I/O routines may return a value signalling an error, such as a file can't be openede,
+the tiff contents are improperly formatted, or a parameter is not of the right shape, kind,
+or type.
+In such an error event, one may get a descriptive string of the problem by calling
+<a href="Image.html#Image_Error">Image_Error</a>, right after the error occurs.  In order for this to be thread-safe, if
+multiple threads encounter an error, only one of the threads (which is unspecified) records
+a descriptive string.
+One must subsequently "release" the recorded error (with <a href="Image.html#Image_Error_Release">Image_Error_Release</a>) in order
+for a thread to record a new error, if one occurs.  So an error message must be released even
+when one's application is not threaded.  These routines are shared with the <a href="Image.html">Image I/O</a> module.
+</ol>
+</p>
+<p>
+A <B>Tiff</B> object manages either the reading or writing of a tiff file.  It has the concept
+of a current IFD, which for reading is one in the sequence of IFDs in the file or none
+if the <B>Tiff</B> is at the end of the file.  For writing, the current IFD is always the next
+one to be written to the file's sequence of IFDs and this IFD, immediately after the
+previous one has been written, is empty in that it has no channels.
+A <B>Tiff</B> is opened for either reading ("r") or writing ("w") with <a href="Tiff.html#Open_Tiff">Open_Tiff</a> and must be
+closed with <a href="Tiff.html#Close_Tiff">Close_Tiff</a> when all I/O involving the Tiff is complete.  To clearly distinguish
+between Tiffs open for reading versus those open for writing, the descriptive type
+names <a href="Tiff.html#RTiff">RTiff</a> and <a href="Tiff.html#WTiff">WTiff</a> are introduced.
+</p>
+<p>
+One can advance an RTiff to the next IFD in the file's sequence with <a href="Tiff.html#Advance_Tiff">Advance_Tiff</a> and
+query as to whether or not the end of the sequence has been reached with <a href="Tiff.html#Tiff_EOF">Tiff_EOF</a>.
+An RTiff can also be rewound with <a href="Tiff.html#Rewind_Tiff">Rewind_Tiff</a> which sets the current IFD to the first
+IFD in the associated file.   For example, a simple code to count the number of IFDs in
+a tiff file is:
+</p>
+<pre>
+ int  nifd;
+ Tiff t;
+
+ Open_Tiff("foo.tif","r");
+ nifd = 0;
+ while ( ! Tiff_EOF(t))
+   { nifd += 1;
+     Advance_Tiff(t);
+   }
+ Close_Tiff(t);
+ printf("There are %d IFD's in foo.tif\n",nifd);
+</pre>
+<p>
+An <B>RTiff</B> object gives one finer control over reading the contents of the current IFD
+of a tiff file.  <a href="Tiff.html#Get_IFD_Shape">Get_IFD_Shape</a> returns the width, height, and number of channels in the
+current IFD.  <a href="Tiff.html#Get_IFD_Channel_Kind">Get_IFD_Channel_Kind</a> and <a href="Tiff.html#Get_IFD_Channel_Type">Get_IFD_Channel_Type</a> return the <a href="Tiff.html#Channel_Kind">Channel_Kind</a>
+and <a href="Mylib.html#Value_Type">Value_Type</a> of any given channel in the
+current IFD.  These routines allow a user to know what kind of <a href="Array.html">Array</a> container might
+hold the channel images of the IFD and whether or not it has a color map and how big it
+is.  <a href="Tiff.html#Get_IFD_Channel">Get_IFD_Channel</a> fetches the contents of a given channel into an <a href="Array.html">Array</a> supplied
+by the caller, and <a href="Tiff.html#Get_IFD_Map">Get_IFD_Map</a> fetches the color map (if there is one) into an <a href="Array.html">Array</a>
+supplied by the caller.  It is frequently the case that these <a href="Array.html">Array</a>s are actually
+<a href="Array.html#Array_Bundle">Array_Bundle</a>s into a slice of a larger array that contains the entire stack encoded
+in the file.  For example, suppose it is known that a tiff file contains an <I>RGB_KIND</I> stack
+as might be interpreted by the routines of the <a href="Image.html">Image I/O</a> module.
+The following code would read such a stack into the Array <I>stack</I>:
+</p>
+<pre>
+ int    width, height, depth, nchan;
+ Array *stack;
+
+ Open_Tiff("RGB_3D_Stack.tif","r");
+ depth = 0;
+ while ( ! Tiff_EOF(t))
+   { depth += 1;
+     Advance_Tiff(t);
+   }
+ Rewind_Tiff(t);
+ Get_IFD_Shape(&width,&height,&nchan);
+ stack = Make_Array_With_Shape(RGB_KIND,UINT8_TYPE,Coord3(depth,height,width));
+ depth = 0;
+ while ( ! Tiff_EOF(t))
+   { for (j = 0; j < nchan; j++)
+       { Array_Bundle plane = *stack;
+         Get_IFD_Channel(t,j,Get_Array_Plane(Get_Array_Plane(&plane,j),depth));
+       }
+     depth += 1;
+     Advance_Tiff(t);
+   }
+ Close_Tiff(t);
+</pre>
+<p>
+A more careful code would check the return values of all the calls for error conditions
+and would further check that indeed all the IFD's have the same shape, that <I>nchan</I> = 3,
+and that the <a href="Tiff.html#Channel_Kind">Channel_Kind</a>s are <I>RED_CHAN</I>, <I>GREEN_CHAN</I>, and <I>BLUE_CHAN</I> in that order.
+</p>
+<p>
+Writing a tiff file is simply a matter of building up the current IFD by adding channels
+to it with <a href="Tiff.html#Add_IFD_Channel">Add_IFD_Channel</a>, and possibly adding a color map with <a href="Tiff.html#Set_IFD_Map">Set_IFD_Map</a> (if the
+first channel added is a <I>MAPPED_CHAN</I>), and then  appending it
+to the sequence of IFDs already written with <a href="Tiff.html#Update_Tiff">Update_Tiff</a>.
+The routine below presents a more complex example involving Tiff objects and specifically
+illustrates how to write a tiff file.  The routine take a file named <I>input</I> and looks to see if
+a color thumbnail is encoded in the even IFDs of the file's IFD sequence, as is the case for
+most Zeiss LSM files.  If so, then it extracts and outputs this thumbnail to the file <I>output</I>.
+In this example, care was taken to at least protect every call, returning true if there was
+an error of any kind.  Note also the care that is taken to clean up any open objects regardless
+of how the routine terminates.
+</p>
+<pre>
+ boolean Extract_Thumbnail(string input, string output)
+ { Tiff  *R, *W;
+   Array *P;
+   int    w1[2], h1[2], n1[2];
+   int    w, h, d, n, i, c;
+   int    status = 1;
+
+   if ((R = Open_Tiff(input,"r")) == NULL) return (1);
+   if ((W = Open_Tiff(output,"w")) == NULL) goto exit1;
+
+   for (d = 0; ! Tiff_EOF(R); d++)
+     { if (d < 2)
+         { if (Get_IFD_Shape(R,w1+d,h1+d,n1+d)) goto exit2; }
+       else
+         { if (Get_IFD_Shape(R,&w,&h,&n)) goto exit2;
+           if (w1[d%2] != w || h1[d%2] != h || n1[d%2] != n) goto exit2;
+           if (d%2)
+             { if (n != 3) goto exit2;
+               for (c = 0; c < n; c++)
+                 if (Get_IFD_Channel_Kind(R,c) != RED_CHAN+c ||
+                     Get_IFD_Channel_Type(R,c) != UINT8_TYPE) goto exit2;
+             }
+         }
+       Advance_Tiff(R);
+     }
+   Rewind_Tiff(R);
+
+   P = Make_Array_With_Shape(RGB_KIND,UINT8_TYPE,Coord2(h1[1],w1[1]));
+
+   for (d = 0; ! Tiff_EOF(R); d++)
+     { if (d%2)
+         { for (c = 0; c < 3; c++)
+             { Array_Bundle p = *P;
+               if (Get_IFD_Channel(R,c,Get_Array_Plane(&p,c))) goto exit3;
+               if (Add_IFD_Channel(W,&p,RED_CHAN+c)) goto exit3;
+             }
+           Update_Tiff(W,DONT_PRESS);
+         }
+       Advance_Tiff(R);
+     }
+
+        status = 0;
+ exit3: Free_Array(P);
+ exit2: Close_Tiff(W);
+ exit1: Close_Tiff(R);
+        return (status);
+ }
+</pre>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Channel_Kind"></a><tr><td valign="top">Channel_Kind</td><td>: { PLAIN_CHAN, MAPPED_CHAN, RED_CHAN, <br>&nbsp;&nbsp;&nbsp;&nbsp;GREEN_CHAN, BLUE_CHAN, ALPHA_CHAN }</td></tr>
+  </table></h3>
+<p>
+The possible photometric interpretations for a channel.  As noted in the
+<a href="#details">detailed description</a>
+the only channel in an IFD that can have <B>Channel_Kind</B> <I>MAPPED_CHAN</I> is the
+first.  Even if you ask <a href="Tiff.html#Add_IFD_Channel">Add_IFD_Channel</a> to add a <I>MAPPED_CHAN</I> it will end
+up being <I>PLAIN_CHAN</I> if it is not the first.  If it is the first, then you
+should supply the expected color map with <a href="Tiff.html#Set_IFD_Map">Set_IFD_Map</a>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Open_Tiff"></a><tr><td valign="baseline"><a href="Tiff.html">Tiff</a> *</td>
+     <td valign="baseline">Open_Tiff<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (string <I>file_name</I>, string <I>mode</I>)</td></tr>
+  </table></h3>
+<p>
+Open <I>file_name</I> for reading if <I>mode</I> = "r", or for writing if <I>mode</I> = "w" as a tiff-encoded
+file return a <a href="Tiff.html">Tiff</a> object that models the current state of the I/O.  The Tiff is setup so
+that its current IFD is the first in the sequence.  NULL is returned if there are any problems
+and if so the nature of the problem can be diagnosed with <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Close_Tiff"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Close_Tiff (<a href="Tiff.html">Tiff</a> *<I>tif</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Close the <I>tif</I> I/O object.  This routine must be called to properly complete the writing
+of a tiff file.  It frees the <I>tif</I> object.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_IFD_Shape"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Get_IFD_Shape (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I>, int *<I>width</I>, int *<I>height</I>, int *<I>num_chan</I>)</td></tr>
+  </table></h3>
+<p>
+Set the width, height, and number of channels in the current IFD of the readable Tiff <I>tif</I>
+at the locations pointed at by <I>width</I>, <I>height</I>, and <I>num_chan</I>, respectively.
+True is returned if any I/O or decoding errors occur in attempting to get the shape
+of the IFD,
+and if so the nature of the problem can be diagnosed with <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_IFD_Channel_Type"></a><tr><td valign="baseline"><a href="Mylib.html#Value_Type">Value_Type</a></td>
+     <td valign="baseline">Get_IFD_Channel_Type (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I>, int <I>channel</I>)</td></tr>
+  </table></h3>
+<p>
+Return the <a href="Mylib.html#Value_Type">Value_Type</a> of channel <I>channel</I> in the current IFD of the readable Tiff <I>tif</I>.
+If there is any error in accessing the current IFD or the parameter <I>channel</I> is out
+of range, then -1 is returned
+and the nature of the problem can be diagnosed with <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_IFD_Channel_Kind"></a><tr><td valign="baseline"><a href="Tiff.html#Channel_Kind">Channel_Kind</a></td>
+     <td valign="baseline">Get_IFD_Channel_Kind (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I>, int <I>channel</I>)</td></tr>
+  </table></h3>
+<p>
+Return the <a href="Tiff.html#Channel_Kind">Channel_Kind</a> of channel <I>channel</I> in the current IFD of the readable Tiff <I>tif</I>.
+If there is any error in accessing the current IFD or the parameter <I>channel</I> is out
+of range, then -1 is returned
+and the nature of the problem can be diagnosed with <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_IFD_Channel"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Get_IFD_Channel (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I>, int <I>channel</I>, <a href="Array.html">Array</a> *<I>plane</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Read channel <I>channel</I> from the current IFD of readable Tiff <I>tif</I> into the data vector
+of array <I>plane</I>.  The array <I>plane</I> must be a <I>PLAIN_KIND</I> 2D array whose dimensions match
+those of the channels of the IFD and whose type must be consistent with the <a href="Mylib.html#Value_Type">Value_Type</a>
+of the channel (i.e. <a href="Tiff.html#Get_IFD_Channel_Type">Get_IFD_Channel_Type</a>(tif,channel)).
+True is returned if any I/O or decoding errors occur in attempting to fetch the channel,
+and if so the nature of the problem can be diagnosed with <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_IFD_Annotation"></a><tr><td valign="baseline">string</td>
+     <td valign="baseline">Get_IFD_Annotation (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the text of the <B>JF_ANO_BLOCK</B> tag of the current IFD of the readable
+Tiff <I>tif</I> if it is present.  If it is not present than a pointer to an empty string is
+returned, and if there is an error than NULL is returned.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_IFD_Map"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Get_IFD_Map (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I>, <a href="Array.html">Array</a> *<I>map</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Place the value of the color map of the current IFD of the readable Tiff <I>tif</I> in the
+array <I>map</I>.  The array <I>map</I> must be an <I>RGB_KIND</I> 1D array whose size is
+<i>2<sup>scale</sup></i> where
+<I>scale</I> is the number of bits in the first channel that must further be of kind
+<I>CHAN_MAPPED</I>.  If it is not, or any other I/O or decoding error occurs then true
+is returned and the nature of the problem can be diagnosed with <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Advance_Tiff"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Advance_Tiff (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+The readable Tiff <I>tif</I>, has its current IFD updated to the next one in sequence within
+the underlying tiff file.
+</p>
+  <h3 class="fn"><table>
+     <a name="Rewind_Tiff"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Rewind_Tiff (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+The readable Tiff <I>tif</I>, has its current IFD reset to the first one in the sequence of IFDs within
+the underlying tiff file.
+</p>
+  <h3 class="fn"><table>
+     <a name="Tiff_EOF"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Tiff_EOF (<a href="Tiff.html#RTiff">RTiff</a> *<I>tif</I>)</td></tr>
+  </table></h3>
+<p>
+Returns true only if the <I>tif</I>, that must be opened for reading, is at the end of the file,
+i.e. it has advanced beyond the last IFD.
+</p>
+  <h3 class="fn"><table>
+     <a name="Add_IFD_Channel"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Add_IFD_Channel (<a href="Tiff.html#WTiff">WTiff</a> *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>plane</I>, <a href="Tiff.html#Channel_Kind">Channel_Kind</a> <I>kind</I>)</td></tr>
+  </table></h3>
+<p>
+Add a new channel to the current IFD of the writeable Tiff <I>tif</I>.  The contents of the channel
+will be those of <I>plane</I> <B>when the Tiff is updated</B> and <I>plane</I> must be a <I>PLAIN_KIND</I> 2D
+array.  If it is the first channel added, then its dimensions set the dimensions of the channels
+of the current IFD, otherwise its dimensions must match those of the previously added
+channels.  The setting of the parameter <I>kind</I> determines the photometric interpretation or
+<a href="Tiff.html#Channel_Kind">Channel_Kind</a> for the channel.  <B>NB:</B> All the arrays added as channels to a current IFD must
+not be modified until after the Tiff is updated with a call to <a href="Tiff.html#Update_Tiff">Update_Tiff</a> as their data is
+copied directly from the array to the underlying file at the time of the update and not
+before.  If there are any errors then true is returned and the problem can be diagnosed
+with a call to <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_IFD_Map"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Set_IFD_Map (<a href="Tiff.html#WTiff">WTiff</a> *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html">Array</a> *<I>map</I>)</td></tr>
+  </table></h3>
+<p>
+Set the value of the colormap of the writeable Tiff <I>tif</I> to the value in the array <I>map</I>.
+Unlike <a href="Tiff.html#Add_IFD_Channel">Add_IFD_Channel</a>, the values of <I>map</I> are copied immediately so there is no requirement
+for <I>map</I> to remain untouched until the Tiff is updated.  However, at least the first channel
+must have been added to the current IFD and it must be of kind <I>MAPPED_CHAN</I>.  Moreover,
+the array <I>map</I> must be an <I>RGB_KIND</I> 1D array whose size is
+<i>2<sup>scale</sup></i>
+where <I>scale</I> is the number of bits in the first channel.
+If there are any errors then true is returned and the problem can be diagnosed
+with a call to <a href="Image.html#Image_Error">Image_Error</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Update_Tiff"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Update_Tiff (<a href="Tiff.html#WTiff">WTiff</a> *<I>tif</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Image.html#Image_Compress">Image_Compress</a> <I>compress</I>)</td></tr>
+  </table></h3>
+<p>
+Write the contents of the current IFD of the writeable Tiff <I>tif</I> as the next IFD in
+the underlying tiff file's sequence (as long as it is not empty), and reset the current
+IFD to be empty.
+</td></tr></table>
+</body>
+</html>

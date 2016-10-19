@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by mylib 1.0 -->
+
+<svg
+   xmlns:mylib="http://www.mylib.org/mylib1.0"
+   xmlns="http://www.w3.org/2000/svg"
+   width="6.5in"
+   height="2.25in"
+   viewBox="0 0 650 225"
+   preserveAspectRatio="none"
+   version="1.1">
+<rect x="5" y="5" width="640" height="215"
+ stroke="#0000ff" stroke-width="2" fill="none" />
+<path d=" M 50 150 L 125 50 L 200 150"
+ stroke="#000000" stroke-width="40" fill="none" />
+<path d=" M 50 150 L 125 50 L 200 150"
+ stroke="#ffc0cb" stroke-width="2" stroke-linejoin="bevel" fill="none" />
+<circle cx="125" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" stroke-linejoin="bevel" fill="#ffc0cb" />
+<text x="125" y="200" font-family="sans-serif" font-size="28" text-anchor="middle" stroke="none" fill="#000000">
+    'miter' join
+</text>
+<path d=" M 250 150 L 325 50 L 400 150"
+ stroke="#000000" stroke-width="40" stroke-linejoin="round" fill="none" />
+<path d=" M 250 150 L 325 50 L 400 150"
+ stroke="#ffc0cb" stroke-width="2" stroke-linejoin="bevel" fill="none" />
+<circle cx="325" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" stroke-linejoin="bevel" fill="#ffc0cb" />
+<text x="325" y="200" font-family="sans-serif" font-size="28" text-anchor="middle" stroke="none" fill="#000000">
+    'round' join
+</text>
+<path d=" M 450 150 L 525 50 L 600 150"
+ stroke="#000000" stroke-width="40" stroke-linejoin="bevel" fill="none" />
+<path d=" M 450 150 L 525 50 L 600 150"
+ stroke="#ffc0cb" stroke-width="2" stroke-linejoin="bevel" fill="none" />
+<circle cx="525" cy="50" r="4" stroke="#ffc0cb" stroke-width="2" stroke-linejoin="bevel" fill="#ffc0cb" />
+<text x="525" y="200" font-family="sans-serif" font-size="28" text-anchor="middle" stroke="none" fill="#000000">
+    'bevel' join
+</text>
+</svg>

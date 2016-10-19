@@ -1,0 +1,1927 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Array Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Array Class Reference</h1>
+
+<p>
+N-dimensional arrays over scalar data.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;array.h&gt;
+</pre>
+<hr />
+
+<a name="Fields"></a>
+<h2>Visible Fields</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#kind"> kind </a></b>
+     </td><td class="define" valign="baseline">: Array_Kind</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#type"> type </a></b>
+     </td><td class="define" valign="baseline">: Value_Type</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#scale"> scale </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#ndims"> ndims </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#dims"> dims </a></b>
+     </td><td class="define" valign="baseline">: Dimn_Type *</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#tlen"> tlen </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#text"> text </a></b>
+     </td><td class="define" valign="baseline">: string</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#data"> data </a></b>
+     </td><td class="define" valign="baseline">: void *</td>
+</tr>
+<tr><td class="dot" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#size"> size </a></b>
+     </td><td class="define" valign="baseline">: Size_Type</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Interpreation of the array: one of the 4 Array_Kinds below</td></tr>
+    <tr><td class="comment" valign="baseline">The type of the array's values, one of the 10 Value_Types</td></tr>
+    <tr><td class="comment" valign="baseline">Number of bits in non-float values</td></tr>
+    <tr><td class="comment" valign="baseline">Number of dimensions of the array</td></tr>
+    <tr><td class="comment" valign="baseline">dims[i] is the length of dimension i</td></tr>
+    <tr><td class="comment" valign="baseline">Length of the string text</td></tr>
+    <tr><td class="comment" valign="baseline">An arbitrary string label</td></tr>
+    <tr><td class="comment" valign="baseline">A block of sizeof(type)*size bytes holding the array's elements</td></tr>
+    <tr><td class="comment" valign="baseline">Total number of elements in the array (= &prod; <sub>i</sub> dims[i])</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Bundle"> Array_Bundle </a></b>
+   </td><td class="define" valign="baseline">: Array</td>
+</tr></table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Range_Bundle"> Range_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#maxval"> maxval </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#minval"> minval </a></b>
+     </td><td class="define" valign="baseline">: Value</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">max observed value</td></tr>
+    <tr><td class="comment" valign="baseline">min observed value</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Extent_Bundle"> Extent_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#min"> min </a></b>
+     </td><td class="define" valign="baseline">: Vector *</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#max"> max </a></b>
+     </td><td class="define" valign="baseline">: Vector *</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Minimum value encountered in each dimension</td></tr>
+    <tr><td class="comment" valign="baseline">Maximum value encountered in each dimension</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Kind"> Array_Kind </a></b>
+     </td><td class="define" valign="baseline">: { PLAIN_KIND, RGB_KIND, RGBA_KIND, COMPLEX_KIND }</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Color_Index"> Color_Index </a></b>
+     </td><td class="define" valign="baseline">: { RED_INDEX, GREEN_INDEX, BLUE_INDEX, ALPHA_INDEX }</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Complex_Index"> Complex_Index </a></b>
+     </td><td class="define" valign="baseline">: { REAL_INDEX, IMAG_INDEX }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Matrix"></a>
+       <b><a href="Array.html#Matrix"> Matrix </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Vector"></a>
+       <b><a href="Array.html#Vector"> Vector </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Coordinate"></a>
+       <b><a href="Array.html#Coordinate"> Coordinate </a></b>
+     </td><td class="define" valign="baseline">: Vector</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A 2-dimensional array</td></tr>
+    <tr><td class="comment" valign="baseline">A 1-dimensional array</td></tr>
+    <tr><td class="comment" valign="baseline">A Dimn_Type vector</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Pixel_Array"></a>
+       <b><a href="Array.html#Pixel_Array"> Pixel_Array </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Pixel_Matrix"></a>
+       <b><a href="Array.html#Pixel_Matrix"> Pixel_Matrix </a></b>
+     </td><td class="define" valign="baseline">: Matrix</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Pixel_Vector"></a>
+       <b><a href="Array.html#Pixel_Vector"> Pixel_Vector </a></b>
+     </td><td class="define" valign="baseline">: Vector</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Pixel_APart"></a>
+       <b><a href="Array.html#Pixel_APart"> Pixel_APart </a></b>
+     </td><td class="define" valign="baseline">: APart</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A uint8 or uint16 array</td></tr>
+    <tr><td class="comment" valign="baseline">A uint8 or uint16 matrix</td></tr>
+    <tr><td class="comment" valign="baseline">A uint8 or uint16 vector</td></tr>
+    <tr><td class="comment" valign="baseline">A uint8 or uint16 array or slice</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Integer_Array"></a>
+       <b><a href="Array.html#Integer_Array"> Integer_Array </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Integer_Matrix"></a>
+       <b><a href="Array.html#Integer_Matrix"> Integer_Matrix </a></b>
+     </td><td class="define" valign="baseline">: Matrix</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Integer_Vector"></a>
+       <b><a href="Array.html#Integer_Vector"> Integer_Vector </a></b>
+     </td><td class="define" valign="baseline">: Vector</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">An int32 array</td></tr>
+    <tr><td class="comment" valign="baseline">An int32 matrix</td></tr>
+    <tr><td class="comment" valign="baseline">An int32 vector</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Float_Array"></a>
+       <b><a href="Array.html#Float_Array"> Float_Array </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Float_Matrix"></a>
+       <b><a href="Array.html#Float_Matrix"> Float_Matrix </a></b>
+     </td><td class="define" valign="baseline">: Matrix</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Float_Vector"></a>
+       <b><a href="Array.html#Float_Vector"> Float_Vector </a></b>
+     </td><td class="define" valign="baseline">: Vector</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A float32 array</td></tr>
+    <tr><td class="comment" valign="baseline">A float32 matrix</td></tr>
+    <tr><td class="comment" valign="baseline">A float32 vector</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Double_Array"></a>
+       <b><a href="Array.html#Double_Array"> Double_Array </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Double_Matrix"></a>
+       <b><a href="Array.html#Double_Matrix"> Double_Matrix </a></b>
+     </td><td class="define" valign="baseline">: Matrix</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Double_Vector"></a>
+       <b><a href="Array.html#Double_Vector"> Double_Vector </a></b>
+     </td><td class="define" valign="baseline">: Vector</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A float64 array</td></tr>
+    <tr><td class="comment" valign="baseline">A float64 matrix</td></tr>
+    <tr><td class="comment" valign="baseline">A float64 vector</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Numeric_Array"></a>
+       <b><a href="Array.html#Numeric_Array"> Numeric_Array </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Numeric_Matrix"></a>
+       <b><a href="Array.html#Numeric_Matrix"> Numeric_Matrix </a></b>
+     </td><td class="define" valign="baseline">: Matrix</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Numeric_Vector"></a>
+       <b><a href="Array.html#Numeric_Vector"> Numeric_Vector </a></b>
+     </td><td class="define" valign="baseline">: Vector</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A float32 or float64 array</td></tr>
+    <tr><td class="comment" valign="baseline">A float32 or float64 matrix</td></tr>
+    <tr><td class="comment" valign="baseline">A float32 or float64 vector</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Complex_Array"></a>
+       <b><a href="Array.html#Complex_Array"> Complex_Array </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Complex_Matrix"></a>
+       <b><a href="Array.html#Complex_Matrix"> Complex_Matrix </a></b>
+     </td><td class="define" valign="baseline">: Matrix</td>
+</tr>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Complex_Vector"></a>
+       <b><a href="Array.html#Complex_Vector"> Complex_Vector </a></b>
+     </td><td class="define" valign="baseline">: Vector</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A float32 or float64 PLAIN or COMPLEX array</td></tr>
+    <tr><td class="comment" valign="baseline">A float32 or float64 PLAIN or COMPLEX matrix</td></tr>
+    <tr><td class="comment" valign="baseline">A float32 or float64 PLAIN or COMPLEX vector</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+</table>
+<p class="group"><i>Creation and Basic Manipulation</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">uint8</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AUINT8">AUINT8</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">uint16</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AUINT16">AUINT16</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">uint32</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AUINT32">AUINT32</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">uint64</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AUINT64">AUINT64</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">int8</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AINT8">AINT8</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">int16</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AINT16">AINT16</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">int32</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AINT32">AINT32</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">int64</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AINT64">AINT64</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">float32</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AFLOAT32">AFLOAT32</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">float64</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AFLOAT64">AFLOAT64</a></b>
+     (Array *<I>a</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Dimn_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#ADIMN">ADIMN</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AINDX">AINDX</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">Size_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#ASIZE">ASIZE</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">Offs_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AOFFS">AOFFS</a></b>
+     (Array *<I>a</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Make_Array">Make_Array</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array_Kind <I>kind</I>, Value_Type <I>type</I>, int <I>ndims</I>, Dimn_Type *<I>dims</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Make_Array_With_Shape">Make_Array_With_Shape</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array_Kind <I>kind</I>, Value_Type <I>type</I>, Coordinate *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Make_Array_From_Arrays">Make_Array_From_Arrays</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array_Kind <I>kind</I>, int <I>n</I>, Array **<I>arrays</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Make_Array_Of_Data">Make_Array_Of_Data</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array_Kind <I>kind</I>, Value_Type <I>type</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>ndims</I>, Dimn_Type *<I>dims</I>, void *<I>data</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Set_Array_Text">Set_Array_Text</a></b>
+     (Array *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>text</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Append_To_Array_Text">Append_To_Array_Text</a></b>
+     (Array *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>text</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Value</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Get_Array_Value">Get_Array_Value</a></b>
+     (Array *<I>a</I>, Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Set_Array_Value">Set_Array_Value</a></b>
+     (Array *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Value <I>v</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Get_Array_Plane">Get_Array_Plane</a></b>
+     (Array_Bundle *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Dimn_Type <I>plane</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Print_Array">Print_Array</a></b>
+     (AForm *<I>a</I>, FILE *<I>output</I>, int <I>indent</I>, string <I>format</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Print_Inuse_List">Print_Inuse_List</a></b>
+     (FILE *<I>output</I>, int <I>indent</I>)</td></tr>
+</table>
+<p class="group"><i>Coordinates</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Coord">Coord</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (string <I>list</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Print_Coord">Print_Coord</a></b>
+     (FILE *<I>f</I>, Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Coord1">Coord1</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Dimn_Type <I>d1</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Coord2">Coord2</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Dimn_Type <I>d2</I>, Dimn_Type <I>d1</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Coord3">Coord3</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Dimn_Type <I>d3</I>, Dimn_Type <I>d2</I>, Dimn_Type <I>d1</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Coord4">Coord4</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Dimn_Type <I>d4</I>, Dimn_Type <I>d3</I>, Dimn_Type <I>d2</I>, Dimn_Type <I>d1</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#AppendCoord">AppendCoord</a></b>
+     (Dimn_Type <I>d</I>, Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#PrependCoord">PrependCoord</a></b>
+     (Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Dimn_Type <I>d</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Idx2CoordA">Idx2CoordA</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Indx_Type <I>idx</I>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Coord2IdxA">Coord2IdxA</a></b>
+     (Array *<I>a</I>, Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Set_Coord_Basis">Set_Coord_Basis</a></b>
+     (Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Array_Kind <I>kind</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Use_Array_Basis">Use_Array_Basis</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Get_Coord_Basis">Get_Coord_Basis</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array_Kind *<I>kind</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Idx2Coord">Idx2Coord</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Indx_Type <I>idx</I>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Coord2Idx">Coord2Idx</a></b>
+     (Coordinate *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Idx2CoreA">Idx2CoreA</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Indx_Type <I>idx</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Idx2Core">Idx2Core</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Indx_Type <I>idx</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Floor_Coord">Floor_Coord</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Double_Vector *<I>point</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Ceiling_Coord">Ceiling_Coord</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Double_Vector *<I>point</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Nearest_Coord">Nearest_Coord</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Double_Vector *<I>point</I>)</td></tr>
+</table>
+<p class="group"><i>Conversion, Element-Wise Ops, Padding, Clipping, and Down-Sampling</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Convert_Array">Convert_Array</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Array_Kind <I>kind</I>, Value_Type <I>type</I>, int <I>scale</I>, int|double <I>factor</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Convert_Array_Inplace">Convert_Array_Inplace</a></b>
+     (Array *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array_Kind <I>kind</I>, Value_Type <I>type</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>scale</I>, int|double <I>factor</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Image_Check">Image_Check</a></b>
+     (Array *<I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Convert_Image">Convert_Image</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Array_Kind <I>kind</I>, Value_Type <I>type</I>, int <I>scale</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Convert_Image_Inplace">Convert_Image_Inplace</a></b>
+     (Array *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Array_Kind <I>kind</I>, Value_Type <I>type</I>, int <I>scale</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Range_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Range">Array_Range</a></b>
+     (Range_Bundle *<I>range</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, AForm *<I>a</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Scale_Array">Scale_Array</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>factor</I>, double <I>offset</I>)</td></tr>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Scale_Array_To_Range">Scale_Array_To_Range</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Value <I>min</I>, Value <I>max</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Op_Scalar">Array_Op_Scalar</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Operator <I>op</I>, Value_Type <I>type</I>, Value <I>v</I>)</td></tr>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Complex_Op_Scalar">Complex_Op_Scalar</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Operator <I>op</I>, Value_Type <I>type</I>, Value <I>v</I>, Value <I>w</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Op_Array">Array_Op_Array</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Operator <I>op</I>, AForm *<I>b</I>)</td></tr>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Complex_Op_Array">Complex_Op_Array</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Operator <I>op</I>, AForm *<I>b</I>)</td></tr>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Complex_Op_Complex">Complex_Op_Complex</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Operator <I>op</I>, AForm *<I>b</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Fct_Val">Array_Fct_Val</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Value (*<I>fct</I>)(void * valp))</td></tr>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Fct_Idx">Array_Fct_Idx</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Value (*<I>fct</I>)(Coordinate *coord))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Threshold_Array">Threshold_Array</a></b>
+     (APart *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Value <I>cutoff</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Array_Multiply">Array_Multiply</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>a</I>, Array *<I>b</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Apply_Map">Apply_Map</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>image</I>, Array *<I>map</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Down_Sample">Down_Sample</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (AForm *<I>source</I>, Coordinate *<I>box</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Clip_Array">Clip_Array</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (AForm *<I>source</I>, Coordinate *<I>beg</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Coordinate *<I>end</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Pad_Array">Pad_Array</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (AForm *<I>source</I>, Coordinate *<I>anchor</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Coordinate *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Down_Sample_Inplace">Down_Sample_Inplace</a></b>
+     (Array *<I>source</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Coordinate *<I>box</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Clip_Array_Inplace">Clip_Array_Inplace</a></b>
+     (Array *<I>source</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Coordinate *<I>beg</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Coordinate *<I>end</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Array.html#Pad_Array_Inplace">Pad_Array_Inplace</a></b>
+     (Array *<I>source</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Coordinate *<I>anchor</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, Coordinate *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+An <B>array</B> is the central object of the <B>Mylib</B> library and is used throughout.  This page
+describes primarily those routines and matters that pertain to arrays in and of themselves.
+All the fields of an Array object's structure are visible to the user in order to facilitate
+access.  One may freely change the values of the elements in an array without concern for
+unanticipated side-effects.  However, we recommend that you do not make any changes to the
+dimensions, type, kind, or any other facet of an array that changes its size <I>unless</I> you
+have familiarized yourself with the object conventions and how <B>Mylib</B>'s object manager works
+by reading the document
+<a href="../PDFS/Object.Management.pdf">Object.Management</a>.
+</p>
+<h3>Anatomy of an Array</h3>
+<p>
+An array can have any number of dimensions <a href="Array.html#ndims">ndims</a> and the size of each dimension
+is given by <a href="Array.html#dims">dims</a>[i] for i from 0 to ndims-1 where 0 is the innermost (and fastest moving)
+dimension.
+</p>
+<p>
+The elements of an array of are all of a given <a href="Array.html#type">type</a> that is one of the ten scalar
+<a href="Mylib.html#Value_Type">Value_Type</a>s that
+cover unsigned integers, signed integers, and floating point values of all standard sizes.
+Moreover, for the signed and unsigned integer types, the <a href="Array.html#scale">scale</a>-field specifies the number
+of bits used to encode the value.  Typically this is just the number of bits in the underlying
+element type (e.g. 32 if <I>INT32_TYPE</I>, or <I>UINT32_TYPE</I>), but it may be
+a smaller number if desirable.  This is motivated by the frequent occurence in microscopy
+data, of 12-bit or 10-bit D/A converters in a microscope's CCD camera.
+One might, for example, recieve an array with elements of <a href="Array.html#type">type</a> <I>UINT16_TYPE</I> and a <a href="Array.html#scale">scale</a> of 12.
+This makes almost no difference to any routine in the package which will happily treat
+the values as <I>uint16</I>, <I>except</I> when the array is read or written to a TIFF file
+(e.g. <a href="Image.html#Read_Image">Read_Image</a>, <a href="Image.html#Read_Images">Read_Images</a>, etc.),
+or when one converts an array from one type and scale to another
+(e.g. <a href="Array.html#Convert_Array">Convert_Array</a>, <a href="Array.html#Convert_Image">Convert_Image</a>, etc.)
+</p>
+<p>
+The <a href="Array.html#data">data</a> field is a void pointer to the elements of the array stored as a linear vector.
+To obtain a pointer to the appropriate type use one of the routines <a href="Array.html#AUINT8">AUINT8</a>, <a href="Array.html#AUINT16">AUINT16</a>, ...
+<a href="Array.html#AFLOAT64">AFLOAT64</a> below (these are actually simple macros).  The elements are layed out
+with <a href="Array.html#dims">dims</a>[0] being the fastest moving dimension, i.e., for an <I>n</I>-dimensional array
+the index of
+<I>A[x<sub>n-1</sub>,...,x<sub>1</sub>,x<sub>0</sub>]</I>
+is
+</p>
+<p class="center"><I>(... (x<sub>n-1</sub>*dims[n-2] + x<sub>n-2</sub>)*dims[n-3] + ...)*dims[0] + x<sub>0</sub></I></p>
+<p>
+using Horner's rule.  While it could be computed from <a href="Array.html#dims">dims</a> and <a href="Array.html#ndims">ndims</a>, <B>Mylib</B> keeps the
+<a href="Array.html#size">size</a> of an array as a field (<B>NB</B>: this is not the size in bytes, but the number of elements
+in the array).
+</p>
+<p>
+There are four <a href="Array.html#kind">kind</a>s of arrays: plain, rgb, rgba, and complex that are indicated by the
+values of the enum <a href="Array.html#Array_Kind">Array_Kind</a>.  Every kind of array is basically an n-dimensional array
+over the ten scalar types, but in the case of all but <I>PLAIN_KIND</I> arrays, there is a
+restriction on one of the dimensions.  Specifically, if an array is of <I>RGB_KIND</I> or <I>RGBA_KIND</I>
+then the <B>outermost</B> dimension must be 3 and 4, respectively, one (n-1)-dimensional sub-array
+of red, green, blue, and alpha values.  If an array is of <I>COMPLEX_KIND</I> then the <B>innermost</B>
+dimension is 2, where the first element in this dimension is the real part, and the second
+the imaginary part of a complex number.  As an example, consider a 3 x 5 x 2 array, A.
+It can be interpreted as either a 3 x 5 x 2 plain array, a 5 x 2 array of rgb colors, or
+a 3 x 5 array of complex numbers, depending on its kind.
+That is, (A[0,y,x],A[1,y,x],A[2,y,x]) can represent an rgb-triple or color, or
+A[x,y,0] + <B>i</B> A[x,y,1] can represents a complex number.  The choice to have color be
+the outer rather than the inner dimension is unconventional, but it gives one the ability
+to work independently on a red, green, blue, or alpha sub-array easily, with no real
+downside to setting or computing on color-tuples in terms of code or efficiency on today's
+machines with 4-or-more-way interleaved caches.
+</p>
+<a name="shape"><a>
+<a name="core shape"><a>
+<p>
+The <B>shape</B> of an array is the <a href="Array.html#ndims">ndims</a> element vector of its dimensions <a href="Array.html#dims">dims</a>.  For example,
+for the array A in our example above, it's shape is the vector (3,5,2).  The <B>core shape</B>
+of an array is its shape less the special dimension attributed to its <a href="Array.html#kind">kind</a>.  For example,
+A has core shape (3,5) if it is of <I>COMPLEX_KIND</I>, (5,2) if it is of <I>RGB_KIND</I>, and
+(3,5,2) if it is of <I>PLAIN_KIND</I>.  Care must be taken that some routines work with core
+shapes (e.g. all the drawing routines) while most work directly with an array's shape.
+</p>
+<p>
+While rgb and rgba arrays are typically of type <I>UINT8_TYPE</I> or <I>UINT16_TYPE</I>, and complex
+array are typically <I>FLOAT32_TYPE</I> or <I>FLOAT64_TYPE</I>, we do not so restrict them nor do
+our tiff reader/writer routines.  For the alpha channel the convention is that alpha
+is between 0. and 1. for floating point types, and for integer types, no transparency
+or 100% opacity, is denoted by the largest possible positive value
+encodable with the number of bits given by the type and scale, e.g. 1024 = 2^10-1 when
+<a href="Array.html#type">type</a> = <I>UINT8_TYPE</I> and <a href="Array.html#scale">scale</a> = 10, and 32677 = 2^15-1 when <a href="Array.html#type">type</a> = <I>INT16_TYPE</I>
+and <a href="Array.html#scale">scale</a> = 16.
+</p>
+<p>
+Finally, every array has an associated text tag, <a href="Array.html#text">text</a>, whose length is <a href="Array.html#tlen">tlen</a>.
+The text tag is generally the empty string for ordinary arrays, but one can label
+arrays with arbitrarily long strings if they find it useful.  In particular, the
+<a href="Array.html#Print_Inuse_List">Print_Inuse_List</a> routine will list the text tag of each array so one can identify
+them in the usage analysis report when trying to debug an object memory leak.  Furthermore
+the text tag is read/written from and to the JF_TAGGER tag of a TIFF file by <B>Mylib</B>, so
+it can be used as a means to encode arbirary amounts of meta-data about an array or image.
+</p>
+<h3>Creating and Accessing Arrays</h3>
+<p>
+There are currently four ways to generate a new array from scratch: <a href="Array.html#Make_Array">Make_Array</a>,
+<a href="Array.html#Make_Array_With_Shape">Make_Array_With_Shape</a>, <a href="Array.html#Make_Array_Of_Data">Make_Array_Of_Data</a> and <a href="Array.html#Make_Array_From_Arrays">Make_Array_From_Arrays</a>.  The first
+two routines take parameters that specify the kind, type, and <a class="ref" href="Array.html#core shape">core shape</a> of the array
+desired.  <a href="Array.html#Make_Array">Make_Array</a> recieves the shape as an <I>ndim</I>,<I>dims</I> pair and <a href="Array.html#Make_Array_With_Shape">Make_Array_With_Shape</a>
+recieves it in the form of an integer <a href="Array.html#Coordinate">Coordinate</a>.  <a href="Array.html#Make_Array_Of_Data">Make_Array_Of_Data</a> takes a
+linear <a href="Array.html#data">data</a> array supplied by the caller and wraps an array object around it, taking
+ownership of the data vector.  <a href="Array.html#Make_Array_From_Arrays">Make_Array_From_Arrays</a> takes an array of pointers to say
+<I>n</I> arrays all of the same shape &alpha;, generates an array of shape (n,&alpha), and
+fills it in with the values of the <I>n</I> arrays.  For example, one can construct an
+<I>RGB_KIND</I> array from three planes as follows:
+</p>
+<pre>
+ Array **planes[3];
+
+ planes[0] = a_red_array;
+ planes[1] = a_green_array;
+ planes[2] = a_blue_array;
+ color = Make_Array_From_Arrays(RGB_KIND,3,planes);
+</pre>
+<p>
+One can set the text tag of an array with <a href="Array.html#Set_Array_Text">Set_Array_Text</a> and append to it with
+<a href="Array.html#Append_To_Array_Text">Append_To_Array_Text</a>.  There are also simple routines to get and set a given element
+of an array: <a href="Array.html#Get_Array_Value">Get_Array_Value</a> and <a href="Array.html#Set_Array_Value">Set_Array_Value</a>.  These are provided mostly as an
+example for users in order to make sure they understand how elements are indexed and
+accessed.  Any serious computation over an array is expected to be done directly with
+indices into an array's data or with the aid of the array traversal mechanisms provided
+by the <a href="Slice.html">Slice</a> and <a href="Frame.html">Frame</a> classes.
+</p>
+<p>
+One can select sub-slices of an array by peeling away the outer dimension with <a href="Array.html#Get_Array_Plane">Get_Array_Plane</a>.
+The idea is to be efficient and not create a new array object, but rather a "fake" array that
+is valid as long as the underlying real array object is not modified.  This "fake" array is
+an <a href="Array.html#Array_Bundle">Array_Bundle</a> that is just the  outer <I>struct</I> of an array object whose <a href="Array.html#dims">dims</a>, <a href="Array.html#data">data</a>, and
+<a href="Array.html#text">text</a> pointers are into a real array's structure.  <a href="Array.html#Get_Array_Plane">Get_Array_Plane</a> takes a valid
+<a href="Array.html#Array_Bundle">Array_Bundle</a> and modifies it so that upon return the bundle models the requested sub-array.
+The tricky part is that the bundle must initially be set up by assigning it to the outer-struct
+of a real array object.  For example, the code below, takes the <I>color</I>
+array from the example above, and peals off each color sub-array:
+</p>
+<pre>
+ Array_Bundle red, green, blue;
+
+ red = green = blue = *color;
+ Get_Array_Plane(&red,0);
+ Get_Array_Plane(&green,1);
+ Get_Array_Plane(&blue,2);
+</pre>
+<p>
+If a real independent, and proper object is need for a sub-array then call
+<a href="Generic.html#Copy_X">Copy_Array</a> on
+the fetched plane, e.g. <I>Copy_array(&amp;red)</I>.
+Moreover, more than one layer of outer dimensions can be peeled away:
+</p>
+<pre>
+ Array_Bundle bundle;
+ Get_Array_Plane(Get_Array_Plane(&(bundle=*color),1),3);
+</pre>
+<p>
+gets the 3rd z-plane of the green pixels when <I>color</I>
+is a 3D <I>RGB_KIND</I> array.
+</p>
+<p>
+One can produce an ASCII print out of an array, slice, or frame with <a href="Array.html#Print_Array">Print_Array</a>.  The
+caller can specify the indentation, the output stream to be written to, and the format in
+which to print the numbers.  Obviously this capability is not designed for very large
+arrays, but more for small examples to help one develope a code using <B>Mylib</B>.  Moreover,
+arrays are typically so frequently used in a code that there is the possibility of failing
+to free or kill one, creating a memory leak.  To facilitate the developers efforts we provide
+the routine <a href="Array.html#Print_Inuse_List">Print_Inuse_List</a> that gives a report of all the currently active arrays,
+slices, and frames at the current moment.  A typical output follows:
+</p>
+<pre>
+   Arrays:
+      1 : 3 int32 = 12
+      1 : 3 int32 = 12
+      3 : 3 x 4 x 5 int32 = 240
+   Slices:
+      1 : (0,0,0) - (2,3,4) int32
+   Frames:
+      1 : 8 x 8 x 8 int32 = 12.3Kb
+</pre>
+<h3>Generalization and Specializations of Arrays: AForms, Matrices, ...</h3>
+<p>
+There are a large number of type definitions in the header of this page -- e.g. <a href="Array.html#Matrix">Matrix</a>,
+<a href="Array.html#Vector">Vector</a>, etc. -- that are effectively all equivalent to <a href="Array.html">Array</a>.
+The intent is to document the kind, type, and/or dimensionality of the array that is
+being operated upon.  For example, if one sees a routine declaration where the
+argument is a <a href="Array.html#Complex_Matrix">Complex_Matrix</a>, then one knows that the argument should be a
+<I>FLOAT32_TYPE</I> or <I>FLOAT64_TYPE</I>, 2D array of either <I>PLAIN_KIND</I> or <I>COMPLEX_KIND</I>.
+In general, if a routine
+takes an argument that can only be a subset of all the possible array types, kinds, and
+dimensionalities, then the routine actually checks that the argument meets those constraints
+before proceeding, and conversely if it returns such a typed retult, then one can be sure
+that it satisfies the constraints of the type name.
+</p>
+<a name="array form"><a>
+<p>
+In the direction of generalization, note that the key attributes of an array-like object is that
+it is an <I>n</I>-dimensional lattice of values of some <a href="Mylib.html#Value_Type">Value_Type</a> that may be interpreted
+specially based on its <a href="Array.html#Array_Kind">Array_Kind</a>.  In addition to <a href="Array.html">Array</a>s, <B>Mylib</B> also supports <a href="Slice.html">Slice</a>s
+that are any hyper-rectangular sub-region of an underlying array, and <a href="Frame.html">Frame</a>s that are
+hyper-rectangular shape windows that can be moved over an underlying array (but need not
+lie within its lattice).  Any routine that takes an <a href="Array.html">Array</a> as a read-only argument could
+equally well take a <a href="Slice.html">Slice</a> or a <a href="Frame.html">Frame</a> as the argument.  The union of the three classes
+is termed an <B>array form</B> and an <a href="AForm.html">AForm</a> class is introduced to model this generalization of
+the three base classes.  Note carefully that many of the "array" routines on this page have
+been generalized to take <a href="AForm.html">AForm</a>s as arguments.  Similarly, note that any routine that takes
+an <a href="Array.html">Array</a> as an argument for which only it's elements will be modified (and not it's shape,
+type, etc.), could equally well take a <a href="Slice.html">Slice</a> as an argument (but not a <a href="Frame.html">Frame</a> as a frame
+may not lie with the boundary of its underlying array), in which case only the elements of
+the underlying array delimited by the slice's hyper-rectangle are modified.  The union of
+the <a href="Array.html">Array</a> and the <a href="Slice.html">Slice</a> classes is termed an <B>array part</B> and an <a href="AForm.html#APart">APart</a> type is introduced
+to model this genalization.  Again, note that many of the "array" routines on this page have been
+generalized to take <a href="AForm.html#APart">APart</a>s as arguments.
+</p>
+<h3>Coordinates</h3>
+<p>
+Many if not most <B>Mylib</B> routines address an element of an array with an <B>index</B> directly
+into the linear vector pointed at by the <a href="Array.html#data">data</a> field.  But conceptually an address into
+an <I>n</I>-dimensional array, is an integer coordinate
+<font>(x<sub>0</sub>,x<sub>1</sub>...x<sub>n</sub>)</font>
+into the <I>n</I>-dimensional lattice --
+<font>[0,dims[0]-1] x [0,dims[1]-1] x ... x [0,dims[n]-1]</font>
+-- of the array.  In the subsection on the anatomy of an array above we showed how to
+map such a coordinate to an index into the data vector, that is, we specified the mapping
+<B>Mylib</B> uses to assign lattice positions to linear positions in <a href="Array.html#data">data</a>'s linear vector.
+</p>
+<p>
+It is clearly conceptually easier for a human being to think in terms of coordinates than
+in terms of indices.  So <B>Mylib</B> supports the idea of a <a href="Array.html#Coordinate">Coordinate</a> which is itself an
+array that is 1-dimensional and of type <a href="Mylib.html#Dimn_Type">Dimn_Type</a> (a signed 32-bit integer).
+There are routines that create coordinates with specific values and lengths
+(<a href="Array.html#Coord">Coord</a>, <a href="Array.html#Coord1">Coord1</a>, <a href="Array.html#Coord2">Coord2</a>, <a href="Array.html#Coord3">Coord3</a>, <a href="Array.html#Coord4">Coord4</a>),
+routines that convert coordinates to indices and vice versa
+(<a href="Array.html#Idx2CoordA">Idx2CoordA</a>, <a href="Array.html#Idx2CoreA">Idx2CoreA</a>, <a href="Array.html#Coord2IdxA">Coord2IdxA</a>),
+routines that add dimensions to a coordinate
+(<a href="Array.html#AppendCoord">AppendCoord</a>, <a href="Array.html#PrependCoord">PrependCoord</a>),
+and routines to round real-valued <I>n</I>-dimensional points to the nearest coordinate
+(<a href="Array.html#Floor_Coord">Floor_Coord</a>, <a href="Array.html#Ceiling_Coord">Ceiling_Coord</a>, <a href="Array.html#Nearest_Coord">Nearest_Coord</a>).
+<a href="Array.html#Coordinate">Coordinate</a>s are also used to specify the shape of an array (see <a href="AForm.html#AForm_Shape">AForm_Shape</a> for an
+example) and to model offsets relative to a point in an array's <I>n</I>-dimensional lattice
+(see <a href="Frame.html#Make_Frame">Make_Frame</a> for an example).  Coordinates are generally short-lived objects and
+so the convention is that most routines that recieve coordinates as input parameters,
+free or subsume them before returning.
+</p>
+<a name="current basis"><a>
+<p>
+The routines <a href="Array.html#Idx2CoordA">Idx2CoordA</a> and <a href="Array.html#Coord2IdxA">Coord2IdxA</a> convert between coordinates and array indices.
+Note carefully that the conversions require a parameter specifying the array in question as
+the shape of the array must be known in order to perform the conversion.
+As an alternative to always supplying the array as an argument, we maintain a global
+<B>current basis</B> which can be set with <a href="Array.html#Set_Coord_Basis">Set_Coord_Basis</a> or <a href="Array.html#Use_Array_Basis">Use_Array_Basis</a> and
+retrieved with <a href="Array.html#Get_Coord_Basis">Get_Coord_Basis</a>.  The conversions of <a href="Array.html#Idx2Coord">Idx2Coord</a> and <a href="Array.html#Coord2Idx">Coord2Idx</a> (note the
+'A' is missing from the names) take place with respect to the current basis.  Clearly the use
+of the current basis is not re-entrant, but the routines for setting it are thread-safe.
+For code that must be re-entrant, you must use <a href="Array.html#Idx2CoordA">Idx2CoordA</a> and <a href="Array.html#Coord2IdxA">Coord2IdxA</a>.
+</p>
+<a name="core coordinate"><a>
+<p>
+For arrays whose kind is not <I>PLAIN_KIND</I>, one often needs to describe coordinates as if the
+special dimension (i.e. the outermost for <I>RGB_KIND</I> and <I>RGBA_KIND</I>, and the innermost for
+<I>COMPLEX_KIND</I>) were not present.  This is particularly true of drawing routines (see
+the <a href="Draw.html">Draw</a> module) where a "brush" of kind <I>PLAIN_</I>, <I>RGB_</I>, <I>RGBA_</I>, or <I>COMPLEX_KIND</I> is
+being applied to an array of the given kind.  We consider such a truncated coordinate a
+<B>core coordinate</B> in direct analogy to the idea of the <a class="ref" href="Array.html#core shape">core shape</a> of an array.  Many
+routines in the library will accept either a core coordinate or a complete coordinate.
+In those instances, it is generally the case that:
+when a core coordinate is being used as a point, the special dimension is assumed to be 0,
+and when being used as a shape or basis, it gets filled in with the width of the special
+dimension.  <a href="Array.html#Idx2CoreA">Idx2CoreA</a> and <a href="Array.html#Idx2Core">Idx2Core</a> convert an array index into a core coordinate
+(where any offset in the special dimension is ignored), and <a href="Array.html#Coord2IdxA">Coord2IdxA</a> and <a href="Array.html#Coord2Idx">Coord2Idx</a>
+will accept core coordinates and assume the coorindate for the special dimension is 0.
+Note, that <a href="Array.html#Idx2Core">Idx2Core</a> requires that the <a class="ref" href="Array.html#current basis">current basis</a> also records the kind of the basis
+as well.
+</p>
+<h3>Basic Array Routines</h3>
+<a name="image"><a>
+<p>
+Converting an array from one type, kind, and/or scale to another is frequently required.
+<a href="Array.html#Convert_Array">Convert_Array</a> performs such a conversion generating a new array for the result, whereas
+<a href="Array.html#Convert_Array_Inplace">Convert_Array_Inplace</a> does so in the existing memory blocks of the array in question,
+increasing the size of said blocks if necessary.  Similarly, <a href="Array.html#Convert_Image">Convert_Image</a> and
+<a href="Array.html#Convert_Image_Inplace">Convert_Image_Inplace</a> convert arrays that are presumed to model an image where the
+routine <a href="Array.html#Image_Check">Image_Check</a> will ascertain if a given array is an image.
+An array is considered an <B>image</B> if all values are between <I>0</I> and
+<I>2<sup><a href="Array.html#scale">scale</a>-1</sup>&minus;1</I>
+for a signed integer array, are all between <I>0</I> and
+<I>2<sup><a href="Array.html#scale">scale</a></sup>&minus;1</I>
+for an unsigned integer array, and between <I>0.</I> and <I>1.</I>, inclusive, for a floating point array.
+</p>
+<p>
+There are quite a few routines for performing basic element-by-element functions on an
+array.  <a href="Array.html#Array_Range">Array_Range</a> computes the range of values in an array, and <a href="Array.html#Scale_Array">Scale_Array</a> and
+<a href="Array.html#Scale_Array_To_Range">Scale_Array_To_Range</a> offer two ways to scale and offset the values in an array.
+<a href="Array.html#Array_Op_Scalar">Array_Op_Scalar</a> combines every element of an array with a particular scalar value
+via any of the ten supported <a href="Mylib.html#Operator">Operator</a>s and <a href="Array.html#Array_Op_Array">Array_Op_Array</a> does an element-wise
+combination between two arrays.  There are also <a href="Array.html#Complex_Op_Scalar">Complex_Op_Scalar</a>, <a href="Array.html#Complex_Op_Array">Complex_Op_Array</a>,
+and <a href="Array.html#Complex_Op_Complex">Complex_Op_Complex</a> that require the first argument be a <I>COMPLEX_KIND</I> array and
+for these routines the combining is done via <B>complex arithmetic</B> when it makes sense.
+<a href="Array.html#Array_Fct_Val">Array_Fct_Val</a> replaces each element of an array with a new value that is any caller-defined
+function of its current value, while <a href="Array.html#Array_Fct_Idx">Array_Fct_Idx</a> replaces each element with a caller-defined
+function of its coordinate in the array's lattice.  <a href="Array.html#Threshold_Array">Threshold_Array</a> binarizes an array
+against a background/foreground threshold value.
+</p>
+<p>
+Array multiplication and index-table mapping are two operations that can be generalized
+to arrays of any dimension provided the innermost dimension of the first array equals the
+outermost dimension of the second for multiplication, and the range of values in the first
+array equals the innermost dimension of the second for mapping.  The routines <a href="Array.html#Array_Multiply">Array_Multiply</a>
+and <a href="Array.html#Apply_Map">Apply_Map</a> realize these generalized versions of the operations.  For fast matrix
+multiplication for linear algebra, one should use <a href="Linear.html#Matrix_Multiply">Matrix_Multiply</a> in the <a href="Linear.html">Linear Algebra</a>
+module.  On the other hand if you read a color-mapped image in the <a href="Image.html">Image I/O</a> module then
+one should use <a href="Array.html#Apply_Map">Apply_Map</a> to perform the color mapping if desired.
+</p>
+<p>
+Finally, there are routines to clip, pad, and downsample an array.  They come in a
+generator version that makes a new array holding the result
+(<a href="Array.html#Clip_Array">Clip_Array</a>, <a href="Array.html#Pad_Array">Pad_Array</a>, and <a href="Array.html#Down_Sample">Down_Sample</a>),
+and in-place versions that perform the operation in the memory of the subject array,
+expanding said if necessary
+(<a href="Array.html#Clip_Array_Inplace">Clip_Array_Inplace</a>, <a href="Array.html#Pad_Array_Inplace">Pad_Array_Inplace</a>, and <a href="Array.html#Down_Sample_Inplace">Down_Sample_Inplace</a>).
+One should particularly note that
+how an array gets padded is a function of the <a class="ref" href="Mylib.html#current boundary effect">current boundary effect</a>.
+</p>
+<hr />
+
+<h2>Visible Fields Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="kind"></a><tr><td valign="top">kind</td><td>: <a href="Array.html#Array_Kind">Array_Kind</a></td></tr>
+  </table></h3>
+<p>
+Indicates whether an array can be interpreted as an rgb, rgba, or complex array, as opposed
+to just an ordinary or plain array.
+If an <I>RGB_KIND</I> array, then the outermost dimension is 3 and
+<font>(A[0,&alpha;],A[1,&alpha;],A[2,&alpha;])</font>
+is an rgb color triple for each index sequence &alpha;.
+If an <I>RGBA_KIND</I> array, then the outermost dimension is 4 and
+<font>(A[0,&alpha;],A[1,&alpha;],A[2,&alpha;],A[3,&alpha;])</font>
+is an rgba color for each &alpha;.
+If an <I>COMPLEX_KIND</I> array, then the innermost dimension is 2 and
+<font>A[&alpha;,0] + [i] A[&alpha;,1]
+is a complex number for each &alpha;.
+</p>
+  <h3 class="fn"><table>
+     <a name="type"></a><tr><td valign="top">type</td><td>: <a href="Mylib.html#Value_Type">Value_Type</a></td></tr>
+  </table></h3>
+<p>
+Specifies the type of the elements of an array which can be one of the ten number types
+supported in C.
+</p>
+  <h3 class="fn"><table>
+     <a name="scale"></a><tr><td valign="top">scale</td><td>: int</td></tr>
+  </table></h3>
+<p>
+If the array has integer elements, then this field specifies the number of bits used to
+encode the values.  It cannot be more than the number of bits in the type.  A typical
+example where this field comes into play would be 12-bit microscopy data, for which <I>type</I>
+would be <I>UINT16_TYPE</I> and <I>scale</I> would be 12.  This field only has an effect when
+converting an array (e.g. <a href="Array.html#Convert_Array">Convert_Array</a>) or when reading or writing the array to a TIFF
+file (where only the number of bits per value is read or written).
+</p>
+  <h3 class="fn"><table>
+     <a name="ndims"></a><tr><td valign="top">ndims</td><td>: int</td></tr>
+  </table></h3>
+<p>
+The number of dimensions of the array.
+</p>
+  <h3 class="fn"><table>
+     <a name="dims"></a><tr><td valign="top">dims</td><td>: <a href="Mylib.html#Dimn_Type">Dimn_Type</a> *</td></tr>
+  </table></h3>
+<p>
+dims[i] gives the size of the i<sup>th</sup> dimension of the array for
+i from 0 to ndims-1.
+</p>
+  <h3 class="fn"><table>
+     <a name="tlen"></a><tr><td valign="top">tlen</td><td>: int</td></tr>
+  </table></h3>
+<p>
+The length of the text tag <a href="Array.html#text">text</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="text"></a><tr><td valign="top">text</td><td>: string</td></tr>
+  </table></h3>
+<p>
+An arbirary text tag for the array.  Typically empty, but you can use it to label an array
+so you can identify it in a space usage report produced by <a href="Array.html#Print_Inuse_List">Print_Inuse_List</a>, or you can
+place, say xml-encoded meta-data describing the image acquisition parameters of the microscope
+that produced the data.  This tag is read and written to and from the JF_TAGGER tag of a
+TIFF file for this purpose.
+</p>
+  <h3 class="fn"><table>
+     <a name="data"></a><tr><td valign="top">data</td><td>: void *</td></tr>
+  </table></h3>
+<p>
+A void pointer to the elements of the array stored as a linear vector.
+To obtain a pointer to the appropriate type use one of the routines <a href="Array.html#AUINT8">AUINT8</a>, <a href="Array.html#AUINT16">AUINT16</a>, ...
+<a href="Array.html#AFLOAT64">AFLOAT64</a> below (these are actually simple macros).  The elements are layed out
+with <a href="Array.html#dims">dims</a>[0] being the fastest moving dimension, i.e., for an <I>n</I>-dimensional array
+the index of
+<I>A[x<sub>n-1</sub>,...,x<sub>1</sub>,x<sub>0</sub>]</I>
+is
+</p>
+<p class="center"><I>(... (x<sub>n-1</sub>*dims[n-2] + x<sub>n-2</sub>)*dims[n-3] + ...)*dims[0] + x<sub>0</sub></I></p>
+<p>
+using Horner's rule.
+</p>
+  <h3 class="fn"><table>
+     <a name="size"></a><tr><td valign="top">size</td><td>: <a href="Mylib.html#Size_Type">Size_Type</a></td></tr>
+  </table></h3>
+<p>
+The total number of elements in the array.
+</p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Array_Bundle"></a>     <tr><td class="name" valign="top">Array_Bundle</td>
+      <td class="define">: Array</td></tr></table>
+  </h3>
+<p>
+Used to serve as a short term construct that can be passed as an array to any routine that
+does not modify that array argument.  It is just the outer struct of an array object:
+the <a href="Array.html#dims">dims</a> vector, <a href="Array.html#data">data</a> vector, and <a href="Array.html#text">text</a> tag all point to another array's memory
+(so do not modify that array until the Array_Bundle is no longer in use).
+This is not often used save for efficiency or simplicity.  For example, for a 3D array <I>A</I>
+one can get the i<sup>th</sup> z-plane as an Array_Bundle using <a href="Array.html#Get_Array_Plane">Get_Array_Plane</a>
+as follows:
+</p>
+<pre>
+   Array_Bundle plane;
+   Range_Bundle range;
+    ...
+   plane = *A;
+   Get_Array_Bundle(&plane,i);
+   Array_Range(&range,&plane);
+</pre>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Range_Bundle"></a>     <tr><td class="name" valign="top">Range_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>maxval</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>minval</i></td><td class="define">: <a href="Mylib.html#Value">Value</a></td></tr>
+    </table>
+  </h3>
+<p>
+Used by <a href="Array.html#Array_Range">Array_Range</a> so that it can record the minimum and maximum value seen in the
+<a href="AForm.html">AForm</a> in question.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Extent_Bundle"></a>     <tr><td class="name" valign="top">Extent_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>min</i></td><td class="define">: <a href="Array.html#Vector">Vector</a> *</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>max</i></td><td class="define">: <a href="Array.html#Vector">Vector</a> *</td></tr>
+    </table>
+  </h3>
+<p>
+This bundle is passed to routines like <a href="Region.html#Region_Extent">Region_Extent</a> and <a href="SWC_Tree.html#SWC_Tree_Extent">SWC_Tree_Extent</a> so that they can
+be filled in with the minimum and maximum vectors, <I>min</I> and <I>max</I>, respectively, of the
+smallest bounding box that encloses all the elements of the object in question.  The type of the
+arrays for <I>min</I> and <I>max</I> depends on the routine, e.g. <a href="Region.html#Region_Extent">Region_Extent</a> fills in <a href="Array.html#Coordinate">Coordinate</a>s
+and <a href="SWC_Tree.html#SWC_Tree_Extent">SWC_Tree_Extent</a> fills in <a href="Array.html#Double_Vector">Double_Vector</a>s.
+</p>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Array_Kind"></a><tr><td valign="top">Array_Kind</td><td>: { PLAIN_KIND, RGB_KIND, RGBA_KIND, COMPLEX_KIND }</td></tr>
+  </table></h3>
+<p>
+The four supported <a href="Array.html#kind">kind</a>s of an array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Color_Index"></a><tr><td valign="top">Color_Index</td><td>: { RED_INDEX, GREEN_INDEX, BLUE_INDEX, ALPHA_INDEX }</td></tr>
+  </table></h3>
+<p>
+The indices into the red, green, blue, and alpha sub-arrays of a color array.  Primarily
+defined for those that wish to write more descriptive code as one can equally well use
+0, 1, 2, and 3 as the indices.
+</p>
+  <h3 class="fn"><table>
+     <a name="Complex_Index"></a><tr><td valign="top">Complex_Index</td><td>: { REAL_INDEX, IMAG_INDEX }</td></tr>
+  </table></h3>
+<p>
+The indices for the real and imaginary parts of the innermost dimension of a complex array.
+Primarily defined for those that wish to write more descriptive code as one can equally well
+use 0 and 1 for this purpose.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="AUINT8"></a><tr><td valign="baseline">uint8</td>
+     <td valign="baseline">AUINT8 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AUINT16"></a><tr><td valign="baseline">uint16</td>
+     <td valign="baseline">AUINT16 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AUINT32"></a><tr><td valign="baseline">uint32</td>
+     <td valign="baseline">AUINT32 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AUINT64"></a><tr><td valign="baseline">uint64</td>
+     <td valign="baseline">AUINT64 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AINT8"></a><tr><td valign="baseline">int8</td>
+     <td valign="baseline">AINT8 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AINT16"></a><tr><td valign="baseline">int16</td>
+     <td valign="baseline">AINT16 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AINT32"></a><tr><td valign="baseline">int32</td>
+     <td valign="baseline">AINT32 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AINT64"></a><tr><td valign="baseline">int64</td>
+     <td valign="baseline">AINT64 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AFLOAT32"></a><tr><td valign="baseline">float32</td>
+     <td valign="baseline">AFLOAT32 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AFLOAT64"></a><tr><td valign="baseline">float64</td>
+     <td valign="baseline">AFLOAT64 (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+  </table></h3>
+<p>
+Each function returns a pointer to the <a href="Array.html#data">data</a> of array <I>a</I> that is of the type implied
+by its name.  These functions are implemented as macros.
+</p>
+  <h3 class="fn"><table>
+     <a name="ADIMN"></a><tr><td valign="baseline"><a href="Mylib.html#Dimn_Type">Dimn_Type</a></td>
+     <td valign="baseline">ADIMN (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AINDX"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">AINDX (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="ASIZE"></a><tr><td valign="baseline"><a href="Mylib.html#Size_Type">Size_Type</a></td>
+     <td valign="baseline">ASIZE (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+     <a name="AOFFS"></a><tr><td valign="baseline"><a href="Mylib.html#Offs_Type">Offs_Type</a></td>
+     <td valign="baseline">AOFFS (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+  </table></h3>
+<p>
+Each function returns a pointer to the <a href="Array.html#data">data</a> of array <I>a</I> that is of the type implied
+by its name.  For example, if <I>a</I> is a <a href="Array.html#Coordinate">Coordinate</a> then while one could access its elements
+with <a href="Array.html#AINT32">AINT32</a>(a), it is better to do so with <a href="Array.html#ADIMN">ADIMN</a>(a), as the latter will remain
+correct even if the type of <a href="Mylib.html#Dimn_Type">Dimn_Type</a> were to change.  These functions are implemented as macros.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Make_Array<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, int <I>ndims</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> *<I>dims</I>)</td></tr>
+  </table></h3>
+<p>
+Creates an array of the given <I>kind</I>, <I>type</I>, and <a class="ref" href="Array.html#core shape">core shape</a>, that is, if <I>kind</I> is other
+than <I>PLAIN_KIND</I>, then the shape specified by <I>ndims</I> and <I>dims</I> does not include the extra
+dimension for the kind which is automatically added.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Array_With_Shape"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Make_Array_With_Shape<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Creates an array where the <a href="Array.html#Coordinate">Coordinate</a> <I>shape</I> gives the dimensionality
+and size of each dimension of the <a class="ref" href="Array.html#core shape">core shape</a> of the matrix.  See <a href="Array.html#Coord">Coord</a> for one way to
+easily make a shape (e.g. you could write
+<I>Make_Array_With_Shape(RGB_KIND,UINT8_TYPE,Coord("4,2,3"))</I>.
+The shape coordinate is freed before returning.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Array_From_Arrays"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Make_Array_From_Arrays<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, int <I>n</I>, <a href="Array.html">Array</a> **<I>arrays</I>)</td></tr>
+  </table></h3>
+<p>
+The parameter <I>arrays</I> is expected to be contain <I>n</I> pointers to arrays that all have the same
+type, kind, and shape &alpha;.  Creates an array with shape
+<i>(n,&alpha;)</i>
+that is the concatenation of the <I>n</I> arrays.  The <I>n</I> array objects are unaffected by the
+construction as their elements are copied to the new array.
+<B>NB:</B> If <I>kind</I> is <I>COMPLEX_KIND</I> then the arrays pointed at must all be of <I>COMPLEX_KIND</I>,
+otherwise all the array must be of <I>PLAIN_KIND</I>.  Moreover, if
+<I>kind</I> is <I>RGB_KIND</I> then <I>n</I> must be 3 and if <I>kind</I> is <I>RGBA_KIND</I> then <I>n</I> must be 4.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Array_Of_Data"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Make_Array_Of_Data<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>ndims</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> *<I>dims</I>, void *<I>data</I>)</td></tr>
+  </table></h3>
+<p>
+Creates an array whose data vector is the one supplied as the last
+argument <I>data</I>.  The argument conventions are otherwise exactly as for <a href="Array.html#Make_Array">Make_Array</a>.
+The data vector must be of size at least size*sizeof(type) bytes and the
+memory management of this vector is taken over by the array class.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Array_Text"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Set_Array_Text (<a href="Array.html">Array</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>text</I>)</td></tr>
+  </table></h3>
+<p>
+Set the <a href="Array.html#text">text</a> tag of array <I>a</I> to <I>text</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Append_To_Array_Text"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Append_To_Array_Text (<a href="Array.html">Array</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>text</I>)</td></tr>
+  </table></h3>
+<p>
+Append <I>text</I> to the <a href="Array.html#text">text</a> tag of array <I>a</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Array_Value"></a><tr><td valign="baseline"><a href="Mylib.html#Value">Value</a></td>
+     <td valign="baseline">Get_Array_Value (<a href="Array.html">Array</a> *<I>a</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Get the value of the element at coordinate <I>coord</I> in array <I>a</I>.  The coordinate <I>coord</I>
+is freed upon return and the value is passed back in a <a href="Mylib.html#Value">Value</a> structure.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Array_Value"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Set_Array_Value (<a href="Array.html">Array</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Mylib.html#Value">Value</a> <I>v</I>)</td></tr>
+  </table></h3>
+<p>
+Set the value of the element at coordinate <I>coord</I> in array <I>a</I> to <I>v</I>.  The coordinate <I>coord</I>
+is freed upon return and the value <I>v</I> is passed to the routine in a <a href="Mylib.html#Value">Value</a> structure.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Array_Plane"></a><tr><td valign="baseline"><a href="Array.html#Array_Bundle">Array_Bundle</a> *</td>
+     <td valign="baseline">Get_Array_Plane (<a href="Array.html#Array_Bundle">Array_Bundle</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>plane</I>)</td></tr>
+  </table></h3>
+<p>
+Select the <I>plane</I><sup>th</sup> (n-1)-dimension sub-array of the,
+say n-dimensional, <a href="Array.html#Array_Bundle">Array_Bundle</a> <I>a</I>, which is basically just the outer struct of
+an array object, where the <a href="Array.html#dims">dims</a>, <a href="Array.html#data">data</a>, and <a href="Array.html#text">text</a> fields point to the memory of some
+real array object.  A bundle is initialized by assigning it the value of a proper array's
+struct.  <a href="Array.html#Get_Array_Plane">Get_Array_Plane</a> returns a pointer to <I>a</I> after modifying
+its fields (in the bundle only) so that it now models the selected sub-array.  For example,
+the code below, takes the <I>color</I>
+array from the example above, and peals off each color sub-array:
+</p>
+<pre>
+ Array_Bundle red, green, blue;
+
+ red = green = blue = *color;
+ Get_Array_Plane(&red,0);
+ Get_Array_Plane(&green,1);
+ Get_Array_Plane(&blue,2);
+</pre>
+<p>
+If a real independent, and proper object is need for a sub-array then call
+<a href="Generic.html#Copy_X">Copy_Array</a> on
+the fetched plane, e.g.  <I>Copy_Array(&amp;red)</I>.
+Moreover, more than one layer of outer dimensions can be peeled away:
+</p>
+<pre>
+ Array_Bundle bundle;
+ Get_Array_Plane(Get_Array_Plane(&(bundle=*color),1),3);
+</pre>
+<p>
+gets the 3rd z-plane of the green pixels when <I>color</I>
+is a 3D <I>RGB_KIND</I> array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Print_Array"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Print_Array (<a href="AForm.html">AForm</a> *<I>a</I>, FILE *<I>output</I>, int <I>indent</I>, string <I>format</I>)</td></tr>
+  </table></h3>
+<p>
+Print an array or slice or frame in a tabular form on the open FILE <I>output</I>.  The display
+depends on the kind of the array and is indented by <I>indent</I> spaces from the left margin.
+The <I>format</I> string must be appropriate for the type of data in the array, e.g.  "%10lld"
+for an <I>INT64_TYPE</I> array, or "%6.4f" for a <I>FLOAT32_TYPE</I> array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Print_Inuse_List"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Print_Inuse_List (FILE *<I>output</I>, int <I>indent</I>)</td></tr>
+  </table></h3>
+<p>
+Prints out a report of the current set of arrays, slices, and frames currently
+in use by the program to the specified <I>output</I>, indented by the amount specified by <I>indent</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Coord"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Coord<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (string <I>list</I>)</td></tr>
+  </table></h3>
+<p>
+The routine expects the string <I>list</I> to be a comma-separated list of integer constants.
+The routine generates a coordinate corresponding to the list, e.g.
+<I>Coord("3,4,2")</I> produces a 3-element coordinate.
+</p>
+  <h3 class="fn"><table>
+     <a name="Print_Coord"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Print_Coord (FILE *<I>f</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Print the coordinate <I>coord</I> as an comma-separated list of integers to the file <I>f</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Coord1"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Coord1<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d1</I>)</td></tr>
+     <a name="Coord2"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Coord2<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d2</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d1</I>)</td></tr>
+     <a name="Coord3"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Coord3<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d3</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d2</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d1</I>)</td></tr>
+     <a name="Coord4"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Coord4<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d4</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d3</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d2</I>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d1</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a k-element coordinate (<I>d1</I>,<I>d2</I>,<I>d3</I>,...) according to the name of the routine
+and the number of its arguments.
+</p>
+  <h3 class="fn"><table>
+     <a name="AppendCoord"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">AppendCoord (<a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Add integer <I>d</I> as the outermost dimension of coordinate <I>coord</I> and return a pointer to
+the modified coordinate.
+</p>
+  <h3 class="fn"><table>
+     <a name="PrependCoord"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">PrependCoord (<a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>d</I>)</td></tr>
+  </table></h3>
+<p>
+Add integer <I>d</I> as the innermost dimension of coordinate <I>coord</I> and return a pointer to
+the modified coordinate.
+</p>
+  <h3 class="fn"><table>
+     <a name="Idx2CoordA"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Idx2CoordA<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>idx</I>)</td></tr>
+  </table></h3>
+<p>
+Generates the coordinate in array <I>a</I>'s lattice corresponding to index <I>idx</I> into its
+data vector.
+</p>
+  <h3 class="fn"><table>
+     <a name="Coord2IdxA"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Coord2IdxA (<a href="Array.html">Array</a> *<I>a</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Returns the index corresponding to the position of coordinate <I>coord</I> within the lattice of
+array <I>a</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Coord_Basis"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Set_Coord_Basis (<a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>)</td></tr>
+  </table></h3>
+<p>
+Sets the <a class="ref" href="Array.html#current basis">current basis</a> for <B>Mylib</B> to the given <I>shape</I> and <I>kind</I>.  Specifying the kind
+is important as it affects the operation of <a href="Array.html#Idx2Core">Idx2Core</a> which must know if any of the dimensions
+of <I>shape</I> are special.
+</p>
+  <h3 class="fn"><table>
+     <a name="Use_Array_Basis"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Use_Array_Basis (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+  </table></h3>
+<p>
+Sets the <a class="ref" href="Array.html#current basis">current basis</a> for <B>Mylib</B> to that of the array <I>a</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Coord_Basis"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Get_Coord_Basis<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Array_Kind">Array_Kind</a> *<I>kind</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Generates a coordinate that models the <a class="ref" href="Array.html#shape">shape</a> of the <a class="ref" href="Array.html#current basis">current basis</a>, and returns
+in the value pointed at by <I>kind</I> the kind of the current basis.
+</p>
+  <h3 class="fn"><table>
+     <a name="Idx2Coord"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Idx2Coord<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Indx_Type">Indx_Type</a> <I>idx</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the coordinate in the <a class="ref" href="Array.html#current basis">current basis</a> corresponding to index <I>idx</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Coord2Idx"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Coord2Idx (<a href="Array.html#Coordinate">Coordinate</a> *<I>coord</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Returns the index corresponding to the position of coordinate <I>coord</I> within the lattice of
+the <a class="ref" href="Array.html#current basis">current basis</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Idx2CoreA"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Idx2CoreA<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>idx</I>)</td></tr>
+  </table></h3>
+<p>
+Generates the <a class="ref" href="Array.html#core coordinate">core coordinate</a> in array <I>a</I>'s lattice corresponding to index <I>idx</I> into its
+data vector.
+</p>
+  <h3 class="fn"><table>
+     <a name="Idx2Core"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Idx2Core<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Indx_Type">Indx_Type</a> <I>idx</I>)</td></tr>
+  </table></h3>
+<p>
+Generates the <a class="ref" href="Array.html#core coordinate">core coordinate</a> in the lattice of the <a class="ref" href="Array.html#current basis">current basis</a> corresponding to
+index <I>idx</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Floor_Coord"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Floor_Coord<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>point</I>)</td></tr>
+  </table></h3>
+<p>
+Generate the coordinate produced by taking the floor of every element of <I>point</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Ceiling_Coord"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Ceiling_Coord<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>point</I>)</td></tr>
+  </table></h3>
+<p>
+Generate the coordinate produced by taking the ceiling of every element of <I>point</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Nearest_Coord"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Nearest_Coord<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>point</I>)</td></tr>
+  </table></h3>
+<p>
+Generate the coordinate produced by taking rounding every element of <I>point</I> to the nearest
+integer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convert_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Convert_Array<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, int <I>scale</I>, int|double <I>factor</I>)</td></tr>
+  </table></h3>
+<p>
+Converts the array <I>a</I> to one of the specified <I>kind</I>, <I>type</I>, and <I>scale</I> in a newly generated
+array, say <I>t</I>, and returns a pointer to it.  The result is as if the assignement
+<i>t[i] = Mapping(a[i])*&beta;</i>
+were made for each core element (i.e. RGB-triple, complex number, ...) where <I>i</I> ranges over
+the <a class="ref" href="Array.html#core shape">core shape</a> of <I>a</I>, <I>Mapping</I> converts between different kinds of elements,
+and &beta; is a scaling factor.  If the types of <I>a</I> and <I>t</I> are different then the the
+right hand side is computed in <I>a</I>'s type space and then the type conversion takes place
+during the assignment as per C's type rules.
+</p>
+<p>
+If the kind remains unchanged, the <I>Mapping</I> is the identity fucntion.  Otherwise the table
+below gives the function implied by each source/target kind pair.  The free variable <I>i</I> is
+assumed to range over all possible <a class="ref" href="Array.html#core coordinate">core coordinate</a>s of <I>a</I> (and <I>t</I>).
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="5" cellspacing="1" width="600px">
+<tr><th width="35%">Conversion</th><th width="65%">Mapping</th></tr>
+<tr class="odd"> <td valign="baseline">PLAIN to RGB</td>
+<td valign="baseline">t[0,i] = t[1,i] = t[2,i] = a[i]</td>
+</tr>
+<tr class="even"> <td valign="baseline">PLAIN to RGBA</td>
+<td valign="baseline">t[0,i] = t[1,i] = t[2,i] = a[i], t[3,i] = &alpha(t)</td>
+</tr>
+<tr class="odd"> <td valign="baseline">RGB to RGBA</td>
+<td valign="baseline">t[c,i] = a[c,i] for c &isin; {0,1,2}, t[3,i] = &alpha(t)</td>
+</tr>
+<tr class="even"> <td valign="baseline">RGBA to RGB</td>
+<td valign="baseline">t[c,i] = a[c,i]*a[3,i] / &alpha;(a) for c &isin; {0,1,2}</td>
+</tr>
+<tr class="odd"> <td valign="baseline">RGB to PLAIN</td>
+<td valign="baseline">t[i] = .30*a[0,i] + .59*a[1,i] + .11*a[2,i]</td>
+</tr>
+</tr>
+<tr class="even"> <td valign="baseline">RGBA to PLAIN</td>
+<td valign="baseline">t[i] = (.30*a[0,i] + .59*a[1,i] + .11*a[2,i])*a[3,i] / &alpha;(a)</td>
+</tr>
+<tr class="odd"> <td valign="baseline">PLAIN to COMPLEX</td>
+<td valign="baseline">t[i,0] = a[i], t[i,1] = 0</td>
+</tr>
+<tr class="even"> <td valign="baseline">COMPLEX to PLAIN</td>
+<td valign="baseline">t[i] = (a[i,0]<sup>2</sup> + a[i,1]<sup>2</sup>)<sup>.5</sup></td>
+</tr>
+<tr class="odd"> <td valign="baseline">KIND X to KIND Y</td>
+<td valign="baseline">KIND X to PLAIN to KIND Y</td>
+</tr>
+</table>
+</p>
+<p>
+The last row of the table is intended to capture any conversion not specified in the previous
+rows of the table.  For example, a <I>COMPLEX_KIND</I> to <I>RGB_KIND</I> transformation is conceptually
+the result of first converting the <I>COMPLEX_KIND</I> to a <I>PLAIN_KIND</I> and then converting the
+<I>PLAIN_KIND</I> to an <I>RGB_KIND</I>.  The quantity &alpha(x) is
+(a) <I>2 <sup>x-&gt;scale</sup>&minus;1</I> if the type of <I>x</I> is one of the unsigned integer types,
+(b) <I>2 <sup>x-&gt;scale-1</sup>&minus;1</I> if the type of <I>x</I> is one of the signed integer types,
+and
+(c) <I>1</I> if the type of <I>x</I> is one of the floating point types.  Intuitively it is the fully
+opaque value for the alpha component of an <I>RGBA_KIND</I> array of the same type as <I>x</I>.
+</p>
+<p>
+Conceptually after being mapped as per the table above, each value is then scaled by a factor
+&beta; <I>except</I> for an alpha component if it has been newly introduced.  The value of &beta;
+is determined by the parameter <I>factor</I> as follows.  If the type of <I>a</I> or the type of <I>t</I>
+is a floating point type, then the parameter <I>factor</I> is interpreted as a <I>double</I> value
+and it is &beta;.  Otherwise, <I>factor</I> is interpreted as an <I>int</I> argument and the value
+of &beta; is effectively <I>2<sup>-factor</sup></I>.  We say "effectively" because the
+multiplication by &beta; is actually accomplished with a left or right bit shift.
+The <a href="Array.html#scale">scale</a> of t is simply set to the <I>scale</I> parameter; one must set <I>factor</I> appropriately
+if an actually scale change in the value resulting from the kind <I>Mapping</I> is required.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convert_Array_Inplace"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Convert_Array_Inplace (<a href="Array.html">Array</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <I>scale</I>, int|double <I>factor</I>)</td></tr>
+  </table></h3>
+<p>
+Convert <I>a</I> in the same way as <a href="Array.html#Convert_Array">Convert_Array</a> above, but do so in-place, that is, <I>a</I> is
+overwritten with the converted result and a pointer to <I>a</I> is returned.
+</p>
+  <h3 class="fn"><table>
+     <a name="Image_Check"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Image_Check (<a href="Array.html">Array</a> *<I>a</I>)</td></tr>
+  </table></h3>
+<p>
+Check whether or not an array is an <a class="ref" href="Array.html#image">image</a>.
+An array is considered an <B>image</B> if all its values are between <I>0</I> and
+<I>2 <sup><a href="Array.html#scale">scale</a>-1</sup>&minus;1</I>
+for a signed integer array, are all between <I>0</I> and
+<I>2 <sup><a href="Array.html#scale">scale</a></sup>&minus;1</I>
+for an unsigned integer array, and between <I>0.</I> and <I>1.</I>, inclusive, for a floating point array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convert_Image"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Convert_Image<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, int <I>scale</I>)</td></tr>
+  </table></h3>
+<p>
+Converts an <a class="ref" href="Array.html#image">image</a> into one of the given <I>kind</I>, <I>type</I>, and <I>scale</I> in a newly generated array
+that is returned as the result.  Unlike <a href="Array.html#Convert_Array">Convert_Array</a>, values are scaled so that the relative
+intensity of a pixel element is preserved.  For example, if <I>a</I> has <a href="Array.html#type">type</a> UINT16_TYPE and <a href="Array.html#scale">scale</a>
+12, then
+(a) if <I>type</I> is <I>UINT8_TYPE</I> and <I>scale</I> is 8, then values of <I>a</I> will be right-shifted 4 bits,
+(a) if <I>type</I> is <I>FLOAT32_TYPE</I>, then values of <I>a</I> will be divided by the floating point value
+<I>2 <sup><a href="Array.html#scale">scale</a></sup>&minus;1</I>, and (c) if <I>type</I> is <I>INT32_TYPE</I> and <I>scale</I> is 24, then
+the values of <I>a</I> will be left-shifted 11 bits.
+</p>
+  <h3 class="fn"><table>
+     <a name="Convert_Image_Inplace"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Convert_Image_Inplace (<a href="Array.html">Array</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Array_Kind">Array_Kind</a> <I>kind</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, int <I>scale</I>)</td></tr>
+  </table></h3>
+<p>
+Convert <a class="ref" href="Array.html#image">image</a> <I>a</I> in the same way as <a href="Array.html#Convert_Image">Convert_Image</a> above, but do so in-place, that is, <I>a</I> is
+overwritten with the converted result and a pointer to <I>a</I> is returned.
+</p>
+  <h3 class="fn"><table>
+     <a name="Array_Range"></a><tr><td valign="baseline"><a href="Array.html#Range_Bundle">Range_Bundle</a> *</td>
+     <td valign="baseline">Array_Range (<a href="Array.html#Range_Bundle">Range_Bundle</a> *<I>range</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <a href="AForm.html">AForm</a> *<I>a</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the smallest and largest value in <I>array</I> in the <I>maxval</I> and <I>minval</I> fields of the
+<a href="Array.html#Range_Bundle">Range_Bundle</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Scale_Array"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Scale_Array (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>factor</I>, double <I>offset</I>)</td></tr>
+  </table></h3>
+<p>
+Each element of <I>a</I> is first ofset by <I>offset</I> and then scaled by <I>factor</I>, i.e.
+a[i] = factor * (a[i] + offset) for all i in basis of <I>a</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Scale_Array_To_Range"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Scale_Array_To_Range (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Value">Value</a> <I>min</I>, <a href="Mylib.html#Value">Value</a> <I>max</I>)</td></tr>
+  </table></h3>
+<p>
+Scales every element of <I>a</I> so that the largest (after scaling) equals
+max and the smallest equals min.  Returns a for convenience.
+</p>
+  <h3 class="fn"><table>
+     <a name="Array_Op_Scalar"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Array_Op_Scalar (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Operator">Operator</a> <I>op</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, <a href="Mylib.html#Value">Value</a> <I>v</I>)</td></tr>
+  </table></h3>
+<p>
+Combines each element in <I>a</I> with the value <I>v</I> of type <I>type</I> according to
+the selected Operator <I>op</I>.  The table below lists the operational effect.  Not carefully that
+if <I>a</I> and <I>v</I> are not of the same type, then results are coreced for the operation and
+assignment according to the rules of the C-language.  <I>v</I> must be a positive integer if either
+of the two shift operators is requested.
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="2" cellspacing="1" width="400px">
+<tr><th width="50%">Operator</th><th width="50%">Effect</th></tr>
+<tr class="odd"> <td valign="top"><tt>SET_OP</tt></td> <td valign="top"><tt>a[i] = v</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>ADD_OP</tt></td> <td valign="top"><tt>a[i] = a[i] + v</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>SUB_OP</tt></td> <td valign="top"><tt>a[i] = a[i] - v</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MUL_OP</tt></td> <td valign="top"><tt>a[i] = a[i] * v</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>DIV_OP</tt></td> <td valign="top"><tt>a[i] = a[i] / v</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>POW_OP</tt></td> <td valign="top"><tt>a[i] = a[i] ^ v</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>LSH_OP</tt></td> <td valign="top"><tt>a[i] = a[i] << v</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>RSH_OP</tt></td> <td valign="top"><tt>a[i] = a[i] >> v</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>MIN_OP</tt></td> <td valign="top"><tt>a[i] = min(a[i],v)</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MAX_OP</tt></td> <td valign="top"><tt>a[i] = max(a[i],v)</tt></td> </tr>
+</table><p>
+  <h3 class="fn"><table>
+     <a name="Complex_Op_Scalar"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Complex_Op_Scalar (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Operator">Operator</a> <I>op</I>, <a href="Mylib.html#Value_Type">Value_Type</a> <I>type</I>, <a href="Mylib.html#Value">Value</a> <I>v</I>, <a href="Mylib.html#Value">Value</a> <I>w</I>)</td></tr>
+  </table></h3>
+<p>
+Assumes <I>a</I> is of <I>COMPLEX_KIND</I> and combines each <B>complex</B> element of <I>a</I> with
+the complex number <I>v</I>+<B>i</B><I>w</I>.  All arithmetic is done in the field of complex numbers.
+However, for the shift and min/max operators, the operations are performed on the real and imaginary
+parts separately, e.g. for <I>LSH_OP</I>, <I>a[i].real &lt;&lt;= v</I> and <I>a[i].imag &lt;&lt;= w</I>.
+<I>v</I> and <I>w</I> must be positive integers if either of the two shift operators is requested.
+</p>
+  <h3 class="fn"><table>
+     <a name="Array_Op_Array"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Array_Op_Array (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Operator">Operator</a> <I>op</I>, <a href="AForm.html">AForm</a> *<I>b</I>)</td></tr>
+  </table></h3>
+<p>
+Combine, element-wise, the elements of the arrays <I>a</I> and <I>b</I> with <a href="Mylib.html#Operator">Operator</a> <I>op</I>, leaving the
+result in the element of <I>a</I>.  <I>a</I> and <I>b</I> do not have to be the same size,
+type, or kind.  If <I>b</I> is larger than <I>a</I>, then the first <I>a-&gt;size</I> elements of <I>b</I> are combined
+with the elements of <I>a</I>.  If <I>b</I> is smaller than <I>a</I>, then the elements of <I>b</I> are used in a
+circular fashion until every element of <I>a</I> has been operated upon.  This is reflected in the
+table below by the use of the expression <I>b[i%|B|]</I> where <I>|B|</I> is, <I>b-&gt;size</I>, the size of <I>b</I>.
+</p>
+<p><table class="valuelist" align="center" border="1" cellpadding="2" cellspacing="1" width="400px">
+<tr><th width="50%">Operator</th><th width="50%">Effect</th></tr>
+<tr class="odd"> <td valign="top"><tt>SET_OP</tt></td> <td valign="top"><tt>a[i] = b[i%|B|]</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>ADD_OP</tt></td> <td valign="top"><tt>a[i] = a[i] + b[i%|B|]</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>SUB_OP</tt></td> <td valign="top"><tt>a[i] = a[i] - b[i%|B|]</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MUL_OP</tt></td> <td valign="top"><tt>a[i] = a[i] * b[i%|B|]</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>DIV_OP</tt></td> <td valign="top"><tt>a[i] = a[i] / b[i%|B|]</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>POW_OP</tt></td> <td valign="top"><tt>a[i] = a[i] ^ b[i%|B|]</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>LSH_OP</tt></td> <td valign="top"><tt>a[i] = a[i] << b[i%|B|]</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>RSH_OP</tt></td> <td valign="top"><tt>a[i] = a[i] >> b[i%|B|]</tt></td> </tr>
+<tr class="odd"> <td valign="top"><tt>MIN_OP</tt></td> <td valign="top"><tt>a[i] = min(a[i],b[i%|B|])</tt></td> </tr>
+<tr class="even"> <td valign="top"><tt>MAX_OP</tt></td> <td valign="top"><tt>a[i] = max(a[i],b[i%|B|])</tt></td> </tr>
+</table><p>
+  <h3 class="fn"><table>
+     <a name="Complex_Op_Array"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Complex_Op_Array (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Operator">Operator</a> <I>op</I>, <a href="AForm.html">AForm</a> *<I>b</I>)</td></tr>
+  </table></h3>
+<p>
+The effect is similar to <a href="Array.html#Array_Op_Array">Array_Op_Array</a> above except that <I>a</I> must be of <I>COMPLEX_KIND</I> and
+each non-complex element of <I>b</I> is combined with each complex element of <I>a</I> and complex
+arithmetic is used for all but the shift and min/max operators.  To be a bit more precise, if
+<I>p</I> is the index corresponding to a core coordinate <I>c</I> of <I>a</I>, then the complex number
+<I>a</I>[<I>c</I>,0] + <B>i</B> <I>a</I>[<I>c</I>,1] is combined with <I>b</I>[<I>p</I>%|B|] according to <I>op</I>.  For, the
+shift and min/max operators, the <I>b</I>-value is applied to both parts of the <I>a</I>-value, e.g.
+x+<B>i</B>y &lt;&lt; e is (x&lt;&lt;e) + <B>i</B> (y&lt;&lt;e).
+</p>
+  <h3 class="fn"><table>
+     <a name="Complex_Op_Complex"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Complex_Op_Complex (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Operator">Operator</a> <I>op</I>, <a href="AForm.html">AForm</a> *<I>b</I>)</td></tr>
+  </table></h3>
+<p>
+The effect is similar to <a href="Array.html#Array_Op_Array">Array_Op_Array</a> above except that <I>a</I> and <I>b</I> must both be of
+<I>COMPLEX_KIND</I> and complex arithmetic is used to combine elements except for the shift
+and min/max operators which take place on the real and imaginary parts separately, e.g.
+x+<B>i</B>y &lt;&lt; c+<B>i</B>d is (x&lt;&lt;c) + <B>i</B> (y&lt;&lt;d).
+</p>
+  <h3 class="fn"><table>
+     <a name="Array_Fct_Val"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Array_Fct_Val (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Value">Value</a> (*<I>fct</I>)(void * valp))</td></tr>
+  </table></h3>
+<p>
+For each element of <I>a</I>, the routine calls the handler <I>fct</I> with a <tt>void</tt> pointer
+to the element and replaces the element with whatever <a href="Mylib.html#Value">Value</a> <I>fct</I> returns.
+</p>
+  <h3 class="fn"><table>
+     <a name="Array_Fct_Idx"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Array_Fct_Idx (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Value">Value</a> (*<I>fct</I>)(<a href="Array.html#Coordinate">Coordinate</a> *coord))</td></tr>
+  </table></h3>
+<p>
+For each element of <I>a</I>, the routine calls the handler <I>fct</I> with the <a href="Array.html#Coordinate">Coordinate</a> of the
+element and replaces the element with whatever <a href="Mylib.html#Value">Value</a> <I>fct</I> returns.
+</p>
+  <h3 class="fn"><table>
+     <a name="Threshold_Array"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Threshold_Array (<a href="AForm.html#APart">APart</a> *<I>a</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Value">Value</a> <I>cutoff</I>)</td></tr>
+  </table></h3>
+<p>
+Binarizes the image with respect to threshold <I>cutoff</I>.  That is, every element whose value
+is less than or equal to <I>cutoff</I> is set to 0, and every element other element is set to 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Array_Multiply"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Array_Multiply<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>a</I>, <a href="Array.html">Array</a> *<I>b</I>)</td></tr>
+  </table></h3>
+<p>
+Multiply arrays <I>a</I> and <I>b</I> where they must both be of the same type and the innermost
+dimension of <I>a</I> must be of the same length as the outermost dimension of <I>b</I>.  If either
+<I>a</I> or <I>b</I> is of <I>COMPLEX_KIND</I> then complex arithmetic is performed and a <I>COMPLEX_KIND</I>
+array is returned.  The kind of the arrays is otherwise ignored and a <I>PLAIN_KIND</I> array
+returned.
+</p>
+<p>
+The routine handles all type situations and complex multiplication and is therefore not
+as efficient as the carefully-crafted <a href="Linear.html#Matrix_Multiply">Matrix_Multiply</a> routine in the <a href="Linear.html">Linear Algebra</a>
+module for multiplying <a href="Array.html#Double_Matrix">Double_Matrix</a>es together.
+</p>
+  <h3 class="fn"><table>
+     <a name="Apply_Map"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Apply_Map<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>image</I>, <a href="Array.html">Array</a> *<I>map</I>)</td></tr>
+  </table></h3>
+<p>
+A general routine for mapping array data, but specifically inspired by image "color maps".
+The array <I>image</I> must be of <I>PLAIN_KIND</I> and unsigned integer type.  The array <I>map</I> must
+have dimension at least 1 and its inner dimension must be equal to <I>m</I> =
+2 <sup><I>image</I>-&gt;scale</sup>, i.e. the range of values in <I>image</I>.  Suppose the shape
+of <I>map</I> is <I>(&alpha;,m)</I>.  Each value <I>v</I> in <I>image</I> is replaced with the *<I>array</I>*
+<I>map[&beta;,v]</I><sub>&beta;</sub> of shape &alpha;.
+Thus the resulting array is of shape &alpha;.shape(image) and has the type and scale of <I>map</I>.
+A new array is created to hold the result and a pointer to it is returned.
+</p>
+  <h3 class="fn"><table>
+     <a name="Down_Sample"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Down_Sample<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html">AForm</a> *<I>source</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>box</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Downsample array <I>source</I> where the downsampling in each dimension is given by <I>box</I>.
+For example, <tt>Coord("2,3,4")</tt>, would downsample a 3 dimensional array by
+4 pixels in dimension 0, 3 pixels in dimension 1, and 2 pixels in dimension 2.  If the
+array is <I>RGB_KIND</I>, <I>RGBA_KIND</I>, or <I>COMPLEX_KIND</I> then the downsample vector need only
+specify the downsampling in the <a class="ref" href="Array.html#core shape">core shape</a>, in which case the downsampling in the special
+dimesnion is assumed to be 1 (i.e. no downsampling).  A pixel in the result is the average
+of the pixels it replaces.  A new array is generated for the result and a pointer to it
+returned.
+</p>
+  <h3 class="fn"><table>
+     <a name="Clip_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Clip_Array<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html">AForm</a> *<I>source</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>beg</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>end</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Select the subset of <I>source</I> in the rectangle whose opposing corners are at the
+coordinates <I>beg</I> and <I>end</I>.  For example, if <I>beg</I> = (2,4,3) and <I>end</I> = (6,7,8) then the
+sub-array <I>source</I>[2..6][4..7][3..8] will be returned.  If the array is <I>RGB_KIND</I>,
+<I>RGBA_KIND</I>, or <I>COMPLEX_KIND</I>, then one is free to use <a class="ref" href="Array.html#core coordinate">core coordinate</a>s as well, in which
+case the entire range of the special dimension is assumed.
+</p>
+  <h3 class="fn"><table>
+     <a name="Pad_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Pad_Array<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html">AForm</a> *<I>source</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>anchor</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Place the array <I>source</I> in a padded array of shape <I>shape</I> where its origin (index 0 pixel)
+is placed at coordinate <I>anchor</I> in the padded array.  <I>shape</I> must be not smaller than the shape
+of <I>source</I> in every dimension.  The padded array is padded according to the
+<a class="ref" href="Mylib.html#current boundary effect">current boundary effect</a>.  (<B>NB:</B> Padding with zero's is the most efficient, the other
+padding effects take an extra pass over the boundary pixels.)
+If the array is <I>RGB_KIND</I>, <I>RGBA_KIND</I>, or <I>COMPLEX_KIND</I>, then <I>shape</I> and <I>anchor</I>
+can be a <a class="ref" href="Array.html#core shape">core shape</a> and <a class="ref" href="Array.html#core coordinate">core coordinate</a>, in which case the special dimension is not
+padded and the origins of the special dimension are aligned.
+</p>
+  <h3 class="fn"><table>
+     <a name="Down_Sample_Inplace"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Down_Sample_Inplace (<a href="Array.html">Array</a> *<I>source</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>box</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Same effect as <a href="Array.html#Down_Sample">Down_Sample</a> except that it only applies to <a href="Array.html">Array</a>s and modifies <I>source</I>
+to hold the downsampled result and returns a pointer to <I>source</I>.
+Be sure to pack the array
+<font><a href="Generic.html#Pack_X">Pack_Array</a>)</font>
+if you want to free up the space no longer
+required by the downsampled array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Clip_Array_Inplace"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Clip_Array_Inplace (<a href="Array.html">Array</a> *<I>source</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>beg</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>end</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Same effect as <a href="Array.html#Clip_Array">Clip_Array</a> except that it only applies to <a href="Array.html">Array</a>s and modifies <I>source</I>
+to hold the clipped result and returns a pointer to <I>source</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Pad_Array_Inplace"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Pad_Array_Inplace (<a href="Array.html">Array</a> *<I>source</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>anchor</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Same effect as <a href="Array.html#Pad_Array">Pad_Array</a> except that it only applies to <a href="Array.html">Array</a>s and modifies <I>source</I>
+to hold the padded result and returns a pointer to <I>source</I>.
+</td></tr></table>
+</body>
+</html>

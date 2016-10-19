@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: System Utilities & Command Line Interface Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">System Utilities & Command Line Interface Module Reference</h1>
+
+<p>
+A flexible command line processing suite and guarded system utilities.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;utilities.h&gt;
+</pre>
+<hr />
+
+<a name="Constants"></a>
+<h2>Macro Constants</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#ASCII"> ASCII </a></b>
+     </td><td class="define" valign="baseline">= 128</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Ascii characters have values from 0 to ASCII-1</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+</table>
+<p class="group"><i>Command Line Processor</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Process_Arguments">Process_Arguments</a></b>
+     (int <I>argc</I>, char **<I>argv</I>, char **<I>spec</I>, int <I>no_escapes</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">char *</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Program_Name">Program_Name</a></b>
+     ()</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Get_Repeat_Count">Get_Repeat_Count</a></b>
+     (char *<I>name</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Is_Arg_Matched">Is_Arg_Matched</a></b>
+     (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Get_Int_Arg">Get_Int_Arg</a></b>
+     (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>, int <I>an</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Get_Double_Arg">Get_Double_Arg</a></b>
+     (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>, int <I>an</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">char *</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Get_String_Arg">Get_String_Arg</a></b>
+     (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>, int <I>an</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Print_Argument_Usage">Print_Argument_Usage</a></b>
+     (FILE *<I>file</I>, int <I>no_escapes</I>)</td></tr>
+</table>
+<p class="group"><i>Guarded System Calls</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void *</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Guarded_Malloc">Guarded_Malloc</a></b>
+     (int <I>size</I>, char *<I>routine</I>)</td></tr>
+<tr><td class="return" valign="baseline">void *</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Guarded_Realloc">Guarded_Realloc</a></b>
+     (void *<I>array</I>, int <I>size</I>, char *<I>routine</I>)</td></tr>
+<tr><td class="return" valign="baseline">char *</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Guarded_Strdup">Guarded_Strdup</a></b>
+     (char *<I>string</I>, char *<I>routine</I>)</td></tr>
+<tr><td class="return" valign="baseline">FILE *</td>
+    <td class="name" valign="baseline">
+       <b><a href="System.html#Guarded_Fopen">Guarded_Fopen</a></b>
+     (char *<I>name</I>, char *<I>options</I>, char *<I>routine</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<h3>Command Line Processor</h3>
+<p>
+All UNIX programs take arguments from the command line as an array <I>argv</I> of
+<I>argc</I> strings.  It becomes quite tedious to copy and retailor code
+for processing the command line each time you write a new program.  To alleviate this
+<B>mylib</B> provides the routine <a href="System.html#Process_Arguments">Process_Arguments</a> that interprets the
+command line arguments from a specification, where the specification can be a complex
+pattern that also serves as the usage statement shown to a user of the program in the
+event a user invokes the program improperly.
+<a href="System.html#Process_Arguments">Process_Arguments</a> stores the results of its command-line interpretation in
+a permanent table so that you can then get the value of any command-line argument at
+any time during the subsequent computation of your program with a number of simple
+access routines, e.g. <a href="System.html#Get_Int_Arg">Get_Int_Arg</a>, <a href="System.html#Get_String_Arg">Get_String_Arg</a>, etc.
+</p>
+<p>
+Our design goal for this utility
+was to encompass as many of the features and styles of command line interfaces and
+conventions as possible.  To do this required a quite flexible and powerful specification
+language whose semantics are compicated enough that (a) it
+takes a bit of effort to understand, and (b) you can create some pretty surprising
+patterns if you wish.  As such we refer you to the document
+<a href="../PDFS/Command.Line.pdf">Command.Line</a> for a 7 page description of the
+specification language along with lots of examples.
+</p>
+<p>
+To give one example, the specification:
+</p>
+<pre>
+ static char *Spec[] =
+     { "[-{m|matrix} &lt;file(PAM120)&gt;] [-{t|thresh} &lt;int(40)&gt;] &lt;query:file&gt; &lt;db:file&gt; ...",
+       NULL
+     };
+</pre>
+<p>
+for a program called, say "sw", would result in a usage statement of the form:
+</p>
+<pre>
+ Usage: sw [-{m|matrix} &lt;file(PAM120)&gt;] [-{t|thresh} &lt;int(40)&gt;] &lt;query:file&gt; &lt;db:file&gt; ...
+</pre>
+<p>
+which specifies that there are options <I>-m</I> and <I>-t</I>, with long forms <I>-matrix</I> and
+<I>-thresh</I>, respectively, for specifying a scoring matrix (where the default is <I>PAM120</I>) and
+threshold level for a match (where the default is <I>40</I>).  The first required argument is a
+file containing a query sequence followed by one or more files to be searched against.
+Calling <a href="System.html#Process_Arguments">Process_Arguments</a> with <I>Spec</I> at the start of your program effectively interprets
+the command line for the syntax above, printing the usage statement if not correct.  Then
+anywhere within your program, the call <a href="System.html#Get_Int_Arg">Get_Int_Arg</a>("-t") will return the value for the
+threshold argument, <a href="System.html#Get_Repeat_Count">Get_Repeat_Count</a>("db") will return the number of files to be
+searched, <a href="System.html#Get_String_Arg">Get_String_Arg</a>("db",2) will return the file name of the 3rd file to be
+searched (if present), and so on.
+</p>
+<h3>Guarded System Calls</h3>
+<p>
+Standard library routines such as <I>malloc</I> and <I>fopen</I> can fail for a number of reasons
+and one should detect the failure.  We provide simple guarded versions of these routines
+that check for a failure, and if they encounter one, then the print an error message
+and exit with status 1.  For most batch applications this is just fine and saves one
+having to write a few extra lines of code where ever these functions are needed.
+</p>
+<p>
+The generated object management routines call these guarded system routines.  In a module
+where stopping the program doesn't make sense, e.g. the image I/O module, we simply
+declared a <I>static</I> version of the routines and redefined their behavior, so that when
+the object management code is compiled it refers to the redefined, private version of
+the routines.
+</p>
+<hr />
+
+<h2>Macro Constants Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="ASCII"></a><tr><td valign="top">ASCII</td><td>= 128</td></tr>
+  </table></h3>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Process_Arguments"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Process_Arguments (int <I>argc</I>, char **<I>argv</I>, char **<I>spec</I>, int <I>no_escapes</I>)</td></tr>
+  </table></h3>
+<p>
+This should be one of the very first if not the first call in the main routine of a program.
+The <I>argc</I> arguments in <I>argv</I> from the command line are parsed and interpreted
+according to <I>spec</I>.  Rather than giving the specification as a single string, one gives
+it as an array of strings whose last element is <I>NULL</I> and where the concatenation of the
+strings in the array is the specification.  The reason for this is to allow you to control
+exactly what the usage statement will look like, as each string will be output as a line of
+the specification, offset by the program name.  For example, consider the specification:
+</p>
+<pre>
+   static char *Spec[] = { "[-m &lt;int&gt;] [!xyz] [-c'(&lt;int&gt;')]",
+                           "  &lt;arg1:int&gt;  &lt;arg2:int&gt;",
+                           NULL;
+                         };
+</pre>
+<p>
+and suppose that the compiled program is called, say <I>my_program</I>.  Then the usage
+statement that will be printed by <a href="System.html#Print_Argument_Usage">Print_Argument_Usage</a> (see below) is:
+</p>
+<pre>
+   Usage: my_program [-m &lt;int&gt;] [-xyz] [-c'(&lt;int&gt;')]
+                       &lt;arg1:int&gt;  &lt;arg2:int&gt;
+</pre>
+<p>
+if the argument <I>no_escapes</I> is false, and:
+</p>
+<pre>
+   Usage: my_program [-m &lt;int&gt;] [-xyz] [-c(&lt;int&gt;)]
+                       &lt;arg1:int&gt;  &lt;arg2:int&gt;
+</pre>
+<p>
+if <I>no_escapes</I> is true.
+</p>
+<p>
+The possible syntax for a command line is documented in detail in the document
+<a href="../PDFS/Command.Line.pdf">Command.Line</a> as it is too complex for a description
+here.  Suffice it to say that it was designed to be very flexible and to encompass as
+many of the command line argument prototypes found amongst the common UNIX utilities.
+</p>
+<p>
+Note carefully that the routine catches two classes of errors -- those made by the
+programmer and those made by the user.  The author of the program should be certain to
+thoroughly debug the specification and the access calls so that the only errors a user
+sees are those due to their giving the program invalid input on the command line.  Messages
+to the user always begin with the program name and messages to the implementor always begin
+with "Error in &lt;routine name&gt;:".  Messages to the user always end with a usage statement
+for the program, thus the necessity of having <I>no_escapes</I> as a parameter to
+<a href="System.html#Process_Arguments">Process_Arguments</a>.
+</p>
+<p>
+This routine parses the command line and saves all the values obtained there from in
+a set of global state variables, so that all the following routines, that provide access
+to what was parsed, can be called anywhere within the code base of ones program.
+This is obviously not re-entrant.
+</p>
+  <h3 class="fn"><table>
+     <a name="Program_Name"></a><tr><td valign="baseline">char *</td>
+     <td valign="baseline">Program_Name ()</td></tr>
+  </table></h3>
+<p>
+Returns a pointer the name of the program.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Repeat_Count"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_Repeat_Count (char *<I>name</I>)</td></tr>
+  </table></h3>
+<p>
+Returns 0 if the named unit is not in a repetition or if the repetition it is in was
+not used in making the match to the command line.
+Otherwise returns the number of times the repetition containing the named unit
+was iterated to match the command line.
+Note carefully that the name should not contain any escaping quotes that might have
+been necessary in the specification.
+</p>
+  <h3 class="fn"><table>
+     <a name="Is_Arg_Matched"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Is_Arg_Matched (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+For a given unit name, returns true if and only if the unit instance has been matched.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Int_Arg"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_Int_Arg (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>, int <I>an</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Returns the integer value of the argument whose name is <I>name</I>.  If the argument
+is in a repetition then you must supply the parameter <I>no</I>, and the routine
+returns the <I>no<sup>th</sup></I> instance.
+If the argument is one of several in a multi-value
+option, then you must also supply the parameter <I>an</I>, and the routine returns
+the <I>an<sup>th</sup></I> value in the option.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Double_Arg"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Get_Double_Arg (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>, int <I>an</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Exactly like <a href="System.html#Get_Int_Arg">Get_Int_Arg</a> save that the returned value is double.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_String_Arg"></a><tr><td valign="baseline">char *</td>
+     <td valign="baseline">Get_String_Arg (char *<I>name</I>, ... int <I>no</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>, int <I>an</I> <sup><b><font color="#00AA55" title="This argument is symbolic only, *x*'d out">X</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Exactly like <a href="System.html#Get_Int_Arg">Get_Int_Arg</a> save that the returned value is a string.
+</p>
+  <h3 class="fn"><table>
+     <a name="Print_Argument_Usage"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Print_Argument_Usage (FILE *<I>file</I>, int <I>no_escapes</I>)</td></tr>
+  </table></h3>
+<p>
+Prints a usage message for the program to stream <I>file</I>.  The message is taken
+directly from the specification as discussed under the description of <I>Process_Arguments</I>.
+If the argument <I>no_escapes</I> is true then any escape characters are removed
+from the display of the specification.
+</p>
+  <h3 class="fn"><table>
+     <a name="Guarded_Malloc"></a><tr><td valign="baseline">void *</td>
+     <td valign="baseline">Guarded_Malloc (int <I>size</I>, char *<I>routine</I>)</td></tr>
+  </table></h3>
+<p>
+Calls the system routine <I>malloc</I> with <I>size</I> and returns the pointer it recieves
+from said, unless the result is <I>NULL</I> in which case an out-of-memory message is printed
+with <I>routine</I> indicated as the source of the request, and the program is exited with
+status 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Guarded_Realloc"></a><tr><td valign="baseline">void *</td>
+     <td valign="baseline">Guarded_Realloc (void *<I>array</I>, int <I>size</I>, char *<I>routine</I>)</td></tr>
+  </table></h3>
+<p>
+Calls the system routine <I>realloc</I> with <I>array</I> and <I>size</I> and returns the pointer it recieves
+from said, unless the result is <I>NULL</I> in which case an out-of-memory message is printed
+with <I>routine</I> indicated as the source of the request, and the program is exited with
+status 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Guarded_Strdup"></a><tr><td valign="baseline">char *</td>
+     <td valign="baseline">Guarded_Strdup (char *<I>string</I>, char *<I>routine</I>)</td></tr>
+  </table></h3>
+<p>
+Calls the system routine <I>strdup</I> with <I>string</I> and returns the pointer it recieves
+from said, unless the result is <I>NULL</I> in which case an out-of-memory message is printed
+with <I>routine</I> indicated as the source of the request, and the program is exited with
+status 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="Guarded_Fopen"></a><tr><td valign="baseline">FILE *</td>
+     <td valign="baseline">Guarded_Fopen (char *<I>name</I>, char *<I>options</I>, char *<I>routine</I>)</td></tr>
+  </table></h3>
+<p>
+Calls the system routine <I>fopen</I> with <I>file_name</I> and <I>options</I> and returns the <I>FILE</I>
+pointer it recieves from said, unless the result is <I>NULL</I> in which case cannot-open-file
+message is printed with <I>routine</I> indicated as the source of the request, and the program
+is exited with status 1.
+</td></tr></table>
+</body>
+</html>

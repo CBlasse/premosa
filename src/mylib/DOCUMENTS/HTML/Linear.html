@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Linear Algebra Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Linear Algebra Module Reference</h1>
+
+<p>
+Matrix arithmetic including inversion.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;linear.algebra.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Double_Matrix *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Linear.html#Identity_Matrix">Identity_Matrix</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Dimn_Type <I>n</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Matrix *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Linear.html#Set_Matrix2Identity">Set_Matrix2Identity</a></b>
+     (Double_Matrix *<I>m</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Matrix *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Linear.html#Transpose_Matrix">Transpose_Matrix</a></b>
+     (Double_Matrix *<I>m</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Matrix *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Linear.html#Matrix_Multiply">Matrix_Multiply</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Double_Matrix *<I>a</I>, boolean <I>ta</I>, Double_Matrix *<I>b</I>, boolean <I>tb</I>)</td></tr>
+<tr><td class="return" valign="baseline">Double_Matrix *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Linear.html#Set_Matrix2Product">Set_Matrix2Product</a></b>
+     (Double_Matrix *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double_Matrix *<I>a</I>, boolean <I>ta</I>, Double_Matrix *<I>b</I>, boolean <I>tb</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Double_Matrix *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Linear.html#Orthogonalize_Matrix">Orthogonalize_Matrix</a></b>
+     (Double_Matrix *<I>m</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+The linear algebra module consists of this page and two classes: <a href="LU_Factor.html">LU_Factor</a> and <a href="Band_Factor.html">Band_Factor</a>
+that realize matrix inversion via factored forms, where the former is for general matrices
+and the latter is for tri- and penta-diagonal systems.
+A planned addition for the module is to support eigen-values and eigen-vectors.
+</p>
+<p>
+Currently the module has some simple routines to generate or set up an identity matrix
+(<a href="Linear.html#Identity_Matrix">Identity_Matrix</a> and <a href="Linear.html#Set_Matrix2Identity">Set_Matrix2Identity</a>), a simple, in-place matrix transpose routine
+(<a href="Linear.html#Transpose_Matrix">Transpose_Matrix</a>), and routines to generate or set up the product of two matrices and/or
+their transposes (<a href="Linear.html#Matrix_Multiply">Matrix_Multiply</a> and <a href="Linear.html#Set_Matrix2Product">Set_Matrix2Product</a>).  Finally, one can get an
+orthogonal rotation matrix that spans the same basis as a given subject array via a
+stable Gram-Schmidt process by calling <a href="Linear.html#Orthogonalize_Matrix">Orthogonalize_Matrix</a>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Identity_Matrix"></a><tr><td valign="baseline"><a href="Array.html#Double_Matrix">Double_Matrix</a> *</td>
+     <td valign="baseline">Identity_Matrix<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>n</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a square <I>n</I> x <I>n</I> identity matrix.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Matrix2Identity"></a><tr><td valign="baseline"><a href="Array.html#Double_Matrix">Double_Matrix</a> *</td>
+     <td valign="baseline">Set_Matrix2Identity (<a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>m</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Sets the square matrix <I>m</I> to the identity matrix of its size and as a convenience
+return a pointer to it.
+</p>
+  <h3 class="fn"><table>
+     <a name="Transpose_Matrix"></a><tr><td valign="baseline"><a href="Array.html#Double_Matrix">Double_Matrix</a> *</td>
+     <td valign="baseline">Transpose_Matrix (<a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>m</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Transposes the matrix <I>m</I> (not necessarily square) in place and as a convenience
+return a pointer to it.
+</p>
+  <h3 class="fn"><table>
+     <a name="Matrix_Multiply"></a><tr><td valign="baseline"><a href="Array.html#Double_Matrix">Double_Matrix</a> *</td>
+     <td valign="baseline">Matrix_Multiply<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>a</I>, boolean <I>ta</I>, <a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>b</I>, boolean <I>tb</I>)</td></tr>
+  </table></h3>
+<p>
+Generates the product of <I>a</I> and <I>b</I>.  If <I>ta</I> is true than use <I>a'</I> in lieu of <I>a</I>,
+and similarly if <I>tb</I> is true than use <I>b'</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Matrix2Product"></a><tr><td valign="baseline"><a href="Array.html#Double_Matrix">Double_Matrix</a> *</td>
+     <td valign="baseline">Set_Matrix2Product (<a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>c</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>a</I>, boolean <I>ta</I>, <a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>b</I>, boolean <I>tb</I>)</td></tr>
+  </table></h3>
+<p>
+Sets the matrix <I>c</I> to the product of <I>a</I> and <I>b</I> or their transposes as indicated by the
+boolean flags <I>ta</I> and <I>tb</I>.  The matrix <I>c</I> must already be of the correct shape to hold
+the product.
+</p>
+  <h3 class="fn"><table>
+     <a name="Orthogonalize_Matrix"></a><tr><td valign="baseline"><a href="Array.html#Double_Matrix">Double_Matrix</a> *</td>
+     <td valign="baseline">Orthogonalize_Matrix (<a href="Array.html#Double_Matrix">Double_Matrix</a> *<I>m</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Replace the square matrix <I>m</I> with an orthogonal rotation matrix that covers the same basis as
+<I>m</I>, and return a pointer to it as a convenience.
+The routine uses a "stable" version of Gram-Schmidt, which is not as stable as methods
+that use SVD (for which we do not have an implementation), so be cautious about the
+stability of the output matrix.
+</td></tr></table>
+</body>
+</html>

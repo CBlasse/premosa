@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: SVG Drawing Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">SVG Drawing Module Reference</h1>
+
+<p>
+A module for generating 2D SVG drawings displayable on the www and editable with Inkscape.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;svg.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Point"> SVG_Point </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#x"> x </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#y"> y </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Box"> SVG_Box </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#w"> w </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#h"> h </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Frame"> SVG_Frame </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#corner"> corner </a></b>
+     </td><td class="define" valign="baseline">: SVG_Point</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#window"> window </a></b>
+     </td><td class="define" valign="baseline">: SVG_Box</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Path"> SVG_Path </a></b>
+   </td><td class="define" valign="baseline">: void</td>
+</tr></table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Context"> SVG_Context </a></b>
+   </td><td class="define" valign="baseline">: void</td>
+</tr></table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Canvas"> SVG_Canvas </a></b>
+   </td><td class="define" valign="baseline">: void</td>
+</tr></table>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Color"> SVG_Color </a></b>
+     </td><td class="define" valign="baseline">: { SVG_alice_blue, SVG_antique_white, SVG_aqua, SVG_aquamarine, SVG_azure <br>&nbsp;&nbsp;&nbsp; SVG_beige, SVG_bisque, SVG_black, SVG_blanched_almond, SVG_blue, <br>&nbsp;&nbsp;&nbsp; SVG_blue_violet, SVG_brown, SVG_burly_wood, SVG_cadet_blue, SVG_chartreuse, <br>&nbsp;&nbsp;&nbsp; SVG_chocolate, SVG_coral, SVG_cornflower_blue, SVG_cornsilk, SVG_crimson, <br>&nbsp;&nbsp;&nbsp; SVG_Cyan, SVG_dark_blue, SVG_dark_cyan, SVG_dark_goldenrod, SVG_dark_gray, <br>&nbsp;&nbsp;&nbsp; SVG_dark_green, SVG_dark_grey, SVG_dark_khaki, SVG_dark_magenta, <br>&nbsp;&nbsp;&nbsp; SVG_dark_olive_green, SVG_dark_orange, SVG_dark_orchid, SVG_dark_red, <br>&nbsp;&nbsp;&nbsp; SVG_dark_salmon, SVG_dark_sea_green, SVG_dark_slate_blue, SVG_dark_slate_gray, <br>&nbsp;&nbsp;&nbsp; SVG_dark_slate_grey, SVG_dark_turquoise, SVG_dark_violet, SVG_deep_pink, <br>&nbsp;&nbsp;&nbsp; SVG_deep_sky_blue, SVG_dim_gray, SVG_dim_grey, SVG_dodger_blue, <br>&nbsp;&nbsp;&nbsp; SVG_fire_brick, SVG_floral_white, SVG_forest_green, SVG_fuchsia, SVG_gainsboro, <br>&nbsp;&nbsp;&nbsp; SVG_ghost_white, SVG_gold, SVG_goldenrod, SVG_gray, SVG_grey, SVG_green, <br>&nbsp;&nbsp;&nbsp; SVG_green_yellow, SVG_honey_dew, SVG_hot_pink, SVG_indian_red, SVG_indigo, <br>&nbsp;&nbsp;&nbsp; SVG_ivory, SVG_khaki, SVG_lavender, SVG_lavender_blush, SVG_lawn_green, <br>&nbsp;&nbsp;&nbsp; SVG_lemon_chiffon, SVG_light_blue, SVG_light_coral, SVG_light_cyan, <br>&nbsp;&nbsp;&nbsp; SVG_light_goldenrod_yellow, SVG_light_gray, SVG_light_green, SVG_light_grey, <br>&nbsp;&nbsp;&nbsp; SVG_light_pink, SVG_light_salmon, SVG_light_sea_green, SVG_light_sky_blue, <br>&nbsp;&nbsp;&nbsp; SVG_light_slate_gray, SVG_light_slate_grey, SVG_light_steel_blue, SVG_light_yellow, <br>&nbsp;&nbsp;&nbsp; SVG_lime, SVG_lime_green, SVG_linen, SVG_magenta, SVG_maroon, <br>&nbsp;&nbsp;&nbsp; SVG_medium_aquamarine, SVG_medium_blue, SVG_medium_orchid, <br>&nbsp;&nbsp;&nbsp; SVG_medium_purple, SVG_medium_sea_green, SVG_medium_slate_blue, <br>&nbsp;&nbsp;&nbsp; SVG_medium_spring_green, SVG_medium_turquoise, SVG_medium_violet_red, <br>&nbsp;&nbsp;&nbsp; SVG_midnight_blue, SVG_mint_cream, SVG_misty_rose, SVG_moccasin, <br>&nbsp;&nbsp;&nbsp; SVG_navajo_white, SVG_navy, SVG_old_lace, SVG_olive, SVG_olive_drab, <br>&nbsp;&nbsp;&nbsp; SVG_orange, SVG_orange_red, SVG_orchid, SVG_pale_goldenrod, SVG_pale_green, <br>&nbsp;&nbsp;&nbsp; SVG_pale_turquoise, SVG_pale_violet_red, SVG_papaya_whip, SVG_peach_puff, <br>&nbsp;&nbsp;&nbsp; SVG_peru, SVG_pink, SVG_plum, SVG_powder_blue, SVG_purple, SVG_red, <br>&nbsp;&nbsp;&nbsp; SVG_rosy_brown, SVG_royal_blue, SVG_saddle_brown, SVG_salmon, <br>&nbsp;&nbsp;&nbsp; SVG_sandy_brown, SVG_sea_green, SVG_sea_shell, SVG_sienna, SVG_silver, <br>&nbsp;&nbsp;&nbsp; SVG_sky_blue, SVG_slate_blue, SVG_slate_gray, SVG_slate_grey, SVG_snow, <br>&nbsp;&nbsp;&nbsp; SVG_spring_green, SVG_steel_blue, SVG_tan, SVG_teal, SVG_thistle, SVG_tomato, <br>&nbsp;&nbsp;&nbsp; SVG_turquoise, SVG_violet, SVG_wheat, SVG_white, SVG_white_smoke, SVG_yellow, <br>&nbsp;&nbsp;&nbsp; SVG_yellow_green }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Join"> SVG_Join </a></b>
+     </td><td class="define" valign="baseline">: { SVG_miter_join, SVG_round_join, SVG_bevel_join }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Cap"> SVG_Cap </a></b>
+     </td><td class="define" valign="baseline">: { SVG_butt_cap, SVG_round_cap, SVG_square_cap }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Arrow"> SVG_Arrow </a></b>
+     </td><td class="define" valign="baseline">: { SVG_no_arrow, SVG_line_arrow, SVG_flat_arrow, <br>&nbsp;&nbsp;&nbsp; SVG_plain_arrow, SVG_flint_arrow }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Font"> SVG_Font </a></b>
+     </td><td class="define" valign="baseline">: { SVG_serif, SVG_sans_serif, SVG_monospace, SVG_Arial, <br>&nbsp;&nbsp;&nbsp; SVG_Arial_Black, SVG_Book_Antiqua, SVG_Charcoal, SVG_Courier <br>&nbsp;&nbsp;&nbsp; SVG_Gadget,SVG_Geneva, SVG_Georgia, SVG_Helvetica, SVG_Impact, <br>&nbsp;&nbsp;&nbsp; SVG_Lucida_Console, SVG_Lucida_Grande, SVG_Monaco, SVG_Palatino <br>&nbsp;&nbsp;&nbsp; SVG_Tahoma, SVG_Times, SVG_Verdana }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Style"> SVG_Style </a></b>
+     </td><td class="define" valign="baseline">: { SVG_plain, SVG_italic, SVG_bold, SVG_bold_italic }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Align"> SVG_Align </a></b>
+     </td><td class="define" valign="baseline">: { SVG_left_align, SVG_center_align, SVG_right_align }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+</table>
+<p class="group"><i>Graphics State</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SVG_Context *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Make_SVG_Context">Make_SVG_Context</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">SVG_Context *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Set_To_Default_Context">Set_To_Default_Context</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SVG_Context *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Get_SVG_Context">Get_SVG_Context</a></b>
+     (SVG_Canvas *<I>canvas</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Set_SVG_Context">Set_SVG_Context</a></b>
+     (SVG_Canvas *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Set_Arrow_Context">Set_Arrow_Context</a></b>
+     (SVG_Canvas *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Stroke_Off">SVG_Stroke_Off</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Stroke_Color">SVG_Stroke_Color</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Color <I>color</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Stroke_RGB">SVG_Stroke_RGB</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>red</I>, int <I>green</I>, int <I>blue</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Stroke_Width">SVG_Stroke_Width</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>thick</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Stroke_Opacity">SVG_Stroke_Opacity</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>pcnt</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Join_Style">SVG_Join_Style</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Join <I>style</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Cap_Style">SVG_Cap_Style</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Cap <I>style</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Miter_Limit">SVG_Miter_Limit</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>limit</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Dash_Spec">SVG_Dash_Spec</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>offset</I>, int <I>n</I>, double *<I>dashlens</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Fill_Off">SVG_Fill_Off</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Fill_Color">SVG_Fill_Color</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Color <I>color</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Fill_RGB">SVG_Fill_RGB</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>red</I>, int <I>green</I>, int <I>blue</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Fill_Opacity">SVG_Fill_Opacity</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>pcnt</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Text_Font">SVG_Text_Font</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Font <I>font</I>, SVG_Style <I>style</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Custom_Font">SVG_Custom_Font</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>css_font</I>, SVG_Style <I>style</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Point_Size">SVG_Point_Size</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>size</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Text_Alignment">SVG_Text_Alignment</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Align <I>align</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Arrow_Mode">SVG_Arrow_Mode</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, boolean <I>bin</I>, SVG_Arrow <I>beg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>ein</I>, SVG_Arrow <I>end</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Arrow_Size">SVG_Arrow_Size</a></b>
+     (SVG_Context *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>width</I>, double <I>height</I>)</td></tr>
+</table>
+<p class="group"><i>2D Objects</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SVG_Point *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Make_SVG_Point">Make_SVG_Point</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>x</I>, double <I>y</I>)</td></tr>
+<tr><td class="return" valign="baseline">SVG_Box *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Make_SVG_Box">Make_SVG_Box</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>w</I>, double <I>h</I>)</td></tr>
+<tr><td class="return" valign="baseline">SVG_Frame *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Make_SVG_Frame">Make_SVG_Frame</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (SVG_Point *<I>corner</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, SVG_Box *<I>window</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SVG_Path *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Make_SVG_Path">Make_SVG_Path</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>)</td></tr>
+<tr><td class="return" valign="baseline">SVG_Path *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Append_Move">Append_Move</a></b>
+     (SVG_Path *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Point *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">SVG_Path *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Append_Line">Append_Line</a></b>
+     (SVG_Path *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Point *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">SVG_Path *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Append_Bezier">Append_Bezier</a></b>
+     (SVG_Path *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Point *<I>in</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SVG_Point *<I>out</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, SVG_Point *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">SVG_Path *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Append_Arc">Append_Arc</a></b>
+     (SVG_Path *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, SVG_Point *<I>rad</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, double <I>xrot</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>large_arc</I>, boolean <I>sweep</I>, SVG_Point *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">SVG_Path *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Append_Close">Append_Close</a></b>
+     (SVG_Path *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<p class="group"><i>Drawing</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SVG_Canvas *</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Begin_SVG_Drawing">Begin_SVG_Drawing</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (string <I>file_name</I>, SVG_Box *<I>viewport</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, SVG_Frame *<I>viewbox</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Finish_SVG_Drawing">Finish_SVG_Drawing</a></b>
+     (SVG_Canvas *<I>canvas</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#Draw_SVG_Path">Draw_SVG_Path</a></b>
+     (SVG_Canvas *<I>canvas</I>, SVG_Path *<I>path</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Rectangle">SVG_Rectangle</a></b>
+     (SVG_Canvas *<I>canvas</I>, SVG_Frame *<I>rectangle</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, double <I>round</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Ellipse">SVG_Ellipse</a></b>
+     (SVG_Canvas *<I>canvas</I>, SVG_Point *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SVG_Point *<I>radii</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, double <I>angle</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Circle">SVG_Circle</a></b>
+     (SVG_Canvas *<I>canvas</I>, SVG_Point *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, double <I>radius</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="SVG.html#SVG_Text">SVG_Text</a></b>
+     (SVG_Canvas *<I>canvas</I>, SVG_Point *<I>anchor</I>, double <I>angle</I>, string <I>text</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+SVG is a web-based standard for describing 2-dimensional graphics based on XML.
+This module allows one to generate an SVG drawing programmatically by way of a
+collection of routine calls that draw objects according to a <B>current graphics state</B>.
+</p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SVG_Point"></a>     <tr><td class="name" valign="top">SVG_Point</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>x</i></td><td class="define">: double</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>y</i></td><td class="define">: double</td></tr>
+    </table>
+  </h3>
+<p>
+A 2-dimensional real-valued point <I>(x,y)</I>.  A proper <B>mylib</B> object.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SVG_Box"></a>     <tr><td class="name" valign="top">SVG_Box</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>w</i></td><td class="define">: double</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>h</i></td><td class="define">: double</td></tr>
+    </table>
+  </h3>
+<p>
+A rectangular region of width <I>w</I> and height <I>h</I>.  A proper <B>mylib</B> object.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SVG_Frame"></a>     <tr><td class="name" valign="top">SVG_Frame</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>corner</i></td><td class="define">: <a href="SVG.html#SVG_Point">SVG_Point</a></td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>window</i></td><td class="define">: <a href="SVG.html#SVG_Box">SVG_Box</a></td></tr>
+    </table>
+  </h3>
+<p>
+The rectangular region <I>window</I> positioned so that its upper-left corner is at the point <I>corner</I>.
+A proper <B>mylib</B> object.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SVG_Path"></a>     <tr><td class="name" valign="top">SVG_Path</td>
+      <td class="define">: void</td></tr></table>
+  </h3>
+<p>
+A series of one or more continuous stroke objects that can be line segments, bezier curve segments,
+or elliptical arcs.  A proper <B>mylib</B> object.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SVG_Context"></a>     <tr><td class="name" valign="top">SVG_Context</td>
+      <td class="define">: void</td></tr></table>
+  </h3>
+<p>
+An object modeling a particular graphics state, i.e. a setting of stroke, fill, text drawing, and
+arrow attributes.  A proper <B>mylib</B> object.
+</p>
+<p>
+Precisely, a graphics state contains a specification of the following:
+<ol>
+<li>a stroke color, stroke thickness, and stroke opacity, and whether stroking is on or off.
+</li>
+<li>
+whether a join between two consecutive strokes is mitered, rounded, or beveled, and if
+mitered a limit on how far the miter will extend.
+</li>
+<li>
+whether the end or beginning of a stroke not connected to another is to be given a
+square, round, or butt cap.
+</li>
+<li>
+a specification of a dashing pattern for a stroke, or that there is none.
+</li>
+<li>
+a fill color and fill opacity, and whether filling is on or off.
+</li>
+<li>
+whether or not an open curve should have arrowheads at its beginning and end, the
+style and size and of the arrowheads, and the graphics context to be used when drawing them.
+</li>
+<li>
+a font type and style for text, the point size for the text, and its alignment relative to
+the anchor point with respect to which it is to be drawn.
+</li>
+</ol>
+</p>
+<p>
+The fill color and opacity only apply if a stroked object is closed (e.g. a rectangle or a
+path that is closed with a call to <I>Append_Close</I>.
+Text is actually stroked and if the outline is closed the symbol or symbol part is filled.
+If an object is both stroked and filled then the stroke takes precedence over any area that
+would be covered by the fill.  That is, when an object is filled but not stroked then the
+fill extends to the infintessimally thin border that defines the enclosed region, but when
+the object is stroked and filled, then the fill extends only to the boundary of the stroke
+that depends on the width of the stroke.  Extra care (and SVG commands) are required to
+acheive this effect which we believe should be the correct semantics of a simultaneously
+filled and stroked object.
+</p>
+<p>
+Arrowheads can either have NULL as their graphics context, in which case the current graphics
+context for the canvas is used to draw the arrow, or if they have had a graphics context assigned
+to them, said context is used.  Thus one can, for example, have arrows that are of a different
+color and opacity then that of the curve they delimit.  Moreover, arrows are carefully drawn
+so that their tip and tail both lie on the specified curve.  This is not the same as SVG
+marks which are simply oriented according to the tangent of the curve at its endpoints.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="SVG_Canvas"></a>     <tr><td class="name" valign="top">SVG_Canvas</td>
+      <td class="define">: void</td></tr></table>
+  </h3>
+<p>
+A drawing canvas corresponding to a .svg file under creation.  This is not a proper object, it
+can only be created by <a href="SVG.html#Begin_SVG_Drawing">Begin_SVG_Drawing</a>, then used until a drawing is complete, where upon
+it is killed and the drawing completed with a call to <a href="SVG.html#Finish_SVG_Drawing">Finish_SVG_Drawing</a>.  A canvas has its
+own graphics context or <a href="SVG.html#SVG_Context">SVG_Context</a> that is consulted when drawing objects onto the
+canvas.  One can have any number of canvases in existence at a given time.  The code is
+fully re-entrant.
+</p>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="SVG_Color"></a><tr><td valign="top">SVG_Color</td><td>: { SVG_alice_blue, SVG_antique_white, SVG_aqua, SVG_aquamarine, SVG_azure <br>&nbsp;&nbsp;&nbsp; SVG_beige, SVG_bisque, SVG_black, SVG_blanched_almond, SVG_blue, <br>&nbsp;&nbsp;&nbsp; SVG_blue_violet, SVG_brown, SVG_burly_wood, SVG_cadet_blue, SVG_chartreuse, <br>&nbsp;&nbsp;&nbsp; SVG_chocolate, SVG_coral, SVG_cornflower_blue, SVG_cornsilk, SVG_crimson, <br>&nbsp;&nbsp;&nbsp; SVG_Cyan, SVG_dark_blue, SVG_dark_cyan, SVG_dark_goldenrod, SVG_dark_gray, <br>&nbsp;&nbsp;&nbsp; SVG_dark_green, SVG_dark_grey, SVG_dark_khaki, SVG_dark_magenta, <br>&nbsp;&nbsp;&nbsp; SVG_dark_olive_green, SVG_dark_orange, SVG_dark_orchid, SVG_dark_red, <br>&nbsp;&nbsp;&nbsp; SVG_dark_salmon, SVG_dark_sea_green, SVG_dark_slate_blue, SVG_dark_slate_gray, <br>&nbsp;&nbsp;&nbsp; SVG_dark_slate_grey, SVG_dark_turquoise, SVG_dark_violet, SVG_deep_pink, <br>&nbsp;&nbsp;&nbsp; SVG_deep_sky_blue, SVG_dim_gray, SVG_dim_grey, SVG_dodger_blue, <br>&nbsp;&nbsp;&nbsp; SVG_fire_brick, SVG_floral_white, SVG_forest_green, SVG_fuchsia, SVG_gainsboro, <br>&nbsp;&nbsp;&nbsp; SVG_ghost_white, SVG_gold, SVG_goldenrod, SVG_gray, SVG_grey, SVG_green, <br>&nbsp;&nbsp;&nbsp; SVG_green_yellow, SVG_honey_dew, SVG_hot_pink, SVG_indian_red, SVG_indigo, <br>&nbsp;&nbsp;&nbsp; SVG_ivory, SVG_khaki, SVG_lavender, SVG_lavender_blush, SVG_lawn_green, <br>&nbsp;&nbsp;&nbsp; SVG_lemon_chiffon, SVG_light_blue, SVG_light_coral, SVG_light_cyan, <br>&nbsp;&nbsp;&nbsp; SVG_light_goldenrod_yellow, SVG_light_gray, SVG_light_green, SVG_light_grey, <br>&nbsp;&nbsp;&nbsp; SVG_light_pink, SVG_light_salmon, SVG_light_sea_green, SVG_light_sky_blue, <br>&nbsp;&nbsp;&nbsp; SVG_light_slate_gray, SVG_light_slate_grey, SVG_light_steel_blue, SVG_light_yellow, <br>&nbsp;&nbsp;&nbsp; SVG_lime, SVG_lime_green, SVG_linen, SVG_magenta, SVG_maroon, <br>&nbsp;&nbsp;&nbsp; SVG_medium_aquamarine, SVG_medium_blue, SVG_medium_orchid, <br>&nbsp;&nbsp;&nbsp; SVG_medium_purple, SVG_medium_sea_green, SVG_medium_slate_blue, <br>&nbsp;&nbsp;&nbsp; SVG_medium_spring_green, SVG_medium_turquoise, SVG_medium_violet_red, <br>&nbsp;&nbsp;&nbsp; SVG_midnight_blue, SVG_mint_cream, SVG_misty_rose, SVG_moccasin, <br>&nbsp;&nbsp;&nbsp; SVG_navajo_white, SVG_navy, SVG_old_lace, SVG_olive, SVG_olive_drab, <br>&nbsp;&nbsp;&nbsp; SVG_orange, SVG_orange_red, SVG_orchid, SVG_pale_goldenrod, SVG_pale_green, <br>&nbsp;&nbsp;&nbsp; SVG_pale_turquoise, SVG_pale_violet_red, SVG_papaya_whip, SVG_peach_puff, <br>&nbsp;&nbsp;&nbsp; SVG_peru, SVG_pink, SVG_plum, SVG_powder_blue, SVG_purple, SVG_red, <br>&nbsp;&nbsp;&nbsp; SVG_rosy_brown, SVG_royal_blue, SVG_saddle_brown, SVG_salmon, <br>&nbsp;&nbsp;&nbsp; SVG_sandy_brown, SVG_sea_green, SVG_sea_shell, SVG_sienna, SVG_silver, <br>&nbsp;&nbsp;&nbsp; SVG_sky_blue, SVG_slate_blue, SVG_slate_gray, SVG_slate_grey, SVG_snow, <br>&nbsp;&nbsp;&nbsp; SVG_spring_green, SVG_steel_blue, SVG_tan, SVG_teal, SVG_thistle, SVG_tomato, <br>&nbsp;&nbsp;&nbsp; SVG_turquoise, SVG_violet, SVG_wheat, SVG_white, SVG_white_smoke, SVG_yellow, <br>&nbsp;&nbsp;&nbsp; SVG_yellow_green }</td></tr>
+  </table></h3>
+<p>
+A list of 147 predefined, named colors.  The following two charts shows all of them:
+</p>
+<p class="center">
+<object align="center" data="Images/SVG.Colors.svg" type="image/svg+xml"></object>
+</p>
+  <h3 class="fn"><table>
+     <a name="SVG_Join"></a><tr><td valign="top">SVG_Join</td><td>: { SVG_miter_join, SVG_round_join, SVG_bevel_join }</td></tr>
+  </table></h3>
+<p>
+The shape of corners formed when paths or basic shapes change direction while being stroked.
+The picture below illustrates the three possibilities:
+</p>
+<p class="center">
+<object align="center" data="Images/SVG.Join.Styles.svg" type="image/svg+xml"></object>
+</p>
+  <h3 class="fn"><table>
+     <a name="SVG_Cap"></a><tr><td valign="top">SVG_Cap</td><td>: { SVG_butt_cap, SVG_round_cap, SVG_square_cap }</td></tr>
+  </table></h3>
+<p>
+The shape to be used at the end of open sub-paths when they are stroked.
+The picture below illustrates the three possibilities:
+</p>
+<p class="center">
+<object align="center" data="Images/SVG.Cap.Styles.svg" type="image/svg+xml"></object>
+</p>
+  <h3 class="fn"><table>
+     <a name="SVG_Arrow"></a><tr><td valign="top">SVG_Arrow</td><td>: { SVG_no_arrow, SVG_line_arrow, SVG_flat_arrow, <br>&nbsp;&nbsp;&nbsp; SVG_plain_arrow, SVG_flint_arrow }</td></tr>
+  </table></h3>
+<p>
+The type of arrow to be drawn (if any) at the end of open sub-paths.  The underlying
+path is not stroked in the area occupied by the arrows.  Arrows are drawn with
+respect to a special graphics context (see <a href="SVG.html#Set_Arrow_Context">Set_Arrow_Context</a>) that is part of each
+<a href="SVG.html#SVG_Canvas">SVG_Canvas</a>, unless it is NULL in which case the arrow is drawn with the same
+graphics context as the path.  The figure below shows the four types of arrows and
+their possible orientations at each end.  For each group, the leftmost arrow is drawn
+with the same context as the path (olive_drab, 7-width stroke, miter join, butt cap, and
+no fill).  The next
+arrow to the right has both the stroke and fill color set to blue_violet, 4-width stroke,
+bevel joins and square caps.  The next over has the same style as the previous except that
+it has red fill and both the join and cap styles are round.
+The rightmost arrow in each group is has the same style as the previous arrow except
+that the stroke opacity is .4 and the fill opacity is .6.
+</p>
+<p class="center">
+<object align="center" data="Images/SVG.Arrows.svg" type="image/svg+xml"></object>
+</p>
+  <h3 class="fn"><table>
+     <a name="SVG_Font"></a><tr><td valign="top">SVG_Font</td><td>: { SVG_serif, SVG_sans_serif, SVG_monospace, SVG_Arial, <br>&nbsp;&nbsp;&nbsp; SVG_Arial_Black, SVG_Book_Antiqua, SVG_Charcoal, SVG_Courier <br>&nbsp;&nbsp;&nbsp; SVG_Gadget,SVG_Geneva, SVG_Georgia, SVG_Helvetica, SVG_Impact, <br>&nbsp;&nbsp;&nbsp; SVG_Lucida_Console, SVG_Lucida_Grande, SVG_Monaco, SVG_Palatino <br>&nbsp;&nbsp;&nbsp; SVG_Tahoma, SVG_Times, SVG_Verdana }</td></tr>
+  </table></h3>
+<p>
+A number of named fonts are supported and shown below.
+</p>
+<p class="center">
+<object align="center" data="Images/SVG.Fonts.svg" type="image/svg+xml"></object>
+</p>
+  <h3 class="fn"><table>
+     <a name="SVG_Style"></a><tr><td valign="top">SVG_Style</td><td>: { SVG_plain, SVG_italic, SVG_bold, SVG_bold_italic }</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Align"></a><tr><td valign="top">SVG_Align</td><td>: { SVG_left_align, SVG_center_align, SVG_right_align }</td></tr>
+  </table></h3>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Make_SVG_Context"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Context">SVG_Context</a> *</td>
+     <td valign="baseline">Make_SVG_Context<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> ()</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Set_To_Default_Context"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Context">SVG_Context</a> *</td>
+     <td valign="baseline">Set_To_Default_Context (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Get_SVG_Context"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Context">SVG_Context</a> *</td>
+     <td valign="baseline">Get_SVG_Context (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Set_SVG_Context"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Set_SVG_Context (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Set_Arrow_Context"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Set_Arrow_Context (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Stroke_Off"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Stroke_Off (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Stroke_Color"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Stroke_Color (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Color">SVG_Color</a> <I>color</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Stroke_RGB"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Stroke_RGB (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>red</I>, int <I>green</I>, int <I>blue</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Stroke_Width"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Stroke_Width (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>thick</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Stroke_Opacity"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Stroke_Opacity (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>pcnt</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Join_Style"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Join_Style (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Join">SVG_Join</a> <I>style</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Cap_Style"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Cap_Style (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Cap">SVG_Cap</a> <I>style</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Miter_Limit"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Miter_Limit (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>limit</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Dash_Spec"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Dash_Spec (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>offset</I>, int <I>n</I>, double *<I>dashlens</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Fill_Off"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Fill_Off (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Fill_Color"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Fill_Color (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Color">SVG_Color</a> <I>color</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Fill_RGB"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Fill_RGB (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>red</I>, int <I>green</I>, int <I>blue</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Fill_Opacity"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Fill_Opacity (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>pcnt</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Text_Font"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Text_Font (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Font">SVG_Font</a> <I>font</I>, <a href="SVG.html#SVG_Style">SVG_Style</a> <I>style</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Custom_Font"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Custom_Font (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, string <I>css_font</I>, <a href="SVG.html#SVG_Style">SVG_Style</a> <I>style</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Point_Size"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Point_Size (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>size</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Text_Alignment"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Text_Alignment (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Align">SVG_Align</a> <I>align</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Arrow_Mode"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Arrow_Mode (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, boolean <I>bin</I>, <a href="SVG.html#SVG_Arrow">SVG_Arrow</a> <I>beg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>ein</I>, <a href="SVG.html#SVG_Arrow">SVG_Arrow</a> <I>end</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Arrow_Size"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Arrow_Size (<a href="SVG.html#SVG_Context">SVG_Context</a> *<I>context</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>width</I>, double <I>height</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Make_SVG_Point"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Point">SVG_Point</a> *</td>
+     <td valign="baseline">Make_SVG_Point<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>x</I>, double <I>y</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Make_SVG_Box"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Box">SVG_Box</a> *</td>
+     <td valign="baseline">Make_SVG_Box<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>w</I>, double <I>h</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Make_SVG_Frame"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Frame">SVG_Frame</a> *</td>
+     <td valign="baseline">Make_SVG_Frame<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="SVG.html#SVG_Point">SVG_Point</a> *<I>corner</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="SVG.html#SVG_Box">SVG_Box</a> *<I>window</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Make_SVG_Path"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Path">SVG_Path</a> *</td>
+     <td valign="baseline">Make_SVG_Path<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Append_Move"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Path">SVG_Path</a> *</td>
+     <td valign="baseline">Append_Move (<a href="SVG.html#SVG_Path">SVG_Path</a> *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Append_Line"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Path">SVG_Path</a> *</td>
+     <td valign="baseline">Append_Line (<a href="SVG.html#SVG_Path">SVG_Path</a> *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Append_Bezier"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Path">SVG_Path</a> *</td>
+     <td valign="baseline">Append_Bezier (<a href="SVG.html#SVG_Path">SVG_Path</a> *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>in</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>out</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Append_Arc"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Path">SVG_Path</a> *</td>
+     <td valign="baseline">Append_Arc (<a href="SVG.html#SVG_Path">SVG_Path</a> *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>rad</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>, double <I>xrot</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>large_arc</I>, boolean <I>sweep</I>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>pnt</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Append_Close"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Path">SVG_Path</a> *</td>
+     <td valign="baseline">Append_Close (<a href="SVG.html#SVG_Path">SVG_Path</a> *<I>path</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Begin_SVG_Drawing"></a><tr><td valign="baseline"><a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *</td>
+     <td valign="baseline">Begin_SVG_Drawing<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (string <I>file_name</I>, <a href="SVG.html#SVG_Box">SVG_Box</a> *<I>viewport</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <a href="SVG.html#SVG_Frame">SVG_Frame</a> *<I>viewbox</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Finish_SVG_Drawing"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Finish_SVG_Drawing (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="Draw_SVG_Path"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Draw_SVG_Path (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I>, <a href="SVG.html#SVG_Path">SVG_Path</a> *<I>path</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Rectangle"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Rectangle (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I>, <a href="SVG.html#SVG_Frame">SVG_Frame</a> *<I>rectangle</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, double <I>round</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Ellipse"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Ellipse (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SVG.html#SVG_Point">SVG_Point</a> *<I>radii</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, double <I>angle</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Circle"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Circle (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>center</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>, double <I>radius</I>)</td></tr>
+  </table></h3>
+  <h3 class="fn"><table>
+     <a name="SVG_Text"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">SVG_Text (<a href="SVG.html#SVG_Canvas">SVG_Canvas</a> *<I>canvas</I>, <a href="SVG.html#SVG_Point">SVG_Point</a> *<I>anchor</I>, double <I>angle</I>, string <I>text</I>)</td></tr>
+  </table></h3>
+</td></tr></table>
+</body>
+</html>

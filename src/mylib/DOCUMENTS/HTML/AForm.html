@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: AForm Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">AForm Class Reference</h1>
+
+<p>
+An Array, a Slice, or a Frame.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;array.h&gt;
+</pre>
+<hr />
+
+<a name="Enums"></a>
+<h2>Enumerated Scalars</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#Form_Class"> Form_Class </a></b>
+     </td><td class="define" valign="baseline">: { ARRAY_CLASS, SLICE_CLASS, FRAME_CLASS }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#AForm"> AForm </a></b>
+     </td><td class="define" valign="baseline">: union { Array; Slice; Frame }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="APart"></a>
+       <b><a href="AForm.html#APart"> APart </a></b>
+     </td><td class="define" valign="baseline">: union { Array; Slice }</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Form_Class</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#AForm_Class">AForm_Class</a></b>
+     (AForm *<I>form</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#Is_Slice">Is_Slice</a></b>
+     (AForm *<I>form</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#Is_Frame">Is_Frame</a></b>
+     (AForm *<I>form</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#Is_Array">Is_Array</a></b>
+     (AForm *<I>form</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#AForm_Array">AForm_Array</a></b>
+     (AForm *<I>form</I>)</td></tr>
+<tr><td class="return" valign="baseline">Size_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#AForm_Size">AForm_Size</a></b>
+     (AForm *<I>form</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array_Kind</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#AForm_Kind">AForm_Kind</a></b>
+     (AForm *<I>form</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#AForm_Shape">AForm_Shape</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (AForm *<I>form</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#Same_Shape">Same_Shape</a></b>
+     (AForm *<I>a</I>, AForm *<I>b</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="AForm.html#Same_Type">Same_Type</a></b>
+     (AForm *<I>a</I>, AForm *<I>b</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+<a href="Array.html">Array</a>s, <a href="Slice.html">Slice</a>s, and <a href="Frame.html">Frame</a>s are all "array-like" in that they represent an <I>n</I>-dimensional
+lattice of values of a given <a href="Array.html#type">type</a> and <a href="Array.html#scale">scale</a>, where the inner or outer dimension may have
+a special interpretation depending on the objects <a href="Array.html#kind">kind</a>.  An <a href="AForm.html">AForm</a> represents the union
+of these three types of objects, and this page describes the routines common to an <a href="AForm.html">AForm</a>
+object.
+</p>
+<p>
+Most routines in the <B>Mylib</B> library that take an <a href="Array.html">Array</a> as a read-only argument can
+equally well operate on a <a href="Slice.html">Slice</a> or <a href="Frame.html">Frame</a>, and indeed most routines in the library will accept
+an <a href="AForm.html">AForm</a> in such cases.  Other routines that only modify the elements of the array, but not
+the shape, type, scale, etc., can equally well take a Slice (but not a Frame as its window
+may not be withiin its underlying array), and so to distinguish that case, the <a href="AForm.html#APart">APart</a>
+type is the union of an <a href="Array.html">Array</a> and a <a href="Slice.html">Slice</a>.
+</p>
+<p>
+The are routines <a href="AForm.html#AForm_Class">AForm_Class</a>, <a href="AForm.html#Is_Slice">Is_Slice</a>, <a href="AForm.html#Is_Frame">Is_Frame</a>, and <a href="AForm.html#Is_Array">Is_Array</a> can all be used
+to distinguish which type of object an <a href="AForm.html">AForm</a> happens to be.  <a href="AForm.html#Same_Shape">Same_Shape</a> and <a href="AForm.html#Same_Type">Same_Type</a>
+determine if two array forms have the same shape and type.  The size, kind, and shape of
+an array form are returned by <a href="AForm.html#AForm_Size">AForm_Size</a>, <a href="AForm.html#AForm_Kind">AForm_Kind</a>, <a href="AForm.html#AForm_Shape">AForm_Shape</a>.  Lastly the
+underlying array for an array form is returned by <a href="AForm.html#AForm_Array">AForm_Array</a>.  If the array form is
+an <a href="Array.html">Array</a> then it is returned (as it is its own "underlying array").
+</p>
+<hr />
+
+<h2>Enumerated Scalars Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Form_Class"></a><tr><td valign="top">Form_Class</td><td>: { ARRAY_CLASS, SLICE_CLASS, FRAME_CLASS }</td></tr>
+  </table></h3>
+<p>
+The three "classes" of objects that an <a href="AForm.html">AForm</a> can be.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="AForm_Class"></a><tr><td valign="baseline"><a href="AForm.html#Form_Class">Form_Class</a></td>
+     <td valign="baseline">AForm_Class (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the <a href="AForm.html#Form_Class">Form_Class</a> value that identifies the class <I>form</I> belongs to.
+</p>
+  <h3 class="fn"><table>
+     <a name="Is_Slice"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Is_Slice (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only if <I>form</I> is a <a href="Slice.html">Slice</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Is_Frame"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Is_Frame (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only if <I>form</I> is a <a href="Frame.html">Frame</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Is_Array"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Is_Array (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only if <I>form</I> is an <a href="Array.html">Array</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="AForm_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">AForm_Array (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the underlying array of <I>form</I>.  For an array this is
+the array itself.
+</p>
+  <h3 class="fn"><table>
+     <a name="AForm_Size"></a><tr><td valign="baseline"><a href="Mylib.html#Size_Type">Size_Type</a></td>
+     <td valign="baseline">AForm_Size (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of elements in the shape of <I>form</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="AForm_Kind"></a><tr><td valign="baseline"><a href="Array.html#Array_Kind">Array_Kind</a></td>
+     <td valign="baseline">AForm_Kind (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Return the <a href="AForm.html#AForm_Class">AForm_Class</a> value that identifies which class of object <I>form</I> is.
+</p>
+  <h3 class="fn"><table>
+     <a name="AForm_Shape"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">AForm_Shape<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html">AForm</a> *<I>form</I>)</td></tr>
+  </table></h3>
+<p>
+Generate a coordinate that models the shape of the object <I>form</I>.  For frames notice
+that while the coordinate is the same as that returned by <a href="Frame.html#Frame_Shape">Frame_Shape</a>, there is the
+subtle difference that the later is <I>owned</I> by the <a href="Frame.html">Frame</a> whereas the result of this
+routine is a newly generated <a href="Array.html#Coordinate">Coordinate</a>, i.e. it is equivalent to
+<a href="Generic.html#Copy_X">Copy_Array</a>(<a href="Frame.html#Frame_Shape">Frame_Shape</a>(<i>form</i>)).
+</p>
+  <h3 class="fn"><table>
+     <a name="Same_Shape"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Same_Shape (<a href="AForm.html">AForm</a> *<I>a</I>, <a href="AForm.html">AForm</a> *<I>b</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only the shape of <I>a</I> and <I>b</I> are the same.
+</p>
+  <h3 class="fn"><table>
+     <a name="Same_Type"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Same_Type (<a href="AForm.html">AForm</a> *<I>a</I>, <a href="AForm.html">AForm</a> *<I>b</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only the shape and the type of <I>a</I> and <I>b</I> are the same.
+</td></tr></table>
+</body>
+</html>

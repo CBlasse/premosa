@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Frame Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Frame Class Reference</h1>
+
+<p>
+A hyper-rectangular region of interest that can be moved over an Array.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;array.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Frame *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Make_Frame">Make_Frame</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Array *<I>target</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, Coordinate *<I>shape</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>, Coordinate *<I>anchor</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Shape">Frame_Shape</a></b>
+     (Frame *<I>f</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Anchor">Frame_Anchor</a></b>
+     (Frame *<I>f</I>)</td></tr>
+<tr><td class="return" valign="baseline">Indx_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Index">Frame_Index</a></b>
+     (Frame *<I>f</I>)</td></tr>
+<tr><td class="return" valign="baseline">Coordinate *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Coordinate">Frame_Coordinate</a></b>
+     (Frame *<I>f</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Place_Frame">Place_Frame</a></b>
+     (Frame *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Indx_Type <I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Move_Frame_Forward">Move_Frame_Forward</a></b>
+     (Frame *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Move_Frame_Backward">Move_Frame_Backward</a></b>
+     (Frame *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Within_Array">Frame_Within_Array</a></b>
+     (Frame *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Values">Frame_Values</a></b>
+     (Frame *<I>f</I>)</td></tr>
+<tr><td class="return" valign="baseline">Offs_Type *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Offsets">Frame_Offsets</a></b>
+     (Frame *<I>f</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Make_Array_From_Frame">Make_Array_From_Frame</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Frame *<I>f</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Frame.html#Frame_Array">Frame_Array</a></b>
+     (Array_Bundle *<I>bundle</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, Frame *<I>f</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<a name="anchor"><a>
+<a name="window"><a>
+<p>
+A <a href="Frame.html">Frame</a> over an <I>n</I>-dimensional array is a specified <I>n</I>-dimensional hyper-rectangular <B>shape</B>
+that can have its <B>anchor</B> dynamically placed at a position within
+the array, where the frame's anchor is a specified point relative to the coordinate system
+of the shape.  The hyper-rectangle of the underlying array covered by the shape when anchored
+at a position, is called the frame's current <B>window</B>.  For example, if <I>A</I> is a 10x10x10 array,
+and <I>F</I> is a frame with a 4x4x4 shape and an anchor of (0,2,-2),
+then if <I>F</I> is placed is at coordinate (0,0,0) of <I>A</I>, its window is the sub-array
+<i>A[0..3][-2..1][2..5]</i>
+and if <I>F</I> is placed at coordinate (5,5,5) of <I>a</I>, then its window is the sub-array
+<i>A[5..8][3..6][7..10]</i>.
+Note carefully, that (a) the anchor need not be in the window's boundary, and (b) in both
+examples the window is not entirely within <I>A</I>.  Conceptually
+when a frame is placed at coordinate <I>c</I> within <I>A</I>, it is the anchor <I>an</I> that is being
+placed at that coordinate, and therefore the origin of the shape is being placed at
+<I>c</I>&minus;<I>an</I>.  When the window is not within the boundary of <I>A</I> then the
+<a class="ref" href="Mylib.html#current boundary effect">current boundary effect</a> is used to fill in the values outside of <I>A</I>'s boundary,
+so that a frame in any position is effectively an array of a given shape.
+The type and scale of a frame are that of its underlying array.  The kind of a frame
+is the same as its underlying array except that it is <I>PLAIN_KIND</I> if its window's
+outer dimension does not match that of an <I>RGB_KIND</I> or <I>RGBA_KIND</I> array, or if
+its window's innermost dimension does not match that of a <I>COMPLEX_KIND</I> array.
+This class has the full complement of conventional class primitives save that reading
+and writing are not available as a frame is intrinsically short lived.
+</p>
+<p>
+<a href="Frame.html">Frame</a>s, along with <a href="Array.html">Array</a>s and <a href="Slice.html">Slice</a>s, are considered <B>array forms</B> that are modeled
+in <B>Mylib</B> by the class <a href="AForm.html">AForm</a>.  These three separate classes all model a rectangular lattice of
+values in <I>n</I>-dimensions and hence many of the routines in the <B>Mylib</B> library operate on
+<a href="AForm.html">AForm</a>s as opposed to a specific one of the three types.  The major purpose of
+a frame is to allow a user to apply an operation or a routine to a small, dynamically-positioned
+rectangular sub-region of an array <I>and its implicit boundary</I> as determined by the
+<a class="ref" href="Mylib.html#current boundary effect">current boundary effect</a>.  A frame should never be too big.  Unlike a slice it consumes an
+amount of memory proportional to its shape's size!  In effect a frame is a smallish slice
+that can be moved around and need not be within the underlying array's boundary.
+As an example, one may want the entropy around every point in an array within a small region.
+To do so one can ask for the <a href="Histogram.html">Histogram</a> at each point within the frame's window and then ask
+for its entropy.  Suppose <I>A</I> is a <I>UINT8_TYPE</I> array, then the code below realizes the
+example:
+</p>
+<pre>
+ Frame     *f;
+ Histogram *h;
+ Indx_Type  p;
+ double     ent;
+
+ h = Make_Histogram(UVAL,256,VALU(1),VALU(0));
+ f = Make_Frame(A,Coord3(5,5,5),Coord3(2,2,2));
+ Place_Frame(f,0);
+ for (p = 0; p < A->size; p++)
+   { Histagain_Array(h,f,0);
+     ent = Histogram_Entropy(h);
+     //  ... do something with ent = the entropy in a 5x5x5 shape about p
+     Move_Frame_Forward(f);
+   }
+ Free_Frame(f);
+ Free_Histogram(h);
+</pre>
+<p>
+As another example,
+the <a href="Frame.html">Frame</a> class was used to realize the <a href="Convolver.html">Convolver</a> class that performs brute-force convolutions
+of a region with a specified filter of the same shape.
+</p>
+<a name="current position"><a>
+<p>
+A <a href="Frame.html">Frame</a> maintains a <B>current position</B> that is an index into its underlying array along with
+auxiliary information so that one can efficiently more the frame forward and backward across
+the elements of an array.  While the window of a frame need not lie in the array, its current
+position must be an index inside the range of the array.
+</p>
+<p>
+A frame is created with <a href="Frame.html#Make_Frame">Make_Frame</a>, and its shape, anchor, current position/index, and
+coordinate (int the underlying array) for the current position can be retrieved with
+<a href="Frame.html#Frame_Shape">Frame_Shape</a>, <a href="Frame.html#Frame_Anchor">Frame_Anchor</a>, <a href="Frame.html#Frame_Index">Frame_Index</a>, and <a href="Frame.html#Frame_Coordinate">Frame_Coordinate</a>.  Note that a frame is
+an opaque object, i.e. unlike say an <a href="Array.html">Array</a>, you cannot directly access any of its fields.
+</p>
+<p>
+As mentioned previously a frame is an <a href="AForm.html">AForm</a> and as such it is guaranteed to have
+an underlying array, kind, size, and shape which can be fetched with
+<a href="AForm.html#AForm_Array">AForm_Array</a>, <a href="AForm.html#AForm_Kind">AForm_Kind</a>, <a href="AForm.html#AForm_Kind">AForm_Kind</a>, and <a href="AForm.html#AForm_Shape">AForm_Shape</a>.  Moreover, you
+can ask if an array form is a slice via <a href="AForm.html#AForm_Class">AForm_Class</a> or <a href="AForm.html#Is_Slice">Is_Slice</a>.
+</p>
+<p>
+One can set the current position, increase it by 1, decrease it by 1, and ask if the
+window for the current position lies entirely within the boundaries of the underlying
+array with <a href="Frame.html#Place_Frame">Place_Frame</a>, <a href="Frame.html#Move_Frame_Forward">Move_Frame_Forward</a>, <a href="Frame.html#Move_Frame_Backward">Move_Frame_Backward</a>, and <a href="Frame.html#Frame_Within_Array">Frame_Within_Array</a>.
+All the routines are O(1) expected time except for <a href="Frame.html#Place_Frame">Place_Frame</a> which take time proportional
+to the dimensionality of the frame.
+</p>
+<p>
+While many routines in <B>Mylib</B> operate directly on a frame, there will be occasions where
+one needs to work directly with the values in the current window in order to compute something
+not realized in the library.
+There are two ways to get the values in the current window of a frame.  The simplist
+is to call <a href="Frame.html#Frame_Values">Frame_Values</a> that returns a
+<tt>void</tt>
+pointer to a vector holding the elements of the window.  For example, the code fragment
+below computes the sum of the elements in the window of a frame <I>F</I> whose underlying array
+is of <I>INT32_TYPE</I>
+</p>
+<pre>
+ int i, sum, *data;
+
+ sum  = 0;
+ data = (int32 *) Frame_Values(F);
+ for (i = 0; i < AForm_Size(F); i++)
+   sum += data[i];
+ //  sum = the sum of the values in F's current window
+</pre>
+<p>
+Note that the number of elements in the window is obtained with <a href="AForm.html#AForm_Size">AForm_Size</a>(F).  While
+not important for the example above, the elements of the current window are laid out in
+<I>data</I> exactly as if the window were a small array.
+</p>
+<p>
+While <a href="Frame.html#Frame_Values">Frame_Values</a> above is as efficient as it can be, it has to compute boundary elements
+when the current window is not within the underlying array and it has to fill a vector
+holding all the current window's elements.  Hence it takes time proportional to the size of
+the window.
+To attain more efficiency, please note that when the frame's window is completely within
+the array then the elements of the window are all in the array at a fixed offsets from the
+current position.
+The key is that the offsets are the same, regardless of the movement or position of the
+frame.  <a href="Frame.html#Frame_Offsets">Frame_Offsets</a> returns a pointer to this pre-computed offset vector for any given
+frame.  The vector of offsets depends on the shape of the window and the shape of the underlying
+array, but it is computed once when the frame is created, and thereafter remains fixed.
+So a much more efficient template for computing the sum in the example would be:
+</p>
+<a name="example"><a>
+<pre>
+  Offs_Type *offs = Frame_Offsets(F);
+
+  sum = 0;
+  if (Frame_Within_Array(F))
+    { data = (int *) AINT32(AForm_Array(F))) + Frame_Index(F);
+      for (i = 0; i < AForm_Size(F); i++)
+        sum += data[offs[i]];
+    }
+  else
+    { data = (int32 *) Frame_Values(F);
+      for (i = 0; i < AForm_Size(F); i++)
+        sum += data[i];
+    }
+</pre>
+<p>
+The efficiency is due to (a) the fact that most of the time, a frame is completely inside
+its array (e.g. for a 512 x 512 x 512 array and a 11 x 11 x 11 window with an anchor in its
+center, if you place the frame at every position in the array, then the window is not inside
+the array only .216% of the time), and (b) only O(1) time is spent getting ready for the summation
+loop in the case the window is in the frame, whereas, when <a href="Frame.html#Frame_Values">Frame_Values</a> is called it has
+to compute boundary elements as well as fill in a vector of size <a href="AForm.html#AForm_Size">AForm_Size</a>(F).
+The trade off is that twice as much code is required, so employing this optimization depends on
+how critical the time for a computation is.  All the routines in <B>Mylib</B> that compute on
+<a href="AForm.html">AForm</a>s optimize their handling of <a href="Frame.html">Frame</a>s in this way.
+</p>
+<p>
+Finally, one can create an <a href="Array.html">Array</a>, say <I>A</I>, that has the shape and values of the current window
+of a frame with <a href="Frame.html#Make_Array_From_Frame">Make_Array_From_Frame</a>.  <a href="Frame.html#Frame_Array">Frame_Array</a> fills in the <a href="Array.html#Array_Bundle">Array_Bundle</a> passed to
+it so that it is functionally equivalent to <I>A</I>, albeit the bundle can only be used in a read
+only fashion and is invalid as soon as any change is made to the frame.  The <a href="Array.html#data">data</a> field
+of the returned bundle points at the vector returned by a call to <a href="Frame.html#Frame_Values">Frame_Values</a>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Make_Frame"></a><tr><td valign="baseline"><a href="Frame.html">Frame</a> *</td>
+     <td valign="baseline">Make_Frame<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html">Array</a> *<I>target</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>shape</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>, <a href="Array.html#Coordinate">Coordinate</a> *<I>anchor</I> <sup><b><font color="#00AA55" title="This object is *S*ubsumed by the created result">S</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Creates a frame object given a target array <I>target</I> and the coordinates <I>shape</I> and <I>anchor</I>
+defining the window shape and anchor point of the frame.
+If the underlying array is <I>RGB_KIND</I>, <I>RGBA_KIND</I>, or <I>COMPLEX_KIND</I>, then one is free to
+specify only a <a class="ref" href="Array.html#core shape">core shape</a> for <I>shape</I> and a <a class="ref" href="Array.html#core coordinate">core coordinate</a> for <I>anchor</I> in which case
+the width of the special dimension is assumed for the shape, and 0 is assumed for the anchor.
+<B>NB:</B> A reference to <I>target</I> is created and held by the frame so that <I>target</I> cannot disappear
+until the frame does.  Also, the <a href="Array.html#Coordinate">Coordinate</a>s <I>shape</I> and <I>anchor</I> are <I>subsumed</I> by this
+routine, meaning that they must have a reference count of 1 upon entry and that those
+references will be taken over by the frame object being created.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Shape"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Frame_Shape (<a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the shape <a href="Array.html#Coordinate">Coordinate</a> (<I>shape</I> in <a href="Frame.html#Make_Frame">Make_Frame</a>) of the frame <I>f</I>.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Anchor"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Frame_Anchor (<a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the anchor point <a href="Array.html#Coordinate">Coordinate</a> (<I>anchor</I> in <a href="Frame.html#Make_Frame">Make_Frame</a>) of the frame <I>f</I>.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Index"></a><tr><td valign="baseline"><a href="Mylib.html#Indx_Type">Indx_Type</a></td>
+     <td valign="baseline">Frame_Index (<a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return the current index or position of frame <I>f</I> which is an index into the <a href="Array.html#data">data</a> vector of <I>f</I>'s
+underlying array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Coordinate"></a><tr><td valign="baseline"><a href="Array.html#Coordinate">Coordinate</a> *</td>
+     <td valign="baseline">Frame_Coordinate (<a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return the <a href="Array.html#Coordinate">Coordinate</a> corresponding to the current index or position of frame <I>f</I> which is an
+index into the <a href="Array.html#data">data</a> vector of <I>f</I>'s underlying array.
+This is not a reference, one should not free or kill this pointer.
+</p>
+  <h3 class="fn"><table>
+     <a name="Place_Frame"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Place_Frame (<a href="Frame.html">Frame</a> *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Set frame <I>f</I>'s current index or position within its underlying array to <I>idx</I> and returns true
+if the frame's window is entirely with its array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Move_Frame_Forward"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Move_Frame_Forward (<a href="Frame.html">Frame</a> *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Increase frame <I>f</I>'s current index or position by 1 and return true if the frame's window is
+entirely within its array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Move_Frame_Backward"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Move_Frame_Backward (<a href="Frame.html">Frame</a> *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Decrease frame <I>f</I>'s current index or position by 1 and return true if the frame's window is
+entirely within its array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Within_Array"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Frame_Within_Array (<a href="Frame.html">Frame</a> *<I>f</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only if the frame's window is currently entirely within the underlying
+array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Values"></a><tr><td valign="baseline">void *</td>
+     <td valign="baseline">Frame_Values (<a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return an untyped pointer to a vector that contains the values of the current window of <I>f</I>.
+The vector belongs to the frame and is reused by it as needed.  The values in the vector
+are only good until the next call to Frame_Values.  The number of elements in the vector
+is equal to the size of the shape of <I>f</I>, i.e. <a href="AForm.html#AForm_Size">AForm_Size</a>(f), and the order of elements
+is the same as if the window were an array and this was its <a href="Array.html#data">data</a> vector.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Offsets"></a><tr><td valign="baseline"><a href="Mylib.html#Offs_Type">Offs_Type</a> *</td>
+     <td valign="baseline">Frame_Offsets (<a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Return a vector of offsets relative to the current position of all the elements in the
+underlying array.   This vector is computed once upon creation of the <I>f</I> and all this routine
+does is return a pointer to it.  The offsets only make sense when the window is inside the
+boundary of the array.  Please see the <a class="ref" href="Frame.html#example">example</a> in the detailed description above for how
+this vector of offsets can be used to realize efficient computations over frames.
+The number of elements in the vector
+is equal to the size of the shape of <I>f</I>, i.e. <a href="AForm.html#AForm_Size">AForm_Size</a>(f), and the order of offsets
+is the same as if the window were an array and this was its <a href="Array.html#data">data</a> vector.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Array_From_Frame"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Make_Array_From_Frame<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Generate an array whose shape and value is that modeled by the current window of the
+frame <I>f</I>.  The array has the kind (as returned by <a href="AForm.html#AForm_Kind">AForm_Kind</a>), type, and scale
+of the frame.
+</p>
+  <h3 class="fn"><table>
+     <a name="Frame_Array"></a><tr><td valign="baseline"><a href="Array.html#Array_Bundle">Array_Bundle</a> *</td>
+     <td valign="baseline">Frame_Array (<a href="Array.html#Array_Bundle">Array_Bundle</a> *<I>bundle</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <a href="Frame.html">Frame</a> *<I>f</I>)</td></tr>
+  </table></h3>
+<p>
+Fill in <I>bundle</I> so that it is functionally equivalent to the array returned by
+<a href="Frame.html#Make_Array_From_Frame">Make_Array_From_Frame</a>.  The bundle can only be used in read only contexts and
+is invalid as soon as any change is made to <I>f</I>.  The <a href="Array.html#data">data</a> field
+of the returned bundle points at the vector returned by a call to <a href="Frame.html#Frame_Values">Frame_Values</a>.
+</td></tr></table>
+</body>
+</html>

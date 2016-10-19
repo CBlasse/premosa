@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by mylib 1.0 -->
+
+<svg
+   xmlns:mylib="http://www.mylib.org/mylib1.0"
+   xmlns="http://www.w3.org/2000/svg"
+   width="8.2in"
+   height="30in"
+   viewBox="0 0 820 3000"
+   preserveAspectRatio="none"
+   version="1.1">
+<rect x="5" y="5" width="810" height="2990"
+ stroke="#0000ff" stroke-width="2" fill="none" />
+<rect x="5" y="5" width="400" height="2990"
+ stroke="#0000ff" stroke-width="2" fill="none" />
+<rect x="20" y="20" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f0f8ff" />
+<text x="58" y="43" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    alice blue
+</text>
+<rect x="420" y="20" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#faebd7" />
+<text x="458" y="43" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    antique white
+</text>
+<rect x="20" y="60" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00ffff" />
+<text x="58" y="83" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    aqua
+</text>
+<rect x="420" y="60" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#7fffd4" />
+<text x="458" y="83" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    aquamarine
+</text>
+<rect x="20" y="100" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f0ffff" />
+<text x="58" y="123" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    azure
+</text>
+<rect x="420" y="100" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f5f5dc" />
+<text x="458" y="123" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    beige
+</text>
+<rect x="20" y="140" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffe4c4" />
+<text x="58" y="163" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    bisque
+</text>
+<rect x="420" y="140" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#000000" />
+<text x="458" y="163" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    black
+</text>
+<rect x="20" y="180" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffebcd" />
+<text x="58" y="203" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    blanched almond
+</text>
+<rect x="420" y="180" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#0000ff" />
+<text x="458" y="203" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    blue
+</text>
+<rect x="20" y="220" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#8a2be2" />
+<text x="58" y="243" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    blue violet
+</text>
+<rect x="420" y="220" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#a52a2a" />
+<text x="458" y="243" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    brown
+</text>
+<rect x="20" y="260" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#deb887" />
+<text x="58" y="283" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    burly wood
+</text>
+<rect x="420" y="260" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#5f9ea0" />
+<text x="458" y="283" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    cadet blue
+</text>
+<rect x="20" y="300" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#7fff00" />
+<text x="58" y="323" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    chartreuse
+</text>
+<rect x="420" y="300" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#d2691e" />
+<text x="458" y="323" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    chocolate
+</text>
+<rect x="20" y="340" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff7f50" />
+<text x="58" y="363" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    coral
+</text>
+<rect x="420" y="340" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#6495ed" />
+<text x="458" y="363" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    cornflower blue
+</text>
+<rect x="20" y="380" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fff8dc" />
+<text x="58" y="403" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    cornsilk
+</text>
+<rect x="420" y="380" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#dc143c" />
+<text x="458" y="403" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    crimson
+</text>
+<rect x="20" y="420" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00ffff" />
+<text x="58" y="443" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    cyan
+</text>
+<rect x="420" y="420" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00008b" />
+<text x="458" y="443" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark blue
+</text>
+<rect x="20" y="460" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#008b8b" />
+<text x="58" y="483" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark cyan
+</text>
+<rect x="420" y="460" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#b8860b" />
+<text x="458" y="483" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark goldenrod
+</text>
+<rect x="20" y="500" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#a9a9a9" />
+<text x="58" y="523" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark gray
+</text>
+<rect x="420" y="500" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#006400" />
+<text x="458" y="523" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark green
+</text>
+<rect x="20" y="540" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#a9a9a9" />
+<text x="58" y="563" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark grey
+</text>
+<rect x="420" y="540" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#bdb76b" />
+<text x="458" y="563" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark khaki
+</text>
+<rect x="20" y="580" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#8b008b" />
+<text x="58" y="603" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark magenta
+</text>
+<rect x="420" y="580" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#556b2f" />
+<text x="458" y="603" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark olive green
+</text>
+<rect x="20" y="620" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff8c00" />
+<text x="58" y="643" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark orange
+</text>
+<rect x="420" y="620" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#9932cc" />
+<text x="458" y="643" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark orchid
+</text>
+<rect x="20" y="660" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#8b0000" />
+<text x="58" y="683" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark red
+</text>
+<rect x="420" y="660" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#e9967a" />
+<text x="458" y="683" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark salmon
+</text>
+<rect x="20" y="700" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#8fbc8f" />
+<text x="58" y="723" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark sea green
+</text>
+<rect x="420" y="700" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#483d8b" />
+<text x="458" y="723" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark slate blue
+</text>
+<rect x="20" y="740" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#2f4f4f" />
+<text x="58" y="763" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark slate gray
+</text>
+<rect x="420" y="740" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#2f4f4f" />
+<text x="458" y="763" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark slate grey
+</text>
+<rect x="20" y="780" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00ced1" />
+<text x="58" y="803" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark turquoise
+</text>
+<rect x="420" y="780" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#9400d3" />
+<text x="458" y="803" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dark violet
+</text>
+<rect x="20" y="820" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff1493" />
+<text x="58" y="843" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    deep pink
+</text>
+<rect x="420" y="820" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00bfff" />
+<text x="458" y="843" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    deep sky blue
+</text>
+<rect x="20" y="860" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#696969" />
+<text x="58" y="883" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dim gray
+</text>
+<rect x="420" y="860" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#696969" />
+<text x="458" y="883" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dim grey
+</text>
+<rect x="20" y="900" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#1e90ff" />
+<text x="58" y="923" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    dodger blue
+</text>
+<rect x="420" y="900" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#b22222" />
+<text x="458" y="923" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    fire brick
+</text>
+<rect x="20" y="940" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fffaf0" />
+<text x="58" y="963" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    floral white
+</text>
+<rect x="420" y="940" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#228b22" />
+<text x="458" y="963" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    forest green
+</text>
+<rect x="20" y="980" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff00ff" />
+<text x="58" y="1003" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    fuchsia
+</text>
+<rect x="420" y="980" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#dcdcdc" />
+<text x="458" y="1003" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    gainsboro
+</text>
+<rect x="20" y="1020" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f8f8ff" />
+<text x="58" y="1043" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    ghost white
+</text>
+<rect x="420" y="1020" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffd700" />
+<text x="458" y="1043" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    gold
+</text>
+<rect x="20" y="1060" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#daa520" />
+<text x="58" y="1083" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    goldenrod
+</text>
+<rect x="420" y="1060" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#808080" />
+<text x="458" y="1083" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    gray
+</text>
+<rect x="20" y="1100" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#808080" />
+<text x="58" y="1123" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    grey
+</text>
+<rect x="420" y="1100" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#008000" />
+<text x="458" y="1123" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    green
+</text>
+<rect x="20" y="1140" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#adff2f" />
+<text x="58" y="1163" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    green yellow
+</text>
+<rect x="420" y="1140" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f0fff0" />
+<text x="458" y="1163" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    honey dew
+</text>
+<rect x="20" y="1180" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff69b4" />
+<text x="58" y="1203" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    hot pink
+</text>
+<rect x="420" y="1180" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#cd5c5c" />
+<text x="458" y="1203" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    indian red
+</text>
+<rect x="20" y="1220" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#4b0082" />
+<text x="58" y="1243" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    indigo
+</text>
+<rect x="420" y="1220" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fffff0" />
+<text x="458" y="1243" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    ivory
+</text>
+<rect x="20" y="1260" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f0e68c" />
+<text x="58" y="1283" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    khaki
+</text>
+<rect x="420" y="1260" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#e6e6fa" />
+<text x="458" y="1283" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    lavender
+</text>
+<rect x="20" y="1300" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fff0f5" />
+<text x="58" y="1323" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    lavender blush
+</text>
+<rect x="420" y="1300" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#7cfc00" />
+<text x="458" y="1323" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    lawn green
+</text>
+<rect x="20" y="1340" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fffacd" />
+<text x="58" y="1363" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    lemon chiffon
+</text>
+<rect x="420" y="1340" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#add8e6" />
+<text x="458" y="1363" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light blue
+</text>
+<rect x="20" y="1380" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f08080" />
+<text x="58" y="1403" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light coral
+</text>
+<rect x="420" y="1380" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#e0ffff" />
+<text x="458" y="1403" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light cyan
+</text>
+<rect x="20" y="1420" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fafad2" />
+<text x="58" y="1443" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light goldenrod yellow
+</text>
+<rect x="420" y="1420" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#d3d3d3" />
+<text x="458" y="1443" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light gray
+</text>
+<rect x="20" y="1460" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#90ee90" />
+<text x="58" y="1483" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light green
+</text>
+<rect x="420" y="1460" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#d3d3d3" />
+<text x="458" y="1483" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light grey
+</text>
+<rect x="20" y="1500" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffb6c1" />
+<text x="58" y="1523" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light pink
+</text>
+<rect x="420" y="1500" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffa07a" />
+<text x="458" y="1523" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light salmon
+</text>
+<rect x="20" y="1540" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#20b2aa" />
+<text x="58" y="1563" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light sea green
+</text>
+<rect x="420" y="1540" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#87cefa" />
+<text x="458" y="1563" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light sky blue
+</text>
+<rect x="20" y="1580" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#778899" />
+<text x="58" y="1603" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light slate gray
+</text>
+<rect x="420" y="1580" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#778899" />
+<text x="458" y="1603" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light slate grey
+</text>
+<rect x="20" y="1620" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#b0c4de" />
+<text x="58" y="1643" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light steel blue
+</text>
+<rect x="420" y="1620" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffffe0" />
+<text x="458" y="1643" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    light yellow
+</text>
+<rect x="20" y="1660" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00ff00" />
+<text x="58" y="1683" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    lime
+</text>
+<rect x="420" y="1660" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#32cd32" />
+<text x="458" y="1683" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    lime green
+</text>
+<rect x="20" y="1700" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#faf0e6" />
+<text x="58" y="1723" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    linen
+</text>
+<rect x="420" y="1700" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff00ff" />
+<text x="458" y="1723" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    magenta
+</text>
+<rect x="20" y="1740" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#800000" />
+<text x="58" y="1763" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    maroon
+</text>
+<rect x="420" y="1740" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#66cdaa" />
+<text x="458" y="1763" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium aquamarine
+</text>
+<rect x="20" y="1780" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#0000cd" />
+<text x="58" y="1803" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium blue
+</text>
+<rect x="420" y="1780" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ba55d3" />
+<text x="458" y="1803" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium orchid
+</text>
+<rect x="20" y="1820" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#9370db" />
+<text x="58" y="1843" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium purple
+</text>
+<rect x="420" y="1820" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#3cb371" />
+<text x="458" y="1843" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium sea green
+</text>
+<rect x="20" y="1860" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#7b68ee" />
+<text x="58" y="1883" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium slate blue
+</text>
+<rect x="420" y="1860" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00fa9a" />
+<text x="458" y="1883" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium spring green
+</text>
+<rect x="20" y="1900" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#48d1cc" />
+<text x="58" y="1923" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium turquoise
+</text>
+<rect x="420" y="1900" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#c71585" />
+<text x="458" y="1923" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    medium violet red
+</text>
+<rect x="20" y="1940" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#191970" />
+<text x="58" y="1963" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    midnight blue
+</text>
+<rect x="420" y="1940" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f5fffa" />
+<text x="458" y="1963" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    mint cream
+</text>
+<rect x="20" y="1980" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffe4e1" />
+<text x="58" y="2003" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    misty rose
+</text>
+<rect x="420" y="1980" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffe4b5" />
+<text x="458" y="2003" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    moccasin
+</text>
+<rect x="20" y="2020" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffdead" />
+<text x="58" y="2043" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    navajo white
+</text>
+<rect x="420" y="2020" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#000080" />
+<text x="458" y="2043" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    navy
+</text>
+<rect x="20" y="2060" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fdf5e6" />
+<text x="58" y="2083" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    old lace
+</text>
+<rect x="420" y="2060" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#808000" />
+<text x="458" y="2083" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    olive
+</text>
+<rect x="20" y="2100" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#6b8e23" />
+<text x="58" y="2123" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    olive drab
+</text>
+<rect x="420" y="2100" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffa500" />
+<text x="458" y="2123" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    orange
+</text>
+<rect x="20" y="2140" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff4500" />
+<text x="58" y="2163" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    orange red
+</text>
+<rect x="420" y="2140" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#da70d6" />
+<text x="458" y="2163" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    orchid
+</text>
+<rect x="20" y="2180" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#eee8aa" />
+<text x="58" y="2203" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    pale goldenrod
+</text>
+<rect x="420" y="2180" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#98fb98" />
+<text x="458" y="2203" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    pale green
+</text>
+<rect x="20" y="2220" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#afeeee" />
+<text x="58" y="2243" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    pale turquoise
+</text>
+<rect x="420" y="2220" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#db7093" />
+<text x="458" y="2243" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    pale violet red
+</text>
+<rect x="20" y="2260" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffefd5" />
+<text x="58" y="2283" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    papaya whip
+</text>
+<rect x="420" y="2260" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffdab9" />
+<text x="458" y="2283" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    peach puff
+</text>
+<rect x="20" y="2300" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#cd853f" />
+<text x="58" y="2323" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    peru
+</text>
+<rect x="420" y="2300" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffc0cb" />
+<text x="458" y="2323" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    pink
+</text>
+<rect x="20" y="2340" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#dda0dd" />
+<text x="58" y="2363" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    plum
+</text>
+<rect x="420" y="2340" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#b0e0e6" />
+<text x="458" y="2363" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    powder blue
+</text>
+<rect x="20" y="2380" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#800080" />
+<text x="58" y="2403" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    purple
+</text>
+<rect x="420" y="2380" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff0000" />
+<text x="458" y="2403" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    red
+</text>
+<rect x="20" y="2420" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#bc8f8f" />
+<text x="58" y="2443" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    rosy brown
+</text>
+<rect x="420" y="2420" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#4169e1" />
+<text x="458" y="2443" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    royal blue
+</text>
+<rect x="20" y="2460" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#8b4513" />
+<text x="58" y="2483" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    saddle brown
+</text>
+<rect x="420" y="2460" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fa8072" />
+<text x="458" y="2483" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    salmon
+</text>
+<rect x="20" y="2500" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f4a460" />
+<text x="58" y="2523" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    sandy brown
+</text>
+<rect x="420" y="2500" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#2e8b57" />
+<text x="458" y="2523" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    sea green
+</text>
+<rect x="20" y="2540" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fff5ee" />
+<text x="58" y="2563" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    sea shell
+</text>
+<rect x="420" y="2540" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#a0522d" />
+<text x="458" y="2563" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    sienna
+</text>
+<rect x="20" y="2580" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#c0c0c0" />
+<text x="58" y="2603" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    silver
+</text>
+<rect x="420" y="2580" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#87ceeb" />
+<text x="458" y="2603" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    sky blue
+</text>
+<rect x="20" y="2620" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#6a5acd" />
+<text x="58" y="2643" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    slate blue
+</text>
+<rect x="420" y="2620" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#708090" />
+<text x="458" y="2643" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    slate gray
+</text>
+<rect x="20" y="2660" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#708090" />
+<text x="58" y="2683" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    slate grey
+</text>
+<rect x="420" y="2660" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#fffafa" />
+<text x="458" y="2683" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    snow
+</text>
+<rect x="20" y="2700" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#00ff7f" />
+<text x="58" y="2723" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    spring green
+</text>
+<rect x="420" y="2700" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#4682b4" />
+<text x="458" y="2723" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    steel blue
+</text>
+<rect x="20" y="2740" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#d2b48c" />
+<text x="58" y="2763" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    tan
+</text>
+<rect x="420" y="2740" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#008080" />
+<text x="458" y="2763" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    teal
+</text>
+<rect x="20" y="2780" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#d8bfd8" />
+<text x="58" y="2803" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    thistle
+</text>
+<rect x="420" y="2780" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ff6347" />
+<text x="458" y="2803" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    tomato
+</text>
+<rect x="20" y="2820" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#40e0d0" />
+<text x="58" y="2843" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    turquoise
+</text>
+<rect x="420" y="2820" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ee82ee" />
+<text x="458" y="2843" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    violet
+</text>
+<rect x="20" y="2860" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f5deb3" />
+<text x="58" y="2883" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    wheat
+</text>
+<rect x="420" y="2860" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffffff" />
+<text x="458" y="2883" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    white
+</text>
+<rect x="20" y="2900" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#f5f5f5" />
+<text x="58" y="2923" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    white smoke
+</text>
+<rect x="420" y="2900" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#ffff00" />
+<text x="458" y="2923" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    yellow
+</text>
+<rect x="20" y="2940" width="30" height="30" rx="5" ry="5"
+ stroke="#000000" stroke-width="2" fill="#9acd32" />
+<text x="58" y="2963" font-family="sans-serif" font-size="18" stroke="none" fill="#000000">
+    yellow green
+</text>
+<text x="385" y="43" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(240,248,255)
+</text>
+<text x="800" y="43" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(250,235,215)
+</text>
+<text x="385" y="83" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,255,255)
+</text>
+<text x="800" y="83" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(127,255,212)
+</text>
+<text x="385" y="123" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(240,255,255)
+</text>
+<text x="800" y="123" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(245,245,220)
+</text>
+<text x="385" y="163" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,228,196)
+</text>
+<text x="800" y="163" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,0,0)
+</text>
+<text x="385" y="203" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,235,205)
+</text>
+<text x="800" y="203" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,0,255)
+</text>
+<text x="385" y="243" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(138,43,226)
+</text>
+<text x="800" y="243" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(165,42,42)
+</text>
+<text x="385" y="283" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(222,184,135)
+</text>
+<text x="800" y="283" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(95,158,160)
+</text>
+<text x="385" y="323" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(127,255,0)
+</text>
+<text x="800" y="323" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(210,105,30)
+</text>
+<text x="385" y="363" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,127,80)
+</text>
+<text x="800" y="363" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(100,149,237)
+</text>
+<text x="385" y="403" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,248,220)
+</text>
+<text x="800" y="403" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(220,20,60)
+</text>
+<text x="385" y="443" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,255,255)
+</text>
+<text x="800" y="443" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,0,139)
+</text>
+<text x="385" y="483" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,139,139)
+</text>
+<text x="800" y="483" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(184,134,11)
+</text>
+<text x="385" y="523" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(169,169,169)
+</text>
+<text x="800" y="523" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,100,0)
+</text>
+<text x="385" y="563" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(169,169,169)
+</text>
+<text x="800" y="563" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(189,183,107)
+</text>
+<text x="385" y="603" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(139,0,139)
+</text>
+<text x="800" y="603" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(85,107,47)
+</text>
+<text x="385" y="643" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,140,0)
+</text>
+<text x="800" y="643" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(153,50,204)
+</text>
+<text x="385" y="683" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(139,0,0)
+</text>
+<text x="800" y="683" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(233,150,122)
+</text>
+<text x="385" y="723" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(143,188,143)
+</text>
+<text x="800" y="723" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(72,61,139)
+</text>
+<text x="385" y="763" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(47,79,79)
+</text>
+<text x="800" y="763" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(47,79,79)
+</text>
+<text x="385" y="803" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,206,209)
+</text>
+<text x="800" y="803" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(148,0,211)
+</text>
+<text x="385" y="843" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,20,147)
+</text>
+<text x="800" y="843" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,191,255)
+</text>
+<text x="385" y="883" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(105,105,105)
+</text>
+<text x="800" y="883" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(105,105,105)
+</text>
+<text x="385" y="923" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(30,144,255)
+</text>
+<text x="800" y="923" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(178,34,34)
+</text>
+<text x="385" y="963" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,250,240)
+</text>
+<text x="800" y="963" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(34,139,34)
+</text>
+<text x="385" y="1003" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,0,255)
+</text>
+<text x="800" y="1003" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(220,220,220)
+</text>
+<text x="385" y="1043" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(248,248,255)
+</text>
+<text x="800" y="1043" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,215,0)
+</text>
+<text x="385" y="1083" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(218,165,32)
+</text>
+<text x="800" y="1083" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(128,128,128)
+</text>
+<text x="385" y="1123" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(128,128,128)
+</text>
+<text x="800" y="1123" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,128,0)
+</text>
+<text x="385" y="1163" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(173,255,47)
+</text>
+<text x="800" y="1163" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(240,255,240)
+</text>
+<text x="385" y="1203" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,105,180)
+</text>
+<text x="800" y="1203" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(205,92,92)
+</text>
+<text x="385" y="1243" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(75,0,130)
+</text>
+<text x="800" y="1243" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,255,240)
+</text>
+<text x="385" y="1283" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(240,230,140)
+</text>
+<text x="800" y="1283" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(230,230,250)
+</text>
+<text x="385" y="1323" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,240,245)
+</text>
+<text x="800" y="1323" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(124,252,0)
+</text>
+<text x="385" y="1363" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,250,205)
+</text>
+<text x="800" y="1363" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(173,216,230)
+</text>
+<text x="385" y="1403" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(240,128,128)
+</text>
+<text x="800" y="1403" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(224,255,255)
+</text>
+<text x="385" y="1443" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(250,250,210)
+</text>
+<text x="800" y="1443" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(211,211,211)
+</text>
+<text x="385" y="1483" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(144,238,144)
+</text>
+<text x="800" y="1483" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(211,211,211)
+</text>
+<text x="385" y="1523" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,182,193)
+</text>
+<text x="800" y="1523" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,160,122)
+</text>
+<text x="385" y="1563" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(32,178,170)
+</text>
+<text x="800" y="1563" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(135,206,250)
+</text>
+<text x="385" y="1603" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(119,136,153)
+</text>
+<text x="800" y="1603" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(119,136,153)
+</text>
+<text x="385" y="1643" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(176,196,222)
+</text>
+<text x="800" y="1643" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,255,224)
+</text>
+<text x="385" y="1683" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,255,0)
+</text>
+<text x="800" y="1683" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(50,205,50)
+</text>
+<text x="385" y="1723" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(250,240,230)
+</text>
+<text x="800" y="1723" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,0,255)
+</text>
+<text x="385" y="1763" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(128,0,0)
+</text>
+<text x="800" y="1763" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(102,205,170)
+</text>
+<text x="385" y="1803" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,0,205)
+</text>
+<text x="800" y="1803" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(186,85,211)
+</text>
+<text x="385" y="1843" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(147,112,219)
+</text>
+<text x="800" y="1843" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(60,179,113)
+</text>
+<text x="385" y="1883" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(123,104,238)
+</text>
+<text x="800" y="1883" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,250,154)
+</text>
+<text x="385" y="1923" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(72,209,204)
+</text>
+<text x="800" y="1923" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(199,21,133)
+</text>
+<text x="385" y="1963" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(25,25,112)
+</text>
+<text x="800" y="1963" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(245,255,250)
+</text>
+<text x="385" y="2003" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,228,225)
+</text>
+<text x="800" y="2003" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,228,181)
+</text>
+<text x="385" y="2043" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,222,173)
+</text>
+<text x="800" y="2043" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,0,128)
+</text>
+<text x="385" y="2083" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(253,245,230)
+</text>
+<text x="800" y="2083" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(128,128,0)
+</text>
+<text x="385" y="2123" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(107,142,35)
+</text>
+<text x="800" y="2123" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,165,0)
+</text>
+<text x="385" y="2163" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,69,0)
+</text>
+<text x="800" y="2163" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(218,112,214)
+</text>
+<text x="385" y="2203" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(238,232,170)
+</text>
+<text x="800" y="2203" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(152,251,152)
+</text>
+<text x="385" y="2243" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(175,238,238)
+</text>
+<text x="800" y="2243" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(219,112,147)
+</text>
+<text x="385" y="2283" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,239,213)
+</text>
+<text x="800" y="2283" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,218,185)
+</text>
+<text x="385" y="2323" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(205,133,63)
+</text>
+<text x="800" y="2323" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,192,203)
+</text>
+<text x="385" y="2363" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(221,160,221)
+</text>
+<text x="800" y="2363" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(176,224,230)
+</text>
+<text x="385" y="2403" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(128,0,128)
+</text>
+<text x="800" y="2403" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,0,0)
+</text>
+<text x="385" y="2443" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(188,143,143)
+</text>
+<text x="800" y="2443" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(65,105,225)
+</text>
+<text x="385" y="2483" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(139,69,19)
+</text>
+<text x="800" y="2483" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(250,128,114)
+</text>
+<text x="385" y="2523" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(244,164,96)
+</text>
+<text x="800" y="2523" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(46,139,87)
+</text>
+<text x="385" y="2563" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,245,238)
+</text>
+<text x="800" y="2563" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(160,82,45)
+</text>
+<text x="385" y="2603" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(192,192,192)
+</text>
+<text x="800" y="2603" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(135,206,235)
+</text>
+<text x="385" y="2643" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(106,90,205)
+</text>
+<text x="800" y="2643" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(112,128,144)
+</text>
+<text x="385" y="2683" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(112,128,144)
+</text>
+<text x="800" y="2683" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,250,250)
+</text>
+<text x="385" y="2723" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,255,127)
+</text>
+<text x="800" y="2723" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(70,130,180)
+</text>
+<text x="385" y="2763" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(210,180,140)
+</text>
+<text x="800" y="2763" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(0,128,128)
+</text>
+<text x="385" y="2803" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(216,191,216)
+</text>
+<text x="800" y="2803" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,99,71)
+</text>
+<text x="385" y="2843" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(64,224,208)
+</text>
+<text x="800" y="2843" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(238,130,238)
+</text>
+<text x="385" y="2883" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(245,222,179)
+</text>
+<text x="800" y="2883" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,255,255)
+</text>
+<text x="385" y="2923" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(245,245,245)
+</text>
+<text x="800" y="2923" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(255,255,0)
+</text>
+<text x="385" y="2963" font-family="sans-serif" font-size="18" font-style="italic" text-anchor="end" stroke="none" fill="#00008b">
+    rgb(154,205,50)
+</text>
+</svg>

@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -fPIC -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/tiffRGB.dir/app.color.c.o CMakeFiles/tiffRGB.dir/utilities.c.o  -o tiffRGB  libmytiff.a 

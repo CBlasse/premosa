@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: CDF Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">CDF Class Reference</h1>
+
+<p>
+Generators for random variables from different common distributions.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;cdf.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#erand">erand</a></b>
+     (uint64 *<I>state</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">uint64</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#eseed">eseed</a></b>
+     (uint32 <I>seedval</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#drand">drand</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#dseed">dseed</a></b>
+     (uint32 <I>seedval</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Normal_CDF">Normal_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>mean</I>, double <I>stdev</I>)</td></tr>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Exponential_CDF">Exponential_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Poisson_CDF">Poisson_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>a</I>)</td></tr>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Geometric_CDF">Geometric_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Uniform_CDF">Uniform_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (double <I>low</I>, double <I>hgh</I>)</td></tr>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Binomial_CDF">Binomial_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, double <I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#FairCoin_CDF">FairCoin_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>)</td></tr>
+<tr><td class="return" valign="baseline">CDF *</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Bernouilli_CDF">Bernouilli_CDF</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>n</I>, double *<I>weight</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Sample_CDF">Sample_CDF</a></b>
+     (CDF *<I>cdf</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Seed_CDF">Seed_CDF</a></b>
+     (CDF *<I>cdf</I>, uint32 <I>seedval</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Link_CDF">Link_CDF</a></b>
+     (CDF *<I>ref</I>, CDF *<I>cdf</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="CDF.html#Unlink_CDF">Unlink_CDF</a></b>
+     (CDF *<I>cdf</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+<B>Mylib</B> uses its own version of the popular UNIX <I>drand48</I> suite.  In our
+realization, a random number generator's <B>state</B> is modelled by a single <I>uint64</I> integer.
+Given a particular state, <a href="CDF.html#erand">erand</a> generates a uniform psuedo-random number in the interval
+[0.,1.) and advances the supplied <I>state</I>.  <a href="CDF.html#eseed">eseed</a> produces a state with respect a 32-bit integer
+seed value -- typically, this is the processor id number if one wants every run of a program
+to produce a different pseudo-random sequence of numbers.  <a href="CDF.html#drand">drand</a> and <a href="CDF.html#dseed">dseed</a> are versions
+of <a href="CDF.html#erand">erand</a> and <a href="CDF.html#eseed">eseed</a> that consult a global private state.  They are both thread-safe.
+</p>
+<p>
+A <a href="CDF.html">CDF</a> object is a random number generator that will produce a pseudo-random sequence of
+numbers from a distribution that is specified when it is created.  One can create CDF's
+that generate numbers from normal, exponential, Poisson, geometric, uniform, binomial,
+and Bernouilli distributions with the generators: <a href="CDF.html#Normal_CDF">Normal_CDF</a>, <a href="CDF.html#Exponential_CDF">Exponential_CDF</a>,
+<a href="CDF.html#Poisson_CDF">Poisson_CDF</a>, <a href="CDF.html#Geometric_CDF">Geometric_CDF</a>, <a href="CDF.html#Uniform_CDF">Uniform_CDF</a>, <a href="CDF.html#Binomial_CDF">Binomial_CDF</a>, and <a href="CDF.html#Bernouilli_CDF">Bernouilli_CDF</a>.
+<a href="CDF.html#FairCoin_CDF">FairCoin_CDF</a> generates an equal-weight Bernouilli distribution.  Once a <a href="CDF.html">CDF</a> has been
+created, successive pseudo-random numbers can be drawn from it with successive calls
+to <a href="CDF.html#Sample_CDF">Sample_CDF</a>.
+</p>
+<p>
+Each <a href="CDF.html">CDF</a> object normally keeps its own state, so that its pseudo-random sequence is
+independent of other CDF objects.  This state can be seeded (just as for <a href="CDF.html#eseed">eseed</a>) by
+calling <a href="CDF.html#Seed_CDF">Seed_CDF</a>.  However, one may not want this semantics for a number of reasons.
+For example, two <a href="CDF.html">CDF</a> objects for the same distribution with the same parameters will
+generate exactly the same pseudo-random sequence.  To prevent this, one can call
+<I><a href="CDF.html#Link_CDF">Link_CDF</a>(a,b)</I> that will result in <I>b</I> sharing the same state as <I>a</I>, which can
+already be sharing state with other CDFs.  The situation is completely flexible, in
+that at a later time, one can decouple <I>b</I> and return it to using its own private state
+by calling <I><a href="CDF.html#Unlink_CDF">Unlink_CDF</a>(b)</I>.
+</p>
+<p>
+If a CDF is written to a file, then its current state is also recorded and re-established
+when it is subsequently read in.  However, if it was sharing this state when written, it
+will be given a private state when read in.  It is the user's responsibility to re-establish
+any sharing that was taking place.
+</p>
+<p>
+A simple schema for having all CDFs share the same state is as follows:
+</p>
+<pre>
+  CDF *master = FairCoin_CDF(1);   //  Won't use this CDF, just used as an aggregator
+
+  CDF *a = X_CDF(...);
+    Link_CDF(master,a);
+  CDF *b = Y_CDF(...);
+    Link_CDF(master,b);
+  CDF *c = Z_CDF(...);
+    Link_CDF(master,c);
+  ...
+</pre>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="erand"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">erand (uint64 *<I>state</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Advances the supplied <I>state</I> and returns the next
+pseudo-random number uniformily distributed in [0.,1.) determined by <I>state</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="eseed"></a><tr><td valign="baseline">uint64</td>
+     <td valign="baseline">eseed (uint32 <I>seedval</I>)</td></tr>
+  </table></h3>
+<p>
+Returns a generator state value derived from the supplied 32-bit integer.
+</p>
+  <h3 class="fn"><table>
+     <a name="drand"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">drand ()</td></tr>
+  </table></h3>
+<p>
+Identical to <a href="CDF.html#erand">erand</a> save that a global private state variable is used.  The routine
+is thread-safe.
+</p>
+  <h3 class="fn"><table>
+     <a name="dseed"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">dseed (uint32 <I>seedval</I>)</td></tr>
+  </table></h3>
+<p>
+Sets the private state variable of <a href="CDF.html#drand">drand</a> to the value returned by calling <I><a href="CDF.html#eseed">eseed</a>(seedval)</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Normal_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">Normal_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>mean</I>, double <I>stdev</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models a normal distribution with mean <I>mean</I> and standard
+deviation <I>stdev</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Exponential_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">Exponential_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>a</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models an exponential distribution with arrival rate <I>a &gt; 0</I>.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Pr(X = k) = a<sup>k</sup>e<sup>-a</sup>/k!</i> &nbsp;&nbsp;&nbsp;&nbsp; for <i>k &ge; 0</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="Poisson_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">Poisson_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>a</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models a Poisson distribution with arrival rate <I>a &gt; 0</I>.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Pr(X &le; x) = 1-e<sup>-ax</sup></i> &nbsp;&nbsp;&nbsp;&nbsp; for <i>x &ge; 0</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="Geometric_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">Geometric_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models a geometric distribution where the probability of an
+event is <I>p</I>.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Pr(X = k) = (1-p)<sup>k-1</sup>p</i> &nbsp;&nbsp;&nbsp;&nbsp; for <i>k &ge; 1</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="Uniform_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">Uniform_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (double <I>low</I>, double <I>hgh</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models a uniform distribution over the interval <I>[low,hgh]</I>.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Pr(X &le; x) = (x-low)/(hgh-low)</i> &nbsp;&nbsp;&nbsp;&nbsp; for <i>x &isin; [low,hgh]</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="Binomial_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">Binomial_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, double <I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models a discrete Binomial distribution for <I>n</I> events
+each with probability <I>p</I>.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Pr(X = k) = (n choose k)p<sup>k</sup>(1-p)<sup>n-k</sup></i> &nbsp;&nbsp;&nbsp;&nbsp; for <i>k &isin; [0,n]</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="FairCoin_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">FairCoin_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models a discrete Bernouilli distribution where each integer between
+1 and <I>n</I> occurs with equal probability.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Pr(X = k) = 1/n</i> &nbsp;&nbsp;&nbsp;&nbsp; for <i>k &isin; [1,n]</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="Bernouilli_CDF"></a><tr><td valign="baseline"><a href="CDF.html">CDF</a> *</td>
+     <td valign="baseline">Bernouilli_CDF<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>n</I>, double *<I>weight</I>)</td></tr>
+  </table></h3>
+<p>
+Create a <a href="CDF.html">CDF</a> object that models a Bernouilli distribution of <I>n</I> outcomes each weighted
+according to <I>weight</I>.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Pr(X = k) = weight[k-1] &nbsp; / &nbsp; &Sigma;<sub>j</sub> weight[j]</i> &nbsp;&nbsp;&nbsp;&nbsp; for <i>k &isin; [1,n]</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="Sample_CDF"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Sample_CDF (<a href="CDF.html">CDF</a> *<I>cdf</I>)</td></tr>
+  </table></h3>
+<p>
+Returns a pseudo-random number distributed according to <I>cdf</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Seed_CDF"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Seed_CDF (<a href="CDF.html">CDF</a> *<I>cdf</I>, uint32 <I>seedval</I>)</td></tr>
+  </table></h3>
+<p>
+Each <a href="CDF.html">CDF</a> has its own state variable for random number generation.  Calling this routine
+is equivalent to seeding its state with the result of calling <I><a href="CDF.html#eseed">eseed</a>(seedval)</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Link_CDF"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Link_CDF (<a href="CDF.html">CDF</a> *<I>ref</I>, <a href="CDF.html">CDF</a> *<I>cdf</I>)</td></tr>
+  </table></h3>
+<p>
+Alter <I>cdf</I> so that it will share the state variable being used by the CDF <I>ref</I> (and
+any other CDFs with which it is linked).  <I>cdf</I> must not be sharing its state with any
+other CDF when the call is made.
+</p>
+  <h3 class="fn"><table>
+     <a name="Unlink_CDF"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Unlink_CDF (<a href="CDF.html">CDF</a> *<I>cdf</I>)</td></tr>
+  </table></h3>
+<p>
+Alter <I>cdf</I> so that it has its own private state variable for random number generation.
+If it was sharing with other CDFs, then the private state variable will be initialized
+to have the value of this shared state variable.
+</td></tr></table>
+</body>
+</html>

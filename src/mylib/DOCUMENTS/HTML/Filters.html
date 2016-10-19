@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Filters Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Filters Module Reference</h1>
+
+<p>
+Efficient routines for filtering images with common filters.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;filters.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Filter_Dimension">Filter_Dimension</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Double_Vector *<I>filter</I>, int <I>dim</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Average_Dimension">Average_Dimension</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Sum_Dimension">Sum_Dimension</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Square_Dimension">Square_Dimension</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Min_Dimension">Min_Dimension</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Max_Dimension">Max_Dimension</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Filter_Array">Filter_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Double_Vector *<I>filter</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Filter_Array_List">Filter_Array_List</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Double_Vector **<I>filters</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Average_Array">Average_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Sum_Array">Sum_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Variance_Array">Variance_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Min_Array">Min_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Max_Array">Max_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#LOG_Array">LOG_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>sigma</I>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#DOG_Array">DOG_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>sigma1</I>, double <I>sigma2</I>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#DOB_Array">DOB_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius1</I>, int <I>radius2</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#ALOG_Array">ALOG_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double *<I>sigma</I>, int *<I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#ADOG_Array">ADOG_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double *<I>sigma1</I>, double *<I>sigma2</I>, int *<I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#ADOB_Array">ADOB_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int *<I>radius1</I>, int *<I>radius2</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Median_Array">Median_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Filters.html#Order_Array">Order_Array</a></b>
+     (Array *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>rank</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+Many common filters such as applying a Gaussian or min/max filter can be performed
+very efficiently when one considers applying the filter to an entire array, as opposed
+to individual pixel locations (see the <a href="Convolver.html">Convolver</a> class).  This module contains efficient
+routines for computing common preprocessing filters on an entire array.
+</p>
+<p>
+Please note carefully that the routines work directly on the array in question performing
+their operations in-place, and perforce saving intermediate results in the type and precision
+of the array.  This implies that for integer type arrays that involve intermediate steps,
+say performing separable convolution along each dimension, that rounding occurs at each stage
+and this can accumulate leading to somewhat perturbed over those values that might normally
+be expected.  For example, an average operation on an <I>n</I>-dimensional, integer array could be off
+by as much as <I>n</I> in the worst case.  If this behavior is undesirable then you should either
+convert the image to a floating-point type before operating upon it, or if space is at a
+premium, then you can use a less efficient <a href="Convolver.html">Convolver</a> to perform the operations.
+</p>
+<p>
+<a href="Filters.html#Average_Array">Average_Array</a> replaces each pixel with the average of the pixels in a window of a specified
+radius about the pixel in total time <I>O(vn)</I> where <I>v</I> is the size of the array and <I>n</I> is its
+dimensionality.
+</p>
+<p>
+<a href="Filters.html#Sum_Array">Sum_Array</a> replaces each pixel with the sum of the pixels in a window of a specified
+radius about the pixel in total time <I>O(vn)</I> where <I>v</I> is the size of the array and <I>n</I> is its
+dimensionality.
+</p>
+<p>
+<a href="Filters.html#Variance_Array">Variance_Array</a> replaces each pixel with the variance of the pixels in a window of a specified
+radius about the pixel in total time <I>O(vn)</I> and requires a single copy of the array temporarily
+during its operation.
+</p>
+<p>
+<a href="Filters.html#Min_Array">Min_Array</a> and <a href="Filters.html#Max_Array">Max_Array</a> replace each pixel with the min/max of the pixels in a window of a
+specified radius about the pixel in total time <I>O(vn)</I>.  One should note that the operators
+are equivalent to the dilate and erode morphological operators on grey-scale images.
+</p>
+<p>
+<a href="Filters.html#LOG_Array">LOG_Array</a> and <a href="Filters.html#ALOG_Array">ALOG_Array</a> apply a Laplacian of Gaussian (LOG) filter to pixels where
+a single standard deviation and support are applied in every dimension by <a href="Filters.html#LOG_Array">LOG_Array</a> and
+inidividual standard deviations and supports are supplied to <a href="Filters.html#ALOG_Array">ALOG_Array</a>.  The filtration
+takes place in <I>O(vn<sup>2</sup>r)</I> time where <I>r</I> is the radius or support of the filter,
+and requires 2 extra copies of the array during its operation.
+(See also <a href="Convolver.html#LOG_Filter">LOG_Filter</a> and <a href="Convolver.html#ALOG_Filter">ALOG_Filter</a>).
+</p>
+<p>
+<a href="Filters.html#DOG_Array">DOG_Array</a> and <a href="Filters.html#ADOG_Array">ADOG_Array</a> apply a difference of Gaussian (DOG) filter to pixels where
+a single standard deviation and support are applied in every dimension by <a href="Filters.html#DOG_Array">DOG_Array</a> and
+inidividual standard deviations and supports are supplied to <a href="Filters.html#ADOG_Array">ADOG_Array</a>.  The filtration
+takes place in <I>O(vnr)</I> time where <I>r</I> is the radius or support of the filter, and
+requies an extra copy of the array during its operation.
+(See also <a href="Convolver.html#DOG_Filter">DOG_Filter</a> and <a href="Convolver.html#ADOG_Filter">ADOG_Filter</a>).
+</p>
+<p>
+<a href="Filters.html#DOB_Array">DOB_Array</a> and <a href="Filters.html#ADOB_Array">ADOB_Array</a> apply a difference of boxes (DOB) filter to pixels where
+a single pair of radii are applied in every dimension by <a href="Filters.html#DOB_Array">DOB_Array</a> and
+inidividual radii pairs are supplied to <a href="Filters.html#ADOB_Array">ADOB_Array</a>.  The filtration
+takes place in <I>O(vn)</I> time.
+(See also <a href="Convolver.html#DOB_Filter">DOB_Filter</a> and <a href="Convolver.html#ADOB_Filter">ADOB_Filter</a>).
+</p>
+<p>
+<a href="Filters.html#Median_Array">Median_Array</a> replaces each pixel with the median value of the pixels in a window of a
+specified radius about the pixel in total time <I>O(vr <sup>n</sup>)</I>.  More generally,
+one can request the <I>k<sup>th</sup></I> largest element with <a href="Filters.html#Order_Array">Order_Array</a>.
+</p>
+<p>
+For separable filters, such as a Gaussian, the routine <a href="Filters.html#Filter_Array">Filter_Array</a> applies a given
+1-dimensional filter to each dimension in turn, and <a href="Filters.html#Filter_Array_List">Filter_Array_List</a> applies a distinct
+1-dimensional filter to each dimension in turn.  Even greater granularity is possible
+with <a href="Filters.html#Filter_Dimension">Filter_Dimension</a> that applies a given 1-dimensional filter along a particular
+dimension of an array.  For example:
+</p>
+<pre>
+ Array *AGaussian_Array(Array *image, double *sigma, int *radii)
+ { int i;
+   for (i = 0; i < n; i++)
+     Filter_Array_Dimension(image,Gaussian_Filter(sigma[i],radii[i]),i);
+   return (image);
+ }
+</pre>
+<p>
+One can also apply an average filter, a square filter, or a min/max filter in just a
+given dimension with the routines <a href="Filters.html#Average_Dimension">Average_Dimension</a>, <a href="Filters.html#Sum_Dimension">Sum_Dimension</a>, <a href="Filters.html#Square_Dimension">Square_Dimension</a>,
+<a href="Filters.html#Min_Dimension">Min_Dimension</a>, and <a href="Filters.html#Max_Dimension">Max_Dimension</a>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Filter_Dimension"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Filter_Dimension (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Double_Vector">Double_Vector</a> *<I>filter</I>, int <I>dim</I>)</td></tr>
+  </table></h3>
+<p>
+Applies the 1-dimensional filter <I>filter</I> to every pixel in array <I>image</I> along dimension
+<I>dim</I>.  The filtration occurs in-place, i.e. every pixel is replace with the convolution
+of the filter with the array, where the filter's mid pixel is centered on the pixel in
+question.
+The complexity is <I>O(vr)</I> where <I>v</I> is the size of <I>image</I> and <I>r</I> is the size of <I>filter</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Average_Dimension"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Average_Dimension (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+  </table></h3>
+<p>
+Applies a 1-dimensional average filter of radius <I>radius</I> to every pixel of the array <I>image</I>
+along the dimension <I>dim</I>.
+The complexity is <I>O(v)</I> where <I>v</I> is the size of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Sum_Dimension"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Sum_Dimension (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+  </table></h3>
+<p>
+Applies a 1-dimensional sum filter of radius <I>radius</I> to every pixel of the array <I>image</I>
+along the dimension <I>dim</I>.
+The complexity is <I>O(v)</I> where <I>v</I> is the size of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Square_Dimension"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Square_Dimension (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+  </table></h3>
+<p>
+Applies a 1-dimensional square filter of radius <I>radius</I> to every pixel of the array <I>image</I>
+along the dimension <I>dim</I>.  A square filter produces the average of the sum of the squares
+of the values within the window of the filter, that is,
+<i>S = &Sigma;<sub>i</sub> x<sub>i</sub><sup>2</sup> / n</i> where <i>n = 2*radius+1</i>.
+This operation is useful for computing a variance filter as the variance over the same window
+is
+<i>&Sigma;<sub>i</sub> (x<sub>i</sub> - &sigma;)<sup>2</sup> / n = S - &sigma;<sup>2</sup></i>
+where <I>&sigma;</I> is the mean obtained with an average filter.
+The complexity is <I>O(v)</I> where <I>v</I> is the size of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Min_Dimension"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Min_Dimension (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+  </table></h3>
+<p>
+Applies a 1-dimensional min filter of radius <I>radius</I> to every pixel of the array <I>image</I>
+along the dimension <I>dim</I>.
+The complexity is <I>O(v)</I> where <I>v</I> is the size of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Max_Dimension"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Max_Dimension (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>dim</I>)</td></tr>
+  </table></h3>
+<p>
+Applies a 1-dimensional max filter of radius <I>radius</I> to every pixel of the array <I>image</I>
+along the dimension <I>dim</I>.
+The complexity is <I>O(v)</I> where <I>v</I> is the size of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Filter_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Filter_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Double_Vector">Double_Vector</a> *<I>filter</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Applies the 1-dimensional filter <I>filter</I> to every pixel of the array <I>image</I>
+along every dimension.  That is the result is the same as applying the n-dimensional filter
+<I><a href="Convolver.html#Filter_Power">Filter_Power</a>(filter,image-&gt;ndims)</I> to every pixel.
+The complexity is <I>O(vrn)</I> where <I>v</I> is the size of <I>image</I>, <I>r</I> is the size of <I>filter</I>,
+and <I>n</I> is the dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Filter_Array_List"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Filter_Array_List (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Double_Vector">Double_Vector</a> **<I>filters</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+For dimensions <I>i</I> from 0 to <I>image-&gt;ndims-1</I> in that order, apply the 1-dimensional filter
+<I>filter[i]</I> to <I>image</I> along dimension <I>i</I>.
+The complexity is <I>O(vrn)</I> where <I>v</I> is the size of <I>image</I>, <I>r</I> is the average size of the
+filters, and <I>n</I> is the dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Average_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Average_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply an average filter of radius <I>radius</I> to image <I>image</I>.
+The complexity is <I>O(vn)</I> where <I>v</I> is the size of <I>image</I> and <I>n</I> is the dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Sum_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Sum_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a sum filter of radius <I>radius</I> to image <I>image</I>.
+The complexity is <I>O(vn)</I> where <I>v</I> is the size of <I>image</I> and <I>n</I> is the dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Variance_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Variance_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a variance filter of radius <I>radius</I> to image <I>image</I>.
+The complexity is <I>O(vn)</I> where <I>v</I> is the size of <I>image</I> and <I>n</I> is the dimensionality of <I>image</I>.
+One spare working copy of the image is required during the operation.
+</p>
+  <h3 class="fn"><table>
+     <a name="Min_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Min_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a min filter of radius <I>radius</I> to image <I>image</I>.  This is also a generalization
+of the morphological erosion operator for grey-scale images.
+The complexity is <I>O(vn)</I> where <I>v</I> is the size of <I>image</I> and <I>n</I> is the dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Max_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Max_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a max filter of radius <I>radius</I> to image <I>image</I>.  This is also a generalization
+of the morphological dilation operator for grey-scale images.
+The complexity is <I>O(vn)</I> where <I>v</I> is the size of <I>image</I> and <I>n</I> is the dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="LOG_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">LOG_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>sigma</I>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a Laplacian of Gaussian (LOG) filter to image <I>image</I> where the filter has standard deviation
+<I>sigma</I> and support radius <I>radius</I> in every dimension.  See <a href="Convolver.html#LOG_Filter">LOG_Filter</a> for a formal definition
+of the filter.
+The complexity is <I>O(vn<sup>2</sup>r)</I> where <I>v</I> is the size of <I>image</I>, <I>n</I> is the
+dimensionality of <I>image</I>, and <I>r</I> is the radius of the support.
+Two spare working copies of the image are required during the operaion.
+</p>
+  <h3 class="fn"><table>
+     <a name="DOG_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">DOG_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>sigma1</I>, double <I>sigma2</I>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a difference of Gaussians (DOG) filter to image <I>image</I> where a Gaussian with standard
+deviation <I>sigma2</I> is subtracted from a Gaussian with standard deviation <I>sigma1</I> over a support
+of radius <I>radius</I> in every dimension.
+See <a href="Convolver.html#DOG_Filter">DOG_Filter</a> for more on how this filter is an efficient approximation of the LOG filter.
+The complexity is <I>O(vnr)</I> where <I>v</I> is the size of <I>image</I>, <I>n</I> is the
+dimensionality of <I>image</I>, and <I>r</I> is the radius of the support.
+One spare working copy of the image is required during the operation.
+</p>
+  <h3 class="fn"><table>
+     <a name="DOB_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">DOB_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius1</I>, int <I>radius2</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a difference of boxes (DOB) filter to image <I>image</I> where a box filter with radius
+deviation <I>radius2</I> is subtracted from a box filter with radius <I>radius1</I> in every dimension.
+The support of the filter in each dimension is the greater of <I>radius1</I> and <I>radius2</I>.
+The complexity is <I>O(vn)</I> where <I>v</I> is the size of <I>image</I>, and <I>n</I> is the
+dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="ALOG_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">ALOG_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double *<I>sigma</I>, int *<I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a Laplacian of Gaussian filter to image <I>image</I> where the filter has standard deviation
+<I>sigma[i]</I> and support radius <I>radius[i]</I> in dimension <I>i</I>.  See <a href="Convolver.html#ALOG_Filter">ALOG_Filter</a> for a formal
+definition of the filter.
+The complexity is <I>O(vn<sup>2</sup>r)</I> where <I>v</I> is the size of <I>image</I>, <I>n</I> is the
+dimensionality of <I>image</I>, and <I>r</I> is the average radius of the supports.
+</p>
+  <h3 class="fn"><table>
+     <a name="ADOG_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">ADOG_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double *<I>sigma1</I>, double *<I>sigma2</I>, int *<I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a difference of Gaussians (DOG) filter to image <I>image</I> where a Gaussian with standard
+deviation <I>sigma2[i]</I> is subtracted from a Gaussian with standard deviation <I>sigma1[i]</I>
+over a support of radius <I>radius[i]</I> in dimension <I>i</I>.
+See <a href="Convolver.html#ADOG_Filter">ADOG_Filter</a> for more on how this filter is an efficient approximation of the LOG filter.
+The complexity is <I>O(vnr)</I> where <I>v</I> is the size of <I>image</I>, <I>n</I> is the
+dimensionality of <I>image</I>, and <I>r</I> is the radius of the support.
+One spare working copy of the image is required during the operation.
+</p>
+  <h3 class="fn"><table>
+     <a name="ADOB_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">ADOB_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int *<I>radius1</I>, int *<I>radius2</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a difference of boxes (DOB) filter to image <I>image</I> where a box filter with radius deviation
+<I>radius2[i]</I> is subtracted from a box filter with radius <I>radius1[i]</I> in every dimension.
+The support of the filter in each dimension is the greater of <I>radius1[i]</I> and <I>radius2[i]</I>.
+The complexity is <I>O(vn)</I> where <I>v</I> is the size of <I>image</I>, and <I>n</I> is the
+dimensionality of <I>image</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Median_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Median_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>)</td></tr>
+  </table></h3>
+<p>
+Apply a median filter to image <I>image</I> over a window of radius <I>radius</I> in every dimension.
+The time complexity is <I>O(vr <sup>n</sup>)</I> where <I>v</I> is the size of <I>image</I>, <I>n</I> is the
+dimensionality of <I>image</I>, and <I>r</I> is the radius of the support.
+</p>
+  <h3 class="fn"><table>
+     <a name="Order_Array"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Order_Array (<a href="Array.html">Array</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>radius</I>, int <I>rank</I>)</td></tr>
+  </table></h3>
+<p>
+Replace each pixel of <I>image</I> with the <I>rank<sup>th</sup></I> largest element in a window
+of <I>radius</I> in every dimension.
+The complexity is <I>O(vr <sup>n</sup>)</I> where <I>v</I> is the size of <I>image</I>, <I>n</I> is the
+dimensionality of <I>image</I>, and <I>r</I> is the radius of the support.
+</td></tr></table>
+</body>
+</html>

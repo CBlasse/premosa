@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Generic Class Routines Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Generic Class Routines Module Reference</h1>
+
+<p>
+The operations common to every class.
+<a href="#details">More...</a>
+</p>
+<pre>
+
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">X *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Copy_X">Copy_X</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (X *<I>x</I>)</td></tr>
+<tr><td class="return" valign="baseline">X *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Inc_X">Inc_X</a></b>
+     (X *<I>x</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#X_Refcount">X_Refcount</a></b>
+     (X *<I>x</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Free_X">Free_X</a></b>
+     (X *<I>x</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Kill_X">Kill_X</a></b>
+     (X *<I>x</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">X *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Pack_X">Pack_X</a></b>
+     (X *<I>x</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Reset_X">Reset_X</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#X_Usage">X_Usage</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#X_List">X_List</a></b>
+     (void (*<I>handler</I>)(X *))</td></tr>
+<tr><td class="return" valign="baseline">X *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Read_X">Read_X</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (FILE *<I>input</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Generic.html#Write_X">Write_X</a></b>
+     (X *<I>x</I>, FILE *<I>output</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+<B>Mylib</B> employs a consistent object-oriented style, and every class, say <I>X</I>,
+has routines to perform the set of function described on this page, with the
+possible exception of the read and write routines if objects of the class
+are intrinsically short-lived (e.g. a <a href="Slice.html">Slice</a> or <a href="Frame.html">Frame</a>).
+The routines are primarily concerned with object and memory management.
+Each <B>Mylib</B> class keeps track of the set of objects of the class, and every object
+keeps a <B>reference count</B> of the number of program variables and <B>Mylib</B> objects that
+refer to it.  Every class also keeps a cache or <B>free pool</B> of previously used objects that
+it can redeploy as requested, and every object can be thought of as a <B>container</B>
+that holds a value that may not actually occupy all the memory of the container.
+These features, to be explained more precisely in the following, permit <B>Mylib</B> users to
+avoid excessive use of the system heap, if they so desire.
+</p>
+<p>
+A very detailed treatment of object management in <B>Mylib</B> is given in the document
+<a href="../PDFS/Object.Management.pdf">Object.Management</a>.  The first section of the
+document describes the object-oriented conventions and associated routines.  For those
+wishing to add new classes to <B>Mylib</B>, the second section describes how to generate the
+code for these standard routines from a single specification line and a number of
+small helper routines using a preprocessor built specifically for this purpose.  The final section
+precisely documents the code generated for these routines for those who
+are interested or want to extend the object management conventions.  In what follows
+we give a fairly terse explanation of the semantics of each routine.
+</p>
+<p>
+An object of class <I>X</I> can be copied with <a href="Generic.html#Copy_X">Copy_X</a> which generates a new copy of the
+object that has a reference count of 1.  Every object has a reference count that can
+be incremented by calling <a href="Generic.html#Inc_X">Inc_X</a>, examined by calling <a href="Generic.html#X_Refcount">X_Refcount</a>, and decremented
+by calling either <a href="Generic.html#Free_X">Free_X</a> or
+<a href="Generic.html#Kill_X">Kill_X</a>.  Any newly generated object has an initial reference count of 1.  If a
+subsequent call to <a href="Generic.html#Free_X">Free_X</a> or <a href="Generic.html#Kill_X">Kill_X</a> reduces the reference count to 0, then the
+object is returned to the system heap if <a href="Generic.html#Kill_X">Kill_X</a> was called, or to a free pool
+maintained by the class if <a href="Generic.html#Free_X">Free_X</a> was called.  The idea of this free pool, is to
+allow a user to optimize the frequent case where one has a loop in which one creates
+an object, operates upon it, and then no longer needs it.  For example, consider
+</p>
+<pre>
+ for (i = 0; i < N; i++)
+   { Array *a = Read_Array(input);
+     //  Do something with a
+     Kill_Array(a);
+   }
+</pre>
+<p>
+versus
+</p>
+<pre>
+ for (i = 0; i < N; i++)
+   { Array *a = Read_Array(input);
+     //  Do something with a
+     Free_Array(a);
+   }
+</pre>
+<p>
+In the kill case, 4N calls to <I>malloc</I> and <I>free</I> of the underlying system heap are
+made (4 per array).  In the free case, the Array object is recirculated through the
+<a href="Array.html">Array</a> class's free pool, so <I>realloc</I> is called only when the next array is bigger
+in some aspect (its <a href="Array.html#dims">dims</a>, <a href="Array.html#text">text</a>, or <a href="Array.html#data">data</a>) then the previous array.  In the oft-occuring
+case where the arrays are all of the same size, no use of the system heap is required
+at all after the first iteration.  In the case where the size of each array is random,
+in expectation <I>O(log N)</I> <I>realloc</I>
+calls are performed.  In most cases, the user knows the pattern of creation and destruction
+of objects, so by using <I>Free_X</I> appropriately they can save time and prevent the system
+memory allocator from getting into a fragmented state that can cause it to thrash.
+</p>
+<p>
+Because of the recycling enabled by <I>Free_X</I>, over time such a reused object container
+can become significantly bigger than the value it stores (e.g. the next read in our
+running example brings in a small array whose value is placed in the single Array object that
+is being recycled).  Calling <a href="Generic.html#Pack_X">Pack_X</a> will shrink the container of an object of class
+<I>X</I> so that the memory occupied by its container is just large enough to hold the
+object's value.  Calling <a href="Generic.html#Reset_X">Reset_X</a> will (a) return every object currently in the free pool back
+to the system heap, and (b) free any working storage that might be used by the class.  The
+effect is to effectively return the class to its original state.
+</p>
+<p>
+To help programmers avoid memory leaks, <a href="Generic.html#X_Usage">X_Usage</a> returns the number of objects
+currently in use by the programmer (i.e. those that have been generated and have
+neither been returned to the system heap or placed in the free pool).  To further
+aid a programmer, <a href="Generic.html#X_List">X_List</a> calls a handler on each object that the class still
+thinks are in use.  As an example, if one wanted to ensure that a class was in its
+original state, one would write:
+</p>
+<pre>
+ void KillEmAll(X *x)
+ { Kill_X(x); }
+
+ X_List(KillEmAll);
+ Reset_X();
+</pre>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Copy_X"></a><tr><td valign="baseline">X *</td>
+     <td valign="baseline">Copy_X<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (X *<I>x</I>)</td></tr>
+  </table></h3>
+<p>
+Generate and return a new object with reference count 1 whose value is identical to that of <I>x</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Inc_X"></a><tr><td valign="baseline">X *</td>
+     <td valign="baseline">Inc_X (X *<I>x</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Increment the reference count of <I>x</I> by 1.
+</p>
+  <h3 class="fn"><table>
+     <a name="X_Refcount"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">X_Refcount (X *<I>x</I>)</td></tr>
+  </table></h3>
+<p>
+Return the current reference count of object <I>x</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Free_X"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Free_X (X *<I>x</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Decrement the reference count of object <I>x</I> and if it reaches 0, then move the object to
+the free pool of class <I>X</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Kill_X"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Kill_X (X *<I>x</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Decrement the reference count of object <I>x</I> and if it reaches 0, then return all the memory
+blocks of an object to the system heap.
+</p>
+  <h3 class="fn"><table>
+     <a name="Pack_X"></a><tr><td valign="baseline">X *</td>
+     <td valign="baseline">Pack_X (X *<I>x</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+If the container of <I>x</I> (the set of all memory blocks holding the value of <I>x</I>), is larger
+than necessary, then shrink it (via calls to <I>realloc</I> on the relevant memory blocks) so
+that it is just large enough to hold the current value of <I>x</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Reset_X"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Reset_X ()</td></tr>
+  </table></h3>
+<p>
+Kill, i.e. return to the system heap, all objects in the free pool of class <I>X</I>, and
+free all working storage that might be used by the routines of the object.  The latter
+depends on and is specific to the class in question.
+</p>
+  <h3 class="fn"><table>
+     <a name="X_Usage"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">X_Usage ()</td></tr>
+  </table></h3>
+<p>
+Return the number of objects of class <I>X</I> that have been created and as yet neither
+returned to the free pool of <I>X</I> or system heap.
+</p>
+  <h3 class="fn"><table>
+     <a name="X_List"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">X_List (void (*<I>handler</I>)(X *))</td></tr>
+  </table></h3>
+<p>
+Call <I>handler</I> on each object of the class <I>X</I> that have been created and as yet neither
+returned to the free pool of <I>X</I> or system heap.
+</p>
+  <h3 class="fn"><table>
+     <a name="Read_X"></a><tr><td valign="baseline">X *</td>
+     <td valign="baseline">Read_X<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (FILE *<I>input</I>)</td></tr>
+  </table></h3>
+<p>
+Generate an object of class <I>X</I> and set it to a value read from the file stream <I>input</I>.
+The read begins at the current file position indicator of <I>input</I> and should be an encoding
+of a value of an object of type <I>X</I> that is produced by <a href="Generic.html#Write_X">Write_X</a>.
+The file position
+indicator is advanced to the next byte after the encoded value on the stream <I>input</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Write_X"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Write_X (X *<I>x</I>, FILE *<I>output</I>)</td></tr>
+  </table></h3>
+<p>
+Write an encoding of the value of <I>x</I> on the file stream <I>output</I> starting at the current
+file position indicator of <I>output</I>.
+The file position
+indicator is advanced to the next byte after the encoded value on the stream <I>input</I>.
+</td></tr></table>
+</body>
+</html>

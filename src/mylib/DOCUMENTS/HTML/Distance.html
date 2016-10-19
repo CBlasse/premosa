@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Distance Transform Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Distance Transform Module Reference</h1>
+
+<p>
+Distance transforms and Voronoi, Delauney and geodesic partitioning based there upon.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;filters.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Float_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Distance.html#Squared_Distance">Squared_Distance</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I>)</td></tr>
+<tr><td class="return" valign="baseline">Float_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Distance.html#Manhattan_Distance">Manhattan_Distance</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I>)</td></tr>
+<tr><td class="return" valign="baseline">Float_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Distance.html#Binary_Euclidean_Distance">Binary_Euclidean_Distance</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I>, int <I>boundary</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Label_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Distance.html#Voronoi_Labeling">Voronoi_Labeling</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>nseed</I>, Indx_Type *<I>seeds</I>, Coordinate *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Partition *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Distance.html#Delauney_Partition">Delauney_Partition</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (int <I>nseed</I>, Indx_Type *<I>seeds</I>, Coordinate *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Label_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Distance.html#Geodesic_Labeling">Geodesic_Labeling</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I>, boolean <I>iscon2n</I>, int *<I>nregions</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">Partition *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Distance.html#Geodesic_Partition">Geodesic_Partition</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+The distance transform in its most common form is used to compute the distance of
+every foreground pixel from the nearest background pixel in a binary image
+(<a href="Distance.html#Binary_Euclidean_Distance">Binary_Euclidean_Distance</a>).  More generally, given a grey scale image, the transfrom
+computes:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D[p] = min<sub>q</sub> ( I[q] + d(p,q) )</i>
+<br><br>
+where <I>D[p]</I> is the distance transform of pixel <I>p</I>, <I>I[q]</I> is the value
+of the image at pixel <I>q</I>, and <I>d(p,q)</I> is a measure of distance between the coordinates
+of pixels <I>p</I> and <I>q</I>.  Using the linear time algorithm of Fezenszwalb and Hutenlocher
+(Cornell Computing and Information Science Technical Report TR2004-1963, 2004) this
+module provides functions for the squared Euclidean distance (<a href="Distance.html#Squared_Distance">Squared_Distance</a>) and
+Manhattan distance (<a href="Distance.html#Manhattan_Distance">Manhattan_Distance</a>).
+</p>
+<p>
+The Voronoi diagram and its dual Delauney triangulation are constructs that can be derived
+from a set of <I>N</I> real-valued points in <I>O(NlogN)</I> time.  However, one can also, less
+efficiently compute these with respect to a set of <I>N</I> pixels using the distance transform
+in time proportional to the size of the array involved where in this form the Voroni
+diagram is returned by <a href="Distance.html#Voronoi_Labeling">Voronoi_Labeling</a> as a label array that indicates which point
+is closes to any given pixel, and the Delauney triangulation is returned by
+<a href="Distance.html#Delauney_Partition">Delauney_Partition</a> as a <a href="Partition.html">Partition</a> that models the underlying partition of
+the Voronoi diagram.
+</p>
+<p>
+Finally, given a collection of connected foreground objects, <a href="Distance.html#Geodesic_Labeling">Geodesic_Labeling</a> uses
+the distance transform to determine a labeling that gives the foreground object each pixel
+is closest to, and <a href="Distance.html#Geodesic_Partition">Geodesic_Partition</a> returns a <a href="Partition.html">Partition</a> that models the resulting
+partition.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Squared_Distance"></a><tr><td valign="baseline"><a href="Array.html#Float_Array">Float_Array</a> *</td>
+     <td valign="baseline">Squared_Distance<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a <I>FLOAT32_TYPE</I> array with the same shape as array or slice <I>image</I>, that contains the
+distance transform of <I>image</I> with respect to the <B>squared</B> Euclidean metric.
+That is, if <I>D[p]</I> is the
+value of pixel <I>p</I> in the result, and <I>I[q]</I> is the value of <I>image</I> at a pixel
+<I>q</I>, then:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D[p] = min<sub>q</sub> ( I[q] + d(p,q) )</i>
+<br><br>
+where the minimum is conceptually over all pixels <I>q</I> in <I>image</I>, and <I>d(p,q)</I> is
+the square of the Euclidean distance between pixels <I>p</I> and <I>q</I>.  That is, if the coordinates
+for <I>p</I> and <I>q</I> are
+<i>(x<sub>1</sub>, x<sub>2</sub>, ... x<sub>n</sub>)</i>
+and
+<i>(y<sub>1</sub>, y<sub>2</sub>, ... y<sub>n</sub>)</i>, respectively,
+then:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d(p,q) = &Sigma;<sub>i</sub> ( x<sub>i</sub> - y<sub>i</sub> )<sup>2</sup></i>
+<br><br>
+The routine take <I>O(vn)</I> time where <I>v</I> is the size of <I>image</I> and <I>n</I> is its dimensionality.
+</p>
+  <h3 class="fn"><table>
+     <a name="Manhattan_Distance"></a><tr><td valign="baseline"><a href="Array.html#Float_Array">Float_Array</a> *</td>
+     <td valign="baseline">Manhattan_Distance<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a <I>FLOAT32_TYPE</I> array with the same shape as array or slice <I>image</I>, that contains the
+distance transform of <I>image</I> with respect to the Manhattan metric.
+That is, if <I>D[p]</I> is the
+value of pixel <I>p</I> in the result, and <I>I[q]</I> is the value of <I>image</I> at a pixel
+<I>q</I>, then:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D[p] = min<sub>q</sub> ( I[q] + d(p,q) )</i>
+<br><br>
+where the minimum is conceptually over all pixels <I>q</I> in <I>image</I>, and <I>d(p,q)</I> is
+the Manhattan distance between pixels <I>p</I> and <I>q</I>.  That is, if the coordinates
+for <I>p</I> and <I>q</I> are
+<i>(x<sub>1</sub>, x<sub>2</sub>, ... x<sub>n</sub>)</i>
+and
+<i>(y<sub>1</sub>, y<sub>2</sub>, ... y<sub>n</sub>)</i>, respectively,
+then:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d(p,q) = &Sigma;<sub>i</sub> | x<sub>i</sub> - y<sub>i</sub> |</i>
+<br><br>
+The routine take <I>O(vn)</I> time where <I>v</I> is the size of <I>image</I> and <I>n</I> is its dimensionality.
+</p>
+  <h3 class="fn"><table>
+     <a name="Binary_Euclidean_Distance"></a><tr><td valign="baseline"><a href="Array.html#Float_Array">Float_Array</a> *</td>
+     <td valign="baseline">Binary_Euclidean_Distance<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I>, int <I>boundary</I>)</td></tr>
+  </table></h3>
+<p>
+Generates a <I>FLOAT32_TYPE</I> array with the same shape as array or slice <I>image</I>, that contains the
+Euclidean distance transform of the <B>binarization</B> of <I>image</I> where
+non-zero pixels are considered foreground and zero pixels are considered background.
+That is, if <I>D[p]</I> is the
+value of pixel <I>p</I> in the result, and <I>B</I> is the set of all pixels in <I>image</I> that
+are background (zero) then:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D[p] = min<sub>q &isin; B</sub> d(p,q)</i>
+<br><br>
+where <I>d(p,q)</I> is
+the Euclidean distance between pixels <I>p</I> and <I>q</I>.  That is, if the coordinates
+for <I>p</I> is
+<i>(x<sub>1</sub>, x<sub>2</sub>, ... x<sub>n</sub>)</i>
+and the coordinate for <I>q</I> is
+<i>(y<sub>1</sub>, y<sub>2</sub>, ... y<sub>n</sub>)</i>,
+then:
+<br><br>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d(p,q) = ( &Sigma;<sub>i</sub> ( x<sub>i</sub> - y<sub>i</sub> )<sup>2</sup> )<sup>.5</sup></i>
+<br><br>
+The routine take <I>O(vn)</I> time where <I>v</I> is the size of <I>image</I> and <I>n</I> is its dimensionality.
+</p>
+  <h3 class="fn"><table>
+     <a name="Voronoi_Labeling"></a><tr><td valign="baseline"><a href="Partition.html#Label_Array">Label_Array</a> *</td>
+     <td valign="baseline">Voronoi_Labeling<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>nseed</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> *<I>seeds</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Creates an <I>UINT32_TYPE</I> array <I>L</I> of shape <I>shape</I> for which <I>L[p] = i</I> if and only if
+<I>d(p,seeds[i-1]</I> is minimal
+over all possible choices of <I>i &isin; [1,nseed]</I>, where <I>d</I> is Euclidean distance.
+That is, <I>L</I> is a label field that for every pixel indicates which Voronoi region the pixel
+is in, where the Voronoi diagram is that induced by the <I>nseed</I> points given by
+<I>seeds[0..nseed-1]</I> with respect to the lattice of <I>shape</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Delauney_Partition"></a><tr><td valign="baseline"><a href="Partition.html">Partition</a> *</td>
+     <td valign="baseline">Delauney_Partition<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (int <I>nseed</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> *<I>seeds</I>, <a href="Array.html#Coordinate">Coordinate</a> *<I>shape</I> <sup><b><font color="#00AA55" title="This object will be *F*reed">F</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Returns a <a href="Partition.html">Partition</a> graph that models the
+Delauney decomposition of the collection of points <I>seeds[0..nseed-1]</I> with respect to the
+lattice <I>shape</I>.  This decomposition is effectively the partition graph of the Voronoi decomposition
+(see <a href="Distance.html#Voronoi_Labeling">Voronoi_Labeling</a>) of said points.  The depth of each region in this partition
+is always 0, and the height of
+each edge between Voronoi regions is the distance between their foci.
+</p>
+  <h3 class="fn"><table>
+     <a name="Geodesic_Labeling"></a><tr><td valign="baseline"><a href="Partition.html#Label_Array">Label_Array</a> *</td>
+     <td valign="baseline">Geodesic_Labeling<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I>, boolean <I>iscon2n</I>, int *<I>nregions</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Creates an <I>UINT32_TYPE</I> array <I>L</I> with the same shape as array or slice <I>image</I> that gives
+the labeling of pixels in the geodesic decomposition of <I>image</I> when it is interpreted as a binary
+foreground/background image, where non-zero pixels are considered foreground and zero
+pixels are considered background.  Every <I>iscon2n</I>-connected set of foreground pixels is
+assigned an integer index from 1 to <I>*nregion</I>, and there after <I>L[p]</I> for each index
+<I>p</I> is set to the index of the foreground region that is closest to it.
+</p>
+  <h3 class="fn"><table>
+     <a name="Geodesic_Partition"></a><tr><td valign="baseline"><a href="Partition.html">Partition</a> *</td>
+     <td valign="baseline">Geodesic_Partition<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+Returns a <a href="Partition.html">Partition</a> graph that models the partitioning of <I>image</I> described in
+<a href="Distance.html#Geodesic_Labeling">Geodesic_Labeling</a> immediately above.  The depth of each region in this partition is
+always 0, and the height of an edge is the distance between the two
+foreground objects of the regions.
+</td></tr></table>
+</body>
+</html>

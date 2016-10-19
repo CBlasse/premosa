@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Watershed Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Watershed Module Reference</h1>
+
+<p>
+Routines to produce a watershed partition of an image.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;water.shed.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Partition *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Watershed.html#Build_Watershed">Build_Watershed</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Pixel_APart *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>, boolean <I>color</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Label_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Watershed.html#Label_Watershed">Label_Watershed</a></b>
+     (Pixel_APart *<I>image</I>, Integer_Array *<I>labels</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *<I>nbasins</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, boolean <I>iscon2n</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Partition *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Watershed.html#Build_Seeded_Watershed">Build_Seeded_Watershed</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Pixel_APart *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>, Vector *<I>seeds</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Watershed.html#Average_Watershed_Heights">Average_Watershed_Heights</a></b>
+     (Partition *<I>shed</I>, int *<I>num</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, int *<I>den</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, int64 *<I>sqr</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, int <I>null</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+The idea of a watershed partition of an image is well established and informally appeals
+to exactly the idea of a watershed in nature, i.e. a region for which all rain drops
+landing in the region flow to the same minimum basin.  Proceeding more formally, a
+<B>minimum</B> is a connected set of voxels of the same value for which every adjacent voxel
+not in the set has a greater value.  In a watershed partition, there is a <B>catchment
+basin</B> enclosing each minimum, that is the connected set of all voxels for
+which there is a connected path to its minimum along which values do
+not increase (a rain drop flows downhill to the minimum).  For continuous domains this
+definition would suffice, but for integer valued domains there is the problem of ties which is
+solved in the algorithm of Vincent and Soile (<I>IEEE Trans. on Pat. Analysis &amp; Mach. Learning</I>
+13, 6 (1991)), by having the water flow to the geodesically closer basin.  A
+<B>watershed partition</B> is a set of non-overlapping catchment basins that cover the entire
+image.
+</p>
+<a name="catchment basin"><a>
+<a name="dam"><a>
+<p>
+A watershed partition of a <I>UINT8_</I> or <I>UINT16_TYPE</I> array or slice <I>image</I>, using a variant
+of the algorithm of Vincent and Soille, is generated by <a href="Watershed.html#Build_Watershed">Build_Watershed</a>.  The partition is
+returned as a <a href="Partition.html">Partition</a> object whose label array is a coloring of the watershed in the smallest
+type (UINT8, UINT16, or UINT32) that accommodates the number of colors in the labeling.
+A current important
+limitation is that the routine restricts the size of <I>image</I> to 2<sup>31</sup>-1.  Note
+carefully that as a consequence all indices on this page are simply of type <I>int</I>, as opposed
+to the <I>int64</I> required in the rest of the library.  The routine consumes 4 bytes per voxel in
+working storage along with two integer stacks whose size is generally a small fraction of the
+image size.  In the future the 32-bit limitation on size will be removed as large memories
+continue to become less expensive and more common place.
+</p>
+<p>
+<I>Build_Watershed</I> can actually be broken down into two distinct parts.  In the first part
+of the process, a label field of the watershed partition of the image is built in a UINT32_TYPE
+<a href="Partition.html#Label_Array">Label_Array</a> of the same shape as the image or its underlying array wherein the pixels of
+catchment basin <I>i</I> are labeled with <I>i+1</I> for <I>i &isin; [0,nbasins-1]</I>.  This is
+accomplished with a call to <a href="Watershed.html#Label_Watershed">Label_Watershed</a>.  In the second phase, a <a href="Partition.html">Partition</a> object
+is produced by calling <a href="Partition.html#Make_Partition">Make_Partition</a> (described in the <a href="Partition.html">Partition</a> class page) with the
+watershed labeling produced in the first step.
+In fact, the entire <a href="Partition.html">Partition</a> class was initially developed for watersheds and was later
+identified as an independently useful concept.
+The depth of a <a href="Partition.html#P_Vertex">P_Vertex</a> is the value of its catchment basin minimum, and
+the height of an <a href="Partition.html#P_Edge">P_Edge</a> is the height of the dam or ridge that separates two catchment basins of
+the watershed.  Thus one can get a basic representation of a
+watershed partition in the label field array if that is all one desires, or one can further
+build a <a href="Partition.html">Partition</a> graph for the watershed decomposition.  We illustrate this by giving
+the code for <a href="Watershed.html#Build_Watershed">Build_Watershed</a>.
+</p>
+<pre>
+ Partition *Build_Watershed(Pixel_APart *image, boolean iscon2n, boolean color)
+ { Label_Array *h;
+   Partition   *s;
+   int          n;
+
+   h = Make_Array_With_Shape(PLAIN_KIND,INT32_TYPE,AForm_Shape(image));
+   Label_Watershed(image,h,&n,iscon2n);
+   s = Make_Partition(image,h,n,iscon2n,color);
+   if (Get_Partition_Color_Count(s) < 256)
+     Convert_Array_Inplae(h,PLAIN_KIND,UINT8_TYPE,8,0);
+   else if (Get_Partition_Color_Count(s) < 0x10000)
+     Convert_Array_Inplae(h,PLAIN_KIND,UINT16_TYPE,16,0);
+   Pack_Array(h);
+   return (s);
+ }
+</pre>
+<p>
+The watershed algorithm tends to oversegment an image as it is very sensitive to small
+fluctuations in signal.  One approach is to smooth the image with a Gaussian filter prior
+to applying the watershed, but a far superior approach is to progressively merge watersheds
+for which the difference between their depth and the dam height separating them is small.
+To faciliatate this the <a href="Partition.html">Partition</a> class has routines that allow one to progressively merge
+regions in either the fixed order of dam height (<a href="Partition.html#Static_Collapse">Static_Collapse</a>), or more flexibly in
+any dynamic order defined by the user (<a href="Partition.html#General_Collapse">General_Collapse</a>).  For example, for a watershed
+partition <I>w</I>, the routine <a href="Watershed.html#Average_Watershed_Heights">Average_Watershed_Heights</a>
+fills in vectors <I>num</I> and <I>den</I> of length <I>Get_Partition_Edge_Count(p)</I> so that for the
+<i>j<sup>th</sup></i> edge,
+<I>num[j]</I> is the sum of the pixel values along the boundary separating the two basins,
+<I>den[j]</I> is the number of pixels in along the boundary, and therefore
+<I>num[j]/den[j]</I> is the average dam height of the boundary separating the two regions
+of the edge.  In addition, if <I>sqr</I> is not NULL, then upon return <I>sqr[j]</I> contains the
+sum of the square of each pixel value along the boundary separating the two basins, so that
+from this one can compute the variance and standard deviation of pixels along a boundary
+if desired.  Moreover, pixels of value <I>null</I> are not included in the sums and counts, allowing
+one to mask certain pixels if desired (otherwise pick <I>null</I> to be out of the range of values
+in the image).
+The average dam height between two basins may be a more useful measure of separability in
+cases where there are
+'weaknesses' in the barrier, such as irregularly stained biological boundaries.
+One may then wish to collapse basins (regions) in order of average dam height, where a little
+thought reveals that average dam height changes as basins are merged, because this implies
+dams (boundaries) must also be merged.  A complete example of such a merging using the
+values provided by <a href="Watershed.html#Average_Watershed_Heights">Average_Watershed_Heights</a> can be found
+<a href="Partition.html#aveheight">here</a>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Build_Watershed"></a><tr><td valign="baseline"><a href="Partition.html">Partition</a> *</td>
+     <td valign="baseline">Build_Watershed<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Pixel_APart">Pixel_APart</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>, boolean <I>color</I>)</td></tr>
+  </table></h3>
+<p>
+Compute the watershed partition of the <I>UINT8_</I> or <I>UINT16_TYPE</I> array or slice <I>image</I>
+with respect to the connectivity indicated by <I>iscon2n</I>,
+using a variant of the algorithm of Vincent and Soille, and generate a <a href="Partition.html">Partition</a> object
+modeling the partition.  The Partition object creates a new reference to <I>image</I> and its
+label array is a coloring iff <I>color</I> is true.  A
+current important limitation of the Partition class is that this routine restricts the
+size of <I>image</I> to 2<sup>31</sup>-1.  Note carefully that as a consequence all indices
+for this class are simply of type <I>int</I>, as opposed to the <I>int64</I> required in the rest of
+the library.  The routine takes linear time in the size of the array and consumes 4 bytes per
+pixel in working storage along with two
+integer stacks whose size is generally a small fraction of the image size.  In the future
+the 32-bit limitation on size will be removed as large memories continue to become
+less expensive and more common place.
+</p>
+  <h3 class="fn"><table>
+     <a name="Label_Watershed"></a><tr><td valign="baseline"><a href="Partition.html#Label_Array">Label_Array</a> *</td>
+     <td valign="baseline">Label_Watershed (<a href="Array.html#Pixel_APart">Pixel_APart</a> *<I>image</I>, <a href="Array.html#Integer_Array">Integer_Array</a> *<I>labels</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *<I>nbasins</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, boolean <I>iscon2n</I>)</td></tr>
+  </table></h3>
+<p>
+Produce a label field of the watershed partition of <I>image</I> in the supplied integer array
+<I>labels</I> with respect to the connectivity indicated by <I>iscon2n</I>.
+That is, in the integer array <I>labels</I>, the pixels of catchment basin <I>i</I>
+are labeled with <I>i+1</I> for <I>i &isin; [0,nbasins-1]</I>.  The number of basins is returned
+in <I>nbasins</I>.  This label field is in effect a watershed partitioning.  This label field,
+can be used to produce a <a href="Partition.html">Partition</a> graph by <a href="Partition.html#Make_Partition">Make_Partition</a>.
+</p>
+<p>
+If <I>image</I> is an array, then <I>labels</I> must have the same shape as <I>image</I>.  On the otherhand,
+if <I>image</I> is a slice of an array, then <I>labels</I> may have either the shape of the slice or
+the shape of the array of the slice.  In the latter case, the routine only accesses the pixels
+of <I>labels</I> corresponding to the pixels of the slice, thus permitting one to compute the
+watersheds of disjoint slices that cover an array in different threads that share a single
+label field.  This is about 15% more efficient than having each slice use its own label
+field (proportional to the size of the slice) due to the indexing issues involved with
+correlating traversals in arrays of two different sizes.
+</p>
+  <h3 class="fn"><table>
+     <a name="Build_Seeded_Watershed"></a><tr><td valign="baseline"><a href="Partition.html">Partition</a> *</td>
+     <td valign="baseline">Build_Seeded_Watershed<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Pixel_APart">Pixel_APart</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, boolean <I>iscon2n</I>, <a href="Array.html#Vector">Vector</a> *<I>seeds</I>)</td></tr>
+  </table></h3>
+<p>
+Seeded watershed.  Build a watershed graph of image w.r.t iscon2n connectivity, but all
+basins not involving an index in the vector "seeds" are merged with the seed-
+containing-basins with the lowest dam height between them.  The type of Vector must
+be of <a href="Mylib.html#OFFS_TYPE">OFFS_TYPE</a> and the integers should be in [0,image-&gt;size-1].
+</p>
+  <h3 class="fn"><table>
+     <a name="Average_Watershed_Heights"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Average_Watershed_Heights (<a href="Partition.html">Partition</a> *<I>shed</I>, int *<I>num</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, int *<I>den</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, int64 *<I>sqr</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, int <I>null</I>)</td></tr>
+  </table></h3>
+<p>
+Compute the average watershed height between any two adjacent basins. The caller supplies
+the arrays num and den which must be of size <I>Get_Partition_Edge(shed)</I> (the number of edges
+in the watershed graph).  For the <a href="Partition.html#P_Vertex">P_Vertex</a> with index d, the average watershed height between
+its two regions is num[d]/den[d].
+In addition, if <I>sqr</I> is not NULL, then upon return <I>sqr[j]</I> contains the
+sum of the square of each pixel value along the boundary separating the two basins, so that
+from this one can compute the variance and standard deviation of pixels along a boundary
+if desired.  Moreover, pixels of value <I>null</I> are not included in the sums and counts, allowing
+one to mask certain pixels if desired (otherwise pick <I>null</I> to be out of the range of values
+in the image).
+</td></tr></table>
+</body>
+</html>

@@ -1,0 +1,219 @@
+BODY,H1,H2,H3,H4,H5,H6,P,CENTER,TD,TH,UL,DL,DIV {
+  font-family: Arial, Geneva, Helvetica, sans-serif;
+  font-size: 16px
+}
+
+PRE {
+  font-family: monospace;
+  font-size: 14px
+}
+
+CODE {
+  font-family: Helvectica, monospace;
+  font-size: 16px
+}
+
+H1 {
+  text-align: center;
+  font-size: 160%;
+}
+
+H2 {
+  font-size: 120%;
+}
+
+H3 {
+  font-size: 100%;
+}
+
+h2.allclass
+{ margin-left: 36px; }
+p.allclass
+{ margin-left: 48px; }
+
+h3.fn,span.fn
+{
+  background-color: #eee;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+  font-weight: bold;
+  padding: 6px 0px 6px 10px;
+  margin: 42px 0px 0px 0px;
+}
+
+hr {
+  border: 0;
+  color: #a0a0a0;
+  background-color: #ccc;
+  height: 1px;
+  width: 100%;
+  text-align: left;
+  margin: 34px 0px 34px 0px;
+}
+
+sup {
+  vertical-align: 0;
+  position: relative;
+  bottom: 1ex;
+}
+
+sub {
+  vertical-align: 0;
+  position: relative;
+  top: 0.8ex;
+}
+
+p {
+  margin-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+p.center {
+  margin-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+p.group {
+  text-indent: 20px;
+  color: #222222;
+  font-sytle: italic;
+  font-size: 120%;
+  margin: 16px 0px 8px 0px
+}
+
+li {
+  margin-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+a:link
+{
+  color: #0046ad;
+  text-decoration: none
+}
+
+a.ref:link
+{
+  color: #008844;
+  text-decoration: none
+}
+
+a:visited
+{
+  color: #672967;
+  text-decoration: none
+}
+
+body
+{
+  background: #ffffff;
+  color: black
+}
+
+body pre
+{
+  padding: 0.5em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+  color: black
+}
+
+table td.dot {
+  width: 40px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  border-width: 1px;
+  border-color: #E0E0E0;
+  border-style: none;
+  font-size: 100%;
+  text-align: right;
+}
+
+table td.field {
+  width: 140px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  border-width: 1px;
+  border-color: #E0E0E0;
+  border-style: none;
+  font-size: 100%;
+  text-align: right;
+}
+
+table td.return {
+  width: 140px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  border-width: 1px;
+  border-color: #E0E0E0;
+  border-style: none;
+  font-size: 100%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+table td.name {
+  width: 0;
+  padding: 0px 2px 0px 8px;
+  margin: 0px;
+  border-width: 1px;
+  border-color: #E0E0E0;
+  border-style: none;
+  font-size: 100%;
+  white-space: nowrap;
+}
+
+table td.define {
+  width: 0;
+  padding: 0px 0px 0px 2px;
+  margin: 0px;
+  border-width: 1px;
+  border-color: #E0E0E0;
+  border-style: none;
+  font-size: 100%;
+  white-space: nowrap;
+}
+
+table td.comment {
+  padding: 0px 0px 0px 16px;
+  margin: 0px;
+  border-width: 1px;
+  border-color: #E0E0E0;
+  border-style: none;
+  font-size: 100%;
+  color: #00AA55;
+}
+
+table.valuelist {
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color: #dddddd;
+	border-collapse: collapse;
+	background-color: #f0f0f0;
+}
+
+table.valuelist th {
+	border-width: 1px 1px 1px 2px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #666;
+    color:white;
+    background-color:#666;
+}
+
+table tr.odd {
+  background: #f0f0f0;
+  color: black;
+}
+
+table tr.even {
+  background: #e4e4e4;
+  color: black;
+}

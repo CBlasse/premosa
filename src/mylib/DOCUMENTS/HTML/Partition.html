@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Partition Clase Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Partition Class Reference</h1>
+
+<p>
+A graph model of a partition and routines to progressively collapse said.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;water.shed.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#P_Vertex"> P_Vertex </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#seed"> seed </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#depth"> depth </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#size"> size </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A left-most pixel in this region</td></tr>
+    <tr><td class="comment" valign="baseline">The minimum pixel value in this region</td></tr>
+    <tr><td class="comment" valign="baseline"># of pixels in this region</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#P_Edge"> P_Edge </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#region1"> region1 </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#region2"> region2 </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#height"> height </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">Index of region on one side of this edge</td></tr>
+    <tr><td class="comment" valign="baseline">Index of region on the other side of this edge</td></tr>
+    <tr><td class="comment" valign="baseline">Least barrier height of the border modeled by this edge</td></tr>
+</table>
+</td></tr>
+</table>
+<br><table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Map_Bundle"> Map_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#nrange"> nrange </a></b>
+     </td><td class="define" valign="baseline">: int</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#mapto"> mapto </a></b>
+     </td><td class="define" valign="baseline">: int *</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline"># of regions in the range of this map</td></tr>
+    <tr><td class="comment" valign="baseline">mapto[i] is the new region index for region i</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+        <a name="Label_Array"></a>
+       <b><a href="Partition.html#Label_Array"> Label_Array </a></b>
+     </td><td class="define" valign="baseline">: Array</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A UINT8_, UINT16_, or UINT32_TYPE, PLAIN_KIND array</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+</table>
+<p class="group"><i>Partition Routines</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Is_Partition_2n_Connected">Is_Partition_2n_Connected</a></b>
+     (Partition *<I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">boolean</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Is_Partition_Colored">Is_Partition_Colored</a></b>
+     (Partition *<I>p</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">APart *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_APart">Get_Partition_APart</a></b>
+     (Partition *<I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">void *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Set_Partition_APart">Set_Partition_APart</a></b>
+     (Partition *<I>p</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, APart *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Label_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_Labels">Get_Partition_Labels</a></b>
+     (Partition *<I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Set_Partition_Labels">Set_Partition_Labels</a></b>
+     (Partition *<I>p</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Label_Array *<I>labels</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_Vertex_Count">Get_Partition_Vertex_Count</a></b>
+     (Partition *<I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_Edge_Count">Get_Partition_Edge_Count</a></b>
+     (Partition *<I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">int</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_Label_Count">Get_Partition_Label_Count</a></b>
+     (Partition *<I>p</I>)</td></tr>
+<tr><td class="return" valign="baseline">P_Vertex *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_Vertex">Get_Partition_Vertex</a></b>
+     (Partition *<I>p</I>, int <I>c</I>)</td></tr>
+<tr><td class="return" valign="baseline">P_Edge *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_Edge">Get_Partition_Edge</a></b>
+     (Partition *<I>p</I>, int <I>d</I>)</td></tr>
+<tr><td class="return" valign="baseline">int *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Get_Partition_Neighbors">Get_Partition_Neighbors</a></b>
+     (Partition *<I>p</I>, int <I>c</I>, int *<I>n</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Partition *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Make_Partition">Make_Partition</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (APart *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, Label_Array *<I>labels</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>nregions</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>iscon2n</I>, boolean <I>color</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Partition *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Color_Partition">Color_Partition</a></b>
+     (Partition *<I>p</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Draw_Partition">Draw_Partition</a></b>
+     (Array *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Partition *<I>p</I>, double <I>alpha</I>)</td></tr>
+</table>
+<p class="group"><i>Merging Routines</i></p>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Map_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Static_Collapse">Static_Collapse</a></b>
+     (Map_Bundle *<I>map</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, Partition *<I>p</I>, void *<I>arg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tristate (*<I>decide</I>)(int a, int h, int b, void *arg))</td></tr>
+<tr><td class="return" valign="baseline">Map_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#General_Collapse">General_Collapse</a></b>
+     (Map_Bundle *<I>map</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, Partition *<I>p</I>, boolean <I>dynamic</I>, void *<I>arg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tristate (*<I>decide</I>)(int a, int ab, int b, void *arg), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void (*<I>fuse</I>)(int a, int ac, int c, int cb, int b, void *arg), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean (*<I>compare</I>)(int a, int ab, int b, int c, int cd, int d, void *arg))</td></tr>
+<tr><td class="return" valign="baseline">Partition *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Partition.html#Merge_Partition">Merge_Partition</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Partition *<I>p</I>, Map_Bundle *<I>map</I>, Label_Array *<I>labels</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, boolean <I>color</I>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<h3>Partition Graphs</h3>
+<p>
+A <B>Partition</B> models a partitioning of an image into connected subsets of pixels.
+It is primarily used in <B>mylib</B> to model the results of a watershed partitioning
+of an image (described below), but it can in fact model any partitioning or partial
+partitioning of an array.
+At the topological level a Partition is an undirected <B>graph</B>,
+where each <B>vertex</B> represents a subset of connected pixels or a <B>region</B> of an image and
+is modeled by a <a href="Partition.html#P_Vertex">P_Vertex</a> structure that gives the number of pixels in the region, the value of a
+minimal pixel in the region, and a <a class="ref" href="Region.html#leftmost">leftmost</a> seed pixel for the region.  There is an <B>edge</B> for
+every pair of adjacent partition elements, modeled by a <a href="Partition.html#P_Edge">P_Edge</a>, that represents the border that
+is common to the two touching regions.  It further gives the smallest value of a pixel on one
+side or the other of this shared border.
+</p>
+<p>
+A <a href="Partition.html">Partition</a> object maintains a reference to the image it partitions, and may optionally have
+a reference to a <I>UINT8_</I>, <I>UINT16_</I>, or <I>UINT32_TYPE</I> <B>label array</B> that gives a voxel-based
+representation of the partition in one of two forms.  The label array is either (a) a
+<B>labeling</B> of the voxels of the partition where a pixel has label <I>i</I> if it belongs to
+region <I>i-1</I>, or (a) a <B>coloring</B> of the voxels in the partition such that (i) all voxels in
+a given region have the same strictly positive value, and (ii) this value is different from the
+values used to label any adjacent region.  In both cases, pixels labeled 0 are not part of the
+partition, and their presence implies the partition is partial.  Generally a coloring involves
+many fewer distinct values/colors, and
+hence can often fit in a <I>UINT8_TYPE</I> label array when memory is at a premium.  Together with
+the leftmost seed of a <I>P_Vertex</I>, either labeling allows one to easily capture the voxels
+in a basin with a <a class="ref" href="Connectivity.html#flood fill">flood fill</a> from the seed to all pixels with the same value
+(see <a href="Region.html#Record_P_Vertex">Record_P_Vertex</a>).
+</p>
+<p>
+A <a href="Partition.html">Partition</a>'s image reference can actually refer to an entire array or a slice thereof.
+The associated label array must have the same shape as the image in the case that it is an array.
+But to facilatate threaded algorithms, when the image reference is to a slice, the associated
+label array may have either the shape of the slice, or the shape of its underlying array,
+in which case the voxels of the same slice of the label array corresponds to those of the
+image slice.
+The indices stored for the leftmost seed pixel of a <a href="Partition.html#P_Vertex">P_Vertex</a> are always indices into the
+label array and not the image.  These happen to coincide when the image is an
+array, or when the image is a slice and the label array has the shape of the slice's array.
+But note carefully that when the image is a slice and the label array has the shape of the slice,
+indices into the label array do <B>not</B> correspond to indices into the image array.
+</p>
+<p>
+Given a labeling <I>label</I> (not a coloring) of an image array <I>image</I> that has
+regions distinctly labeled between 1 and <I>nregions</I> that are <I>iscon2n</I> connected,
+<I><a href="Partition.html#Make_Partition">Make_Partition</a>(image,label,nregions,iscon2n,color)</I> creates a <B>Partition</B> graph corresponding
+to the labeling.  The labeling <I>label</I> may have zero pixels, which are ignored, and whose presence
+implies that the resulting partition is partial in that the union of its regions do not cover
+the entire domain of the label array.   As mentioned immediately above, <I>label</I> can have the shape
+of either <I>image</I> or its underlying array if it is a slice, and this choice for the shape of <I>label</I>
+has an effect on the nature of the indices stored for the seed voxel of each <a href="Partition.html#P_Vertex">P_Vertex</a>.
+If requested, by setting the boolean parameter <I>color</I> to true, the label array (or relevant
+slice thereof) will be relabeled greedily to provide a coloring of the partition.  Note however,
+that the conversion to a coloring does not have to be performed at the time of creation, but
+can occur at any time by invoking <I>Color_Partition</I>.  The labeling <I>label</I> may on input be over
+small integers, e.g. a UINT8_TYPE array but may, if the construction or coloring requires it,
+be enlarged to be a UINT16_ or UINT32_TYPE array upon completion.  The construction requires
+one extra bit for a sign be available, and while a coloring may use more colors than a labeling,
+this would be highly unusual.  Thus a UINT8_TYPE labeling can be used when there are 127 or
+fewer regions, and a UINT16_TYPE labeling can be used when there are 32,767 or fewer regions.
+</p>
+<p>
+Given a <B>Partition</B> graph, <I>p</I>, one can retrieve the number, <I>V</I>, of regions or vertices,
+the number, <I>E</I>, of edges, and the number of distinct values in the label array of <I>p</I>
+(if it has one) with the routines <a href="Partition.html#Get_Partition_Vertex_Count">Get_Partition_Vertex_Count</a>,
+<a href="Partition.html#Get_Partition_Edge_Count">Get_Partition_Edge_Count</a>, and <a href="Partition.html#Get_Partition_Label_Count">Get_Partition_Label_Count</a>, respectively.  A pointer
+to the label array for a partition graph is return by <a href="Partition.html#Get_Partition_Labels">Get_Partition_Labels</a> and
+<a href="Partition.html#Is_Partition_Colored">Is_Partition_Colored</a> returns true iff and only if the label array is a coloring.
+A pointer to the <a href="Partition.html#P_Vertex">P_Vertex</a> structure for the
+<i>i <sup>th</sup></i> region
+is return by <a href="Partition.html#Get_Partition_Vertex">Get_Partition_Vertex</a><I>(p,i)</I> for <I>i &isin; [0,V-1]</I>, and
+a pointer to the <a href="Partition.html#P_Edge">P_Edge</a> record for the
+<i>e <sup>th</sup></i> edge
+is return by <a href="Partition.html#Get_Partition_Edge">Get_Partition_Edge</a><I>(p,e)</I> for <I>e &isin; [0,E-1]</I>.
+In fact, both of these
+structures are consecutive in memory, so one
+can, for example, get the pointer <I>b = Get_Partition_Vertex(p,0)</I>
+to the first region, and then access the
+<i>i <sup>th</sup></i> region or vertex more efficiently
+as <I>b[i]</I>.
+The edges adjacent to the
+<i>i <sup>th</sup></i> region
+are obtained by calling
+<I>a&nbsp;=&nbsp;<a href="Partition.html#Get_Partition_Neighbors">Get_Partition_Neighbors</a>(p,i,&n)</I>, where
+<I>a[j]</I> for <I>j &isin; [0,n-1]</I> is the set of indices for the edges involving <I>i</I>, i.e.
+either <I>Get_Partition_Edge(p,a[j])-&gt;region1 = i</I>
+or <I>Get_Partition_Edge(p,a[j])-&gt;region2 = i</I>.  To further clarify, the code snippet below
+lists the vertices that are adjacent to each vertex in partition <I>p</I>:
+</p>
+<pre>
+ P_Edge   *e, *f;
+ int      *a, n, v;
+ int       i, j;
+
+ e = Get_Partition_Edge(p,0);
+ v = Get_Partition_Vertex_Count(p);
+ for (i = 0; i < v; i++)
+   { a = Get_Partition_Neighbors(p,i,&n);
+     printf("  %d:",i);
+     for (j = 0; j < n; j++)
+       { f = e+a[j];
+         if (f->region1 == i)
+           printf(" %d",f->region2);
+         else
+           printf(" %d",f->region1);
+       }
+     printf("\n");
+   }
+</pre>
+<p>
+The connectivity, the array or slice from which <I>p</I> was built, and the label array of <I>p</I>
+can be retrieved later with <a href="Partition.html#Is_Partition_2n_Connected">Is_Partition_2n_Connected</a>, <a href="Partition.html#Get_Partition_APart">Get_Partition_APart</a>, and
+<a href="Partition.html#Get_Partition_Labels">Get_Partition_Labels</a>.
+A <B>Partition</B> object can be read and written to a file, but it relies on a reference to the
+underlying array from which it was built, so when you read in a <B>Partition</B> you must
+re-establish this reference with <a href="Partition.html#Set_Partition_APart">Set_Partition_APart</a>.  Similarly, the label array is
+not a sub-object of a partition, and its pointer must be re-established with a call
+to <a href="Partition.html#Set_Partition_Labels">Set_Partition_Labels</a> after reading in a partition.  This routine can also be used
+to set the label array reference
+to NULL, giving a partition graph that no longer refers to the label field that defined
+it.
+</p>
+<p>
+Lastly, with <a href="Partition.html#Draw_Partition">Draw_Partition</a> one can obtain
+a nicely colored image of a watershed blended by a selectable factor <I>alpha</I> with respect
+to any image with the same shape as the watershed's underlying array.
+</p>
+<h3>Collapsing Partitions</h3>
+<a name="collapsing map"><a>
+<p>
+The watershed algorithm (see the <a href="Watershed.html">Watershed</a> module) tends to produce partitions that
+oversegment an image as it is sensitive to small fluctuations in signal.
+A common approach to solve this problem is to progressively merge <a class="ref" href="Watershed.html#catchment basin">catchment basin</a>s
+(partition regions) for which the difference between their depth and the dam height
+separating them is small.  To facilitate such solutions, <a href="Partition.html#Static_Collapse">Static_Collapse</a> progressively
+merges partition regions in order of height as directed by a handler routine that for
+any pair of current regions, decides if they should
+be merged.  The handler should return a value greater than 0 if the regions should be merged,
+0 if they should not, and a value less than 0 if the regions should not be merged <B>and</B> no
+further merging is desired.
+The routine does not actually perform the merges, but rather builds a <B>collapsing map</B>
+that for each original region gives the index of the new region to which it should belong.  Given
+such a <a href="Partition.html#Map_Bundle">Map_Bundle</a>, <a href="Partition.html#Merge_Partition">Merge_Partition</a> then will generate a new <a href="Partition.html">Partition</a> object that models
+the collapsed watershed implied by the map.  An example of the use of these routines, is given
+by <a href="Watershed.html#Build_Seeded_Watershed">Build_Seeded_Watershed</a>, that generates a watershed for the coarsest merging of an
+initial watershed such that each collapsed set of basins contains exactly one pixel from a
+user-supplied set of seed pixels.
+</p>
+<p>
+One may also wish to consider collapsing regions of a partition in an order of edges that
+is dynamic and specified by the caller, as opposed to the fixed, height order of
+<a href="Partition.html#Static_Collapse">Static_Collapse</a>.  For example, for a partition <I>w</I>, the utility <a href="Watershed.html#Average_Watershed_Heights">Average_Watershed_Heights</a>
+(from the <a href="Watershed.html">Watershed</a> module) fills in vectors <I>num</I> and <I>den</I> of length
+<I>Get_Partition_Edge_Count(p)</I> so that for the
+<i>j<sup>th</sup></i> edge,
+<I>num[j]</I> is the sum of the pixel values along the boundary separating the two basins,
+<I>den[j]</I> is the number of pixels along the boundary, and therefore
+<I>num[j]/den[j]</I> is the average height of the boundary separating the two regions
+of the edge.
+This measure of separability between two regions may be more useful in cases where there are
+weaknesses in the barrier, such as irregularly stained biological boundaries.
+One may then wish to collapse regions (catchment basins) in order of average (dam) height,
+where a little
+thought reveals that average height changes as regions are merged, because this implies
+region boundaries must also be merged.
+</p>
+<p>
+<a href="Partition.html#General_Collapse">General_Collapse</a> is a
+generalization of <I>Static_Collapse</I> that allows the order of collapsing decisions to be
+directed dynamically by the caller who supplies three handler routines that direct
+the process.  The routine <I>compare(a,ab,b,c,cd,d)</I> should return true if and only if the edge
+with index <I>ab</I> is considered to be less than or equal to the edge with index <I>cd</I>.  The indices
+of the regions <I>a</I> and <I>b</I> on each side of <I>ab</I> are also supplied, the reason being that as
+the collapsing progresses, the edges and vertices are really unions of merged edges and vertices,
+so the indices representing the merged regions on either side of the fused edge represented by <I>ab</I>
+are not simply the <I>region1</I> and <I>region2</I> fields of the <a href="Partition.html#P_Edge">P_Edge</a> structure in the subject
+partition.
+The handler <I>decide(a,ab,b)</I> is the same as for <I>Static_Collapse</I>, and given
+vertex indices <I>a</I> &amp; <I>b</I> and the edge index <I>ab</I> for the edge between them, returns a value greater
+than 0 if <I>a</I> and <I>b</I> should be merged, 0 if they should not, and a value less than 0 if they
+should not and no further merging should take place.  If the regions are merged, then <I>a</I>
+is the vertex that will represent their union going forward.  Furthermore, observe that there
+can be regions, <I>c</I>, that are adjacent to both <I>a</I> and <I>b</I> in which case the edges <I>ac</I> and
+<I>bc</I> need to be fused.  <I>Fuse(a,ac,c,cb,b)</I> is called for each appropriate <I>c</I> in order to
+inform the caller that the edges <I>ab</I> and <I>cb</I> are being fused and their union will be
+represented by <I>ab</I> going forward.
+</p>
+<p>
+Depending on the logic of the collapsing, a given collapse can in some cases affect only
+the priority of edges that are fused (as in the example below), or in the most general case
+a collapse can effect the priority of every edge adjacent to the fused result.  The later
+case requires more updating of the heap and is not as efficient.  The boolean <I>dynamic</I>
+signals the more complex case when true, and the simpler case when false.
+</p>
+<p>
+As for <I>Static_Collapse</I>, <I>General_Collapse</I> does not actually generate a new partition,
+but rather fills in a map that can then be merged with <I>Merge_Partition</I>.  The code example
+below, realizes a routine <I>Average_Collapse</I> that collapses watershed graph <I>w</I> in order
+of average dam height, merging all basin pairs for which the difference between their
+deepest voxel and the average dam height is less than a threshold <I>barrier</I>.  As basins are
+merged and dams fused, the depth of the resulting basin, and the <I>num</I> and <I>den</I> of the
+fused dam boundaries must be updated.  To do so a <I>void *</I> payload pointer pointing at an
+<I>Info</I> structure that contains arrays for each of these three attributes is initialized and
+then modified by the handlers during the collapsing.
+For example, note that when two dams <I>ab</I> and <I>cb</I> are combined in <I>FUSE</I>, the new
+dam's <I>num</I> and <I>den</I> attributes are recorded in the values for dam <I>ab</I> as this will be the
+representative index going forward.  Further note that <I>DECIDE</I> updates the depth attribute of
+basin <I>a</I>, if <I>a</I> and <I>b</I> are going to be merged.  Finally, note that the merged result
+will have a UINT32_TYPE labeling as its label array.  This could be colored and compacted
+into a UINT8_ or UINT16_TYPE array if desired.
+</p>
+<a name="aveheight"><a>
+<pre>
+ typedef struct
+   { int barrier;
+     int *depth;
+     int *num;
+     int *den;
+   } Info;
+
+ #define INFO      ((Info *) arg)
+ #define AVEHGT(d) ((1.*INFO->num[d])/INFO->den[d])
+
+ tristate DECIDE(int a, int ab, int b, void *arg)
+ { int bar;
+   if (INFO->depth[a] < INFO->depth[b])
+     bar = AVEHGT(ab) - INFO->depth[b];
+   else
+     bar = AVEHGT(ab) - INFO->depth[a];
+   if (bar <= INFO->barrier)
+     { if (INFO->depth[b] < INFO->depth[a])
+         INFO->depth[a] = INFO->depth[b];
+       return (1);
+     }
+   return (0);
+ }
+
+ void FUSE(int a, int ac, int c, int cb, int b, void *arg)
+ { INFO->num[ac] += INFO->num[cb];
+   INFO->den[ac] += INFO->den[cb];
+ }
+
+ boolean COMPARE(int a, int ab, int b, int c, int cd, int d, void *arg)
+ { return (AVEHGT(ab) <= AVEHGT(cd)); }
+
+ Partition *Average_Collapse(Partition *w, int barrier)
+ { int           nbasins = Get_Partition_Vertex_Count(w);
+   int           nedges  = Get_Partition_Edge_Count(w);
+   P_Vertex     *verts   = Get_Partition_Vertex(w,0);
+   Map_Bundle    map;
+   Info          info;
+   int           i;
+
+   into.barrier = barrier;
+   info.depth   = (int *) Guarded_Malloc(sizeof(int)*(nbasins+2*nedges),"Average_Collapse");
+   info.num     = info.depth + nbasins;
+   info.den     = info.num + nedges;
+
+   for (i = 0; i < nbasins; i++)
+     info.depth[i] = verts[i].depth;
+   Average_Watershed_Heights(w,info.num,info.den);
+
+   map.mapto = NULL;
+   General_Collapse(&map,w,0,&info,DECIDE,FUSE,COMPARE);
+   wp = Merge_Partition(w,&map,Make_Array_With_Shape(PLAIN_KIND,UINT32_TYPE,AForm_Shape(w)),0);
+
+   free(info.depth);
+   free(map.mapto);
+
+   return (wp);
+ }
+</pre>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="P_Vertex"></a>     <tr><td class="name" valign="top">P_Vertex</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>seed</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>depth</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>size</i></td><td class="define">: int</td></tr>
+    </table>
+  </h3>
+<p>
+<a href="Partition.html#Get_Partition_Vertex">Get_Partition_Vertex</a> returns a pointer to a structure of this type, that provides
+information about a particular vertex or region in a partition.  The <I>size</I> is the number of voxels
+in the region and <I>depth</I> is the value of the deepest (smallest) voxels in the region.
+For a watershed partition the set of pixels with this value in the region form a single
+connected minimum.  The field <I>seed</I> is a voxel index into the underlying array for the
+partition, and can be used to flood-fill the region in conjunction with the label field
+of the partition.  This seed is <a class="ref" href="Region.html#leftmost">leftmost</a> which implies it can be used in calls to
+routines such as <a href="Region.html#Record_Region">Record_Region</a> that require the seed to have this property.
+Moreover, this index is always in the framework of the label array, so in the particular
+case that the image is a slice, and the label array has the shape of the slice, then
+the seed is into the label array and <B>is not valid in the image</B>.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="P_Edge"></a>     <tr><td class="name" valign="top">P_Edge</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>region1</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>region2</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>height</i></td><td class="define">: int</td></tr>
+    </table>
+  </h3>
+<p>
+<a href="Partition.html#Get_Partition_Edge">Get_Partition_Edge</a> returns a pointer to a structure of this type, that provides
+information about a particular edge between two regions in a partition whose borders
+touch each other.
+<I>region1</I> and <I>region2</I> are the indices of the two regions or vertices separated by the
+edge, and <I>height</I> is the value of the lowest voxel along the edge boundary separating
+the two regions.
+</p>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Map_Bundle"></a>     <tr><td class="name" valign="top">Map_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>nrange</i></td><td class="define">: int</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>mapto</i></td><td class="define">: int *</td></tr>
+    </table>
+  </h3>
+<p>
+Consider a image partition with <I>nregions</I> regions.  A <B>Map_Bundle</B> gives a map
+that effectively merges regions together and renumbers them consecutively from 0
+to <I>nrange-1</I> where <I>nrange &le; nregions</I>.  The field <I>mapto[i]</I> for
+<I>i &isin; [0,nregions-1]</I>
+gives the number of the new region that region <I>i</I> should belong to, where
+<I>U<sub>i</sub> mapto[i]</I> is <I>[0,nrange-1]</I>.
+<a href="Partition.html#Static_Collapse">Static_Collapse</a> and <a href="Partition.html#General_Collapse">General_Collapse</a> fill
+in such a bundle as their merging result, and <a href="Partition.html#Merge_Partition">Merge_Partition</a> uses such a bundle to
+generate a new partition representing the collapsed result.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Is_Partition_2n_Connected"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Is_Partition_2n_Connected (<a href="Partition.html">Partition</a> *<I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Return true if and only if partition <I>p</I> was built with respect to <I>2n</I>-connectivity
+(as opposed to
+<i>(3<sup>n</sup>-1)</i>-connectivity).
+</p>
+  <h3 class="fn"><table>
+     <a name="Is_Partition_Colored"></a><tr><td valign="baseline">boolean</td>
+     <td valign="baseline">Is_Partition_Colored (<a href="Partition.html">Partition</a> *<I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Returns true if and only if partition <I>p</I>'s label array is a coloring (as opposed to
+a label field).  If the label array is NULL, then the result is undefined.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_APart"></a><tr><td valign="baseline"><a href="AForm.html#APart">APart</a> *</td>
+     <td valign="baseline">Get_Partition_APart (<a href="Partition.html">Partition</a> *<I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Return the <a href="Array.html">Array</a> or <a href="Slice.html">Slice</a> (<a href="AForm.html#APart">APart</a>) that partition <I>p</I> was made from.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Partition_APart"></a><tr><td valign="baseline">void *</td>
+     <td valign="baseline">Set_Partition_APart (<a href="Partition.html">Partition</a> *<I>p</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="AForm.html#APart">APart</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+If <I>p</I> has a reference to an image it is freed, and then a
+a new reference to <I>image</I> is created and set to be the image referenced by <I>p</I>.
+The somewhat awkward need for this routine is to relink the partition with its
+image in the event you read it in from a file.  A partition object can be written
+and later read, but writing the object does not write the image upon which it
+depends, so one must take care to write the image as well.  Later when you
+read both the image and partition from the file, one needs this routine link
+them back up.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_Labels"></a><tr><td valign="baseline"><a href="Partition.html#Label_Array">Label_Array</a> *</td>
+     <td valign="baseline">Get_Partition_Labels (<a href="Partition.html">Partition</a> *<I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Return the label field or coloring of the regions of <I>p</I>.
+The type of the array can be <I>UINT8_</I>, <I>UINT16_</I>, or <I>UINT32_TYPE</I> and its shape
+is either the same as that of the <a href="AForm.html#APart">APart</a> image over which <I>p</I> was produced, or
+its underlying array.
+</p>
+  <h3 class="fn"><table>
+     <a name="Set_Partition_Labels"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Set_Partition_Labels (<a href="Partition.html">Partition</a> *<I>p</I> <sup><b><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Partition.html#Label_Array">Label_Array</a> *<I>labels</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+If <I>p</I> has a reference to a label array it is freed, and then
+the label array of partition <I>p</I> is set to <I>labels</I>, consuming the reference to said.
+Primarily used to relink the partition with its label array in the event you read it
+in from a file (see <a href="Partition.html#Set_Partition_APart">Set_Partition_APart</a>).  One can also set the label array to
+<I>NULL</I> which effectivly disassociates a partition from the label array that defined
+it.  This is useful if memory is at a premium and the voxels of each region no longer
+need to be accessed.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_Vertex_Count"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_Partition_Vertex_Count (<a href="Partition.html">Partition</a> *<I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of regions (vertices) in <I>p</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_Edge_Count"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_Partition_Edge_Count (<a href="Partition.html">Partition</a> *<I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of edges in <I>p</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_Label_Count"></a><tr><td valign="baseline">int</td>
+     <td valign="baseline">Get_Partition_Label_Count (<a href="Partition.html">Partition</a> *<I>p</I>)</td></tr>
+  </table></h3>
+<p>
+Return the number of distinct labels or colors used to color the
+label field of <I>p</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_Vertex"></a><tr><td valign="baseline"><a href="Partition.html#P_Vertex">P_Vertex</a> *</td>
+     <td valign="baseline">Get_Partition_Vertex (<a href="Partition.html">Partition</a> *<I>p</I>, int <I>c</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the <a href="Partition.html#P_Vertex">P_Vertex</a> structure for the
+<i>c<sup>th</sup></i>
+region of <I>p</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_Edge"></a><tr><td valign="baseline"><a href="Partition.html#P_Edge">P_Edge</a> *</td>
+     <td valign="baseline">Get_Partition_Edge (<a href="Partition.html">Partition</a> *<I>p</I>, int <I>d</I>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to the <a href="Partition.html#P_Edge">P_Edge</a> structure for the
+<i>d<sup>th</sup></i>
+edge of <I>p</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Get_Partition_Neighbors"></a><tr><td valign="baseline">int *</td>
+     <td valign="baseline">Get_Partition_Neighbors (<a href="Partition.html">Partition</a> *<I>p</I>, int <I>c</I>, int *<I>n</I> <sup><b><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Return a pointer to an integer vector, say <I>a</I>, that gives the <I>n</I> edges
+adjacent to the
+<i>c<sup>th</sup></i>
+region of <I>p</I>.  That is, <I>a[j]</I> is the index of an edge adjacent to the
+region with index <I>c</I>, for <I>j &isin; [0,n-1]</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Make_Partition"></a><tr><td valign="baseline"><a href="Partition.html">Partition</a> *</td>
+     <td valign="baseline">Make_Partition<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="AForm.html#APart">APart</a> *<I>image</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font></b></sup>, <a href="Partition.html#Label_Array">Label_Array</a> *<I>labels</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, int <I>nregions</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean <I>iscon2n</I>, boolean <I>color</I>)</td></tr>
+  </table></h3>
+<p>
+Given an array or slice <I>image</I> and an <I>iscon2n</I>-connected labeling (not a coloring) <I>labels</I>
+of said with
+<I>nregions</I> strictly positive labels, generate a <a href="Partition.html">Partition</a> object that encodes the (partial)
+partition in the label field and if <I>color</I> is true convert <I>labels</I> into a coloring of the
+partition encoded therein.  Note carefully, that 0-labeled pixels are ignored and imply that
+the resulting object is a partial partition.  Moreover, <I>image</I> must be an UINT or INT array
+of values with not more than 32 bits.
+The coloring, of the label array, if requested, is greedy (so for example more than the maximum
+4 colors needed for any 2D partition
+may be used), but the number of colors is generally very small.  The Partition object creates a
+new reference to <I>image</I> and consumes the reference to <I>label</I> (i.e. the object keeps an internal
+reference to <I>label</I> that it is taking from the caller).
+</p>
+<p>
+The label array may have its type enlarged if the extra sign bit required by the routine or
+the number of colors in a greedy coloring demands it.  Conversely, if the labeling is converted
+into a coloring, then it may well be the case that one can compress the label array into
+a <I>UINT8_</I> or <I>UINT16_TYPE</I> array.
+For example, <a href="Watershed.html#Build_Watershed">Build_Watershed</a> below is realized using <a href="Watershed.html#Label_Watershed">Label_Watershed</a> and <a href="Partition.html#Make_Partition">Make_Partition</a>
+and then compressing the coloring if possible.
+</p>
+<pre>
+ Partition *Build_Watershed(Pixel_APart *image, boolean iscon2n, boolean color)
+ { Label_Array *h;
+   Partition   *s;
+   int          n;
+
+   h = Make_Array_With_Shape(PLAIN_KIND,INT32_TYPE,AForm_Shape(image));
+   Label_Watershed(image,h,&n,iscon2n);
+   s = Make_Partition(image,h,n,iscon2n,color);
+   if (Get_Partition_Color_Count(s) < 256)
+     Convert_Array_Inplace(h,PLAIN_KIND,UINT8_TYPE,8,0);
+   else if (Get_Partition_Color_Count(s) < 0x10000)
+     Convert_Array_Inplace(h,PLAIN_KIND,UINT16_TYPE,16,0);
+   Pack_Array(h);
+   return (s);
+ }
+</pre>
+  <h3 class="fn"><table>
+     <a name="Color_Partition"></a><tr><td valign="baseline"><a href="Partition.html">Partition</a> *</td>
+     <td valign="baseline">Color_Partition (<a href="Partition.html">Partition</a> *<I>p</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+The label array of a partition object (if present) can be converted from a labeling to a
+coloring at any time after its creation with this routine.  A pointer to the partition is
+returned as a convenience.
+</p>
+  <h3 class="fn"><table>
+     <a name="Draw_Partition"></a><tr><td valign="baseline"><a href="Array.html">Array</a> *</td>
+     <td valign="baseline">Draw_Partition (<a href="Array.html">Array</a> *<I>canvas</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Partition.html">Partition</a> *<I>p</I>, double <I>alpha</I>)</td></tr>
+  </table></h3>
+<p>
+Color the pixels of an RGB-array canvas with the partition <I>p</I> where <I>alpha</I> of the
+pixel range is the partition coloring and <I>1-alpha</I> is whatever value is already in
+the canvas.  If the canvas is the same shape as the shape of the APart the partition was
+computed over, then the partition colors the entire canvas.  The other possibility
+is that the canvas is the shape of the underlying array of the Apart (which must be
+a slice) in which case the portion of the canvase covered by the slice is colored.
+</p>
+  <h3 class="fn"><table>
+     <a name="Static_Collapse"></a><tr><td valign="baseline"><a href="Partition.html#Map_Bundle">Map_Bundle</a> *</td>
+     <td valign="baseline">Static_Collapse (<a href="Partition.html#Map_Bundle">Map_Bundle</a> *<I>map</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <a href="Partition.html">Partition</a> *<I>p</I>, void *<I>arg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tristate (*<I>decide</I>)(int a, int h, int b, void *arg))</td></tr>
+  </table></h3>
+<p>
+Fills in a <a class="ref" href="Partition.html#collapsing map">collapsing map</a> that results from
+progressively merging partitions in order of edge height as
+directed by the handler routine <I>decide</I>.  The inputs are a partition and
+a user-suppled payload pointer <I>arg</I>
+that will be passed to each call of <I>decide</I> (ensuring re-entrant semantics if desired).
+When a pair of regions is considered for merging by <I>decide</I>, the indices <I>a</I>
+and <I>b</I> of the two regions to be merged is passed to <I>decide</I> along with the
+height <I>h</I> of the edge between them.  The indices are in the range <I>[0,V-1]</I> where
+<I>V = Get_Partition_Count_Count(p)</I>.
+<I>Decide</I> should return a value greater than 0 if the two elements are to be merged, 0 if they are
+not, and a value less than 0 if they are not to be merged and no further merging is desired.
+In the event of a merge, the left argument <I>a</I> will represent the
+combined region, so any information about the current set of regions encoded in
+the structure pointed at by <I>arg</I> should be updated by the user before returning from
+the handler.
+</p>
+<p>
+Elaborating further, the partition data structure is <B>not modified</B> during
+the collapsing, but rather
+the current set of merged regions is modeled as the collapsing progresses, where each set
+of currently collapsed regions is represented by one of the original regions depending on
+the sequence of calls to the handler.
+For example, suppose <I>decide</I> chooses to merge the region pairs <I>(a,b), (c,d), (e,a), (c,e)</I>
+in the order given, then at the end of the sequence the regions <I>a, b, c, d, e</I> are all merged
+into a single region represented by <I>c</I>.
+At the end of the collapsing, a map from each region to the index of a new region index in the
+collapsed partition is filled in and returned and this map can subsequently be given to
+<a href="Partition.html#Merge_Partition">Merge_Partition</a>
+which actually generates a new merged partition.  The map is returned in the
+user-supplied <a href="Partition.html#Map_Bundle">Map_Bundle</a> that contains <I>nrange</I>, the number of basins in the
+collapsed result, and <I>mapto</I> where <I>mapto[i]</I> gives the number of the new region that region
+<I>i</I> now belongs to.  The union <I>U<sub>i</sub> mapto[i]</I> = <I>[0,nrange-1]</I>.
+If <I>mapto</I> is NULL on input,
+then the necessary integer vector is <I>malloc</I>'d, otherwise <I>mapto</I> will be enlarged to
+hold the result if necessary.
+</p>
+  <h3 class="fn"><table>
+     <a name="General_Collapse"></a><tr><td valign="baseline"><a href="Partition.html#Map_Bundle">Map_Bundle</a> *</td>
+     <td valign="baseline">General_Collapse (<a href="Partition.html#Map_Bundle">Map_Bundle</a> *<I>map</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, <a href="Partition.html">Partition</a> *<I>p</I>, boolean <I>dynamic</I>, void *<I>arg</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tristate (*<I>decide</I>)(int a, int ab, int b, void *arg), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void (*<I>fuse</I>)(int a, int ac, int c, int cb, int b, void *arg), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean (*<I>compare</I>)(int a, int ab, int b, int c, int cd, int d, void *arg))</td></tr>
+  </table></h3>
+<p>
+Fills in a <a class="ref" href="Partition.html#collapsing map">collapsing map</a> that results from
+progressively merging partitions as directed by the handler <I>decide</I>, in the order dictated
+by the handler <I>compare</I>.  The inputs are a partition and a user-suppled payload pointer <I>arg</I>
+that will be passed to each of the three input handlers <I>decide</I>, <I>fuse</I>, and <I>compare</I> (ensuring
+re-entrant semantics are possible).
+</p>
+<p>
+As the collapsing progresses vertices are conceptually being merged, which further requires that
+edges between vertices are also being fused together.  During the merging process, any merged set
+of regions is represented by just one of the original regions, and the index of this region/vertex
+is effectively known to the caller by virtue of the convention that whenever <I>decide(a,ab,b)</I> is
+called, <I>b</I> will be merged into <I>a</I> which will then be the representative index for the union of the
+set of regions modeled by <I>a</I> and the set modeled by <I>b</I>.
+Similarly, when region are merged, edges also necessarily need
+to be fused.  Again, a set of fused edges is represented by just one of the original edges, and the
+index of this edge is effectively known to the caller by virtue of the convention that whenever
+<I>fuse(a,ac,c,cb,b)</I> is called, <I>cb</I> will be fused into <I>ac</I> which will then be the representative
+edge index for the union of the set of edge modeled by <I>ac</I> and the set modeled by <I>cb</I>.
+Initially, every basin is modeled by the index for itself, and every dam is modeled by the
+index for itself, in <I>p</I>, implying that the range of region indices is <I>[0,V-1]</I> and
+the range of edge indices is <I>[0,E-1]</I>, where <I>V</I> is the number of vertices and <I>E</I> is the
+number of edges in <I>p</I>.
+Note that because of this dynamic process, given a region index <I>ab</I> representing a fusion of a
+set of edges, the regions on either side of this edge must be communicated to the user in case
+they need information about the adjacent regions to make a decision or perform an update.
+Therefore, <I>compare(a,ab,b,c,cd,d)</I>, whose role is to return true if and only if edge <I>ab</I>
+should be explored for collapsing before edge <I>cd</I>, needs to passed the indices of the regions
+representing <I>a</I>, <I>b</I>, <I>c</I>, and <I>d</I> for the two edges.  A heap of edges to be explore
+is ordered according to <I>compare</I> and updated as region merges and edge fusions occur.
+</p>
+<p>
+In the order implied by <I>compare</I>, the handler <I>decide(a,ab,b,arg)</I> is called with
+a pair of region indices <I>a</I> and <I>b</I> that should be considered for merging
+where <I>ab</I> is the index of the edge between them.
+<I>Decide</I> should return a value greater than 0 if the two elements are to be merged, 0 if they are
+not, and a value less than 0 if they are not to be merged and no further merging is desired.
+In the event of a merge, the left argument <I>a</I> will represent the combined region,
+so any information about the current set of regions encoded in the structure pointed at by
+<I>arg</I> should be updated by the user before returning from this handler.   Moreover, for every
+vertex <I>c</I> that is adjacent to both <I>a</I> and <I>b</I>, the handler <I>fuse(a,ac,c,cb,b,arg)</I> will be
+called after returning from <I>decide</I>, where <I>ac</I> is the index of the edge between the
+vertices represented by <I>a</I> and <I>c</I>, and <I>cb</I> is that for regions <I>b</I> and <I>c</I>.
+The edges for <I>ac</I> and <I>cb</I> are conceptually being fused and <I>ac</I> will represent said fusion
+going forward, so <I>fuse</I> should update the information about edge <I>ac</I> accordingly via the
+payload pointer <I>arg</I>.
+</p>
+<p>
+Note carefully, that the partition data structure <I>p</I> is <B>not modified</B> during
+this collapsing.  At the end of the collapsing, a map from each vertex to the index of a
+new vertex index in the collapsed partition is filled in and returned and this map can
+subsequently be given to <a href="Partition.html#Merge_Partition">Merge_Partition</a> in order to actually build a new merged partition
+if desired.  The map is returned in the user-supplied <a href="Partition.html#Map_Bundle">Map_Bundle</a> which contains <I>nrange</I>,
+the number of regions in the
+collapsed result, and <I>mapto</I> where <I>mapto[i]</I> gives the number of the new region that region
+<I>i</I> now belongs to.  The union <I>U<sub>i</sub> mapto[i]</I> = <I>[0,nrange-1]</I>.
+If <I>mapto</I> is NULL on input,
+then the necessary integer vector is <I>malloc</I>'d, otherwise <I>mapto</I> will be enlarged to
+hold the result if necessary.
+</p>
+  <h3 class="fn"><table>
+     <a name="Merge_Partition"></a><tr><td valign="baseline"><a href="Partition.html">Partition</a> *</td>
+     <td valign="baseline">Merge_Partition<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Partition.html">Partition</a> *<I>p</I>, <a href="Partition.html#Map_Bundle">Map_Bundle</a> *<I>map</I>, <a href="Partition.html#Label_Array">Label_Array</a> *<I>labels</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>, boolean <I>color</I>)</td></tr>
+  </table></h3>
+<p>
+Merge_Partition merges the regions in <I>p</I> according to the mapping in <I>map</I> such
+as produced by <a href="Partition.html#Static_Collapse">Static_Collapse</a> and <a href="Partition.html#General_Collapse">General_Collapse</a> above.  A new partition object
+is returned in which all the regions of the input partition are merged.  A new
+reference to the image source for <I>p</I> is created in building the result.
+If <I>labels</I> is not NULL, then <I>p</I> must have a label or coloring array and <I>labels</I>
+must have the same shape as this label array.  A labeling or coloring,
+depending on the setting of <I>color</I>, for the new partition is produced in <I>labels</I>
+and its reference is given to the new partition.  If the type of <I>labels</I> is not sufficient
+to contain the range of colors/labels required, then the routine adjusts the type (and hence
+also the size) of <I>labels</I> so that the resulting labeling/coloring fits in the array's values.
+For example, if <I>labels</I> is a UINT8_TYPE array and one requests a coloring, but say, 300
+colors are needed, then <I>labels</I> will be a UINT16_TYPE array upon return.
+</p>
+<p>
+While typically <I>labels</I> is a new label array, it may be the label array of <I>p</I> as long as
+<I>p</I> no longer needs a label array after producing the merged result, as may be the case if
+<I>p</I> itself is no longer needed.  For example, the small routine below performs a merge
+of a partition in place.   While two partitions exist at a moment in time, only one label
+array (the most space expensive component) is needed as it is overwritten in place.
+</p>
+<pre>
+ Partition *Merge_Partition_Inplace(Partition *p, Map_Bundle *map, boolean color)
+ { Partition *q = Merge_Partition(p,map,Inc_Array(Get_Partition_Labels(p)),color)
+   Free_Partition(p);
+   return (q);
+ }
+</td></tr></table>
+</body>
+</html>

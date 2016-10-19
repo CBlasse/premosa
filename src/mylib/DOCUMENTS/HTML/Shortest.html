@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Shortest Paths Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Shortest Paths Module Reference</h1>
+
+<p>
+Shortest paths routines
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;path.h&gt;
+</pre>
+<hr />
+
+<a name="Types"></a>
+<h2>Descriptive Types</h2>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#SP_Item"> SP_Item </a></b>
+     </td><td class="define" valign="baseline">: void</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#SP_Value">SP_Value</a></b>
+     (double <I>v</I>)</td></tr>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#SP_Test">SP_Test</a></b>
+     (boolean (*<I>cond</I>)(Indx_Type p, double v))</td></tr>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#SP_Edge">SP_Edge</a></b>
+     (double (*<I>func</I>)(float *w, Indx_Type p, Indx_Type q, double d))</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Seed_Zone">Seed_Zone</a></b>
+     (Indx_Type <I>seed</I>)</td></tr>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Slice_Zone">Slice_Zone</a></b>
+     (Slice *<I>slice</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Region_Zone">Region_Zone</a></b>
+     (Region *<I>region</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Array_Zone">Array_Zone</a></b>
+     ()</td></tr>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Image_Zone">Image_Zone</a></b>
+     (SP_Item *<I>test</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, SP_Item *<I>zone</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">void</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Kill_SP">Kill_SP</a></b>
+     (SP_Item *<I>item</I>)</td></tr>
+<tr><td class="return" valign="baseline">SP_Item *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Inc_SP">Inc_SP</a></b>
+     (SP_Item *<I>item</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Float_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Shortest_Paths">Shortest_Paths</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Float_Array *<I>w</I>, boolean <I>iscon2n</I>, SP_Item *<I>cost</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SP_Item *<I>source</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, SP_Item *<I>zone</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Find_Path">Find_Path</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Float_Array *<I>w</I>, boolean <I>iscon2n</I>, SP_Item *<I>cost</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Float_Array *<I>d</I>, Indx_Type <I>end</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Shortest.html#Shortest_Between">Shortest_Between</a></b><sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup>
+     (Float_Array *<I>w</I>, boolean <I>iscon2n</I>, SP_Item *<I>cost</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SP_Item *<I>source</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, SP_Item *<I>target</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, double *<I>score</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<a name="scoring"><a>
+<p>
+One can view an array as a lattice or undirected graph, and from this view point one can
+then think about paths in this graph as discretely sampled curves in space.  For example,
+for a 3D array and 2n-connectivity, every element or vertex of the array has 6 edges connecting
+it to adjacenet elements.  If one attaches a weight or score to every element of the array,
+say <I>w(p)</I> for pixel <I>p</I>, then the cost of a connected path
+<i>P = p<sub>0</sub>, p<sub>1</sub>, &hellip; p<sub>n</sub></i>
+in an array is the sum of the weights of the scores of the vertices, i.e.,
+<i>w(P) = &Sigma;<sub>i</sub> w(p<sub>i</sub> )</i>.
+One can also consider the geometric distance from one vertex <I>v</I> to another <I>w</I>, <I>d(v,w)</I>
+(e.g. the distance of the edge from (0,0,0) to (1,1,1) is &radic;3), in which case
+the cost of a path is the sum of its edge distances, i.e.,
+<i>d(P) = &Sigma;<sub>i&gt;0</sub> d(p<sub>i-1</sub>,p<sub>i</sub> )</i>.
+For a given blending factor &alpha;, one can more generally consider the cost of a
+path to be <I>b(P) = w(P) + &alpha; d(P)</I>.
+In the most general case, one can consider every edge <I>(p,q)</I> to have a non-negative
+weight <I>e(p,q)</I> in which case the cost of a path is the sum of the weights of its
+edges:
+<i>e(P) = &Sigma;<sub>i&gt;0</sub> e(p<sub>i-1</sub>,p<sub>i</sub> )</i>.
+It is an easy exercise to show that this model encompasses the simpler
+scoring functions <I>w(P)</I>, <I>d(P)</I>, and <I>b(P)</I>.
+</p>
+<p>
+The shortest path problem is to compute the shortest or lowest scoring path from one
+array element or vertex to another.  This can be generalized in at least two ways.  The first
+is given two regions <I>R</I> and <I>S</I> of an array, the problem becomes to find the shortest
+path between the two regions, which includes identifying which vertices in <I>R</I> and <I>S</I>
+are at the respective ends of a shortest path.  The mylib library supports this variation
+by introducing an <a href="Shortest.html#SP_Item">SP_Item</a> micro-object which can encode a single pixel (<a href="Shortest.html#Seed_Zone">Seed_Zone</a>),
+an array <a href="Slice.html">Slice</a> (<a href="Shortest.html#Slice_Zone">Slice_Zone</a>), a connected <a href="Region.html">Region</a> (<a href="Shortest.html#Region_Zone">Region_Zone</a>), the entire array
+(<a href="Shortest.html#Array_Zone">Array_Zone</a>), or the set of pixels within a slice, region, or the entire array, that
+have a particular weight <I>w</I> or satisfy a particular predicate (<a href="Shortest.html#Image_Zone">Image_Zone</a>).  Each of
+the routines mentioned returns an
+<a href="Shortest.html#SP_Item">SP_Item</a> micro-object that can only be used as an input argument to one of the two shortest
+paths routines.  The second variation of shortest paths computes the shortest path to every
+vertex in a given region that begin within a specified source region.  Given that the
+region can have almost any shape, this variation effectively allows one to compute
+<B>geodesic distances</B>.
+</p>
+<p>
+As seen above the <a href="Shortest.html#SP_Item">SP_Item</a> micro-object is used to encode regions or 'zones'.  These short-lived
+objects can also be used to convey (1) a double value, such as the blending factor &alpha;,
+(<a href="Shortest.html#SP_Value">SP_Value</a>),
+(2) a boolean predicate on a pixel that determines if it is in an <a href="Shortest.html#Image_Zone">Image_Zone</a> (<a href="Shortest.html#SP_Test">SP_Test</a>),
+and (3) a double function on an edge <I>(p,q)</I> of distance <I>d</I> over weight array <I>w</I> that
+determines the cost of an edge in a path (<a href="Shortest.html#SP_Edge">SP_Edge</a>).  To keep conventions simple, <a href="Shortest.html#SP_Item">SP_Item</a>
+arguments are always killed by the recieving routine, but if one wants to use an item
+multiple times then one can increment its reference count with <a href="Shortest.html#Inc_SP">Inc_SP</a> and then explicitly
+kill it with <a href="Shortest.html#Kill_SP">Kill_SP</a> when appropriate.
+</p>
+<p>
+The routine <a href="Shortest.html#Shortest_Paths">Shortest_Paths</a> supports the computation of the shortest <I>iscon2n</I>-connected
+path from any vertex in a zone <I>source</I> to every other vertex in a zone <I>zone</I>, with
+respect to weight array <I>w</I> and the scoring scheme <I>cost</I> that is an <a href="Shortest.html#SP_Item">SP_Item</a> built
+from either an <a href="Shortest.html#SP_Value">SP_Value</a> or <a href="Shortest.html#SP_Edge">SP_Edge</a>.  In the case of an <a href="Shortest.html#SP_Value">SP_Value</a>, then paths are
+scored according to <I>b(P)</I> described in the first paragraph and the double value of <I>cost</I> is
+the blending factor <I>&alpha;</I>.  In the case
+of an <a href="Shortest.html#SP_Edge">SP_Edge</a>, then paths are scored according to <I>e(P)</I> described above and the function
+encoded by <I>cost</I> provides the required general edge score <I>e(p,q)</I>.
+The weight array <I>w</I> further defines the lattice under consideration and the values that define
+<a href="Shortest.html#Image_Zone">Image_Zone</a> arguments (if used).  Specifically, for the <a href="Shortest.html#SP_Item">SP_Item</a> <I>source</I>, the
+image zone is those pixels within the slice, region, or array for which eithere (a) <I>w</I> has
+the value of the <a href="Shortest.html#SP_Value">SP_Value</a> given as <I>test</I> when creating the image zone, or (b) the predicate
+suppled by the <a href="Shortest.html#SP_Test">SP_Test</a> given as <I>test</I> is true for the pixel.
+But for the <a href="Shortest.html#SP_Item">SP_Item</a> <I>zone</I>, the image zone is those pixels within the slice, region,
+or array for which either (a) <I>w</I> does <B>not</B> have the given value (if <a href="Shortest.html#SP_Value">SP_Value</a>), or (b)
+the predicate of the image zone is false for the pixel in question.
+To enable unique values that identify pixels as being in or out of an image zone, weights
+within <I>w</I> can be negative, in which case the weight of the vertex for the purpose of
+computing path scores is taken as the absolute value of the given number.
+<a href="Shortest.html#Shortest_Paths">Shortest_Paths</a> generates and returns an array, say <I>d</I>, of the same shape as <I>w</I>, for which
+<I>d[p]</I> for a vertex <I>p</I> in <I>zone</I> is the value of the shortest path from a vertex
+in <I>source</I> to this vertex.  Given <I>d</I> and a particular vertex <I>end</I> in the zone over which it
+was computed, <a href="Shortest.html#Find_Path">Find_Path</a> returns a vector that lists the vertices on a shortest path from
+a vertex in the <I>source</I> zone to the vertex <I>end</I>.
+</p>
+<p>
+The code example below illustrates the use of the routines and in particular the use of <a href="Shortest.html#SP_Item">SP_Item</a>s.
+A shortest path is sought from the points (2,3) and (3,2) to all other points <I>(x,y)</I> in the
+10x10 array <I>w</I> that are between diagonals -3 to 3, inclusive, where the weight of
+a path is the number of vertices in it.  The pixels (2,3) and (3,2) are encoded as the
+sources by setting their values to -1 and then passing <I>Shortest_Paths</I> the <a href="Shortest.html#SP_Item">SP_Item</a>
+<I>Image_Zone(SP_Value(-1.),Slice_Zone(s))</I> where <I>s</I> is the smallest possible slice that
+contains both points.
+The computation is restricted to the desired band of diagonals by the region <I>r</I> which is
+communicated to <I>Shortest_Paths</I> via the <a href="Shortest.html#SP_Item">SP_Item</a> <I>Region_Zone(r)</I>.  The blending factor
+&alpha; is set to 0. so the score of paths is just the sum of the vertex weights, all of
+which are 1, implying that the score of a path is the number of vertices in it.
+Note that upon completion all objects of all types have been killed, noting especially,
+that the <a href="Shortest.html#SP_Item">SP_Item</a>s are killed by the routines they are passed to, and as a result, the
+<a href="Slice.html">Slice</a> <I>s</I> and <a href="Region.html">Region</a> <I>r</I> are killed by the items that consumed their references.
+</p>
+<pre>
+ boolean REGFUN(Indx_Type p, void *arg)
+ { if (p%10 - p/10 >= -3 && p%10 - p/10 <= 3) }
+
+ { Array  *d;
+   Vector *p;
+   float  *f;
+   int     i;
+
+   Array *w = Make_Array_With_Shape(PLAIN_KIND,FLOAT32_TYPE,Coord("10,10"));
+   float *f = AFLOAT32(w);
+
+   Slice   *s = Make_Slice(a,Coord2(2,2),Coord2(3,3));
+   Region  *r = Record_Region(a,0,0,2,1,NULL,REGFUN);
+   SP_Item *a = SP_Value(0.);
+
+   for (i = 0; i < a->size; i++)
+     f[i] = 1.;
+   f[23] = f[32] = -1.;
+
+   printf("Array:");
+   Print_Array(a,stdout,4,"%2.0f");
+
+   d = Shortest_Paths(w,1,Inc_SP(a),Image_Zone(SP_Value(-1.),Slice_Zone(s)),Region_Zone(r));
+
+   printf("\nLengths:");
+   Print_Array(w,stdout,4,"%2.0f");
+
+   p = Find_Path(w,1,a,d,67);
+
+   printf("\nPath:");
+   Print_Array(p,stdout,4,"%2lld");
+
+   Kill_Array(p);
+   Kill_Array(d);
+   Kill_Array(w);
+ }
+</pre>
+<p>
+The output of the example is shown below, where the first array is the value of <I>w</I> on input,
+the second array is the set of distances <I>d</I> returned by <a href="Shortest.html#Shortest_Paths">Shortest_Paths</a>, and lastly, the
+the shortest path from one of the two source vertices to pixel <I>(6,7)</I> is computed by
+<a href="Shortest.html#Find_Path">Find_Path</a> and then output.  Note that in the distance array, pixels adjacent to the
+diagonal band but not in it are set to -1., and all values not set by the algorithm have
+been replaced with a question mark.
+</p>
+<pre>
+ Array:
+     Array [0,9] x [0,9]
+
+     {  1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1, -1,  1,  1,  1,  1,  1,  1
+        1,  1, -1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+     }
+
+ Lengths:
+     Array [0,9] x [0,9]
+
+     {  6,  5,  4,  3, -1,  ?,  ?,  ?,  ?,  ?
+        5,  4,  3,  2,  3, -1,  ?,  ?,  ?,  ?
+        4,  3,  2,  1,  2,  3, -1,  ?,  ?,  ?
+        3,  2,  1,  2,  3,  4,  5, -1,  ?,  ?
+       -1,  3,  2,  3,  4,  5,  6,  7, -1,  ?
+        ?, -1,  3,  4,  5,  6,  7,  8,  9, -1
+        ?,  ?, -1,  5,  6,  7,  8,  9, 10, 11
+        ?,  ?,  ?, -1,  7,  8,  9, 10, 11, 12
+        ?,  ?,  ?,  ?, -1,  9, 10, 11, 12, 13
+        ?,  ?,  ?,  ?,  ?, -1, 11, 12, 13, 14
+     }
+
+ Path:
+     Array [0,8]
+
+     { 32, 42, 52, 53, 63, 64, 65, 66, 67 }
+</pre>
+<p>
+The second form of the computation, embodied by <a href="Shortest.html#Shortest_Between">Shortest_Between</a>, finds a shortest path between
+zone <I>source</I> and
+zone <I>target</I> of score <I>score</I> or less, and if it finds one then it returns a newly-generated
+vector that lists the vertices in a shortest path between them, and NULL if it does not find
+such a path.  This version is optimized to take time porportional to the number of
+vertices that are
+at distance <I>score/2</I> or less from a vertex in one of the two zones.  The variable <I>score</I>
+is modified to be the cost of the path (if one is found) just before returning.
+The algorithm is expected to be
+quite fast if you request the shortest path between two nearby vertices in an array.
+</p>
+<hr />
+
+<h2>Descriptive Types Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="SP_Item"></a><tr><td valign="top">SP_Item</td><td>: void</td></tr>
+  </table></h3>
+<p>
+A very short-lived object that encodes either a sub-region of an array, or a value, pixel
+predicate, or edge function for use in a shortest path computation.  Its' sole purpose
+is to commmunicate inputs of different types to the shortest path routines.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="SP_Value"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">SP_Value (double <I>v</I>)</td></tr>
+  </table></h3>
+<p>
+The returned item encodes a double value.  This item can be used as either the argument
+<I>test</I> to <a href="Shortest.html#Image_Zone">Image_Zone</a> or as the argument <I>cost</I> to one of the shortest path routines.
+</p>
+  <h3 class="fn"><table>
+     <a name="SP_Test"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">SP_Test (boolean (*<I>cond</I>)(<a href="Mylib.html#Indx_Type">Indx_Type</a> p, double v))</td></tr>
+  </table></h3>
+<p>
+The returned item encodes a pointer to a boolean function that takes a pixel <I>p</I>
+and its weight <I>v</I> as input.  This item can only be used as the argument <I>test</I> to
+<a href="Shortest.html#Image_Zone">Image_Zone</a>.
+</p>
+  <h3 class="fn"><table>
+     <a name="SP_Edge"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">SP_Edge (double (*<I>func</I>)(float *w, <a href="Mylib.html#Indx_Type">Indx_Type</a> p, <a href="Mylib.html#Indx_Type">Indx_Type</a> q, double d))</td></tr>
+  </table></h3>
+<p>
+The returned item encodes a pointer to a double function that returns the weight of the
+edge from pixel <I>p</I> to pixel <I>q</I>, where for convenience <I>d</I> is the Euclidean distance between
+the two pixels and <I>w</I> is the floating point vector of pixel weights for the shortest path
+computation in question.  This item can only be used as the argument <I>cost</I> to one of the
+shortest path routines.
+</p>
+  <h3 class="fn"><table>
+     <a name="Seed_Zone"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">Seed_Zone (<a href="Mylib.html#Indx_Type">Indx_Type</a> <I>seed</I>)</td></tr>
+  </table></h3>
+<p>
+The returned item encodes the region consisting of the single pixel <I>seed</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Slice_Zone"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">Slice_Zone (<a href="Slice.html">Slice</a> *<I>slice</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+The returned item encodes the region covered by the <a href="Slice.html">Slice</a> <I>slice</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Region_Zone"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">Region_Zone (<a href="Region.html">Region</a> *<I>region</I> <sup><b><font color="#00AA55" title="This arguments reference is *C*onsumed by the created result">C</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+The returned item encodes the region covered by the <a href="Region.html">Region</a> <I>region</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Array_Zone"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">Array_Zone ()</td></tr>
+  </table></h3>
+<p>
+The returned item encodes the region covered by the entire array.  The
+array in question will be the weight array <I>w</I> passed to one of the shortest
+path routines.
+</p>
+  <h3 class="fn"><table>
+     <a name="Image_Zone"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">Image_Zone (<a href="Shortest.html#SP_Item">SP_Item</a> *<I>test</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <a href="Shortest.html#SP_Item">SP_Item</a> *<I>zone</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+The argument <I>zone</I> can be a <a href="Shortest.html#Slice_Zone">Slice_Zone</a>, <a href="Shortest.html#Region_Zone">Region_Zone</a>, or <a href="Shortest.html#Array_Zone">Array_Zone</a> and the argument
+<I>test</I> can be an <a href="Shortest.html#SP_Value">SP_Value</a> or an <a href="Shortest.html#SP_Test">SP_Test</a>.
+The returned zone encodes the subset of pixels in the region encoded by <I>zone</I> for which
+the pixels (a) have the weight value of <I>test</I> in the case <I>test</I> is an <a href="Shortest.html#SP_Value">SP_Value</a>, or (b)
+satisfy the predicate encoded by <I>test</I> in the case <I>test</I> is an <a href="Shortest.html#SP_Test">SP_Test</a>.
+When the zone is used to represent a start or stopping set for paths, the pixels are those that
+have the <I>test</I> value or predicate.  However, when the zone is representing the area within
+which shortest paths will be computed, then the pixels are those that do not have the <I>test</I>
+value or do not satisfy the <I>test</I> predicate.  In the case of a value, it can be
+negative in order to make it unique, in which case the absolute value of pixels with this
+value are used in computing shortest paths.
+</p>
+  <h3 class="fn"><table>
+     <a name="Kill_SP"></a><tr><td valign="baseline">void</td>
+     <td valign="baseline">Kill_SP (<a href="Shortest.html#SP_Item">SP_Item</a> *<I>item</I>)</td></tr>
+  </table></h3>
+<p>
+Explicitly kills item <I>p</I> and its reference to a <a href="Slice.html">Slice</a> or <a href="Region.html">Region</a> if it consumed one.
+</p>
+  <h3 class="fn"><table>
+     <a name="Inc_SP"></a><tr><td valign="baseline"><a href="Shortest.html#SP_Item">SP_Item</a> *</td>
+     <td valign="baseline">Inc_SP (<a href="Shortest.html#SP_Item">SP_Item</a> *<I>item</I>)</td></tr>
+  </table></h3>
+<p>
+Increment the reference count of item <I>p</I> so that it does not get killed when passed to
+a routine that can take it as an argument.
+</p>
+  <h3 class="fn"><table>
+     <a name="Shortest_Paths"></a><tr><td valign="baseline"><a href="Array.html#Float_Array">Float_Array</a> *</td>
+     <td valign="baseline">Shortest_Paths<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Float_Array">Float_Array</a> *<I>w</I>, boolean <I>iscon2n</I>, <a href="Shortest.html#SP_Item">SP_Item</a> *<I>cost</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Shortest.html#SP_Item">SP_Item</a> *<I>source</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <a href="Shortest.html#SP_Item">SP_Item</a> *<I>zone</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+For the graph defined and weighted by <I>w</I> with respect to <I>iscon2n</I> connectivity,
+compute the length of a shortest path from a vertex in <I>source</I> to each vertex
+in <I>zone</I>, where the paths are scored according to item <I>cost</I> and are
+constrained to lie within <I>zone</I>.  If <I>cost</I> is an <a href="Shortest.html#SP_Value">SP_Value</a>, the paths are
+scored according to <I>b(P)</I> described in the first paragraph on <a class="ref" href="Shortest.html#scoring">scoring</a> and the
+double value of <I>cost</I> is the blending factor <I>&alpha;</I>.  if <I>cost</I> is an
+an <a href="Shortest.html#SP_Edge">SP_Edge</a>, then paths are scored according to <I>e(P)</I> described and the function
+encoded by <I>cost</I> provides the required general edge score <I>e(p,q)</I>.
+Values in <I>w</I> may be negative in order to facilitate the identification of pixels in
+an <a href="Shortest.html#Image_Zone">Image_Zone</a>, but the absolute value of <I>w</I> is used to compute the cost of paths.
+An array, say <I>d</I>, with the same shape as <I>w</I> is generated
+and returned, where the positive distances to each vertex in <I>zone</I> have been computed.
+Only the vertices in <I>zone</I> are guaranteed to have a correct value as the routine is
+implemented so as to take time proportional to the size of <I>zone</I>, and not the size of <I>w</I>.
+However, to assist tracing shortest paths using <I>d</I>, vertices that are not in <I>zone</I> but
+adjacent to vertices in <I>zone</I>, have been set to <I>-1.</I> (an impossible value as all
+distances must be positive).
+</p>
+  <h3 class="fn"><table>
+     <a name="Find_Path"></a><tr><td valign="baseline"><a href="Array.html#Vector">Vector</a> *</td>
+     <td valign="baseline">Find_Path<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Float_Array">Float_Array</a> *<I>w</I>, boolean <I>iscon2n</I>, <a href="Shortest.html#SP_Item">SP_Item</a> *<I>cost</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Array.html#Float_Array">Float_Array</a> *<I>d</I>, <a href="Mylib.html#Indx_Type">Indx_Type</a> <I>end</I>)</td></tr>
+  </table></h3>
+<p>
+Assuming <I>d</I> was computed from <I>w</I>, <I>iscon2n</I>, and <I>cost</I> with <a href="Shortest.html#Shortest_Paths">Shortest_Paths</a>, return
+a vector containing the sequence of array indices on a shortest path from a source vertex
+to the vertex or array element <I>end</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="Shortest_Between"></a><tr><td valign="baseline"><a href="Array.html#Vector">Vector</a> *</td>
+     <td valign="baseline">Shortest_Between<sup><b><font color="#00AA55" title="The function *G*enerates or creates the returned object">G</font></b></sup> (<a href="Array.html#Float_Array">Float_Array</a> *<I>w</I>, boolean <I>iscon2n</I>, <a href="Shortest.html#SP_Item">SP_Item</a> *<I>cost</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Shortest.html#SP_Item">SP_Item</a> *<I>source</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, <a href="Shortest.html#SP_Item">SP_Item</a> *<I>target</I> <sup><b><font color="#00AA55" title="This object will be *K*illed">K</font></b></sup>, double *<I>score</I> <sup><b><font color="#00AA55" title="This argument has its reference count *I*ncremented">I</font><font color="#00AA55" title="This argument's value is set (*O*utput)">O</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+For the graph defined and non-negatively weighted by <I>w</I> with respect to <I>iscon2n</I> connectivity,
+find a shortest path between a vertex in <I>source</I> and a vertex
+in <I>target</I>, where the paths are weighted according to item <I>cost</I> which must be an
+<a href="Shortest.html#SP_Value">SP_Value</a> or an <a href="Shortest.html#SP_Edge">SP_Edge</a>.  If <I>cost</I> is an <a href="Shortest.html#SP_Value">SP_Value</a>, the paths are
+scored according to <I>b(P)</I> described in the first paragraph on <a class="ref" href="Shortest.html#scoring">scoring</a> and the
+double value of <I>cost</I> is the blending factor <I>&alpha;</I>.  if <I>cost</I> is an
+an <a href="Shortest.html#SP_Edge">SP_Edge</a>, then paths are scored according to <I>e(P)</I> described and the function
+encoded by <I>cost</I> provides the required general edge score <I>e(p,q)</I>.
+Values in <I>w</I> may be negative in order to facilitate the identification of pixels in
+an <a href="Shortest.html#Image_Zone">Image_Zone</a>, but the absolute value of <I>w</I> is used to compute the cost of paths.
+</p>
+<p>
+A path of score at most *<I>score</I> is sought and if none is found then NULL is returned.
+Otherwise, a vector listing the vertices along the shortest path found is generated and
+returned, and the score of the path is placed in the double value pointed at by <I>score</I>.
+This algorithm is optimized to take time porportional to the number of vertices that are
+at distance <I>score/2</I> or less from a vertex in one of the two zones.
+Thus the algorithm is expected to be
+quite fast if you request the shortest path between two nearby vertices in an array.
+</td></tr></table>
+</body>
+</html>

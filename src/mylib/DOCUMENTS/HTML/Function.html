@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Function Minimization Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Function Minimization Module Reference</h1>
+
+<p>
+Minimization of functions of one or more variables, with and without a derivative/gradient.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;fct.min.h&gt;
+</pre>
+<hr />
+
+<a name="Bundles"></a>
+<h2>Structures</h2>
+<table><tr><td width="100px">&nbsp;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#Minimum_Bundle"> Minimum_Bundle </a></b>
+   </td><td class="define" valign="baseline">: struct</td>
+</tr></table>
+<table><tr><td valign="top">
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#lft"> lft </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#mid"> mid </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+<tr><td class="field" valign="baseline">&bull;</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#rgt"> rgt </a></b>
+     </td><td class="define" valign="baseline">: double</td>
+</tr>
+</table>
+</td><td>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+    <tr><td class="comment" valign="baseline">A bracket for function minimization:</td></tr>
+    <tr><td class="comment" valign="baseline">&nbsp;&nbsp;&nbsp;&nbsp;lft < mid < rgt and f(mid) < f(lft), f(rgt)</td></tr>
+    <tr><td class="comment">&nbsp;</td></tr>
+</table>
+</td></tr>
+</table>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Minimum_Bundle *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#Find_Min_Bracket">Find_Min_Bracket</a></b>
+     (Minimum_Bundle *<I>brack</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>xin</I>, double <I>step</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double (*<I>f</I>)(double x))</td></tr>
+<tr><td class="return" valign="baseline">double</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#Minimize_Fct">Minimize_Fct</a></b>
+     (Minimum_Bundle *<I>brack</I>, double (*<I>f</I>)(double x), double (*<I>df</I>)(double x))</td></tr>
+<tr><td class="return" valign="baseline">Double_Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#Powell_Minimizer">Powell_Minimizer</a></b>
+     (Double_Vector *<I>xio</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>step</I>, double (*<I>f</I>)(double *x))</td></tr>
+<tr><td class="return" valign="baseline">Double_Vector *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Function.html#Polak_Ribier_Minimizer">Polak_Ribier_Minimizer</a></b>
+     (Double_Vector *<I>xio</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double (*<I>f</I>)(double *x), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double (*<I>df</I>)(double *x, double *<I>g</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *O*utput">O</font></b></sup>))</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+This module contains numerical routines for finding a local minimum of a function.
+For functions of a single variable, the module provides a single routine <a href="Function.html#Minimize_Fct">Minimize_Fct</a>
+that employs different strategies depending on whether you supply it with a function
+for the derivative.  In either case, the function needs a triple of points that bracket
+a minimum, modeled by a <a href="Function.html#Minimum_Bundle">Minimum_Bundle</a>, that can be computed in the vicinity of a
+point of interest with <a href="Function.html#Find_Min_Bracket">Find_Min_Bracket</a>.
+</p>
+<p>
+For <I>n</I>-ary functions the module provides a separate routine <a href="Function.html#Powell_Minimizer">Powell_Minimizer</a> for
+finding a minimum without having an analytically computable gradient vector, and
+<a href="Function.html#Polak_Ribier_Minimizer">Polak_Ribier_Minimizer</a> for find a minimum when supplied with such a gradient function.
+</p>
+<p>
+The unary methods utilize the Golden section search accelerated with the parabolic
+interpolation method of Brent when possible
+(Press, Vetterling, Teukolsky and Flannery, Numerical Recipes in C (Cambridge University
+Press, 1992), Chapter 10.1-3).
+For a description of Powell's method see Chapter 10.5 of this reference, and for
+the Polak_Ribier method see Chapter 10.6.
+</p>
+<hr />
+
+<h2>Structure Documentation</h2>
+  <h3 class="fn">
+    <table cellspacing="0" width=0>
+     <a name="Minimum_Bundle"></a>     <tr><td class="name" valign="top">Minimum_Bundle</td>
+      <td class="define">: struct</td></tr></table>
+    <table cellspacing="0" width=0>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>lft</i></td><td class="define">: double</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>mid</i></td><td class="define">: double</td></tr>
+      <tr><td class="dot" valign="baseline">&bull;</td>
+      <td class="name"><i>rgt</i></td><td class="define">: double</td></tr>
+    </table>
+  </h3>
+<p>
+A bracket for minimization purposes is 3 points <I>lft</I> &lt; <I>mid</I> &lt; <I>rgt</I> that straddle
+at least one local minimum of the 1-dimensional function <I>f</I> in question.  This is true if
+and only if <I>f(mid)</I> &lt; <I>f(lft)</I> and <I>f(mid</I></I> &lt; <I>f(rgt)</I>.
+</p>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Find_Min_Bracket"></a><tr><td valign="baseline"><a href="Function.html#Minimum_Bundle">Minimum_Bundle</a> *</td>
+     <td valign="baseline">Find_Min_Bracket (<a href="Function.html#Minimum_Bundle">Minimum_Bundle</a> *<I>brack</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>xin</I>, double <I>step</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double (*<I>f</I>)(double x))</td></tr>
+  </table></h3>
+<p>
+Given a function <I>f</I> of one argument, a point <I>xin</I>, and a step size <I>step</I>, Find_Min_Bracket
+attempts to find a bracket
+about a minimum in the downhill direction from <I>xin</I>.  Fill in the <a href="Function.html#Minimum_Bundle">Minimum_Bundle</a>
+with the bracket that is found and return a pointer to it for convenience.
+If a bracket cannot reasonably be found, then <I>NULL</I> is returned.  It is
+generally a good idea to keep the step size small as it determines the
+jump sizes for the search, which can overshoot if it's too big.
+</p>
+  <h3 class="fn"><table>
+     <a name="Minimize_Fct"></a><tr><td valign="baseline">double</td>
+     <td valign="baseline">Minimize_Fct (<a href="Function.html#Minimum_Bundle">Minimum_Bundle</a> *<I>brack</I>, double (*<I>f</I>)(double x), double (*<I>df</I>)(double x))</td></tr>
+  </table></h3>
+<p>
+Given a minimization bracket <I>brack</I>, Minimzie_Fct returns a point within the bracket at which a
+locally minimumal value of the unary function <I>f</I> is acheived.  Accurate to first 8
+digits (half double-precision).
+If the derivative of <I>f</I>, <I>df</I>, is <I>NULL</I>, then parabolic estimation is used to accelerate
+convergence, otherwise the secant method is employed.  In the event <I>df</I> is used, one may take
+advantage of the fact that a call to <I>df</I> with a value <I>x</I>, <B>always</B> follows a prior call to <I>f</I>
+with the same value.  So one may, via globally shared values, optimize the computation of <I>f</I>
+and <I>df</I> by sharing the computation of any common sub-expressions.
+</p>
+  <h3 class="fn"><table>
+     <a name="Powell_Minimizer"></a><tr><td valign="baseline"><a href="Array.html#Double_Vector">Double_Vector</a> *</td>
+     <td valign="baseline">Powell_Minimizer (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>xio</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double <I>step</I>, double (*<I>f</I>)(double *x))</td></tr>
+  </table></h3>
+<p>
+Finds a minimum of the <I>n</I>-ary function <I>f</I> with Powell's method (that does not use
+the gradient of <I>f</I>).  The dimensionality <I>n</I> is inferred from the size of <I>xio</I>.  Start the
+search
+at the point <I>xio</I> with an initial set of <I>n</I> axis-oriented descent vectors of size <I>step</I>.
+The point at which the minimum is acheived is returned in the vector <I>xio</I> and a pointer to
+it is returned as a convenience.
+</p>
+  <h3 class="fn"><table>
+     <a name="Polak_Ribier_Minimizer"></a><tr><td valign="baseline"><a href="Array.html#Double_Vector">Double_Vector</a> *</td>
+     <td valign="baseline">Polak_Ribier_Minimizer (<a href="Array.html#Double_Vector">Double_Vector</a> *<I>xio</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, double (*<I>f</I>)(double *x), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double (*<I>df</I>)(double *x, double *<I>g</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *O*utput">O</font></b></sup>))</td></tr>
+  </table></h3>
+<p>
+Finds a point at which a minimum of the <I>n</I>-ary function <I>f</I> is acheived with the
+conjugate gradient method of Polak and Rabier (that does require the gradient of <I>f</I>).
+The search is started at point <I>xio</I> whose value will be the point at which the minimum is
+acheived upon completion of the search.  Note
+carefully that the gradient function <I>df</I>, takes both the vector <I>x</I> at which the gradient
+is desired, and a vector <I>g</I> that will be returned holding the gradient value in each of
+the <I>n</I> directions.  This is necessary so that <I>g</I> can be re-entrant, in keeping with all
+the functions in the library.
+</td></tr></table>
+</body>
+</html>

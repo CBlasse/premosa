@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>mylib 1.0: Fast Fourier Transform Module Reference</title>
+<link href="mydoc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="left" valign="top" width="32"><a href="http://qt.nokia.com/">
+       <img src="images/qt-logo.png" align="left" border="0" /></a>
+  </td>
+  <td width="1">&nbsp;&nbsp;</td>
+  <td class="postheader" valign="center"><a href="index.html">
+     <font color="#004faf">Home</font></a>&nbsp;&middot;
+     <a href="AllPages.html"><font color="#004faf">Pages</font></a>&nbsp;&middot;
+     <a href="AllFunctions.html"><font color="#004faf">Index</font></a>&nbsp;&middot;
+     <a href="overviews.html"><font color="#004faf">Overviews</font></a>
+   </td>
+</tr>
+</table>
+<table align="center" width=810><tr><td>
+<h1 class="title">Fast Fourier Transform Module Reference</h1>
+
+<p>
+Fast fourier transforms, convolution, correlation, and normalized correlation.
+<a href="#details">More...</a>
+</p>
+<pre>
+ #include &lt;fft.h&gt;
+</pre>
+<hr />
+
+<a name="Routines"></a>
+<h2>Routines</h2>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+
+<tr><td class="return" valign="baseline">Dimn_Type</td>
+    <td class="name" valign="baseline">
+       <b><a href="Fast.html#Power_Of_2_Pad">Power_Of_2_Pad</a></b>
+     (Dimn_Type <I>m</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Complex_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Fast.html#FFT">FFT</a></b>
+     (Complex_Array *<I>data</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, boolean <I>invert</I>)</td></tr>
+<tr><td class="return" valign="baseline">Complex_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Fast.html#FFT_Convolution">FFT_Convolution</a></b>
+     (Complex_Array *<I>fft1</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Complex_Array *<I>fft2</I>)</td></tr>
+<tr><td class="return" valign="baseline">Complex_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Fast.html#FFT_Correlation">FFT_Correlation</a></b>
+     (Complex_Array *<I>fft1</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, Complex_Array *<I>fft2</I>)</td></tr>
+</table>
+<br>
+<table class="alignedsummary" border="0" cellpadding="0" cellspacing="0" width=0>
+<tr><td class="return" valign="baseline">Numeric_Array *</td>
+    <td class="name" valign="baseline">
+       <b><a href="Fast.html#Normalize_FFT_Correlation">Normalize_FFT_Correlation</a></b>
+     (Numeric_Array *<I>ref1</I>, Numeric_Array *<I>ref2</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numeric_Array *<I>cor</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+</table>
+<a name="details"></a>
+<hr />
+<h2>Detailed Description</h2>
+<p>
+The fast fourier transform (FFT) provides a fast calculation of convolution and
+correlations (among other things).  Given a vector of <I>n</I> values,
+<i>A = [ a<sub>0</sub>, a<sub>1</sub>, ...  a<sub>n-1</sub> ]</i>, consider the polynomial
+<i>P<sub>A</sub>(x) = a<sub>n-1</sub>x<sup>n-1</sup> + a<sub>n-2</sub>x<sup>n-2</sup> + ... +  a<sub>0</sub></i>.
+The discrete fourier transform of <I>A</I> is the vector
+<i>FFT(A) = [ f<sub>0</sub>, f<sub>1</sub>, ...  f<sub>n-1</sub> ]</i>,
+where for each <I>i</I>,
+<i>f<sub>i</sub> = P<sub>A</sub>(&phi;<sup>i</sup>)</i>,
+where <I>&phi;</I> is the <I>n<sup>th</sup></I> root of unity.  In other words, the discrete
+fourier transform of <I>A</I> is the values of the polynomial
+<i>P<sub>A</sub>(x)</i>
+evaluated at the <I>n</I> roots of unity <I>&phi;<sup>i</sup></I> for <I>i &isin; [0,n-1]</I>.
+The key observation is that the pairwise product of the elements of <I>FFT(A)</I> and
+<I>FFT(B)</I> for two <I>n</I>-element vectors are then the values of the <B>product</B> of
+the polynomials
+<i>P<sub>A</sub>(x)</i> and <i>P<sub>B</sub>(x)</i>
+at the <I>n</I> roots of unity,
+and the coefficients of the product of the two polynomials are the <B>convolutions</B> of
+the coefficients of said polynomials.  Ergo, inverting the transform gives the
+convolution for each offset of <I>A</I> with respect to <I>b</I>, where the inversion is simply a
+matter of evaluating
+<i>P<sub>FFT(A)</sub>(x)</i>
+at each of the inverse roots of unity <I>&phi;<sup>-i</sup></I> for <I>i &isin; [0,n-1]</I>.
+The kicker is that the FFT and its inverse can be computed in <I>O(nlogn)</I> time as opposed
+to <I>O(n<sup>2</sup>)</I> time because of the structure of the roots of unity in the
+field of complex numbers.  Correlations are closely related to convolutions and its not
+hard to show that they amount to taking the product of <I>FFT(A)</I> and the conjugate values
+of <I>FFT(B)</I>.  Moreover, the transform can be extended to arrays of 2 or more dimensions.
+</p>
+<p>
+A more traditional view of the FFT is to consider the values <I>A</I> as being in the <B>spatial domain</B>,
+and then if one thinks of roots of unities as frequencies (a thing physicist find
+rather useful) <I>FFT(A)</I> is the same object described in the <B>frequency domain</B>.
+The (forward) FFT maps from the spatial to the frequency domain, and the inverse FFT
+maps from the frequency domain back to the spatial domain.  The mappings are rightly called
+transforms
+because <I>A = FFT&nbsp;<sup>-1</sup>(FFT(A))</I>, i.e. the inverse transform of the transform
+restores the object.  The module provides a single routine <a href="Fast.html#FFT">FFT</a> that maps an n-dimensional
+<a href="Array.html#Complex_Array">Complex_Array</a> in either the forward or reverse direction depending on the setting of
+a boolean argument <I>invert</I>.  The FFT is performed in-place.  It executes optimized codes
+in the event the argument is real-valued and/or 1-dimensional and/or 32-bit floating point
+versus 64-bit floating point.  For example,
+</p>
+<pre>
+  FFT(FFT(data,0),1)
+</pre>
+<p>
+leaves <I>data</I> unalterred save for any loss of precision due to rounding error (which is
+typically on the order of 1/2 the precision of the numbers).
+</p>
+<p>
+Unfortunately, <B>Mylib</B>'s implementation while matching the best in class for FFT's where
+dimensions are powers of 2, <B>only works on arrays that have dimensions that are powers
+of 2</B>.  <a href="Fast.html#Power_Of_2_Pad">Power_Of_2_Pad</a> returns the next largest power of 2 as a convenience, and the
+the routines <a href="Array.html#Pad_Array">Pad_Array</a> or <a href="Array.html#Pad_Array_Inplace">Pad_Array_Inplace</a> in the <a href="Array.html">Array</a> class will pad the
+arrays for you as needed.
+</p>
+<p>
+There is a routine <a href="Fast.html#FFT_Convolution">FFT_Convolution</a> that computes the pairwise complex product of two
+FFTs, and another <a href="Fast.html#FFT_Correlation">FFT_Correlation</a> that computes the pairwise complex product with the
+conjugate of the second FFT.  Then as expected,
+given two arrays <I>a</I> and <I>b</I> in the spatial domain,
+their convolution <I>c</I> and correlation <I>d</I> in the spatial domain can be computed as
+follows:
+</p>
+<pre>
+  c = FFT(FFT_Convolution(FFT(Copy_Array(a),0),FFT(Copy_Array(b),0)),1);
+  d = FFT(FFT_Correlation(FFT(Copy_Array(a),0),FFT(Copy_Array(b),0)),1);
+</pre>
+<p>
+Note carefully, that the computed convolution and correlation "wrap"
+around the boundary.  For example, in the case of 1-dimensional arrays, if <I>a</I>, <I>b</I>, <I>c</I>,
+and <I>d</I> are <I>N</I>-element vectors, then:
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c[i] = &Sigma;<sub>j</sub> a[j]*b[(N+(j-i)) mod N]</i> &nbsp;&nbsp;&nbsp;and
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[i] = &Sigma;<sub>j</sub> a[(j+i) mod N]*b[j].</i>
+</p>
+<p>
+Because of this wrapping behavior, one often needs to zero-pad the subject arrays in order
+to eliminate the effect of wrapping.  That is, if <I>a</I> is of length <I>A</I>, and <I>b</I> is of length
+<I>B</I>, then zero-padding <I>a</I> by <I>B-1</I> zeros on the right, and <I>b</I> by <I>A-1</I> zeros on the left,
+will give a convolution or correlation vector of length <I>A+B-1</I> for which the terms are
+the convolution of correlations of <I>a</I> versus <I>b</I> at every possible offset/lag.  For example,
+for the case of the correlation <I>d</I>, with the given padding it follows that:
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[m(i)] = &Sigma;<sub>max(0,-i)&le;j&lt;min(B,A-i)</sub> a[j+i]*b[j]</i>
+<br><br>
+for <I>i &isin; (-B,A)</I> where <I>m(i)</I> is <I>i</I> if <I>i &ge; 0</I> and <I>(A+B-1)-i</I> if <I>i &lt; 0</I>.
+When computing such a vector of all possible correlations between <I>a</I> and <I>b</I>, it is frequently
+the case that one actually seeks the normalized correlation (see <a href="Correlation.html#A_Pearson_Correlation">A_Pearson_Correlation</a>) of
+each possible correlation.  This is accomplised in linear time by the routine
+<a href="Fast.html#Normalize_FFT_Correlation">Normalize_FFT_Correlation</a>.
+The routine <I>NCC</I> below computes such an array of normalized correlation terms given <I>a</I>
+and <I>b</I> of the same shape either wrapped or unwrapped according to the setting of the boolean
+argument <I>wrap</I>.
+Note carefully, that assuming the dimensions of <I>a</I> and <I>b</I> are powers of 2, we simply double
+them in the non-wrapping case.
+</p>
+<pre>
+  Numeric_Array *Zero_Pad(Numeric_Array *a)
+  { Coordinate *shp = AForm_Shape(a);
+    Coordinate *anc = Copy_Array(shp);
+    int i;
+    for (i = 0; i < a->ndims; i++)
+      { ADIMN(shp)[i] *= 2;
+        ADIMN(anc)[i]  = 0;
+      }
+    Use_Zero_Boundary();
+    return (Pad_Array(a,anc,shp));
+  }
+
+  Numeric_Array *NCC(Numeric_Array *a, Numeric_Array *b, boolean wrap)
+  { Numeric_Array *ap, *bp;
+    if (wrap)
+      { ap = Copy_Array(a);
+        bp = Copy_Array(b);
+      }
+    else
+      { ap = Zero_Pad(a);
+        bp = Zero_Pad(b);
+      }
+    FFT(FFT_Correlation(FFT(ap,0),FFT(bp,0)),1);
+    Free_Array(bp);
+    return (Normalize_FFT_Correlation(a,b,ap));
+  }
+</pre>
+<hr />
+
+<h2>Routine Documentation</h2>
+  <h3 class="fn"><table>
+     <a name="Power_Of_2_Pad"></a><tr><td valign="baseline"><a href="Mylib.html#Dimn_Type">Dimn_Type</a></td>
+     <td valign="baseline">Power_Of_2_Pad (<a href="Mylib.html#Dimn_Type">Dimn_Type</a> <I>m</I>)</td></tr>
+  </table></h3>
+<p>
+Returns the smallest power of 2 not less than <I>m</I>.
+</p>
+  <h3 class="fn"><table>
+     <a name="FFT"></a><tr><td valign="baseline"><a href="Array.html#Complex_Array">Complex_Array</a> *</td>
+     <td valign="baseline">FFT (<a href="Array.html#Complex_Array">Complex_Array</a> *<I>data</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, boolean <I>invert</I>)</td></tr>
+  </table></h3>
+<p>
+FFT of a complex- or real-valued float or double array (see the definition of
+<a href="Array.html#Complex_Array">Complex_Array</a>).  If <I>invert</I> is true then the inverse FFT is performed.
+The operation is performed in-place within the data vector of <I>data</I>, and a
+pointer to said is returned as a convenience.  The code works for arrays of
+any dimensionality.
+</p>
+<p>
+<B>The operations only work on arrays whose dimensions are powers of 2!</B>
+</p>
+<p>
+This routine is mostly a stub that calls various routines in the <B>MY_FFT</B> sub-library,
+that have been highly optimzed for various scenarios, i.e. real versus complex, 1-dimensional
+versus multi-dimensional.  It is imperative to note that taking the FFT of a real-valued
+array, i.e. <I>PLAIN_KIND</I> and either <I>FLOAT32_TYPE</I> or <I>FLOAT64_TYPE</I>, results in a
+<I>PLAIN_KIND</I> array that is an <B>encoding</B> of a complex, conjugate symmetric array that
+results when one transforms a real array.  This setting of the array's kind, indicates to the
+routines of the module that are expecting an array in the frequency domain, that the
+array is so encoded.  The reason for the encoding, is that without it, a real valued
+fft could not be performed in place.  See the main section above for the details on how
+the symmetries of a conjugate symmetric matrix are used to pack its value into an
+encoding that occupies half as much space.
+</p>
+  <h3 class="fn"><table>
+     <a name="FFT_Convolution"></a><tr><td valign="baseline"><a href="Array.html#Complex_Array">Complex_Array</a> *</td>
+     <td valign="baseline">FFT_Convolution (<a href="Array.html#Complex_Array">Complex_Array</a> *<I>fft1</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Complex_Array">Complex_Array</a> *<I>fft2</I>)</td></tr>
+  </table></h3>
+<p>
+Given two ffts, <I>fft1</I> and <I>fft2</I>, of the same shape in the frequency domain, produce
+their convolution (in the frequency domain), in-place within <I>fft1</I> and return a pointer
+to it as a convenience.
+The routine works just fine if <I>fft1</I> and <I>fft2</I> point to the same array.
+However, both must be complex or both must be an encoding of the fft of a real array.
+</p>
+<p>
+In general, given two arrays <I>a</I> and <I>b</I> in the spatial domain, i.e. untransformed,
+the way to compute their convolution in the spatial domain is via the template:
+</p>
+<pre>
+  c = FFT(FFT_Convolution(FFT(Copy_Array(a),0),FFT(Copy_Array(b),0)),1);
+</pre>
+<p>
+If you don't mind <I>a</I> or <I>b</I> being overwritten, then you can remove the respective
+calls to
+<a href="Generic.html#Copy_X">Copy_Array</a>.
+Note carefully, that the computed convolution "wraps"
+around the boundary.  For example, in the case of 1-dimensional arrays, if <I>c[0..N]</I> is the
+result of convoluting
+<I>a[0..N]</I> and <I>b[0..N]</I> in the spatial domain, then:
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c[i] = &Sigma;<sub>j</sub> a[j]*b[(N+(j-i)) mod N].</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="FFT_Correlation"></a><tr><td valign="baseline"><a href="Array.html#Complex_Array">Complex_Array</a> *</td>
+     <td valign="baseline">FFT_Correlation (<a href="Array.html#Complex_Array">Complex_Array</a> *<I>fft1</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>, <a href="Array.html#Complex_Array">Complex_Array</a> *<I>fft2</I>)</td></tr>
+  </table></h3>
+<p>
+Given two ffts, <I>fft1</I> and <I>fft2</I>, of the same shape in the frequency domain, produce
+their correlation (in the frequency domain), in-place within <I>fft1</I> and return a pointer
+to it as a convenience.
+The routine works just fine if <I>fft1</I> and <I>fft2</I> point to the same array.
+However, both must be complex or both must be an encoding of the fft of a real array.
+</p>
+<p>
+In general, given two arrays <I>a</I> and <I>b</I> in the spatial domain, i.e. untransformed,
+the way to compute their correlation in the spatial domain is via the template:
+</p>
+<pre>
+  c = FFT(FFT_Correlation(FFT(Copy_Array(a),0),FFT(Copy_Array(b),0)),1);
+</pre>
+<p>
+If you don't mind <I>a</I> or <I>b</I> being overwritten, then you can remove the respective
+calls to
+<a href="Generic.html#Copy_X">Copy_Array</a>.
+Note carefully, that the computed correlation "wraps"
+around the boundary.  For example, in the case of 1-dimensional arrays, if <I>c[0..N]</I> is the
+result of correlating
+<I>a[0..N]</I> and <I>b[0..N]</I> in the spatial domain, then:
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c[i] = &Sigma;<sub>j</sub> a[(j+i) mod N]*b[j].</i>
+</p>
+  <h3 class="fn"><table>
+     <a name="Normalize_FFT_Correlation"></a><tr><td valign="baseline"><a href="Array.html#Numeric_Array">Numeric_Array</a> *</td>
+     <td valign="baseline">Normalize_FFT_Correlation (<a href="Array.html#Numeric_Array">Numeric_Array</a> *<I>ref1</I>, <a href="Array.html#Numeric_Array">Numeric_Array</a> *<I>ref2</I>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Array.html#Numeric_Array">Numeric_Array</a> *<I>cor</I> <sup><b><font color="#00AA55" title="This argument is *R*eturned as the result">R</font><font color="#00AA55" title="This argument is *M*odified">M</font></b></sup>)</td></tr>
+  </table></h3>
+<p>
+Normalize the spatial correlation array <I>cor</I> that is presumed to be the correlation
+matrix of versions of <I>ref1</I> and <I>ref2</I> that were zero-padded to the right to give
+the dimensions of <I>cor</I>.  Normally, each dimension of <I>cor</I> is the sum of the corresponding
+dimensions in <I>ref1</I> and <I>ref2</I> less one in order that the correlation not wrap values about the
+domain, but this need not be the case.
+</p>
+<p>
+To explain this further, consider the 1-dimensional case, and suppose <I>cor</I> is of length
+<I>C</I>, <I>ref1</I> of length <I>R1</I>, and <I>ref2</I> of length <I>R2</I>, and that <I>C = R1+R2-1</I>.
+Then, if <I>cor</I> is the correlation of <I>ref1'</I> which is padded with <I>R2-1</I> zeros on the right,
+and <I>ref2'</I> that is padded with <I>R1-1</I> zeros on the right, then
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cor[i] = &Sigma;<sub>j</sub> ref1'[(j+i) mod N]*ref2'[j]</i>
+<br><br>
+for <I>i &isin; [0,C)</I> by definition.  But given the padding, in terms of <I>ref1</I> and
+<I>ref2</I> this is:
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cor[m(i)] = &Sigma;<sub>max(0,-i)&le;j&lt;min(R2,R1-i)</sub> ref1[j+i]*ref2[j]</i>
+<br><br>
+for <I>i &isin; [R1-C,R1)</I> where <I>m(i)</I> is <I>i</I> if <I>i &ge; 0</I> and <I>C-i</I> if <I>i &lt; 0</I>.
+That is, <I>cor</I> contains the correlation of <I>ref1</I> with <I>ref2</I> at every possible overlapping
+offset of the pair, thanks to the padding.  Without it, or if the padding is less than
+that just given, the correlations are wrapped accordingly.
+</p>
+<p>
+In full generality, assume <I>cor[i]</I> is the correlation of <I>ref1</I> and <I>ref2</I> over the possibly
+cyclic domains <I>I1(i)</I> and <I>I2(i)</I> depending on <I>i</I> and the amount of zero-padding.
+The normalization is exactly that discussed in the <a href="Correlation.html">Correlation and Regression</a> module, namely:
+<br><br><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cor[i] = <font size="+1">&Sigma;</font><sub>j &isin; I2(i)</sub>(ref1[j+i] - &mu;<sub>1</sub>(i))(ref2[j] - &mu;<sub>2</sub>(i)) / (&sigma;<sub>1</sub>(i)&sigma;<sub>2</sub>(i)A)</i>
+<br><br>
+where
+<i>&mu;<sub>x</sub>(i)</i>
+is the mean of the elements of <I>refx</I> over <I>Ix(i)</I>,
+<i>&sigma;<sub>x</sub>(i)</i>
+is the standard deviation of the elements in <I>refx</I> over <I>Ix(i)</I>,
+and <I>A</I> is the number of elements in <I>I1(i)</I>, that is the same as the number of
+elements in <I>I2(i)</I>.
+</td></tr></table>
+</body>
+</html>
