@@ -12,6 +12,7 @@
 #include <vector>
 
 #include <QFile>
+#include <QProcess>
 #include <QString>
 #include <QSysInfo>
 #include <QTextStream>
@@ -490,7 +491,7 @@ namespace PreprocessingPipeline {
             // Fiji call (depends on the presence of a master tile configuration and the system(Linux/OsX) )
             if (!tileFile.exists()) {
               
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
               stitchProgram = inputParamter.GetFiji() + " -batch" +
               " " + inputParamter.GetScriptLocation() + "/gridStitching_GetTileConfig_MacOsX.bsh" +
               " -i" + outputDirFFC_TP.absolutePath() +
@@ -513,7 +514,7 @@ namespace PreprocessingPipeline {
 #endif
               
             } else {
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
               stitchProgram = inputParamter.GetFiji() + " -batch" +
               " " + inputParamter.GetScriptLocation() + "/gridStitching_UseTileConfig_MacOsX.bsh"+
               " -in" + outputDirFFC_TP.absolutePath() +
@@ -528,7 +529,12 @@ namespace PreprocessingPipeline {
               " -- --no-splash " + inputParamter.GetScriptLocation() + "/gridStitching_UseTileConfig.bsh";
 #endif
             }
-            system(qPrintable(stitchProgram));
+  
+            QProcess process;
+            process.start(stitchProgram);
+            process.waitForFinished(-1);
+            
+            //QProcess::execute(stitchProgram.toStdString());
             
             
             // Prepare contrast adjustment
@@ -545,7 +551,7 @@ namespace PreprocessingPipeline {
             QString maxInt = QString::number(inputParamter.GetMaxIntensity());
             
             QString caProgram;
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
             //            caProgram = inputParamter.GetFiji() +
             //            " --run \"Contrast Adjustment\" \"folder=" + outputDirFFC_TP.absolutePath() + QDir::separator() +
             //            " output_folder=" + outputDirAC_TP.absolutePath() + QDir::separator() +
@@ -573,7 +579,8 @@ namespace PreprocessingPipeline {
             " -Dmax=" + maxInt +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/RunContrastAdjustment.bsh";
 #endif
-            system(qPrintable(caProgram));
+            process.start(caProgram);
+            process.waitForFinished(-1);
             
             // Copy black tiles
             for (auto blackTile : blackTiles) {
@@ -584,9 +591,10 @@ namespace PreprocessingPipeline {
             // Actual Stitching
             
             QString tileConfigCopy = outputDirAC_TP.absolutePath()+QDir::separator()+"TileConfiguration.txt";
-            system(qPrintable("cp " + tileConfig2 + " " + tileConfigCopy));
+            process.start("cp " + tileConfig2 + " " + tileConfigCopy);
+            process.waitForFinished(-1);
             
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
             stitchProgram = inputParamter.GetFiji() + " -batch" +
             " " + inputParamter.GetScriptLocation() + "/gridStitching_UseFixedTileConfig_MacOsX.bsh"
             " -in" + outputDirAC_TP.absolutePath() +
@@ -601,13 +609,13 @@ namespace PreprocessingPipeline {
             " -Dtile=" + "TileConfiguration.txt" +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/gridStitching_UseFixedTileConfig.bsh";
 #endif
-            system(qPrintable(stitchProgram));
+            QProcess::execute(qPrintable(stitchProgram));
             
-            system(qPrintable("mv " + outputDirs.stitchedDir.absolutePath()+QDir::separator()+"img_t1_z1_c1" + " " + outputDirs.stitchedDir.absolutePath()+QDir::separator()+"t"+iPadded+"_preprocessed.tif"));
+            QProcess::execute(qPrintable("mv " + outputDirs.stitchedDir.absolutePath()+QDir::separator()+"img_t1_z1_c1" + " " + outputDirs.stitchedDir.absolutePath()+QDir::separator()+"t"+iPadded+"_preprocessed.tif"));
             
             if (inputParamter.GetIntermediateFileDeletion()) {
-              system(qPrintable("rm -rf "+ outputDirAC_TP.absolutePath()));
-              system(qPrintable("rm -rf "+ outputDirFFC_TP.absolutePath()));
+              QProcess::execute(qPrintable("rm -rf "+ outputDirAC_TP.absolutePath()));
+              QProcess::execute(qPrintable("rm -rf "+ outputDirFFC_TP.absolutePath()));
             }
             
           } else {
