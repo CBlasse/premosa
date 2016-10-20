@@ -1,0 +1,30 @@
+import ij.IJ;
+import java.lang.Runtime;
+import java.util.*;
+import java.io.*;
+
+runtime = Runtime.getRuntime();
+
+argStr = getArgument();
+args = argStr.split("=");
+
+for(i=0; i < args.length; i++){
+	IJ.log(args[i]);
+	if (args[i].startsWith("-in")) {
+		inputpath = args[i].substring(3, args[i].length());
+	} else if (args[i].startsWith("-out")) {
+		outputpath = args[i].substring(4, args[i].length());
+	} else if (args[i].startsWith("-tile")) {
+		tileConfig = args[i].substring(5, args[i].length());
+	} else if (args[i].startsWith("-min")) {
+		min = args[i].substring(4, args[i].length());
+	} else if (args[i].startsWith("-max")) {
+		max = args[i].substring(4, args[i].length());
+	} 
+}
+
+parameters = "folder="+inputpath+" output_folder="+outputpath+" tile_configuration="+tileConfig+" minimum_intensity="+min+" maximum_intensity="+max+" number_of_samples=100 lambda_1=0.10 lambda_2=0.10";
+IJ.run("Contrast Adjustment", parameters);
+
+/* shutdown */
+runtime.exit(0);

@@ -24,6 +24,7 @@ Prerequisites:
   - Cmake (get it here)
   - Qt (version 5.6, get it here)
   - Fiji (get it here)
+  - Java 8
 
 Installation:
 
@@ -32,7 +33,7 @@ Installation:
 2) Go to the project folder and run: ./Build.sh -p Qt_prefix_path_to_cmake_configurations
   This step will generate executable programs in the ./bin/ folder. It is thereby necessary to add the Qt prefix path for finding the cmake configuration files (e.g. /usr/local/Qt5.6/5.6/clang_64/lib/cmake).
 
-3) Install the contrast adjustment plugin in Fiji. To do so, copy the contrastAdjustment.jar into the plugins folder of your Fiji distribution.
+3) Install the contrast adjustment plugin in Fiji. To do so, copy the contrastAdjustment-26.1.0.jar into the plugins folder of your Fiji distribution.
 
 
 
