@@ -52,9 +52,9 @@
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
 <ol>
 	<li>Download the source code by using either the <a href="index.html">download page </a> or the git repository:<br><br>
-		<span style="background-color: #f4f4f4;padding-left:20px;padding-right:30px;padding-bottom:10px;padding-top:10px">git clone https://github.com/PreMosa/premosa.git</span></li><br>
-	<li>Go to the project folder and run:<br><br><span style="background-color: #f4f4f4;padding-left:30px;padding-right:30px;padding-bottom:10px;padding-top:10px">./Build.sh</span><br><br>
-	This step will generate executable programs in the ./bin/ folder.</li><br>
+		<span style="background-color: #f4f4f4;padding-left:20px;padding-right:30px;padding-bottom:10px;padding-top:10px">git clone https://github.com/CBlasse/premosa.git</span></li><br>
+	<li>Go to the project folder and run:<br><br><span style="background-color: #f4f4f4;padding-left:30px;padding-right:30px;padding-bottom:10px;padding-top:10px">./Build.sh -p <i>Qt_prefix_path_to_cmake_configurations</i></span><br><br>
+	This step will generate executable programs in the ./bin/ folder.<br>It is thereby necessary to add the Qt prefix path for finding the cmake configuration files (e.g. /usr/local/Qt5.6/5.6/clang_64/lib/cmake). </li><br>
 	<li>Install the contrast adjustment plugin in Fiji. To do so, copy the contrastAdjustment.jar into the plugins folder of your Fiji distribution.</li>
 </ol>
 
