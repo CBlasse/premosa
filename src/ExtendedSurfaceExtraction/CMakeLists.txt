@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
-PROJECT(ProjectionUsingHeightMap)
+PROJECT(ExtendedSurfaceExtraction)
 
-SET(ProjectionUsingHeightMap_INC
+SET(ExtendedSurfaceExtraction_INC
   inc/Analysis.h
   inc/Develop.h
   inc/Filter.h
@@ -12,7 +12,7 @@ SET(ProjectionUsingHeightMap_INC
   inc/ZPlaneSelection.h
   inc/ZProjection.h)
 
-SET(ProjectionUsingHeightMap_SRC
+SET(ExtendedSurfaceExtraction_SRC
   src/main.cpp
   src/Analysis.cpp
   src/Filter.cpp
@@ -23,21 +23,21 @@ SET(ProjectionUsingHeightMap_SRC
   src/ZPlaneSelection.cpp
   src/ZProjection.cpp)
 
-SOURCE_GROUP("Header Files" FILES ${ProjectionUsingHeightMap_INC})
-SOURCE_GROUP("Source Files" FILES ${ProjectionUsingHeightMap_SRC})
+SOURCE_GROUP("Header Files" FILES ${ExtendedSurfaceExtraction_INC})
+SOURCE_GROUP("Source Files" FILES ${ExtendedSurfaceExtraction_SRC})
 
 INCLUDE_DIRECTORIES(
-  ${CMakeProject_PROJECTIONUSINGHEIGHTMAP_INC}
+  ${CMakeProject_EXTENDEDSURFACEEXTRACTION_INC}
   ${CMakeProject_MYLIB_INC}
 	${CMakeProject_HELPERFUNCTIONS_INC}
   ${CMakeProject_PROJECTIONLIBRARY_INC}
 )
 
-ADD_EXECUTABLE(ProjectionUsingHeightMap
-  ${ProjectionUsingHeightMap_INC}
-  ${ProjectionUsingHeightMap_SRC})
+ADD_EXECUTABLE(ExtendedSurfaceExtraction
+  ${ExtendedSurfaceExtraction_INC}
+  ${ExtendedSurfaceExtraction_SRC})
 
-TARGET_LINK_LIBRARIES(ProjectionUsingHeightMap
+TARGET_LINK_LIBRARIES(ExtendedSurfaceExtraction
   ${CMakeProject_MYLIB}
 	${CMakeProject_HELPERFUNCTIONS}
   ${CMakeProject_PROJECTIONLIBRARY}
