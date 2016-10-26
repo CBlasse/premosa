@@ -33,8 +33,8 @@ make
 mkdir ../bin
 cp FlatFieldCorrection/FlatFieldCorrection ../bin/FlatFieldCorrection
 cp PreMosa/PreMosa ../bin/PreMosa
-cp Projection/Projection ../bin/Projection
-cp ProjectionUsingHeightMap/ProjectionUsingHeightMap ../bin/ProjectionUsingHeightMap
+cp SurfaceExtraction/SurfaceExtraction ../bin/SurfaceExtraction
+cp ExtendedSurfaceExtraction/ExtendedSurfaceExtraction ../bin/ExtendedSurfaceExtraction
 
 cd ..
 
