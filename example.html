@@ -15,14 +15,14 @@
   <body>
     <div class="wrapper">
       <header>
-				<img src="./PreMosaLogo.png" alt="PreMosa" ><br>
+				<img src="./images/PreMosaLogo.png" alt="PreMosa" ><br>
 				<p align="center">Mosaic Preprocessing Pipeline</p>
         <ul>
-          <li><a href="https://github.com/PreMosa/premosa/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/PreMosa/premosa/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/PreMosa/premosa">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/CBlasse/premosa/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/CBlasse/premosa/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/CBlasse/premosa">View On <strong>GitHub</strong></a></li>
         </ul>
-        <p class="view"><a href="https://github.com/PreMosa/premosa">View the Project on GitHub <small>PreMosa/premosa</small></a></p>
+        <p class="view"><a href="https://github.com/CBlasse/premosa">View the Project on GitHub <small>CBlasse/premosa</small></a></p>
 				
 				<p  style="margin-top:5em;"><h3>Navigation</h3></p>
 				<p  style="margin-left:2em;">
@@ -34,36 +34,56 @@
       </header>
       <section>
         <h1>
-<a id="welcome-to-premosa" class="anchor" href="#welcome-to-premosa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
+<a id="welcome-to-premosa" class="anchor" href="#welcome-to-premosa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h1>
 
-<p>The pipeline has been only developed for Linux/ Mac OSX.</p><br>
+We provide a data example (<a href="https://cloud.mpi-cbg.de/index.php/s/4VkbGTKp65S9o0T">here</a>) to demonstrate the usage of <font style='font-variant:small-caps;'>PreMosa</font> and its individual steps.
+<br><br><br><br>
+
+<h3>
+<a id="usage-pipeline" class="anchor" href="#usage-pipeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mosaic Preprocessing Pipeline <font style='font-variant:small-caps;'>PreMosa</font></h3>
+<p>To process the provided dataset, one needs to update the parameters in the XML file and then run <font style='font-variant:small-caps;'>PreMosa</font>:<br><br>
+<span style="background-color: #f4f4f4;padding-left:30px;padding-right:20px;padding-bottom:10px;padding-top:10px">./PreMosa PreprocessingParameter_FlyWing.xml</span><br><br>	
+<font style='font-variant:small-caps;'>PreMosa</font> will generate a single, large 2D image per time point in the folder <i>Stitched_2D</i>.</p>
+<img src="./images/PreMosaOutput.png" alt="PreMosaOutput" ><br><br>
 <br>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prerequisites</h3>
-<ul>
-	<li> Linux / Mac OSX system
-	<li> Cmake (get it <a href="https://cmake.org/download/">here</a>)</li>
-	<li> Qt (version 4.8, get it <a href="https://download.qt.io/archive/qt/4.8/4.8.6/">here</a>)</li>
-	<li> Fiji (get it <a href="http://fiji.sc">here</a>)</li>
-</ul>
 
 <h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
-<ol>
-	<li>Download the source code by using either the <a href="index.html">download page </a> or the git repository:<br>
-		<span style="background-color: #f4f4f4;padding-left:20px;padding-right:20px;padding-bottom:2px;padding-top:2px">git clone https://github.com/PreMosa/premosa.git</span></li><br>
-	<li>Go to the project folder and run:<br>
-	<span style="background-color: #f4f4f4;padding-left:20px;padding-right:20px;padding-bottom:2px;padding-top:2px">./Build.sh</span><br>
-	This step will generate executable programs in the ./bin/ folder.</li><br>
-	<li>Install the contrast adjustment plugin in Fiji. To do so, copy the contrastAdjustment.jar into the plugins folder in your Fiji distribution.</li>
-</ol>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Surface extraction</h3>
+<p>
+	
+</p><br>
+<span style="background-color: #f4f4f4;padding-left:20px;padding-right:375px;padding-bottom:55px;padding-top:10px">./ExtendedSurfaceExtraction -r 16 -d 2 -t 50 -hmr </span><br><span style="padding-left:100px">-in RawData/t075/20120531_Pos5_p000001t00000075c01.tif</span><br><span style="padding-left:100px">-out PreprocessedData/FlatFieldCorrected_2D/t075/20120531_Pos5_p000001t00000075c01.tif</span><br><br><br>
+<img src="./images/SurfaceExtraction.png" alt="SurfaceExtraction" ><br><br>
+<br><br>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flat field correction</h3>
+<p>
+<br>
+<span style="background-color: #f4f4f4;padding-left:20px;padding-right:555px;padding-bottom:78px;padding-top:10px">./FlatFieldCorrection </span><br><span style="padding-left:100px">-in PreprocessedData/FlatFieldCorrected_2D/t075/20120531_Pos5_p000001t00000075c01.tif</span> <br><span style="padding-left:100px">-ff FFC.tif </span><br><span style="padding-left:100px">-out PreprocessedData/ContrastAdjusted_2D/t075/20120531_Pos5_p000001t00000075c01.tif</span><br><br>
+<img src="./images/FlatFieldCorrection.png" alt="FlatFieldCorrection" ><br>
+<br><br>
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mosaic stitching</h3>
+<p>To stitch the image mosaic, use the Fiji plugin <em>Grid Stitching</em>. </p>
+<img src="./images/GridStitchingExample.png" alt="GridStitchingExample" ><br><br>
+<img src="./images/Stitching.png" alt="Stitching" ><br><br>
+<br>
+<br>
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contrast Adjustment</h3>
+<p>To adjust the contrast and brightness of individual tiles in a mosaic, launch Fiji with Java 8 and run the plugin <em>Contrast Adjustment</em>. When specifying the input parameter, it is important to add the slash (/) at the end of the input and output path.<br><br>
+<img src="./images/ContrastAdjustmentExample.png" alt="ContrastAdjustmentExample" ><br><br>
+<img src="./images/ContrastAdjustmentExamplePics.png" alt="ContrastAdjustmentExample" ><br><br>
+
+<br>
 
 
 
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/PreMosa">PreMosa</a></p>
+        <p>This project is maintained by <a href="https://github.com/CBlasse">CBlasse</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
