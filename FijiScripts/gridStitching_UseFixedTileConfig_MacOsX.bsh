@@ -1,0 +1,35 @@
+import ij.IJ;
+import java.lang.Runtime;
+import java.util.*;
+import java.io.*;
+
+runtime = Runtime.getRuntime();
+
+argStr = getArgument();
+args = argStr.split("=");
+
+inputpath = "";
+outputpath = "";
+tilepath = "";
+
+for(i=0; i < args.length; i++){
+	IJ.log(args[i]);
+	if (args[i].startsWith("-in")) {
+		inputpath = args[i].substring(3, args[i].length());
+	} else if (args[i].startsWith("-out")) {
+		outputpath = args[i].substring(4, args[i].length());
+	} else if (args[i].startsWith("-tile")) {
+		tilepath = args[i].substring(5, args[i].length());
+	} 
+}
+//IJ.showMessage("Grid/Collection stitching", "type=[Positions from file] order=[Defined by TileConfiguration] directory="+inputpath+
+//	" layout_file="+tilepath+" fusion_method=[Linear Blending] regression_threshold=0.20 max/avg_displacement_threshold=2.50 absolute_displacement_threshold=2.50 "+
+//	" subpixel_accuracy computation_parameters=[Save memory (but be slower)] image_output=[Write to disk] output_directory="+outputpath);
+
+IJ.run("Grid/Collection stitching", "type=[Positions from file] order=[Defined by TileConfiguration] directory="+inputpath+
+	" layout_file="+tilepath+" fusion_method=[Linear Blending] regression_threshold=0.20 max/avg_displacement_threshold=2.50 absolute_displacement_threshold=2.50 "+
+	" subpixel_accuracy computation_parameters=[Save memory (but be slower)] image_output=[Write to disk] output_directory="+outputpath);
+
+
+/* shutdown */
+runtime.exit(0);

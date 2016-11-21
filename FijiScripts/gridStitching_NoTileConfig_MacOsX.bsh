@@ -1,0 +1,54 @@
+import ij.IJ;
+import java.lang.Runtime;
+import java.util.*;
+import java.io.*;
+
+runtime = Runtime.getRuntime();
+
+
+argStr = getArgument();
+args = argStr.split("=");
+
+
+inputpath = "";
+outputpath = "";
+gridX = "";
+gridY = "";
+overlap = "";
+name = "";
+firstIndex = "";
+
+for(i=0; i < args.length; i++){
+	IJ.log(args[i]);
+	if (args[i].startsWith("-i")) {
+		inputpath = args[i].substring(2, args[i].length());
+	} else if (args[i].startsWith("-out")) {
+		outputpath = args[i].substring(4, args[i].length());
+	} else if (args[i].startsWith("-x")) {
+		gridX = args[i].substring(2, args[i].length());
+	} else if (args[i].startsWith("-y")) {
+		gridY = args[i].substring(2, args[i].length());
+	} else if (args[i].startsWith("-l")) {
+		overlap = args[i].substring(2, args[i].length());
+	} else if (args[i].startsWith("-n")) {
+		name = args[i].substring(2, args[i].length());
+	} else if (args[i].startsWith("-f")) {
+		firstIndex = args[i].substring(2, args[i].length());
+	}
+	
+}
+IJ.showMessage("Grid/Collection stitching", "type=[Grid: row-by-row] order=[Right & Down                ] grid_size_x="+gridX+" grid_size_y="+gridY+" tile_overlap="+overlap+
+	" first_file_index_i="+firstIndex+
+	" directory="+inputpath+
+	" file_names="+name+
+	" output_textfile_name=TileConfiguration.txt fusion_method=[Linear Blending] regression_threshold=0.10 max/avg_displacement_threshold=2.50 absolute_displacement_threshold=3.50 compute_overlap computation_parameters=[Save memory (but be slower)] image_output=[Write to disk] output_directory="+outputpath
+	);
+IJ.run("Grid/Collection stitching", "type=[Grid: row-by-row] order=[Right & Down                ] grid_size_x="+gridX+" grid_size_y="+gridY+" tile_overlap="+overlap+
+	" first_file_index_i="+firstIndex+
+	" directory="+inputpath+
+	" file_names="+name+
+	" output_textfile_name=TileConfiguration.txt fusion_method=[Linear Blending] regression_threshold=0.10 max/avg_displacement_threshold=2.50 absolute_displacement_threshold=3.50 compute_overlap computation_parameters=[Save memory (but be slower)] image_output=[Write to disk] output_directory="+outputpath
+	);
+	
+/* shutdown */
+runtime.exit(0);
