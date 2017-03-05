@@ -3,11 +3,11 @@
 //
 //  Created by Corinna Blasse on 06/15/15.
 //
-
+#include <dirent.h>
 #include <iostream>
 #include <math.h>
 #include <chrono>
-
+#include <sys/stat.h>
 
 extern "C" {
 #include "array.h"
@@ -117,6 +117,35 @@ Array * FlatFieldApproximation (Array * image) {
 }
 
 
+bool StringHasSuffix(const std::string &str, const std::string &suffix)
+{
+  return str.size() >= suffix.size() &&
+  str.compare(str.size() - suffix.size(), suffix.size(), suffix) == 0;
+}
+
+void CheckOutputFolder(std::string outputPath) {
+  
+  if (StringHasSuffix(outputPath, "/")) {
+    outputPath = outputPath.substr(0,outputPath.length()-1);
+  }
+  
+  std::string path;
+  
+  if (StringHasSuffix(outputPath, ".tif")) {
+    std::size_t found = outputPath.find_last_of("/");
+    path = outputPath.substr(0, found);
+  } else {
+    path = outputPath;
+  }
+  
+  DIR * outputDir;
+  outputDir  = opendir (&(path)[0]);
+  
+  if (outputDir == NULL){
+    mkdir(&path[0], 0777);
+  }
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -157,7 +186,18 @@ int main(int argc, char * argv[])
   
   // Flat field correction
   Array * output = FlatFieldCorrection(inputImage, flatfield);
-  Write_Image(Get_String_Arg("-out"), output, DONT_PRESS);
+  
+  std::string outputString = Get_String_Arg("-out");
+  // Verification of the output path
+  CheckOutputFolder(outputString);
+  if (!StringHasSuffix(outputString, ".tif")) {
+    if (StringHasSuffix(outputString, "/")) {
+      outputString += "Output.tif";
+    } else {
+      outputString += "/Output.tif";
+    }
+  }
+  Write_Image(&outputString[0], output, DONT_PRESS);
   
   // Cleaning
   Free_Array(inputImage);

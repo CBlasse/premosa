@@ -5,9 +5,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#include <dirent.h>
 #include <iostream>
 #include <string>
 #include <chrono>
+#include <sys/stat.h>
 
 
 extern "C" {
@@ -19,6 +21,35 @@ extern "C" {
 #include "Parameter.h"
 #include "ProjectionAlgorithm.h"
 
+
+bool StringHasSuffix(const std::string &str, const std::string &suffix)
+{
+  return str.size() >= suffix.size() &&
+  str.compare(str.size() - suffix.size(), suffix.size(), suffix) == 0;
+}
+
+void CheckOutputFolder(std::string outputPath) {
+  
+  if (StringHasSuffix(outputPath, "/")) {
+    outputPath = outputPath.substr(0,outputPath.length()-1);
+  }
+  
+  std::string path;
+  
+  if (StringHasSuffix(outputPath, ".tif")) {
+    std::size_t found = outputPath.find_last_of("/");
+    path = outputPath.substr(0, found);
+  } else {
+    path = outputPath;
+  }
+  
+  DIR * outputDir;
+  outputDir  = opendir (&(path)[0]);
+  
+  if (outputDir == NULL){
+    mkdir(&path[0], 0777);
+  }
+}
 
 /****************************************************************************************
  *                                                                                      *
@@ -35,6 +66,18 @@ int main(int argc, char * argv[])
   ProjectionMethod::ParaSet parameter (argc,argv,Spec);
   
   std::string outputString = Get_String_Arg("-out");
+  // Verification of the output path
+  CheckOutputFolder(outputString);
+  if (!StringHasSuffix(outputString, ".tif")) {
+    if (StringHasSuffix(outputString, "/")) {
+      outputString += "Output";
+    } else {
+      outputString += "/Output";
+    }
+  } else {
+    outputString = outputString.substr(0, outputString.length()-4);
+  }
+  
   
   ProjectionMethod::ProjectionAlgorithm imgProjection (Get_String_Arg("-in"));
   imgProjection.SetParameters (parameter);
