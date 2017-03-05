@@ -8,9 +8,9 @@
 
 #include "Pipeline.h"
 
+#include <algorithm>
 #include <math.h>
 #include <vector>
-
 #include <dirent.h>
 #include <iomanip>
 #include <iostream>
