@@ -9,8 +9,7 @@
 #include "ParseXML.h"
 
 #include <iostream>
-#include <QFile>
-
+#include <vector>
 using namespace std;
 
 namespace PreprocessingPipeline {
@@ -22,7 +21,7 @@ namespace PreprocessingPipeline {
   
   XmlFile::XmlFile () {
   }
-
+  
   
   ////////////////////////////////////////////////////////////////////////////////
   /*
@@ -31,26 +30,17 @@ namespace PreprocessingPipeline {
    
    @param xmlFileName:  file path to the xml file
    */
-  XmlFile::XmlFile (QString xmlFileName) {
-        
-    QFile file(xmlFileName);
-    if (!file.open(QIODevice::ReadOnly)) {
-      std::cout << "Error opening XML: " << qPrintable(file.fileName()) << std::endl;
-
-    }
+  XmlFile::XmlFile (std::string xmlFileName) {
     
-    QDomDocument xmlDocument("parameterXML");
-    if (!xmlDocument.setContent(&file)) {
-      file.close();
-      std::cout << "Error reading XML: " << qPrintable(file.fileName()) << std::endl;
+    TiXmlDocument doc( const_cast<char *>(&xmlFileName[0]) );
+    bool loadOkay = doc.LoadFile();
+    if (!loadOkay) {
+      std::cout << "Error reading XML: " << xmlFileName << std::endl;
     }
-    file.close();
-    
-    QDomElement xmlElements = xmlDocument.documentElement();
+    TiXmlHandle xmlElements(&doc);
     complete_ = true;
-      
-    ParseRequieredParameter(xmlElements);
-    ParseNonRequieredParameter(xmlElements);
+    SetDefaultParameters();
+    ParseRequieredParameter(doc);
   }
   
   ////////////////////////////////////////////////////////////////////////////////
@@ -61,6 +51,86 @@ namespace PreprocessingPipeline {
   }
   
   
+  
+  ////////////////////////////////////////////////////////////////////////////////
+  /*
+   Method to verify if all required parameters are set
+   */
+  void XmlFile::SetDefaultParameters () {
+    gridSizeX_ = -1;
+    gridSizeY_ = -1;
+    tStart_ = -1;
+    tEnd_ = -1;
+    verbose_ = false;
+    radius_ = 30;
+    distance_ = 1;
+    lamdba1_ = 0.1;
+    lamdba2_ = 0.1;
+    printHeightMap_ = false;
+    intermediateFileDeletion_ = false;
+    threshold_ = 50;
+    overlap_ = 8;
+    firstIndex_ = 0;
+    minIntensity_ = 0;
+    maxIntensity_ = 65535;
+    numberOfSampledPairs_ = 100;
+  }
+  
+  
+  
+  ////////////////////////////////////////////////////////////////////////////////
+  /*
+   Method to verify if all required parameters are set
+   */
+  void XmlFile::VerifyRequiredParameters (bool hasStitchedTag) {
+    
+    if (inputDir_ == "") {
+      std::cout << "Error in XML: No input folder defined!" << std::endl;
+      complete_ = false;
+    }
+    if (outputDir_ == "") {
+      std::cout << "Error in XML: No output folder defined!" << std::endl;
+      complete_ = false;
+    }
+    if (folderNameExpression_ == "") {
+      std::cout << "Error in XML: No folder name expression defined!" << std::endl;
+      complete_ = false;
+    }
+    if (fileNameExpression_ == "") {
+      std::cout << "Error in XML: No file name expression defined!" << std::endl;
+      complete_ = false;
+    }
+    if (tStart_ == -1) {
+      std::cout << "Error in XML: No start time defined!" << std::endl;
+      complete_ = false;
+    }
+    if (tEnd_ == -1) {
+      std::cout << "Error in XML: No end time defined!" << std::endl;
+      complete_ = false;
+    }
+    if (fiji_ == "") {
+      std::cout << "Error in XML: No path to the fiji binary defined!" << std::endl;
+      complete_ = false;
+    }
+    if (scriptLocation_ == "") {
+      std::cout << "Error in XML: No path to the fiji scripts defined!" << std::endl;
+      complete_ = false;
+    }
+    if (gridSizeX_ == -1) {
+      std::cout << "Error in XML: No grid size in x direction defined!" << std::endl;
+      complete_ = false;
+    }
+    if (gridSizeY_ == -1) {
+      std::cout << "Error in XML: No grid size in y direction defined!" << std::endl;
+      complete_ = false;
+    }
+    if (hasStitchedTag == false) {
+      std::cout << "Error in XML: No stitching element in the required element defined!" << std::endl;
+      complete_ = false;
+    }
+  }
+  
+  
   ////////////////////////////////////////////////////////////////////////////////
   /*
    Parsing function of required parameters
@@ -68,235 +138,194 @@ namespace PreprocessingPipeline {
    
    @param xmlElements:  all elements in the xml file
    */
-  
-  void XmlFile::ParseRequieredParameter(QDomElement xmlElements){
+  void XmlFile::ParseRequieredParameter(TiXmlDocument &xmlDoc){
     
-    // Read input folder
-    QDomNodeList parameterNode = xmlElements.elementsByTagName("inputFolder");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No input folder defined!" << std::endl;
+    TiXmlElement * premosaTag = xmlDoc.FirstChildElement("premosa");
+    if (!premosaTag) {
+      std::cout << "Error in XML: The strutcure is not right (<premosa> element is missing). " << std::endl;
       complete_ = false;
-    } else {
-      inputDir_ = parameterNode.at(0).toElement().text();
+      return;
     }
     
-    // Read output folder
-    parameterNode = xmlElements.elementsByTagName("outputFolder");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No output folder defined!" << std::endl;
-      complete_ = false;
-    } else {
-      outputDir_ = parameterNode.at(0).toElement().text();
-    }
+    bool hasStitchingTag = false;
     
-    // Read folder name expression
-    parameterNode = xmlElements.elementsByTagName("folderNameExpression");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No folder name expression defined!" << std::endl;
-      complete_ = false;
-    } else {
-      folderNameExpression_ = parameterNode.at(0).toElement().text();
-    }
-    
-    // Read file name expression
-    parameterNode = xmlElements.elementsByTagName("fileNameExpression");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No file name expression defined!" << std::endl;
-      complete_ = false;
-    } else {
-      fileNameExpression_ = parameterNode.at(0).toElement().text();
-    }
-
-    // Read path to the fiji scripts
-    parameterNode = xmlElements.elementsByTagName("scriptLocation");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No path to the fiji scripts defined!" << std::endl;
-      complete_ = false;
-    } else {
-      scriptLocation_ = parameterNode.at(0).toElement().text();
-    }
+    for ( TiXmlElement* parameter = premosaTag->FirstChildElement( );
+         parameter;
+         parameter = parameter->NextSiblingElement( ) ) {
       
-    // Read path to the fiji program
-    parameterNode = xmlElements.elementsByTagName("fiji");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No path to the fiji binary defined!" << std::endl;
-      complete_ = false;
-    } else {
-      fiji_ = parameterNode.at(0).toElement().text();
-    }
-    
-    // Parse time range
-    parameterNode = xmlElements.elementsByTagName("tStart");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No start time defined!" << std::endl;
-      complete_ = false;
-    }
-    tStart_ = parameterNode.at(0).toElement().text().toInt();
-    
-    parameterNode = xmlElements.elementsByTagName("tEnd");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No end time defined!" << std::endl;
-      complete_ = false;
-    }
-    tEnd_ = parameterNode.at(0).toElement().text().toInt();
-    
-    
-    // Parse grid size
-    parameterNode = xmlElements.elementsByTagName("gridSizeX");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No grid size in x direction defined!" << std::endl;
-      complete_ = false;
-    }
-    gridSizeX_ = parameterNode.at(0).toElement().text().toInt();
-    
-    parameterNode = xmlElements.elementsByTagName("gridSizeY");
-    if (parameterNode.count() == 0 or parameterNode.at(0).toElement().text().length() == 0) {
-      std::cout << "Error in XML: No grid size in y direction defined!" << std::endl;
-      complete_ = false;
-    }
-    gridSizeY_ = parameterNode.at(0).toElement().text().toInt();
-    
-  }
-  
-  
-  
-  ////////////////////////////////////////////////////////////////////////////////
-  /*
-   Parsing function of non-required parameters
-   -> Individual elements are parsed in order to set the private parameters
-      If an element is not specified in the xml file, a default value is assigned
-   
-   @param xmlElements:  all elements in the xml file
-   */
-  
-  void XmlFile::ParseNonRequieredParameter(QDomElement xmlElements){
-    
-    // Parse verbose value
-    QDomNodeList parameterNode = xmlElements.elementsByTagName("verbose");
-    verbose_ = false;
-    if (parameterNode.count() != 0) {
-      if (parameterNode.at(0).toElement().text() == "true") {
-        verbose_ = true;
+      // Parsing of the parameters
+      if (strcmp(parameter->Value( ), "required") == 0) {
+        
+        for ( TiXmlElement* requiredParameter = parameter->FirstChildElement( );
+             requiredParameter;
+             requiredParameter = requiredParameter->NextSiblingElement( ) ) {
+          
+          if (strcmp(requiredParameter->Value( ), "inputFolder") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              inputDir_ = requiredParameter->GetText();
+            }
+          } else if (strcmp(requiredParameter->Value( ), "outputFolder") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              outputDir_ = requiredParameter->GetText();
+            }
+          } else if (strcmp(requiredParameter->Value( ), "folderNameExpression") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              folderNameExpression_ = requiredParameter->GetText();
+            }
+          } else if (strcmp(requiredParameter->Value( ), "fileNameExpression") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              fileNameExpression_ = requiredParameter->GetText();
+            }
+          } else if (strcmp(requiredParameter->Value( ), "tStart") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              tStart_ = atoi(requiredParameter->GetText());
+            }
+          } else if (strcmp(requiredParameter->Value( ), "tEnd") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              tEnd_ = atoi(requiredParameter->GetText());
+            }
+          } else if (strcmp(requiredParameter->Value( ), "fiji") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              fiji_ = requiredParameter->GetText();
+            }
+          } else if (strcmp(requiredParameter->Value( ), "scriptLocation") == 0) {
+            if (requiredParameter->GetText() != NULL) {
+              scriptLocation_ = requiredParameter->GetText();
+            }
+          } else if (strcmp(requiredParameter->Value( ), "stitching") == 0) {
+            hasStitchingTag = true;
+            
+            for ( TiXmlElement* stitchingParameter = requiredParameter->FirstChildElement( );
+                 stitchingParameter;
+                 stitchingParameter = stitchingParameter->NextSiblingElement( ) ) {
+              
+              if (strcmp(stitchingParameter->Value( ), "gridSizeX") == 0) {
+                if (stitchingParameter->GetText() != NULL) {
+                  gridSizeX_ = atoi(stitchingParameter->GetText());
+                }
+              } else if (strcmp(stitchingParameter->Value( ), "gridSizeY") == 0) {
+                if (stitchingParameter->GetText() != NULL) {
+                  gridSizeY_ = atoi(stitchingParameter->GetText());
+                }
+              } else if (strcmp(stitchingParameter->Value( ), "firstIndex") == 0) {
+                if (stitchingParameter->GetText() != NULL) {
+                  firstIndex_ = atoi(stitchingParameter->GetText());
+                }
+              }
+            }
+          }
+        }
+        
+      } else if (strcmp(parameter->Value( ), "optional")== 0) {
+        
+        for ( TiXmlElement* optionalParameter = parameter->FirstChildElement( );
+             optionalParameter;
+             optionalParameter = optionalParameter->NextSiblingElement( ) ) {
+          
+          if (strcmp(optionalParameter->Value( ), "verbose") == 0) {
+            if (optionalParameter->GetText() != NULL) {
+              if (strcmp(optionalParameter->GetText(), "true") == 0) {
+                verbose_ = true;
+              }
+            }
+          } else if (strcmp(optionalParameter->Value( ), "projection") == 0) {
+            
+            for ( TiXmlElement* projectionParameter = optionalParameter->FirstChildElement( );
+                 projectionParameter;
+                 projectionParameter = projectionParameter->NextSiblingElement( ) ) {
+              
+              if (strcmp(projectionParameter->Value( ), "radius") == 0) {
+                if (projectionParameter->GetText() != NULL) {
+                  radius_ = atoi(projectionParameter->GetText());
+                }
+              } else if (strcmp(projectionParameter->Value( ), "distance") == 0) {
+                if (projectionParameter->GetText() != NULL) {
+                  distance_ = atoi(projectionParameter->GetText());
+                }
+              } else if (strcmp(projectionParameter->Value( ), "threshold") == 0) {
+                if (projectionParameter->GetText() != NULL) {
+                  threshold_ = atoi(projectionParameter->GetText());
+                }
+              } else if (strcmp(projectionParameter->Value( ), "printHeightMap") == 0) {
+                if (projectionParameter->GetText() != NULL) {
+                  if (strcmp(projectionParameter->GetText(), "true") == 0) {
+                    printHeightMap_ = true;
+                  }
+                }
+              }
+            }
+          } else if (strcmp(optionalParameter->Value( ), "stitching") == 0) {
+            
+            for ( TiXmlElement* stitchingParameter = optionalParameter->FirstChildElement( );
+                 stitchingParameter;
+                 stitchingParameter = stitchingParameter->NextSiblingElement( ) ) {
+              
+              if (strcmp(stitchingParameter->Value( ), "overlap") == 0) {
+                if (stitchingParameter->GetText() != NULL) {
+                  overlap_ = atoi(stitchingParameter->GetText());
+                }
+              } else if (strcmp(stitchingParameter->Value( ), "masterTileConfig") == 0) {
+                if (stitchingParameter->GetText() != NULL) {
+                  masterTileConfig_ = stitchingParameter->GetText();
+                }
+              }
+            }
+          } else if (strcmp(optionalParameter->Value( ), "contrastOptimization") == 0) {
+            
+            for ( TiXmlElement* contrastParameter = optionalParameter->FirstChildElement( );
+                 contrastParameter;
+                 contrastParameter = contrastParameter->NextSiblingElement( ) ) {
+              
+              if (strcmp(contrastParameter->Value( ), "flatField") == 0) {
+                if (contrastParameter->GetText() != NULL) {
+                  flatField_ = contrastParameter->GetText();
+                }
+              } else if (strcmp(contrastParameter->Value( ), "minIntensity") == 0) {
+                if (contrastParameter->GetText() != NULL) {
+                  minIntensity_ = atoi(contrastParameter->GetText());
+                }
+              } else if (strcmp(contrastParameter->Value( ), "maxIntensity") == 0) {
+                if (contrastParameter->GetText() != NULL) {
+                  maxIntensity_ = atoi(contrastParameter->GetText());
+                }
+              } else if (strcmp(contrastParameter->Value( ), "numberOfPixelPairs") == 0) {
+                if (contrastParameter->GetText() != NULL) {
+                  numberOfSampledPairs_ = atoi(contrastParameter->GetText());
+                }
+              } else if (strcmp(contrastParameter->Value( ), "lambda1") == 0) {
+                if (contrastParameter->GetText() != NULL) {
+                  lamdba1_ = atof(contrastParameter->GetText());
+                }
+              } else if (strcmp(contrastParameter->Value( ), "lambda2") == 0) {
+                if (contrastParameter->GetText() != NULL) {
+                  lamdba2_ = atof(contrastParameter->GetText());
+                }
+              }
+            }
+          } else if (strcmp(optionalParameter->Value( ), "intermediateFileDeletion") == 0) {
+            if (optionalParameter->GetText() != NULL) {
+              if (strcmp(optionalParameter->GetText(), "true") == 0) {
+                intermediateFileDeletion_ = true;
+              }
+            }
+          }
+        }
+        
+      } else {
+        std::cout << "Error in XML: The strutcure is not right (<required> and/ or <optional> element is missing). " << std::endl;
+        complete_ = false;
       }
     }
     
-    // Parse print height map value
-    parameterNode = xmlElements.elementsByTagName("printHeightMap");
-    printHeightMap_ = false;
-    if (parameterNode.count() != 0) {
-      if (parameterNode.at(0).toElement().text() == "true") {
-      printHeightMap_ = true;
-      }
-    }
-    
-    // Parse intermediateFileDeletion value
-    parameterNode = xmlElements.elementsByTagName("intermediateFileDeletion");
-    intermediateFileDeletion_ = false;
-    if (parameterNode.count() != 0) {
-      if (parameterNode.at(0).toElement().text() == "true") {
-      intermediateFileDeletion_ = true;
-      }
-    }
-    
-    // Parse radius value
-    parameterNode = xmlElements.elementsByTagName("radius");
-    if (parameterNode.count() != 0) {
-      radius_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-      radius_ = 30;
-    }
-    
-    // Parse distance value
-    parameterNode = xmlElements.elementsByTagName("distance");
-    if (parameterNode.count() != 0) {
-      distance_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-      distance_ = 1;
-    }
-    
-    // Parse threshold value
-    parameterNode = xmlElements.elementsByTagName("threshold");
-    if (parameterNode.count() != 0) {
-      threshold_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-      threshold_ = 50;
-    }
-    
-    // Parse threshold value
-    parameterNode = xmlElements.elementsByTagName("overlap");
-    if (parameterNode.count() != 0) {
-      overlap_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-      overlap_ = 8;
-    }
-    
-    // Read flat field file
-    parameterNode = xmlElements.elementsByTagName("flatField");
-    if (parameterNode.count() != 0) {
-      flatField_ = parameterNode.at(0).toElement().text();
-    }
-    
-    // Parse value for the first index of all tiles
-    parameterNode = xmlElements.elementsByTagName("firstIndex");
-    if (parameterNode.count() != 0) {
-      firstIndex_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-        firstIndex_ = 0;
-    }
-    
-    // Parse value for the minimal intensity being included into the contrast adjustment
-    parameterNode = xmlElements.elementsByTagName("minIntensity");
-    if (parameterNode.count() != 0) {
-      minIntensity_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-      minIntensity_ = 0;
-    }
-    
-    // Parse value for the maximal intensity being included into the contrast adjustment
-    parameterNode = xmlElements.elementsByTagName("maxIntensity");
-    if (parameterNode.count() != 0) {
-      maxIntensity_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-      maxIntensity_ = 65535;
-    }
-    
-    // Parse value for the number of pixel pairs sampled during the contrast adjustment
-    parameterNode = xmlElements.elementsByTagName("numberOfPixelPairs");
-    if (parameterNode.count() != 0) {
-      numberOfSampledPairs_ = parameterNode.at(0).toElement().text().toInt();
-    } else {
-      numberOfSampledPairs_ = 100;
-    }
-    
-    // Parse file path of the master tile configuration
-    parameterNode = xmlElements.elementsByTagName("masterTileConfig");
-    if (parameterNode.count() != 0) {
-      masterTileConfig_ = parameterNode.at(0).toElement().text();
-    }
-
-    // Parse value for lambda1
-    parameterNode = xmlElements.elementsByTagName("lambda1");
-    if (parameterNode.count() != 0) {
-      lamdba1_ = parameterNode.at(0).toElement().text().toDouble();
-    } else {
-      lamdba1_ = 0.1;
-    }
-    
-    // Parse value for lambda2
-    parameterNode = xmlElements.elementsByTagName("lambda2");
-    if (parameterNode.count() != 0) {
-      lamdba2_ = parameterNode.at(0).toElement().text().toDouble();
-    } else {
-      lamdba2_ = 0.1;
-    }
-
+    // Verify if all required parameter are added
+    VerifyRequiredParameters(hasStitchingTag);
   }
   
   
   ////////////////////////////////////////////////////////////////////////////////
   /*
    Return functions
-  */
+   */
   
   bool XmlFile::GetComplete () const {
     return complete_;
@@ -310,34 +339,34 @@ namespace PreprocessingPipeline {
     return intermediateFileDeletion_;
   }
   
-  QString XmlFile::GetInputDir () const {
+  std::string XmlFile::GetInputDir () const {
     return inputDir_;
   }
   
-  QString XmlFile::GetOutputDir () const {
+  std::string XmlFile::GetOutputDir () const {
     return outputDir_;
   }
   
-  QString XmlFile::GetFolderNameExpression () const {
+  std::string XmlFile::GetFolderNameExpression () const {
     return folderNameExpression_;
   }
   
-  QString XmlFile::GetFileNameExpression () const {
+  std::string XmlFile::GetFileNameExpression () const {
     return fileNameExpression_;
   }
-    
-  QString XmlFile::GetFiji () const {
+  
+  std::string XmlFile::GetFiji () const {
     return fiji_;
   }
-
-  QString XmlFile::GetScriptLocation () const {
+  
+  std::string XmlFile::GetScriptLocation () const {
     return scriptLocation_;
   }
   
-  QString XmlFile::GetMasterTileConfig () const {
+  std::string XmlFile::GetMasterTileConfig () const {
     return masterTileConfig_;
   }
-
+  
   int XmlFile::GetTStart () const {
     return tStart_;
   }
@@ -366,7 +395,7 @@ namespace PreprocessingPipeline {
     return verbose_;
   }
   
-  QString XmlFile::GetFlatField () const {
+  std::string XmlFile::GetFlatField () const {
     return flatField_;
   }
   
@@ -414,5 +443,5 @@ namespace PreprocessingPipeline {
   void XmlFile::SetMaxIntensity(int maxIntensity) {
     maxIntensity_ = maxIntensity;
   }
-
+  
 }

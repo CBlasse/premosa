@@ -20,8 +20,9 @@ SOURCE_GROUP("Source Files" FILES ${PreMosa_SRC})
 INCLUDE_DIRECTORIES(
   ${CMakeProject_PREMOSA_INC}
   ${CMakeProject_MYLIB_INC}
-	${CMakeProject_HELPERFUNCTIONS_INC}
+  ${CMakeProject_HELPERFUNCTIONS_INC}
   ${CMakeProject_PROJECTIONLIBRARY_INC}
+  ${CMakeProject_TINYXML_INC}
 )
 
 ADD_EXECUTABLE(PreMosa
@@ -30,8 +31,7 @@ ADD_EXECUTABLE(PreMosa
 
 TARGET_LINK_LIBRARIES(PreMosa
   ${CMakeProject_MYLIB}
-	${CMakeProject_HELPERFUNCTIONS}
-	${CMakeProject_PROJECTIONLIBRARY}
-	Qt5::Core
-	Qt5::Xml
+  ${CMakeProject_HELPERFUNCTIONS}
+  ${CMakeProject_PROJECTIONLIBRARY}
+  ${CMakeProject_XMLLIBRARY}
 )

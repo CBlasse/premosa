@@ -9,10 +9,9 @@
 #ifndef PARSEXML_H
 #define PARSEXML_H
 
-#include <QDomDocument>
-#include <QDomElement>
-#include <QDomText>
-#include <QString>
+#include <string>
+
+#include "tinyxml.h"
 
 namespace PreprocessingPipeline {
   
@@ -31,7 +30,7 @@ namespace PreprocessingPipeline {
    Constructor / Destructor
    */
   XmlFile ();
-  XmlFile (QString xmlFileName);
+  XmlFile (std::string xmlFileName);
   ~XmlFile ();
   
   
@@ -39,9 +38,10 @@ namespace PreprocessingPipeline {
   /*
    Parse of the different parameters (required and non-required (default value available))
    */
-  void ParseRequieredParameter(QDomElement xmlElements);
-  void ParseNonRequieredParameter(QDomElement xmlElements);
-  
+  void ParseRequieredParameter(TiXmlDocument & xmlDoc);
+  void SetDefaultParameters ();
+  void VerifyRequiredParameters (bool hasStitchedTag);
+
   
   ////////////////////////////////////////////////////////////////////////////////
   /*
@@ -50,14 +50,14 @@ namespace PreprocessingPipeline {
   bool GetComplete () const;
   bool GetPrintHeightMap () const;
   bool GetIntermediateFileDeletion () const;
-  QString GetInputDir () const;
-  QString GetOutputDir () const;
-  QString GetFolderNameExpression () const;
-  QString GetFileNameExpression () const;
-  QString GetScriptLocation () const;
-  QString GetFiji () const;
-  QString GetFlatField () const;
-  QString GetMasterTileConfig () const;
+  std::string GetInputDir () const;
+  std::string GetOutputDir () const;
+  std::string GetFolderNameExpression () const;
+  std::string GetFileNameExpression () const;
+  std::string GetScriptLocation () const;
+  std::string GetFiji () const;
+  std::string GetFlatField () const;
+  std::string GetMasterTileConfig () const;
   int GetTStart () const;
   int GetTEnd () const;
   int GetGridSizeX () const;
@@ -77,7 +77,6 @@ namespace PreprocessingPipeline {
   void SetMinIntensity (int minIntensity);
   void SetMaxIntensity (int maxIntensity);
   
-  private:
   
   ////////////////////////////////////////////////////////////////////////////////
   /*
@@ -86,14 +85,14 @@ namespace PreprocessingPipeline {
   bool complete_;
   bool printHeightMap_;
   bool intermediateFileDeletion_;
-  QString inputDir_;
-  QString outputDir_;
-  QString folderNameExpression_;
-  QString fileNameExpression_;
-  QString fiji_;
-  QString flatField_;
-  QString scriptLocation_;
-  QString masterTileConfig_;
+  std::string inputDir_;
+  std::string outputDir_;
+  std::string folderNameExpression_;
+  std::string fileNameExpression_;
+  std::string fiji_;
+  std::string flatField_;
+  std::string scriptLocation_;
+  std::string masterTileConfig_;
   int tStart_;
   int tEnd_;
   int gridSizeX_;

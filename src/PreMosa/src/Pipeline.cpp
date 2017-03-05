@@ -11,11 +11,13 @@
 #include <math.h>
 #include <vector>
 
-#include <QFile>
-#include <QProcess>
-#include <QString>
-#include <QSysInfo>
-#include <QTextStream>
+#include <dirent.h>
+#include <iomanip>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <stdlib.h>
+#include <sys/stat.h>
 
 extern "C" {
 #include "array.h"
@@ -136,6 +138,22 @@ namespace PreprocessingPipeline {
     
     ////////////////////////////////////////////////////////////////////////////////
     /*
+     Method to add leading zeros to the string
+     
+     @param number:    number with should be padded
+     @param maxDigits: maximal number of digits
+     */
+    
+    std::string PadString (char paddingCharacter, int number, int maxDigits )
+    {
+    std::stringstream paddedString;
+    paddedString << std::setw( maxDigits ) << std::setfill( paddingCharacter ) << number;
+    return paddedString.str();
+    }
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    /*
      Creation of a tile configuration using a master tile configuration
      
      @param inputParamter:    struct with parameters
@@ -144,36 +162,39 @@ namespace PreprocessingPipeline {
      */
     
     
-    void CreateTileConfiguration (XmlFile inputParamter, QString tileConfigPath, QString fileName) {
+    void CreateTileConfiguration (XmlFile inputParamter, std::string tileConfigPath, std::string fileName) {
       
-      QFile masterFile(inputParamter.GetMasterTileConfig());
+      std::ifstream masterFile;
+      masterFile.open (inputParamter.GetMasterTileConfig());
       
-      if (!masterFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+      if (masterFile.is_open()) {
         std::cout << "Master tile configuration file cannot be opened! A new configuration will be computed!" << std::endl;
         return;
       }
       
-      int paddingNumber = inputParamter.GetFileNameExpression().indexOf("}") - inputParamter.GetFileNameExpression().indexOf("{") - 1;  // determination of the number of digits of the tile indication
+      int paddingNumber = inputParamter.GetFileNameExpression().find("}") - inputParamter.GetFileNameExpression().find("{") - 1;  // determination of the number of digits of the tile indication
       
-      QTextStream in(&masterFile);
-      QString lines = in.readAll();
-      
-      for (int i=inputParamter.GetFirstIndex(); i<=inputParamter.GetGridSizeX()*inputParamter.GetGridSizeY(); i++) {  // iteration through the number of tile
+      std::ofstream tileConfig;
+      tileConfig.open (tileConfigPath, std::ios::app); // writing of the new tile configuration file
+      if (tileConfig.is_open()) {
         
-        QString expression = '{' + QString('i').rightJustified(paddingNumber, 'i')+'}'; // replace the current tile number
-        QString tile = QString::number(i).rightJustified(paddingNumber, '0');
-        QString tileReplacement = "%TILE" + QString::number(i) +"%";
-        QString newFileName = fileName;
-        newFileName.replace(expression, tile);
-        
-        lines = lines.replace(tileReplacement, newFileName);
+        std::string line;
+        while (std::getline(masterFile, line)) {
+          
+          for (int i=inputParamter.GetFirstIndex(); i<=inputParamter.GetGridSizeX()*inputParamter.GetGridSizeY(); i++) {  // iteration through the number of tile
+            
+            std::string expression = '{' + PadString('i', 'i', paddingNumber) +'}'; // replace the current tile number
+            std::string tile = PadString('0', i, paddingNumber);
+            std::string tileReplacement = "%TILE" + std::to_string(i) +"%";
+            std::string newFileName = fileName;
+            newFileName = newFileName.replace(inputParamter.GetFileNameExpression().find("{"), paddingNumber, tile);
+            
+            line = line.replace(inputParamter.GetFileNameExpression().find("%"), tileReplacement.length(), newFileName);
+          }
+          tileConfig << line;
+        }
       }
       
-      QFile tileConfig(tileConfigPath); // writing of the new tile configuration file
-      tileConfig.open(QIODevice::WriteOnly | QIODevice::Text);
-      QTextStream dataTileConfig(&tileConfig);
-      
-      dataTileConfig << lines;
       masterFile.close();
       tileConfig.close();
     }
@@ -284,36 +305,71 @@ namespace PreprocessingPipeline {
      @param blackTiles:       vector with the file names of all black tiles
      */
     
-    void RemoveBlackTilesFromTileConfiguration (QString tileConfigPath,QString tileConfigPath2, std::vector<std::string> &blackTiles) {
+    void RemoveBlackTilesFromTileConfiguration (std::string tileConfigPath,std::string tileConfigPath2, std::vector<std::string> &blackTiles) {
       
-      QFile masterFile(tileConfigPath);
-      QFile masterFile2(tileConfigPath2);
+      std::ifstream masterFile;
+      masterFile.open (tileConfigPath);
+      std::ofstream masterFile2;
+      masterFile2.open (tileConfigPath2, std::ios::app);
       
-      masterFile.open(QIODevice::ReadOnly | QIODevice::Text) ;
-      masterFile2.open(QIODevice::WriteOnly | QIODevice::Text);
-      QTextStream in(&masterFile);
-      QTextStream out(&masterFile2);
-      QString line;
+      if (!masterFile.is_open() or !masterFile2.is_open()) {
+        return;
+      }
       
-      while (!in.atEnd())
-        {
-        line = in.readLine();
-        std::string fileName = line.split(";")[0].toStdString();
+      std::string line;
+
+      while (std::getline(masterFile, line)) {
+        
+        std::string fileName = line.substr(0, line.find(";"));
         if (std::find(blackTiles.begin(), blackTiles.end(), fileName) == blackTiles.end()) {    // if the file name is not included in the black tile vector, then the line is added to the new tile configuration
-          out << line << "\n";
+          masterFile2 << line << "\n";
         }
-        }
+      }
       
       masterFile.close();
       masterFile2.close();
     }
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    /*
+     Function to check whether the filename has ".tif" as ending
+     
+     @param file:   file
+    */
+    
+    bool CheckFileEnding (const struct dirent *file) {
+      std::string fileEnding = ".tif";
+      std::string filename = file->d_name;
+      
+      if (filename.find(fileEnding) != std::string::npos) {
+        return true;
+      }
+      
+      return false;
+    }
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    /*
+     Function to check whether the file exists
+     
+     @param filename:   filename
+     */
+    inline bool FileExists (const std::string& filename) {
+      
+      if (std::ifstream(filename.c_str()))
+        {
+        return true;
+        }
+      return false;
+    }
+    
   } // namespace
   
   
-  
-  
-  
-  
+
+
   
   
   ////////////////////////////////////////////////////////////////////////////////
@@ -333,11 +389,12 @@ namespace PreprocessingPipeline {
     
     if (inputParamter.GetComplete()) {    // Required parameter have to be set
       
-      QDir inputDir(inputParamter.GetInputDir());
+      DIR *inputDir;
+      inputDir = opendir(&(inputParamter.GetInputDir()[0]));
       OutputDirs outputDirs = MakeOutputDirs (inputParamter.GetOutputDir());  // Creation of the required output folders
       
-      int paddingNumber = inputParamter.GetFolderNameExpression().indexOf("}") - inputParamter.GetFolderNameExpression().indexOf("{") - 1;    // Parsing the number of digits used to encode the time point
-      QString expression = '{' + QString('i').rightJustified(paddingNumber, 'i')+'}';
+      int paddingNumber = inputParamter.GetFolderNameExpression().find("}") - inputParamter.GetFolderNameExpression().find("{") - 1;    // Parsing the number of digits used to encode the time point
+      std::string expression = '{' + PadString('i', 'i', paddingNumber)+'}';
       
       
       // Settings for the flat field correction
@@ -354,14 +411,14 @@ namespace PreprocessingPipeline {
       } else if (inputParamter.GetFlatField() == "Approximation") {
         withoutFlatField = true;
       } else {
-        flatField = Read_Image(const_cast<char * > (qPrintable(inputParamter.GetFlatField())),0);
+        flatField = Read_Image(&(inputParamter.GetFlatField()[0]),0);
         Range_Bundle flatFieldRange;
         Array_Range(&flatFieldRange, flatField);
         flatFieldMaximum = ceil(flatFieldRange.maxval.fval);
       }
       
       
-      if (inputDir.exists()) {
+      if (inputDir) {
         
         // Initialize the parameter struct
         ProjectionMethod::ParaSet projectionParameters;
@@ -379,12 +436,20 @@ namespace PreprocessingPipeline {
         
         // Set default minIntensity and maxIntensity values for the contrast adjustement (it depends on the data type, therefore it could not be set up before)
         if (inputParamter.GetMinIntensity() == 0 and inputParamter.GetMaxIntensity() == 65535) {
-          QString iPadded = QString::number(inputParamter.GetTStart()).rightJustified(paddingNumber, '0');
-          QString folderName (inputParamter.GetFolderNameExpression());
-          folderName.replace(expression, iPadded);
-          QDir exampleDir (inputDir.absolutePath()+QDir::separator()+folderName);
+          std::string iPadded = PadString('0', inputParamter.GetTStart(), paddingNumber);
+          std::string folderName (inputParamter.GetFolderNameExpression());
+          folderName.replace(folderName.find("{"), expression.length(), iPadded);
+          DIR * exampleDir;
+          exampleDir = opendir(&(inputParamter.GetInputDir()+"/"+folderName)[0]);
+          struct dirent *exampleEntry;
+          bool firstFile = true;
+          std::string exampleFileName;
           
-          Array * exampleImage = Read_Image(const_cast<char * > (qPrintable(exampleDir.entryInfoList(QDir::Files)[0].filePath())),0);
+          while (firstFile and (exampleEntry = readdir(exampleDir)) != NULL){
+            exampleFileName = inputParamter.GetInputDir()+"/"+folderName + "/"+ exampleEntry->d_name;
+          }
+          
+          Array * exampleImage = Read_Image(&exampleFileName[0],0);
           if (exampleImage->type == UINT8_TYPE) {
             inputParamter.SetMinIntensity(10);
             inputParamter.SetMaxIntensity(245);
@@ -398,33 +463,39 @@ namespace PreprocessingPipeline {
         
         for (int i=inputParamter.GetTStart(); i<=inputParamter.GetTEnd(); ++i) {
           
-          QString iPadded = QString::number(i).rightJustified(paddingNumber, '0');
-          QString folderName (inputParamter.GetFolderNameExpression());
-          folderName.replace(expression, iPadded);
+          std::string iPadded = PadString('0', inputParamter.GetTStart(), paddingNumber);
+          std::string folderName (inputParamter.GetFolderNameExpression());
+          folderName.replace(folderName.find("{"), expression.length(), iPadded);
           
-          std::cout << "Processed time point: " << qPrintable(inputDir.absolutePath()+QDir::separator()+folderName) << std::endl;
-          QDir timePointDir(inputDir.absolutePath()+QDir::separator()+folderName);
+          std::cout << "Processed time point: " << &(inputParamter.GetInputDir()+"/"+folderName)[0] << std::endl;
+          DIR * timePointDir;
+          timePointDir = opendir(&(inputParamter.GetInputDir()+"/"+folderName)[0]);
           
-          QStringList filters;
-          filters << "*.tif";
-          timePointDir.setNameFilters(filters);
           std::vector<std::string> blackTiles;
           
-          if (timePointDir.exists()) {
-            QFileInfoList entries = timePointDir.entryInfoList(QDir::Files);
+          if (timePointDir != NULL) {
+            
+            struct dirent *entry;
             
             // Create subdirectory
-            QDir outputDirFFC_TP(outputDirs.flatFieldDir.absolutePath()+QDir::separator()+folderName);
-            if (not outputDirFFC_TP.exists()) {
-              outputDirFFC_TP.mkdir(outputDirs.flatFieldDir.absolutePath()+QDir::separator()+folderName);
+            DIR * outputDirFFC_TP;
+            std::string outputDirFFC_TP_Path = outputDirs.flatFieldPath+"/"+folderName;
+            outputDirFFC_TP = opendir(&(outputDirFFC_TP_Path)[0]);
+            if (outputDirFFC_TP == NULL) {
+              mkdir(&(outputDirFFC_TP_Path)[0], 0777);
+              outputDirFFC_TP  = opendir (&(outputDirFFC_TP_Path)[0]);
             }
             
-            foreach ( QFileInfo entryInfo, entries){
+            while ((entry = readdir(timePointDir)) != NULL){
               
+              std::string entryString = entry->d_name;
+              if (entryString == "." or entryString == "..") {
+                continue;
+              }
               // Read the image
-              QString path = entryInfo.absoluteFilePath();
-
-              Array * image = Read_Image(const_cast<char * > (qPrintable(entryInfo.filePath())),0);
+              std::string path = inputParamter.GetInputDir()+"/"+folderName+"/"+entry->d_name;
+              std::cout << path << std::endl;
+              Array * image = Read_Image(&path[0],0);
               
               // Resetting the radius parameter
               projectionParameters.radius = originalRadius;
@@ -441,13 +512,13 @@ namespace PreprocessingPipeline {
                 projection = projectionAlgorithm.GetProjection(0);
 
                 if (inputParamter.GetPrintHeightMap()) {
-                  projectionAlgorithm.DrawInterpolatedHeightMap(const_cast<char * > (qPrintable(outputDirFFC_TP.path()+QDir::separator()+entryInfo.fileName())));
+                  projectionAlgorithm.DrawInterpolatedHeightMap(&(outputDirFFC_TP_Path+"/"+entry->d_name)[0]);
                 }
               }
 
               
               // Review if the image features significant signals and is not a 'black tile'
-              CheckForBlackTile(projection, entryInfo.fileName().toStdString(), blackTiles);
+              CheckForBlackTile(projection, entry->d_name, blackTiles);
               
               // Flat field correction
               if (flatFieldCorrection) {
@@ -459,10 +530,10 @@ namespace PreprocessingPipeline {
                   flatFieldMaximum = ceil(flatFieldRange.maxval.fval);
                 }
                 Array * correctedImg = FlatFieldCorrection(projection, flatField, flatFieldMaximum);
-                Write_Image(const_cast<char * > (qPrintable(outputDirFFC_TP.path()+QDir::separator()+entryInfo.fileName())), correctedImg, DONT_PRESS);
+                Write_Image(&(outputDirFFC_TP_Path+"/"+entry->d_name)[0], correctedImg, DONT_PRESS);
                 Free_Array(correctedImg);
               } else {
-                Write_Image(const_cast<char * > (qPrintable(outputDirFFC_TP.path()+QDir::separator()+entryInfo.fileName())), projection, DONT_PRESS);
+                Write_Image(&(outputDirFFC_TP_Path+"/"+entry->d_name)[0], projection, DONT_PRESS);
               }
               
               // Cleaning (projection is freed by the destructor of the ProjectionAlgorithm)
@@ -471,87 +542,84 @@ namespace PreprocessingPipeline {
             }
             
             // Folder for the contrast adjustment
-            QDir outputDirAC_TP(outputDirs.constrastAdjDir.absolutePath()+QDir::separator()+folderName);
-            if (not outputDirAC_TP.exists()) {
-              outputDirAC_TP.mkdir(outputDirs.constrastAdjDir.absolutePath()+QDir::separator()+folderName);
+            DIR * outputDirAC_TP;
+            std::string outputDirAC_TP_Path = outputDirs.contrastAdjPath+"/"+folderName;
+            outputDirAC_TP = opendir(&(outputDirAC_TP_Path)[0]);
+            if (outputDirAC_TP == NULL) {
+              mkdir(&(outputDirAC_TP_Path)[0], 0777);
+              outputDirAC_TP  = opendir (&(outputDirAC_TP_Path)[0]);
             }
             
-            QString fileName (inputParamter.GetFileNameExpression());
-            fileName.replace("TIME", iPadded);
-            
+            std::string fileName (inputParamter.GetFileNameExpression());
+            fileName = fileName.replace(fileName.find("TIME"), 4, iPadded);
             
             // Mosaic stitching to determine the tile configuration
-            QString tileConfig = outputDirFFC_TP.absolutePath() + QDir::separator() + "TileConfiguration.txt";
+            std::string tileConfig = outputDirFFC_TP_Path + "/" + "TileConfiguration.txt";
             if (inputParamter.GetMasterTileConfig() != "") {
               CreateTileConfiguration(inputParamter, tileConfig, fileName);
             }
-            QFile tileFile (tileConfig);
-            QString stitchProgram;
+            
+            std::string stitchProgram;
             
             // Fiji call (depends on the presence of a master tile configuration and the system(Linux/OsX) )
-            if (!tileFile.exists()) {
+            if (!FileExists(tileConfig)) {
               
-#ifdef Q_OS_MAC
+#ifdef __APPLE__
               stitchProgram = inputParamter.GetFiji() + " -batch" +
               " " + inputParamter.GetScriptLocation() + "/gridStitching_GetTileConfig_MacOsX.bsh" +
-              " -i" + outputDirFFC_TP.absolutePath() +
-              "=-x" + QString::number(inputParamter.GetGridSizeX()) +
-              "=-y" + QString::number(inputParamter.GetGridSizeY()) +
-              "=-l" +QString::number(inputParamter.GetOverlap())+
+              " -i" + outputDirFFC_TP_Path +
+              "=-x" + std::to_string(inputParamter.GetGridSizeX()) +
+              "=-y" + std::to_string(inputParamter.GetGridSizeY()) +
+              "=-l" +std::to_string(inputParamter.GetOverlap())+
               "=-n" + fileName +
-              "=-f"+ QString::number(inputParamter.GetFirstIndex());
+              "=-f"+ std::to_string(inputParamter.GetFirstIndex());
 #endif
               
 #ifdef __linux__
               stitchProgram = "xvfb-run -a " + inputParamter.GetFiji() +
-              " -Di=" + outputDirFFC_TP.absolutePath() +
-              " -Dx=" + QString::number(inputParamter.GetGridSizeX()) +
-              " -Dy=" + QString::number(inputParamter.GetGridSizeY()) +
-              " -Dl=" +QString::number(inputParamter.GetOverlap())+
+              " -Di=" + outputDirFFC_TP_Path +
+              " -Dx=" + std::to_string(inputParamter.GetGridSizeX()) +
+              " -Dy=" + std::to_string(inputParamter.GetGridSizeY()) +
+              " -Dl=" +std::to_string(inputParamter.GetOverlap())+
               " -Dn=" + fileName +
-              " -Df="+ QString::number(inputParamter.GetFirstIndex()) +
+              " -Df="+ std::to_string(inputParamter.GetFirstIndex()) +
               " -- --no-splash " + inputParamter.GetScriptLocation() + "/gridStitching_GetTileConfig.bsh";
 #endif
               
             } else {
-#ifdef Q_OS_MAC
+#ifdef __APPLE__
               stitchProgram = inputParamter.GetFiji() + " -batch" +
               " " + inputParamter.GetScriptLocation() + "/gridStitching_UseTileConfig_MacOsX.bsh"+
-              " -in" + outputDirFFC_TP.absolutePath() +
-              "=-out" + outputDirFFC_TP.absolutePath()+QDir::separator();
+              " -in" + outputDirFFC_TP_Path +
+              "=-out" + outputDirFFC_TP_Path+"/";
               
 #endif
               
 #ifdef __linux__
               stitchProgram = "xvfb-run -a " + inputParamter.GetFiji() +
-              " -Din=" + outputDirFFC_TP.absolutePath() +
-              " -Dout=" + outputDirFFC_TP.absolutePath()+QDir::separator() +
+              " -Din=" + outputDirFFC_TP_Path +
+              " -Dout=" + outputDirFFC_TP_Path+ "/" +
               " -- --no-splash " + inputParamter.GetScriptLocation() + "/gridStitching_UseTileConfig.bsh";
 #endif
             }
   
-            QProcess process;
-            process.start(stitchProgram);
-            process.waitForFinished(-1);
-            
-            //QProcess::execute(stitchProgram.toStdString());
-            
-            
+            system(&stitchProgram[0]);
+
             // Prepare contrast adjustment
-            tileConfig = outputDirFFC_TP.absolutePath()+QDir::separator()+"TileConfiguration.registered.txt";
-            QString tileConfig2 = outputDirFFC_TP.absolutePath() + QDir::separator() + "TileConfiguration.registered2.txt";
+            tileConfig = outputDirFFC_TP_Path+"/"+"TileConfiguration.registered.txt";
+            std::string tileConfig2 = outputDirFFC_TP_Path + "/" + "TileConfiguration.registered2.txt";
             
             // Replace black tiles
             RemoveBlackTilesFromTileConfiguration(tileConfig, tileConfig2, blackTiles);
-            //            QString tileReplacement = "cp "+tileConfig2+" "+tileConfig;
+            //            std::string tileReplacement = "cp "+tileConfig2+" "+tileConfig;
             //            system(qPrintable(tileReplacement));
             
             
-            QString minInt = QString::number(inputParamter.GetMinIntensity());
-            QString maxInt = QString::number(inputParamter.GetMaxIntensity());
+            std::string minInt = std::to_string(inputParamter.GetMinIntensity());
+            std::string maxInt = std::to_string(inputParamter.GetMaxIntensity());
             
-            QString caProgram;
-#ifdef Q_OS_MAC
+            std::string caProgram;
+#ifdef __APPLE__
             //            caProgram = inputParamter.GetFiji() +
             //            " --run \"Contrast Adjustment\" \"folder=" + outputDirFFC_TP.absolutePath() + QDir::separator() +
             //            " output_folder=" + outputDirAC_TP.absolutePath() + QDir::separator() +
@@ -562,8 +630,8 @@ namespace PreprocessingPipeline {
             
             caProgram = inputParamter.GetFiji() + " -batch " +
             inputParamter.GetScriptLocation() + "/RunContrastAdjustment_MacOsX.bsh" +
-            " -in" + outputDirFFC_TP.absolutePath() + QDir::separator() +
-            "=-out" + outputDirAC_TP.absolutePath() + QDir::separator() +
+            " -in" + outputDirFFC_TP_Path + "/" +
+            "=-out" + outputDirAC_TP_Path + "/" +
             "=-tile" + tileConfig2 +
             "=-min" + minInt +
             "=-max" + maxInt;
@@ -572,50 +640,48 @@ namespace PreprocessingPipeline {
             
 #ifdef __linux__
             caProgram = "xvfb-run -a " + inputParamter.GetFiji() +
-            " -Din=" + outputDirFFC_TP.absolutePath() + QDir::separator() +
-            " -Dout=" + outputDirAC_TP.absolutePath() + QDir::separator() +
+            " -Din=" + outputDirFFC_TP_Path + "/" +
+            " -Dout=" + outputDirAC_TP_Path + "/" +
             " -Dtile=" + tileConfig2 +
             " -Dmin=" + minInt +
             " -Dmax=" + maxInt +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/RunContrastAdjustment.bsh";
 #endif
-            process.start(caProgram);
-            process.waitForFinished(-1);
+            system (&caProgram[0]);
             
             // Copy black tiles
             for (auto blackTile : blackTiles) {
-              QString copyCall = "cp " + outputDirFFC_TP.absolutePath()+ QDir::separator() + QString::fromStdString(blackTile) + " " + outputDirAC_TP.absolutePath()+ QDir::separator() + QString::fromStdString(blackTile);
-              system(qPrintable(copyCall));
+              std::string copyCall = "cp " + outputDirFFC_TP_Path+ "/" + blackTile + " " + outputDirAC_TP_Path+ "/" + blackTile;
+              system(&copyCall[0]);
             }
             
             // Actual Stitching
             
-            QString tileConfigCopy = outputDirAC_TP.absolutePath()+QDir::separator()+"TileConfiguration.txt";
-            process.start("cp " + tileConfig2 + " " + tileConfigCopy);
-            process.waitForFinished(-1);
+            std::string tileConfigCopy = outputDirAC_TP_Path+"/"+"TileConfiguration.txt";
+            system(&("cp " + tileConfig2 + " " + tileConfigCopy)[0]);
             
-#ifdef Q_OS_MAC
+#ifdef __APPLE__
             stitchProgram = inputParamter.GetFiji() + " -batch" +
             " " + inputParamter.GetScriptLocation() + "/gridStitching_UseFixedTileConfig_MacOsX.bsh"
-            " -in" + outputDirAC_TP.absolutePath() +
-            "=-out" + outputDirs.stitchedDir.absolutePath()+QDir::separator() +
+            " -in" + outputDirAC_TP_Path +
+            "=-out" + outputDirs.stitchedPath+ "/" +
             "=-tile" + "TileConfiguration.txt";
 #endif
             
 #ifdef __linux__
             stitchProgram = "xvfb-run -a " + inputParamter.GetFiji() +
-            " -Din=" + outputDirAC_TP.absolutePath() +
-            " -Dout=" + outputDirs.stitchedDir.absolutePath()+QDir::separator() +
+            " -Din=" + outputDirAC_TP_Path +
+            " -Dout=" + outputDirs.stitchedPath+ "/" +
             " -Dtile=" + "TileConfiguration.txt" +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/gridStitching_UseFixedTileConfig.bsh";
 #endif
-            QProcess::execute(qPrintable(stitchProgram));
+            system(&stitchProgram[0]);
             
-            QProcess::execute(qPrintable("mv " + outputDirs.stitchedDir.absolutePath()+QDir::separator()+"img_t1_z1_c1" + " " + outputDirs.stitchedDir.absolutePath()+QDir::separator()+"t"+iPadded+"_preprocessed.tif"));
+            system(&("mv " + outputDirs.stitchedPath+"/"+"img_t1_z1_c1" + " " + outputDirs.stitchedPath+"/"+"t"+iPadded+"_preprocessed.tif")[0]);
             
             if (inputParamter.GetIntermediateFileDeletion()) {
-              QProcess::execute(qPrintable("rm -rf "+ outputDirAC_TP.absolutePath()));
-              QProcess::execute(qPrintable("rm -rf "+ outputDirFFC_TP.absolutePath()));
+              system(&("rm -rf "+ outputDirAC_TP_Path)[0]);
+              system(&("rm -rf "+ outputDirFFC_TP_Path)[0]);
             }
             
           } else {
@@ -630,8 +696,8 @@ namespace PreprocessingPipeline {
         Free_Array(flatField);
       }
       if (inputParamter.GetIntermediateFileDeletion()) {
-        system(qPrintable("rm -rf "+ outputDirs.flatFieldDir.absolutePath()));
-        system(qPrintable("rm -rf "+ outputDirs.constrastAdjDir.absolutePath()));
+        system(&("rm -rf "+ outputDirs.flatFieldPath)[0]);
+        system(&("rm -rf "+ outputDirs.contrastAdjPath)[0]);
       }
       
     }

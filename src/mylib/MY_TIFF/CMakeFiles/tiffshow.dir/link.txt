@@ -1,1 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -fPIC -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/tiffshow.dir/app.show.c.o CMakeFiles/tiffshow.dir/utilities.c.o  -o tiffshow  libmytiff.a 

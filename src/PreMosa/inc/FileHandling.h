@@ -9,11 +9,8 @@
 #ifndef FILEHANDLING_H
 #define FILEHANDLING_H
 
-#include <unordered_map>
-#include <iostream>
-
-#include <QDir>
-#include <QString>
+#include <dirent.h>
+#include <string>
 
 
 namespace PreprocessingPipeline {
@@ -24,10 +21,14 @@ namespace PreprocessingPipeline {
    */
   
   struct OutputDirs {
-    QDir rootDir;
-    QDir flatFieldDir;
-    QDir constrastAdjDir;
-    QDir stitchedDir;
+    DIR * rootDir;
+    DIR * flatFieldDir;
+    DIR * constrastAdjDir;
+    DIR * stitchedDir;
+    std::string rootPath;
+    std::string flatFieldPath;
+    std::string contrastAdjPath;
+    std::string stitchedPath;
   };
   
   
@@ -38,7 +39,7 @@ namespace PreprocessingPipeline {
    @param outputDirPath:  path to the parent output folder
    */
   
-  OutputDirs MakeOutputDirs (QString outputDirPath);
+  OutputDirs MakeOutputDirs (std::string outputDirPath);
   
 }
 
