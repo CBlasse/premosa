@@ -620,21 +620,15 @@ namespace PreprocessingPipeline {
             
             std::string caProgram;
 #ifdef __APPLE__
-            //            caProgram = inputParamter.GetFiji() +
-            //            " --run \"Contrast Adjustment\" \"folder=" + outputDirFFC_TP.absolutePath() + QDir::separator() +
-            //            " output_folder=" + outputDirAC_TP.absolutePath() + QDir::separator() +
-            //            " tile_configuration=" + tileConfig +
-            //            " minimum_intensity=" + minInt +
-            //            " maximum_intensity=" + maxInt +
-            //            " number_of_samples=100 lambda_1=0.10 lambda_2=0.10\"";
-            
             caProgram = inputParamter.GetFiji() + " -batch " +
             inputParamter.GetScriptLocation() + "/RunContrastAdjustment_MacOsX.bsh" +
             " -in" + outputDirFFC_TP_Path + "/" +
             "=-out" + outputDirAC_TP_Path + "/" +
             "=-tile" + tileConfig2 +
             "=-min" + minInt +
-            "=-max" + maxInt;
+            "=-max" + maxInt +
+            "=-l1" + std::to_string(inputParamter.GetLambda1())+
+            "=-l2" + std::to_string(inputParamter.GetLambda2());
             
 #endif
             
@@ -645,6 +639,8 @@ namespace PreprocessingPipeline {
             " -Dtile=" + tileConfig2 +
             " -Dmin=" + minInt +
             " -Dmax=" + maxInt +
+            " -Dl1" + std::to_string(inputParamter.GetLambda1())+
+            " -Dl2" + std::to_string(inputParamter.GetLambda2()) +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/RunContrastAdjustment.bsh";
 #endif
             system (&caProgram[0]);
