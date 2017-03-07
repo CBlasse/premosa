@@ -649,8 +649,8 @@ namespace PreprocessingPipeline {
             " -Dtile=" + tileConfig2 +
             " -Dmin=" + minInt +
             " -Dmax=" + maxInt +
-            " -Dl1" + std::to_string(inputParamter.GetLambda1())+
-            " -Dl2" + std::to_string(inputParamter.GetLambda2()) +
+            " -Dl1=" + std::to_string(inputParamter.GetLambda1())+
+            " -Dl2=" + std::to_string(inputParamter.GetLambda2()) +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/RunContrastAdjustment.bsh";
 #endif
             system (&caProgram[0]);
