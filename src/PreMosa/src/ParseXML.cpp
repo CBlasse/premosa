@@ -153,6 +153,12 @@ namespace PreprocessingPipeline {
       std::cout << "Error : Fiji script location does not exist!" << std::endl;
       complete_ = false;
     }
+    if (flatField_ != "") {
+      if (!FileExists(flatField_)) {
+        std::cout << "Error : Flat field image does not exist!" << std::endl;
+        complete_ = false;
+      }
+    }
   }
   
   
