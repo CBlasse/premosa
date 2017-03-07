@@ -25,7 +25,7 @@ Linux:
   - Cmake, at least 3.0 (please make sure it also runs from the command line) 
   - Fiji 
   - Java 8
-	- xvfb
+  - xvfb
 
 MacOSX:
   - Cmake, at least 3.0 (please make sure it also runs from the command line) 
