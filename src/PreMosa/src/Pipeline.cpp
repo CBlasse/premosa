@@ -41,6 +41,22 @@ namespace PreprocessingPipeline {
   namespace {
     ////////////////////////////////////////////////////////////////////////////////
     /*
+     Function to check whether the file exists
+     
+     @param filename:   filename
+     */
+    inline bool FileExists (const std::string& filename) {
+      
+      if (std::ifstream(filename.c_str()))
+        {
+        return true;
+        }
+      return false;
+    }
+
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    /*
      Flat field correction
      -> corrected image = (image / flat field) * rescaling factor
      
@@ -174,8 +190,12 @@ namespace PreprocessingPipeline {
       
       int paddingNumber = inputParamter.GetFileNameExpression().find("}") - inputParamter.GetFileNameExpression().find("{") - 1;  // determination of the number of digits of the tile indication
       
+      if (FileExists(tileConfigPath)) {
+        system(&("rm "+ tileConfigPath)[0]);
+      }
+      
       std::ofstream tileConfig;
-      tileConfig.open (tileConfigPath, std::ios::app); // writing of the new tile configuration file
+      tileConfig.open (tileConfigPath, std::ofstream::trunc); // writing of the new tile configuration file
       if (tileConfig.is_open()) {
         
         std::string line;
@@ -309,8 +329,13 @@ namespace PreprocessingPipeline {
       
       std::ifstream masterFile;
       masterFile.open (tileConfigPath);
+      
+      if (FileExists(tileConfigPath2)) {
+        system(&("rm "+ tileConfigPath2)[0]);
+      }
+      
       std::ofstream masterFile2;
-      masterFile2.open (tileConfigPath2, std::ios::app);
+      masterFile2.open (tileConfigPath2);
       
       if (!masterFile.is_open() or !masterFile2.is_open()) {
         return;
@@ -349,21 +374,6 @@ namespace PreprocessingPipeline {
       return false;
     }
     
-    
-    ////////////////////////////////////////////////////////////////////////////////
-    /*
-     Function to check whether the file exists
-     
-     @param filename:   filename
-     */
-    inline bool FileExists (const std::string& filename) {
-      
-      if (std::ifstream(filename.c_str()))
-        {
-        return true;
-        }
-      return false;
-    }
     
   } // namespace
   

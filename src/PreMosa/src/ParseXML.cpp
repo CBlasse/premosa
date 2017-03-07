@@ -8,6 +8,7 @@
 
 #include "ParseXML.h"
 
+#include <fstream>
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -77,6 +78,21 @@ namespace PreprocessingPipeline {
   }
   
   
+  ////////////////////////////////////////////////////////////////////////////////
+  /*
+   Function to check whether the file exists
+   
+   @param filename:   filename
+   */
+  inline bool FileExists (const std::string& filename) {
+    
+    if (std::ifstream(filename.c_str()))
+      {
+      return true;
+      }
+    return false;
+  }
+
   
   ////////////////////////////////////////////////////////////////////////////////
   /*
@@ -126,6 +142,15 @@ namespace PreprocessingPipeline {
     }
     if (hasStitchedTag == false) {
       std::cout << "Error in XML: No stitching element in the required element defined!" << std::endl;
+      complete_ = false;
+    }
+    
+    if (!FileExists(inputDir_)) {
+      std::cout << "Error : Input folder does not exist!" << std::endl;
+      complete_ = false;
+    }
+    if (!FileExists(scriptLocation_)) {
+      std::cout << "Error : Fiji script location does not exist!" << std::endl;
       complete_ = false;
     }
   }
