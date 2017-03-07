@@ -36,7 +36,7 @@
         <h1>
 <a id="welcome-to-premosa" class="anchor" href="#welcome-to-premosa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h1>
 
-We provide a data example (<a href="https://github.com/CBlasse/premosa_dataset.git">here</a>) to demonstrate the usage of <font style='font-variant:small-caps;'>PreMosa</font> and its individual steps.
+We provide a data example (<a href="https://github.com/CBlasse/premosa_dataset.git">here</a>) to demonstrate the usage of <font style='font-variant:small-caps;'>PreMosa</font> and its individual steps. Please run the entire pipeline first in order to generate all input files for testing the individual steps.
 <br><br><br><br>
 
 <h3>
@@ -53,15 +53,16 @@ We provide a data example (<a href="https://github.com/CBlasse/premosa_dataset.g
 <p>
 	
 </p><br>
-<span style="background-color: #f4f4f4;padding-left:20px;padding-right:435px;padding-bottom:55px;padding-top:10px">./SurfaceExtraction -r 16 -d 2 -t 50 -hmr </span><br><span style="padding-left:100px">-in RawData/t075/20120531_Pos5_p000001t00000075c01.tif</span><br><span style="padding-left:100px">-out PreprocessedData/FlatFieldCorrected_2D/t075/20120531_Pos5_p000001t00000075c01.tif</span><br><br><br>
+<span style="background-color: #f4f4f4;padding-left:20px;padding-right:435px;padding-bottom:55px;padding-top:10px">./SurfaceExtraction -r 16 -d 2 -t 50 -hmr </span><br><span style="padding-left:100px">-in RawData/t075/20120531_Pos5_p000001t00000075c01.tif</span><br><span style="padding-left:100px">-out PreprocessedData/Projection_20120531_Pos5_p000001t00000075c01.tif</span><br><br><br>
 <img src="./images/SurfaceExtraction.png" alt="SurfaceExtraction" ><br><br>
 <br><br>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flat field correction</h3>
-<p>
 <br>
-<span style="background-color: #f4f4f4;padding-left:20px;padding-right:555px;padding-bottom:78px;padding-top:10px">./FlatFieldCorrection </span><br><span style="padding-left:100px">-in PreprocessedData/FlatFieldCorrected_2D/t075/20120531_Pos5_p000001t00000075c01.tif</span> <br><span style="padding-left:100px">-ff FFC.tif </span><br><span style="padding-left:100px">-out PreprocessedData/ContrastAdjusted_2D/t075/20120531_Pos5_p000001t00000075c01.tif</span><br><br>
+For running the flat field correction, you need a 2D image as input file. Please run PreMosa beforehand in order to generate the exemplary input image. As an alternative, you can also run the Surface Extraction, however, an adaptation of the exemplary input path is needed.<br><br>
+<p>
+<span style="background-color: #f4f4f4;padding-left:20px;padding-right:555px;padding-bottom:78px;padding-top:10px">./FlatFieldCorrection </span><br><span style="padding-left:100px">-in PreprocessedData/FlatFieldCorrected_2D/t075/20120531_Pos5_p000001t00000075c01.tif</span> <br><span style="padding-left:100px">-ff FFC.tif </span><br><span style="padding-left:100px">-out PreprocessedData/FlatFieldCorrection_20120531_Pos5_p000001t00000075c01.tif</span><br><br>
 <img src="./images/FlatFieldCorrection.png" alt="FlatFieldCorrection" ><br>
 <br><br>
 <h3>
