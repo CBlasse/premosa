@@ -20,18 +20,24 @@ Installation
 The pipeline has been only developed for Linux/ Mac OSX.
 
 Prerequisites:
-  - Linux / Mac OSX system
-  - Cmake (get it here)
-  - Qt (version 5.6, get it here)
-  - Fiji (get it here)
-  - Java 8
+
+  Linux:
+    - Cmake, at least 3.0 (please make sure it also runs from the command line) 
+    - Fiji 
+    - Java 8
+    - xvfb
+
+  MacOSX:
+    - Cmake, at least 3.0 (please make sure it also runs from the command line) 
+    - Fiji 
+    - Java 8
 
 Installation:
 
 1) Download the source code by using either the download page or the git repository: git clone https://github.com/CBlasse/premosa.git
 
-2) Go to the project folder and run: ./Build.sh -p Qt_prefix_path_to_cmake_configurations
-  This step will generate executable programs in the ./bin/ folder. It is thereby necessary to add the Qt prefix path for finding the cmake configuration files (e.g. /usr/local/Qt5.6/5.6/clang_64/lib/cmake).
+2) Go to the project folder and run: ./Build.sh 
+This step will generate executable programs in the ./bin/ folder. 
 
 3) Install the contrast adjustment plugin in Fiji. To do so, copy the contrastAdjustment-26.1.0.jar into the plugins folder of your Fiji distribution.
 
