@@ -561,7 +561,9 @@ namespace PreprocessingPipeline {
             }
             
             std::string fileName (inputParamter.GetFileNameExpression());
-            fileName = fileName.replace(fileName.find("TIME"), 4, iPadded);
+            if (fileName.find("TIME") != std::string::npos) {
+              fileName = fileName.replace(fileName.find("TIME"), 4, iPadded);
+            }
             
             // Mosaic stitching to determine the tile configuration
             std::string tileConfig = outputDirFFC_TP_Path + "/" + "TileConfiguration.txt";
