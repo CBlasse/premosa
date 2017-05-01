@@ -8,9 +8,9 @@
 
 #include "Pipeline.h"
 
+#include <algorithm>
 #include <math.h>
 #include <vector>
-
 #include <dirent.h>
 #include <iomanip>
 #include <iostream>
@@ -39,6 +39,22 @@ extern "C" {
 namespace PreprocessingPipeline {
   
   namespace {
+    ////////////////////////////////////////////////////////////////////////////////
+    /*
+     Function to check whether the file exists
+     
+     @param filename:   filename
+     */
+    inline bool FileExists (const std::string& filename) {
+      
+      if (std::ifstream(filename.c_str()))
+        {
+        return true;
+        }
+      return false;
+    }
+    
+    
     ////////////////////////////////////////////////////////////////////////////////
     /*
      Flat field correction
@@ -174,8 +190,12 @@ namespace PreprocessingPipeline {
       
       int paddingNumber = inputParamter.GetFileNameExpression().find("}") - inputParamter.GetFileNameExpression().find("{") - 1;  // determination of the number of digits of the tile indication
       
+      if (FileExists(tileConfigPath)) {
+        system(&("rm "+ tileConfigPath)[0]);
+      }
+      
       std::ofstream tileConfig;
-      tileConfig.open (tileConfigPath, std::ios::app); // writing of the new tile configuration file
+      tileConfig.open (tileConfigPath, std::ofstream::trunc); // writing of the new tile configuration file
       if (tileConfig.is_open()) {
         
         std::string line;
@@ -264,19 +284,19 @@ namespace PreprocessingPipeline {
       
       return filteredImg;
     }
-
     
-
+    
+    
     
     void CheckForBlackTile (Array * image, std::string fileName, std::vector<std::string> &blackTiles) {
       
       Histogram *h;
- 
+      
       Double_Array * h1 = Filter_Power(Gaussian_Filter(1,1),2);
       
       if (image->type == UINT8_TYPE) {
         Array * gauss1 = Convl_8bit(image, h1);
-
+        
         h = Histogram_Array(gauss1, 256, MylibValues::ValU(0), MylibValues::ValU(1));
         if (Histogram_Sigma(h) < 2 ) {          // Decision based on a fixed threshold (~0.6% of 256)
           std::cout << fileName << std::endl;
@@ -284,7 +304,7 @@ namespace PreprocessingPipeline {
         }
       } else {
         Array * gauss1 = Convl_16bit(image, h1);
-
+        
         h = Histogram_Array(gauss1, 65536, MylibValues::ValU(0), MylibValues::ValU(1));
         if (Histogram_Sigma(h) < 150 ) {         // Decision based on a fixed threshold (~0.02% of 65536)
           std::cout << fileName << std::endl;
@@ -309,15 +329,20 @@ namespace PreprocessingPipeline {
       
       std::ifstream masterFile;
       masterFile.open (tileConfigPath);
+      
+      if (FileExists(tileConfigPath2)) {
+        system(&("rm "+ tileConfigPath2)[0]);
+      }
+      
       std::ofstream masterFile2;
-      masterFile2.open (tileConfigPath2, std::ios::app);
+      masterFile2.open (tileConfigPath2);
       
       if (!masterFile.is_open() or !masterFile2.is_open()) {
         return;
       }
       
       std::string line;
-
+      
       while (std::getline(masterFile, line)) {
         
         std::string fileName = line.substr(0, line.find(";"));
@@ -336,7 +361,7 @@ namespace PreprocessingPipeline {
      Function to check whether the filename has ".tif" as ending
      
      @param file:   file
-    */
+     */
     
     bool CheckFileEnding (const struct dirent *file) {
       std::string fileEnding = ".tif";
@@ -361,26 +386,11 @@ namespace PreprocessingPipeline {
 
     
     
-    ////////////////////////////////////////////////////////////////////////////////
-    /*
-     Function to check whether the file exists
-     
-     @param filename:   filename
-     */
-    inline bool FileExists (const std::string& filename) {
-      
-      if (std::ifstream(filename.c_str()))
-        {
-        return true;
-        }
-      return false;
-    }
-    
   } // namespace
   
   
-
-
+  
+  
   
   
   ////////////////////////////////////////////////////////////////////////////////
@@ -503,10 +513,9 @@ namespace PreprocessingPipeline {
               if (entryString == "." or entryString == "..") {
                 continue;
               }
-              if (CheckFileEndingTif(entryString) == false) {
+              if (CheckFileEndingTif (entryString) == false) {
                 continue;
               }
-              
               // Read the image
               std::string path = inputParamter.GetInputDir()+"/"+folderName+"/"+entry->d_name;
               std::cout << path << std::endl;
@@ -517,7 +526,7 @@ namespace PreprocessingPipeline {
               
               // Stack projection (if the input mosaic is only 2D, then the images are just copied)
               Array * projection;
-
+              
               if (image->ndims == 2) {
                 projection = Copy_Array(image);
               } else {
@@ -525,12 +534,12 @@ namespace PreprocessingPipeline {
                 projectionAlgorithm.SetParameters(projectionParameters);
                 projectionAlgorithm.ProjectImageStack();
                 projection = projectionAlgorithm.GetProjection(0);
-
+                
                 if (inputParamter.GetPrintHeightMap()) {
                   projectionAlgorithm.DrawInterpolatedHeightMap(&(outputDirFFC_TP_Path+"/"+entry->d_name)[0]);
                 }
               }
-
+              
               
               // Review if the image features significant signals and is not a 'black tile'
               CheckForBlackTile(projection, entry->d_name, blackTiles);
@@ -569,7 +578,6 @@ namespace PreprocessingPipeline {
             if (fileName.find("TIME") != std::string::npos) {
               fileName = fileName.replace(fileName.find("TIME"), 4, iPadded);
             }
-            
             
             // Mosaic stitching to determine the tile configuration
             std::string tileConfig = outputDirFFC_TP_Path + "/" + "TileConfiguration.txt";
@@ -620,9 +628,9 @@ namespace PreprocessingPipeline {
               " -- --no-splash " + inputParamter.GetScriptLocation() + "/gridStitching_UseTileConfig.bsh";
 #endif
             }
-  
+            
             system(&stitchProgram[0]);
-
+            
             // Prepare contrast adjustment
             tileConfig = outputDirFFC_TP_Path+"/"+"TileConfiguration.registered.txt";
             std::string tileConfig2 = outputDirFFC_TP_Path + "/" + "TileConfiguration.registered2.txt";
@@ -638,21 +646,15 @@ namespace PreprocessingPipeline {
             
             std::string caProgram;
 #ifdef __APPLE__
-            //            caProgram = inputParamter.GetFiji() +
-            //            " --run \"Contrast Adjustment\" \"folder=" + outputDirFFC_TP.absolutePath() + QDir::separator() +
-            //            " output_folder=" + outputDirAC_TP.absolutePath() + QDir::separator() +
-            //            " tile_configuration=" + tileConfig +
-            //            " minimum_intensity=" + minInt +
-            //            " maximum_intensity=" + maxInt +
-            //            " number_of_samples=100 lambda_1=0.10 lambda_2=0.10\"";
-            
             caProgram = inputParamter.GetFiji() + " -batch " +
             inputParamter.GetScriptLocation() + "/RunContrastAdjustment_MacOsX.bsh" +
             " -in" + outputDirFFC_TP_Path + "/" +
             "=-out" + outputDirAC_TP_Path + "/" +
             "=-tile" + tileConfig2 +
             "=-min" + minInt +
-            "=-max" + maxInt;
+            "=-max" + maxInt +
+            "=-l1" + std::to_string(inputParamter.GetLambda1())+
+            "=-l2" + std::to_string(inputParamter.GetLambda2());
             
 #endif
             
@@ -663,6 +665,8 @@ namespace PreprocessingPipeline {
             " -Dtile=" + tileConfig2 +
             " -Dmin=" + minInt +
             " -Dmax=" + maxInt +
+            " -Dl1=" + std::to_string(inputParamter.GetLambda1())+
+            " -Dl2=" + std::to_string(inputParamter.GetLambda2()) +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/RunContrastAdjustment.bsh";
 #endif
             system (&caProgram[0]);
