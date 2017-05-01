@@ -8,9 +8,9 @@
 
 #include "Pipeline.h"
 
-#include <algorithm>
 #include <math.h>
 #include <vector>
+
 #include <dirent.h>
 #include <iomanip>
 #include <iostream>
@@ -39,22 +39,6 @@ extern "C" {
 namespace PreprocessingPipeline {
   
   namespace {
-    ////////////////////////////////////////////////////////////////////////////////
-    /*
-     Function to check whether the file exists
-     
-     @param filename:   filename
-     */
-    inline bool FileExists (const std::string& filename) {
-      
-      if (std::ifstream(filename.c_str()))
-        {
-        return true;
-        }
-      return false;
-    }
-
-    
     ////////////////////////////////////////////////////////////////////////////////
     /*
      Flat field correction
@@ -190,12 +174,8 @@ namespace PreprocessingPipeline {
       
       int paddingNumber = inputParamter.GetFileNameExpression().find("}") - inputParamter.GetFileNameExpression().find("{") - 1;  // determination of the number of digits of the tile indication
       
-      if (FileExists(tileConfigPath)) {
-        system(&("rm "+ tileConfigPath)[0]);
-      }
-      
       std::ofstream tileConfig;
-      tileConfig.open (tileConfigPath, std::ofstream::trunc); // writing of the new tile configuration file
+      tileConfig.open (tileConfigPath, std::ios::app); // writing of the new tile configuration file
       if (tileConfig.is_open()) {
         
         std::string line;
@@ -329,13 +309,8 @@ namespace PreprocessingPipeline {
       
       std::ifstream masterFile;
       masterFile.open (tileConfigPath);
-      
-      if (FileExists(tileConfigPath2)) {
-        system(&("rm "+ tileConfigPath2)[0]);
-      }
-      
       std::ofstream masterFile2;
-      masterFile2.open (tileConfigPath2);
+      masterFile2.open (tileConfigPath2, std::ios::app);
       
       if (!masterFile.is_open() or !masterFile2.is_open()) {
         return;
@@ -374,6 +349,32 @@ namespace PreprocessingPipeline {
       return false;
     }
     
+    bool CheckFileEndingTif (std::string filename) {
+      std::string fileEnding = ".tif";
+      
+      if (filename.find(fileEnding) != std::string::npos) {
+        return true;
+      }
+      
+      return false;
+    }
+
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    /*
+     Function to check whether the file exists
+     
+     @param filename:   filename
+     */
+    inline bool FileExists (const std::string& filename) {
+      
+      if (std::ifstream(filename.c_str()))
+        {
+        return true;
+        }
+      return false;
+    }
     
   } // namespace
   
@@ -473,7 +474,7 @@ namespace PreprocessingPipeline {
         
         for (int i=inputParamter.GetTStart(); i<=inputParamter.GetTEnd(); ++i) {
           
-          std::string iPadded = PadString('0', inputParamter.GetTStart(), paddingNumber);
+          std::string iPadded = PadString('0', i, paddingNumber);
           std::string folderName (inputParamter.GetFolderNameExpression());
           folderName.replace(folderName.find("{"), expression.length(), iPadded);
           
@@ -502,6 +503,10 @@ namespace PreprocessingPipeline {
               if (entryString == "." or entryString == "..") {
                 continue;
               }
+              if (CheckFileEndingTif(entryString) == false) {
+                continue;
+              }
+              
               // Read the image
               std::string path = inputParamter.GetInputDir()+"/"+folderName+"/"+entry->d_name;
               std::cout << path << std::endl;
@@ -564,6 +569,7 @@ namespace PreprocessingPipeline {
             if (fileName.find("TIME") != std::string::npos) {
               fileName = fileName.replace(fileName.find("TIME"), 4, iPadded);
             }
+            
             
             // Mosaic stitching to determine the tile configuration
             std::string tileConfig = outputDirFFC_TP_Path + "/" + "TileConfiguration.txt";
@@ -632,15 +638,21 @@ namespace PreprocessingPipeline {
             
             std::string caProgram;
 #ifdef __APPLE__
+            //            caProgram = inputParamter.GetFiji() +
+            //            " --run \"Contrast Adjustment\" \"folder=" + outputDirFFC_TP.absolutePath() + QDir::separator() +
+            //            " output_folder=" + outputDirAC_TP.absolutePath() + QDir::separator() +
+            //            " tile_configuration=" + tileConfig +
+            //            " minimum_intensity=" + minInt +
+            //            " maximum_intensity=" + maxInt +
+            //            " number_of_samples=100 lambda_1=0.10 lambda_2=0.10\"";
+            
             caProgram = inputParamter.GetFiji() + " -batch " +
             inputParamter.GetScriptLocation() + "/RunContrastAdjustment_MacOsX.bsh" +
             " -in" + outputDirFFC_TP_Path + "/" +
             "=-out" + outputDirAC_TP_Path + "/" +
             "=-tile" + tileConfig2 +
             "=-min" + minInt +
-            "=-max" + maxInt +
-            "=-l1" + std::to_string(inputParamter.GetLambda1())+
-            "=-l2" + std::to_string(inputParamter.GetLambda2());
+            "=-max" + maxInt;
             
 #endif
             
@@ -651,8 +663,6 @@ namespace PreprocessingPipeline {
             " -Dtile=" + tileConfig2 +
             " -Dmin=" + minInt +
             " -Dmax=" + maxInt +
-            " -Dl1=" + std::to_string(inputParamter.GetLambda1())+
-            " -Dl2=" + std::to_string(inputParamter.GetLambda2()) +
             " -- --no-splash " + inputParamter.GetScriptLocation() + "/RunContrastAdjustment.bsh";
 #endif
             system (&caProgram[0]);
