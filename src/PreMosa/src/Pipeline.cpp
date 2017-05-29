@@ -561,7 +561,7 @@ namespace PreprocessingPipeline {
               }
               
               // Cleaning (projection is freed by the destructor of the ProjectionAlgorithm)
-              // Free_Array(projection);
+              Free_Array(projection);
               Free_Array(image);
             }
             
